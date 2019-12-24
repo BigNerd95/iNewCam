@@ -1,0 +1,1032 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<en>
+<indexhtml>
+<HeaderHomeSpan>Меню</HeaderHomeSpan>
+<HeaderMediaSpan>Mедиа</HeaderMediaSpan>
+<HeaderReplaySpan>Воспроизведене</HeaderReplaySpan>
+<HeaderParametersSpan>Параметры</HeaderParametersSpan>
+<HeaderSystemSpan>Система</HeaderSystemSpan>
+<ScanSpan>Скан</ScanSpan>
+<PtzPointSpan>Точка:</PtzPointSpan>
+<HueSpan>Отеннок:</HueSpan>
+<BrightnessSpan>Яркость:</BrightnessSpan>
+<ContrastSpan>Контраст:</ContrastSpan>
+<SaturationSpan>Насыщение:</SaturationSpan>
+<FlipSpan>Флип:</FlipSpan>
+<MirrorSpan>Зеркало:</MirrorSpan>
+<PowerfreqSpan>Мощность частота:</PowerfreqSpan>
+<MainPageSceneSpan>Сцена:</MainPageSceneSpan>
+<AutoSpan>Авто</AutoSpan>
+<IndoorSpan>В помещении</IndoorSpan>
+<OutdoorSpan>На улице</OutdoorSpan>
+<MainPageIRSpan>ИК:</MainPageIRSpan>
+<IRLowSpan>День&amp;Ночь</IRLowSpan>
+<IRHighSpan>День&amp;Ночь</IRHighSpan>
+<IRColorSpan>Цвет</IRColorSpan>
+<IRBWSpan>Чёрно-белый</IRBWSpan>
+<FillOnSpan>Вкл.</FillOnSpan>
+<FillOffSpan>Выкл.</FillOffSpan>
+<MirrorOnSpan>Вкл.</MirrorOnSpan>
+<MirrorOffSpan>Выкл.</MirrorOffSpan>
+<UpdateSpan>Обновление</UpdateSpan>
+<DefaultSpan>Дефолт</DefaultSpan>
+<PlayerSpan>Плеер :</PlayerSpan>
+<StreamSpan>Поток:</StreamSpan>
+<MainPageImageSpan>Изображение:</MainPageImageSpan>
+<FitSizeSpan>Соответствующий размер</FitSizeSpan>
+<SrcSizeSpan>Оригинальный размер</SrcSizeSpan>
+<MainFlowSpan>Главный поток</MainFlowSpan>
+<MinorFlowSpan>Вторичный поток</MinorFlowSpan>
+<DownloadPlayerSpan>Скачать плеер</DownloadPlayerSpan>
+<LoginDownloadPlayerSpan>Скачать плеер</LoginDownloadPlayerSpan>
+<DownloadOCXSpan>Скачать OCX</DownloadOCXSpan>
+<LoginDownloadOCXSpan>Скачать OCX</LoginDownloadOCXSpan>
+<LogoutSpan>Отмена</LogoutSpan>
+<UsernameSpan>Пользователь:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<LoginLanguageSpan>Язык:</LoginLanguageSpan>
+<LoginEnterSpan>Войти</LoginEnterSpan>
+<AutologinSpan>Авто войти</AutologinSpan>
+<LoginMainFlowSpan>Главный поток</LoginMainFlowSpan>
+<LoginMinorFlowSpan>Вторичный поток</LoginMinorFlowSpan>
+<LoginStreamSpan>Поток:</LoginStreamSpan>
+<QVSpan>Сетевая камера</QVSpan>
+<HomeSpan>Меню</HomeSpan>
+<SystemSetSpan>Система</SystemSetSpan>
+<AboutSpan> О </AboutSpan>
+<MediaSpan>Медиа</MediaSpan>
+<ImageSpan>Изображение</ImageSpan>
+<VideoSpan>Видео</VideoSpan>
+<AdvanceSpan>Продвижение</AdvanceSpan>
+<EventSpan>Событие</EventSpan>
+<NetWorkSpan>Сеть</NetWorkSpan>
+<BasicSettingsSpan>Основные настройки</BasicSettingsSpan>
+<DDNSSpan>DDNS</DDNSSpan>
+<UserSpan>Пользователь</UserSpan>
+<MobileSpan>OSD</MobileSpan>
+<EmailSpan>E-Mail</EmailSpan>
+<MDSpan>Детектор движения</MDSpan>
+<AlarmInSpan>Вход выход тревоги</AlarmInSpan>
+<AlarmOutSpan>Выход тревоги</AlarmOutSpan>
+<AutoSnapSpan>Авто-захвата</AutoSnapSpan>
+<SystemSpan>Система</SystemSpan>
+<LanguageSpan>Язык</LanguageSpan>
+<TimeSpan>Настроики времени</TimeSpan>
+<InitSpan>Инициализация</InitSpan>
+<DeviceinfoSpan>Информация об устройстве</DeviceinfoSpan>
+<LogSpan>Логин системы</LogSpan>
+<PTZSpan>PTZ</PTZSpan>
+<ODSpan>Сигнализация по закрытии</ODSpan>
+<RecordSpan>Запись</RecordSpan>
+<StorageSpan>Устройство хранения</StorageSpan>
+<DownLoadPlayerMsg>Установите плеер, пожалуйста, успешно установили и открыть веб ещё раз!</DownLoadPlayerMsg>
+<HueImgTitile>Цветность</HueImgTitile>
+<BrightnessImgTitile>Яркость</BrightnessImgTitile>
+<ContrastImgTitle>Контраст</ContrastImgTitle>
+<SaturationImgTitile>Насыщение</SaturationImgTitile>
+<RecordSwitchTitile>Запись начинается</RecordSwitchTitile>
+<RecordIngSwitchTitile>Записывает</RecordIngSwitchTitile>
+<CaptureSwitchTitile>Захвата</CaptureSwitchTitile>
+<MicroOnSwitchTitile>Начать разговор</MicroOnSwitchTitile>
+<MicroOffSwitchTitile>Стоп разговора</MicroOffSwitchTitile>
+<VolOnSwitchTitile>Включить звук</VolOnSwitchTitile>
+<VolOffSwitchTitile>Выключить звук</VolOffSwitchTitile>
+<GotoPointTitile>Перейти</GotoPointTitile>
+<SetPointTitile>Установить</SetPointTitile>
+<ClearPointTitile>Ясно</ClearPointTitile>
+<NoAuthErrorMsg>Нет прова доступа!</NoAuthErrorMsg>
+<LoginCheckErrorMsg>Не правильный пароль или пользователь！</LoginCheckErrorMsg>
+<HltalmproxySpan>Установить платформы</HltalmproxySpan>
+<FocusSpan>Фокус</FocusSpan>
+<ZoomSpan>Зум</ZoomSpan>
+<CoverAreaSpan>Покрытие региона</CoverAreaSpan>
+<PtzTrackSpan>Круиз</PtzTrackSpan>
+<Speed485Span>Скорость:</Speed485Span>
+<AudioSpan> Аудио</AudioSpan>
+</indexhtml>
+
+<mainpagehtml>
+<QVSpan>Сетевая камера</QVSpan>
+<HomeSpan>Меню</HomeSpan>
+<SystemSetSpan>Система</SystemSetSpan>
+<AboutSpan>О</AboutSpan>
+<SizeSpan>Размер:</SizeSpan>
+<PTZSpan>PTZ:</PTZSpan>
+<ZOOMSpan>Зум</ZOOMSpan>
+<FOUCESpan>Фркус</FOUCESpan>
+<IRISSpan>IRIS</IRISSpan>
+<SpeedSpan>Скорость</SpeedSpan>
+</mainpagehtml>
+
+<abouthtml>
+<QVSpan>Сетевая камера</QVSpan>
+<HomeSpan>Меню</HomeSpan>
+<SystemSetSpan>Устновка системы</SystemSetSpan>
+<AboutSpan>О</AboutSpan>
+</abouthtml>
+
+<systemsethtml>
+<QVSpan>Сетевая камера</QVSpan>
+<HomeSpan>Меню</HomeSpan>
+<SystemSetSpan>Система</SystemSetSpan>
+<AboutSpan>О</AboutSpan>
+<MediaSpan>Медиа</MediaSpan>
+<ImageSpan>Изображение</ImageSpan>
+<VideoSpan>Видео</VideoSpan>
+<AdvanceSpan>Продвижение</AdvanceSpan>
+<EventSpan>Событие</EventSpan>
+<NetWorkSpan>Сеть</NetWorkSpan>
+<BasicSettingsSpan>Основные настройки</BasicSettingsSpan>
+<DDNSSpan>DDNS</DDNSSpan>
+<UserSpan>Пользователь</UserSpan>
+<MobileSpan>Мобильный</MobileSpan>
+<EmailSpan>E-Mail</EmailSpan>
+<MDSpan>Детектор движения</MDSpan>
+<AlarmInSpan>Вход тревоги</AlarmInSpan>
+<AlarmOutSpan>Выход тревоги</AlarmOutSpan>
+<AutoSnapSpan>Авто-захвата</AutoSnapSpan>
+<SystemSpan>Система</SystemSpan>
+<LanguageSpan>Язык</LanguageSpan>
+<TimeSpan>Настроики времени</TimeSpan>
+<InitSpan>Инициализация</InitSpan>
+<DeviceinfoSpan>Информация об устройстве</DeviceinfoSpan>
+<LogSpan>Логин системы</LogSpan>
+<PTZSpan>PTZ</PTZSpan>
+<ODSpan>Сигнализация по закрытии</ODSpan>
+<RecordSpan>Запись</RecordSpan>
+<StorageSpan>Устройство хранения</StorageSpan>
+</systemsethtml>
+
+<displayhtml>
+<HueSpan>Цветность:</HueSpan>
+<BrightnessSpan>Яркость:</BrightnessSpan>
+<ContrastSpan>Контраст:</ContrastSpan>
+<SaturationSpan>Насыщение:</SaturationSpan>
+<FlipSpan>Флип:</FlipSpan>
+<MirrorSpan>Зеркало:</MirrorSpan>
+<PowerfreqSpan>Мощность частота:</PowerfreqSpan>
+<SaveSpan>Хранение</SaveSpan>
+<ReloadSpan>Перезаряжать</ReloadSpan>
+<DefaultSpan>Дефолт</DefaultSpan>
+<FillOnSpan>Вкл.</FillOnSpan>
+<FillOffSpan>Выкл.</FillOffSpan>
+<MirrorOnSpan>Вкл.</MirrorOnSpan>
+<MirrorOffSpan>Выкл.</MirrorOffSpan>
+</displayhtml>
+
+<videohtml>
+<MainstreamSpan>Главный поток</MainstreamSpan>
+<ResolutionSpan>Разрешение:</ResolutionSpan>
+<BitrateSpan>Скорость передачи данных:</BitrateSpan>
+<ImageQualitySpan>Качество изображения:</ImageQualitySpan>
+<QualityVeryHighSpan>Очень высокое</QualityVeryHighSpan>
+<QualityHighSpan>Высокое</QualityHighSpan>
+<QualityNormalSpan>Среднее</QualityNormalSpan>
+<QualityLowSpan>Низкое</QualityLowSpan>
+<QualityVeryLowSpan>Очень низкое</QualityVeryLowSpan>
+<MaximumframeSpan>Максимальная частота:</MaximumframeSpan>
+<VideoqualitycontrolSpan>Контроль качества:</VideoqualitycontrolSpan>
+<FrameratefirstSpan>Частота кадров на первом месте</FrameratefirstSpan>
+<QualityfirstSpan>Качетво на первом месте </QualityfirstSpan>
+<NormSpan>Нормальный:</NormSpan>
+<SubstreamSpan>Главный поток</SubstreamSpan>
+<SubResolutionSpan>Разрешение:</SubResolutionSpan>
+<SubBitrateSpan>Скорость передачи данных:</SubBitrateSpan>
+<SubImageQualitySpan>Качество изображения:</SubImageQualitySpan>
+<SubImageQualityVeryHighSpan>Очень высокое</SubImageQualityVeryHighSpan>
+<SubQualityHighSpan>Высокое</SubQualityHighSpan>
+<SubQualityNormalSpan>Среднее</SubQualityNormalSpan>
+<SubQualityLowSpan>Низкое</SubQualityLowSpan>
+<SubQualityVeryLowSpan>Очень низкое</SubQualityVeryLowSpan>
+<SubMaximumframeSpan>Максимальная частота:</SubMaximumframeSpan>
+<SubVideoqualitycontrolSpan>Контроль качества:</SubVideoqualitycontrolSpan>
+<SubFrameratefirstSpan>Частота кадров на первом месте</SubFrameratefirstSpan>
+<SubQualityfirstSpan>Качетво на первом месте </SubQualityfirstSpan>
+<NormSpan>Нормальный:</NormSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<InputErrorMsg>Битрейт должен быть меньше исходного размера.</InputErrorMsg>
+<MobileSpan>Мобильный поток:</MobileSpan>
+<ResolutionSpan>Разрешение:</ResolutionSpan>
+<UsernameSpan>Пользователь:</UsernameSpan>
+<PasswordSpan>Пораль:</PasswordSpan>
+<PortSpan>Порт:</PortSpan>
+<QualitySpan>Качетсво:</QualitySpan>
+<QualityVeryHighSpan>Очень высокое</QualityVeryHighSpan>
+<QualityHighSpan>Высокое</QualityHighSpan>
+<QualityNormalSpan>Среднее</QualityNormalSpan>
+<QualityLowSpan>Низкое</QualityLowSpan>
+<QualityVeryLowSpan>Очень низкое</QualityVeryLowSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<PortErrorMsg>Ввдите мобильный порт, пожалуйста！</PortErrorMsg>
+<PortInputMsg>Включают недопустимые буквы!!</PortInputMsg>
+<PortPortErrorMsg>Недействительный порт(1-65535)</PortPortErrorMsg>
+<SubStreamCBR>Закрепительный поток</SubStreamCBR>
+<SubStreamVBR>Переменный поток</SubStreamVBR>
+<MainStreamCBR>Закрепительный поток</MainStreamCBR>
+<MainStreamVBR>Переменный поток</MainStreamVBR>
+<SubStreamBitRateTypeSpan>Тип битрейта:</SubStreamBitRateTypeSpan>
+<MainStreamBitRateTypeSpan>Тип битрейта:</MainStreamBitRateTypeSpan>
+<SubStreamUserDefineSpan>Самоопределения пользователя</SubStreamUserDefineSpan>
+<MainStreamUserDefineSpan>Самоопределения пользователя</MainStreamUserDefineSpan>
+<NormChangeRebootMsg>Перезагрузка!</NormChangeRebootMsg>
+<ViewSizeChangeRebootMsg>Перезагрузка!</ViewSizeChangeRebootMsg>
+<RebootWaitMsg>IP-камера перезагружается, пожалуйста, не выключайте камеру ......</RebootWaitMsg>
+<MainStreamFIXQP>Закрепительное качество</MainStreamFIXQP>
+<SubStreamFIXQP>Закрепительное качество</SubStreamFIXQP>
+<SubStreamFIXQPLevel1>Очень высокое</SubStreamFIXQPLevel1>
+<SubStreamFIXQPLevel2>Высокое</SubStreamFIXQPLevel2>
+<SubStreamFIXQPLevel3>Среднее</SubStreamFIXQPLevel3>
+<SubStreamFIXQPLevel4>Низкое</SubStreamFIXQPLevel4>
+<SubStreamFIXQPLevel5>Очень низкое</SubStreamFIXQPLevel5>
+<MainStreamFIXQPLevel1>Очень высокое</MainStreamFIXQPLevel1>
+<MainStreamFIXQPLevel2>Высокое</MainStreamFIXQPLevel2>
+<MainStreamFIXQPLevel3>Среднее</MainStreamFIXQPLevel3>
+<MainStreamFIXQPLevel4>Низкое</MainStreamFIXQPLevel4>
+<MainStreamFIXQPLevel5>Очень низкое</MainStreamFIXQPLevel5>
+<GopInputTipsSpan>Более или равно</GopInputTipsSpan>
+<MainStreamGopSpan>I  интервал кадра:</MainStreamGopSpan>
+<SubStreamGopSpan>I  интервал кадра:</SubStreamGopSpan>
+<MainStreamAudioSpan>Аудио:</MainStreamAudioSpan>
+<SubStreamAudioSpan>Аудио:</SubStreamAudioSpan>
+<SubStreamAudioGrpOn>Вкл.</SubStreamAudioGrpOn>
+<SubStreamAudioGrpOff>Выкл.</SubStreamAudioGrpOff>
+<MainStreamAudioGrpOn>Вкл.</MainStreamAudioGrpOn>
+<MainStreamAudioGrpOff>Выкл.</MainStreamAudioGrpOff>
+</videohtml>
+
+<networkhtml>
+<LANSettingsSpan>Настройка LAN</LANSettingsSpan>
+<IPTypeSpan>Тип IP:</IPTypeSpan>
+<IPTypeFixedIPAddressSpan>Фиксированный IP адрес</IPTypeFixedIPAddressSpan>
+<IPTypeDynanicIPAddressSpan>Динамический IP-адрес</IPTypeDynanicIPAddressSpan>
+<IPAddressSpan>IP адрес:</IPAddressSpan>
+<SubnetMaskSpan>Маска подсети:</SubnetMaskSpan>
+<GatewaySpan>Шлюз:</GatewaySpan>
+<DNSTypeSpan>Тип DNS:</DNSTypeSpan>
+<DNSTypeManualDNSSpan>Руководство DNS</DNSTypeManualDNSSpan>
+<DNSTypeFromDHCPServerSpan>От сервера DHCP</DNSTypeFromDHCPServerSpan>
+<PrimaryDNSSpan>Первичный DNS:</PrimaryDNSSpan>
+<SecondaryDNSSpan>Второй DNS:</SecondaryDNSSpan>
+<HTTPSpan>HTTP:</HTTPSpan>
+<HTTPPortnumberSpan>Порт :</HTTPPortnumberSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<InputASCIIErrorMsg>пожалуйста, введите ASCII символов (длина 5 или 13)</InputASCIIErrorMsg>
+<InputHEXErrorMsg>пожалуйста, введите HEX параметры (длина 10 или 26)</InputHEXErrorMsg>
+<WepKeyErrorMsg>ключ WEP с ошибками. Шестнадцатеричный код 10 или 26, ASCII коды 5 или 13</WepKeyErrorMsg>
+<InputASCIIError1Msg>пожалуйста, введите ASCII символов (длина составляет от 8 до 63)</InputASCIIError1Msg>
+<InputInvalidMsg>включают недопустимый символ.</InputInvalidMsg>
+<InputErrorMsg>вход с ошибками!</InputErrorMsg>
+<IPChangeMsg>Ip или порта был изменен, пожалуйста, пере-подключите</IPChangeMsg>
+<InputIPMsg>Пожалуйста, введите IP адрес </InputIPMsg>
+<InputMaskMsg>пожалуйста, введите адрес маски подсети</InputMaskMsg>
+<InputPortMsg>Порт с ошибками</InputPortMsg>
+<InputIPErrorMsg>неверный адрес, первый номер должен от 1 до 255</InputIPErrorMsg>
+<InputIPError1Msg>неверный адрес, первый номер должен от 0 до 255</InputIPError1Msg>
+<InputInvalidAddressMsg>неверный адрес</InputInvalidAddressMsg>
+<InputInvalidAddress1Msg> неверный адрес, первый номер должен от 0 до 255</InputInvalidAddress1Msg>
+<SubnetMaskMsg>Маска подсети</SubnetMaskMsg>
+<GateWayMsg>шлюз</GateWayMsg>
+<PrimaryDnsMsg>первичный DNS</PrimaryDnsMsg>
+<SecondDnsMsg>второй dns</SecondDnsMsg>
+<httpportSpan>(80 или 1024~32767)</httpportSpan>
+<WanURLInputSpan>Тест WAN</WanURLInputSpan>
+<WanTestIngSpan>Tестирование......</WanTestIngSpan>
+<WanTestSuccessSpan>Тест успешно</WanTestSuccessSpan>
+<WanTestFailureSpan>Тест не удался</WanTestFailureSpan>
+<WanTestSpan>Tестирование</WanTestSpan>>
+<IPTestH4Span>Тест сети:</IPTestH4Span>
+<rtspportSpan>(554 или 1024~32767)</rtspportSpan>
+<RTSPPortnumberSpan>Порт:</RTSPPortnumberSpan>
+<ONVIFPortnumberSpan>Порт:</ONVIFPortnumberSpan>
+<onvif_httpportSpan>(1018 или 1024~32767,необходимо перезагрузить)</onvif_httpportSpan>
+</networkhtml>
+
+<ddnshtml>
+<DynamicDNSSpan>Динамический DNS:</DynamicDNSSpan>
+<StatusSpan>Статус:</StatusSpan>
+<StatusOnSpan>Вкл.</StatusOnSpan>
+<StatusOffSpan>Выкл.</StatusOffSpan>
+<ProviderSpan>Поставщик:</ProviderSpan>
+<UsernameSpan>Имя пользователя:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<YourDomainSpan>Ваш домен:</YourDomainSpan>
+<UniversalPnPSpan>Универсальный PNP:</UniversalPnPSpan>
+<StatusSpan>Статус:</StatusSpan>
+<StatusOnSpan>Вкл.</StatusOnSpan>
+<StatusOffSpan>Выкл.</StatusOffSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<InputErrorMsg>включают недопустимый символ.</InputErrorMsg>
+<UserErrorMsg>Пожалуйста, введите имя пользователя.</UserErrorMsg>
+<PasswdErrorMsg>Пожалуйста, введите пароль.</PasswdErrorMsg>
+<DomainErrorMsg>Пожалуйста, введите ваш домен </DomainErrorMsg>
+<UserNameErrorMsg>имя пользавателя неправильное, включают недопустимый символ</UserNameErrorMsg>
+<InputDomainErrorMsg> неправильный домен,включают недопустимый символ</InputDomainErrorMsg>
+</ddnshtml>
+
+
+<osdhtml>
+<ParenthesisOptionsSpan>OSD Опции</ParenthesisOptionsSpan>
+<TimeStampSpan>Время печатания:</TimeStampSpan>
+<TimeStampOnSpan>Вкл.</TimeStampOnSpan>
+<TimeStampOffSpan>Выкл.</TimeStampOffSpan>
+<CameranameSpan>Имя камеры:</CameranameSpan>
+<CameranameOnSpan>Вкл.</CameranameOnSpan>
+<CameranameOffSpan>Вык.</CameranameOffSpan>
+<NameSpan>Имя:</NameSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+</osdhtml>
+
+
+<userhtml>
+<UserIDSpan>ID пользователя</UserIDSpan>
+<UsernameSpan>Имя пользователя</UsernameSpan>
+<PasswordSpan>Пароль</PasswordSpan>
+<RetypepasswordSpan>Подтвердите пароль</RetypepasswordSpan>
+<AdministratorSpan>Aдминистратор</AdministratorSpan>
+<User1Span>Пользователь1</User1Span>
+<User2Span>Пользователь2</User2Span>
+<User3Span>Пользователь3</User3Span>
+<User4Span>Пользователь4</User4Span>
+<User5Span>Пользователь5</User5Span>
+<User6Span>Пользователь6</User6Span>
+<User7Span>Пользователь7</User7Span>
+<User8Span>Пользователь8</User8Span>
+<User9Span>Пользователь9</User9Span>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<InputMsg>включают недопустимый символ</InputMsg>
+<AdminMsg>пожалуйста, введите имя администратора.</AdminMsg>
+<RePasswdMsg>Подтверждение об ошибке  пароля</RePasswdMsg>
+<UserNameMsg>Пожалуйста, введите имя пользователя.</UserNameMsg>
+<PasswdMsg>Пожалуйста, введите пароль.</PasswdMsg>
+<UserErrorMsg>Одинаковое имя на прошлой раз</UserErrorMsg>
+<UserInputErrorMsg>имя пользователя включают недопустимый символ.</UserInputErrorMsg>
+</userhtml>
+
+<emailhtml>
+<EMailSettingSpan>Настройка E-Mail:</EMailSettingSpan>
+<SMTPservernameSpan>Имя сервера:</SMTPservernameSpan>
+<SMTPserverportSpan>Порт</SMTPserverportSpan>
+<SSLSpan>SSL:</SSLSpan>
+<AuthenticationSpan>Аутентификация:</AuthenticationSpan>
+<AuthenticationOnSpan>Вкл.</AuthenticationOnSpan>
+<AuthenticationOffSpan>Вык.</AuthenticationOffSpan>
+<UsernameSpan>Имя пользователя:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<SendToSpan>Получатель:</SendToSpan>
+<SendToeMailAddress1Span></SendToeMailAddress1Span>
+<SendToeMailAddress2Span></SendToeMailAddress2Span>
+<SendToeMailAddress3Span></SendToeMailAddress3Span>
+<ShowFromasSpan>Отправитель:</ShowFromasSpan>
+<ShowFromasReturneMailaddressSpan></ShowFromasReturneMailaddressSpan>
+<SubjectSpan>Тема:</SubjectSpan>
+<MessageSpan>Сообщение:</MessageSpan>
+<Messagethemaxlengthis255Span>Максимальная длина составляет 255</Messagethemaxlengthis255Span>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<emailAddrErrorMsg>неверный адрес, длина адреса должны больше, чем 5</emailAddrErrorMsg>
+<emailAddrError1Msg>неверный адрес, адрес должен включать символ '@'</emailAddrError1Msg>
+<emailInputErrorMsg>включают недопустимый символ.</emailInputErrorMsg>
+<emailSMTPErrorMsg>Пожалуйста, ввдите имя сервера</emailSMTPErrorMsg>
+<emailInputAddrMsg>Пожалуйста, ввдите адрес получателя</emailInputAddrMsg>
+<emailFormAddrMsg>Пожалуйста, ввдите адрея отправителя</emailFormAddrMsg>
+<emailUserErrorMsg>Пожалуйста, ввдите имя пользователя </emailUserErrorMsg>
+<emailPasswdErrorMsg>Пожалуйста, ввдите пароль</emailPasswdErrorMsg>
+<emailServerNameErrorMsg>неправильное имя сервера, включают недопустимый символ</emailServerNameErrorMsg>
+<emailFormAddrErrorMsg>неправильный адрес получателя,включают недопустимый символ</emailFormAddrErrorMsg>
+<emailToAddrErrorMsg>неправильный адрес отправителя,включают недопустимый символ</emailToAddrErrorMsg>
+<emailSubjectErrorMsg>неправильная тема,включают недопустимый символ</emailSubjectErrorMsg>
+<emailMessageErrorMsg>Неправильное сообщение,включают недопустимый символ</emailMessageErrorMsg>
+<emailUserInputErrorMsg>неправильное имя пользователя,включают недопустимый символ</emailUserInputErrorMsg>
+<emailPasswdInputErrorMsg>неправильный пароль,включают недопустимый символ</emailPasswdInputErrorMsg>
+<emailMessageLenErrorMsg>максимальная длина сообщения составляет 255</emailMessageLenErrorMsg>
+<emailPortErrorMsg>включают недопустимый символ</emailPortErrorMsg>
+<emailPortError1Msg>неправильный порт(1-65535)</emailPortError1Msg>
+</emailhtml>
+
+<timeplanhtml>
+<workmodeCleanSpan>Удалить</workmodeCleanSpan>
+<weekmodeCleanSpan>Удалить</weekmodeCleanSpan>
+<workdayspan>Рабочие дни</workdayspan>
+<weekendspan>Выходные дни</weekendspan>
+<Workmodetimeperiod1span>Время1</Workmodetimeperiod1span>
+<Workmodetimeperiod2span>Время2</Workmodetimeperiod2span>
+<Workmodetimeperiod3span>Время3</Workmodetimeperiod3span>
+<Weekkmodetimeperiod1span>Время1</Weekkmodetimeperiod1span>
+<Weekkmodetimeperiod2span>Время2</Weekkmodetimeperiod2span>
+<Weekkmodetimeperiod3span>Время3</Weekkmodetimeperiod3span>
+<weeksunspan>ВС.</weeksunspan>
+<weekmonspan>ПН.</weekmonspan>
+<weektuespan>ВТ.</weektuespan>
+<weekwedspan>СР.</weekwedspan>
+<weekthuspan>ЧТ.</weekthuspan>
+<weekfrispan>ПТ.</weekfrispan>
+<weeksatspan>СБ.</weeksatspan>
+</timeplanhtml>
+
+<mdhtml>
+<AreaSpan>Площадь:</AreaSpan>
+<StatusSpan>Статус:</StatusSpan>
+<StatusEnableSpan>ВКЛ.</StatusEnableSpan>
+<SensibilitySpan>Чувствительность:</SensibilitySpan>
+<SensibilityveryhighSpan>Очень высокая</SensibilityveryhighSpan>
+<SensibilityhighSpan>Высокая</SensibilityhighSpan>
+<SensibilitynormalSpan>Средняя</SensibilitynormalSpan>
+<SensibilitylowSpan>Низкая</SensibilitylowSpan>
+<SelectAllSpan>Выбрать все</SelectAllSpan>
+<CleamAllSpan>Удалить все</CleamAllSpan>
+<ActionSpan>Действие:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<SendEmailSpan>Второй E-mail</SendEmailSpan>
+<EmailwithPictureSpan>С изображением</EmailwithPictureSpan>
+<OutputSpan>Выход:</OutputSpan>
+<TriggerAlarmOutputSpan>Выход триггера сигнализации</TriggerAlarmOutputSpan>
+<TriggerAlarmAudioSpan>Trigger Alarm Аудио</TriggerAlarmAudioSpan>
+<ScheduleSpan>Расписание:</ScheduleSpan>
+<ScheduleUsetheweekmodeSpan>Режим Неделя</ScheduleUsetheweekmodeSpan>
+<ScheduleUsetheworkmodeSpan>Режим Работы</ScheduleUsetheworkmodeSpan>
+<ScheduleAlltimedaySpan>Все День Время</ScheduleAlltimedaySpan>
+<MdSelectAllSpan>Выбрать все</MdSelectAllSpan>
+<MdCleanAllSpan>Удалить все</MdCleanAllSpan>
+<MdTimeSpan>Время</MdTimeSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<MdErrorMsg>недопустимое значение!</MdErrorMsg>
+<AlarmRecInputLabel>Сигнализация с записью</AlarmRecInputLabel>
+<AlarmSnapInputLabel>Сигнализация со сменными</AlarmSnapInputLabel>
+<SendToFtpLabel>Загрузить FTP</SendToFtpLabel>
+<FtpUploadRecLabel>Загрузить FTP</FtpUploadRecLabel>
+</mdhtml>
+
+
+<alarminhtml>
+<AlarmInSpan>Вход тревоги:</AlarmInSpan>
+<StatusSpan>Статус:</StatusSpan>
+<EnableSpan>ВКЛ.</EnableSpan>
+<ActivemodeSpan>Активный режим</ActivemodeSpan>
+<ActivemodeLowSpan>Низкий</ActivemodeLowSpan>
+<ActivemodeHighSpan>Высокий</ActivemodeHighSpan>
+<ActionSpan>Действие:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<EMailSendEmailSpan>ВыслатьE-Mail</EMailSendEmailSpan>
+<EMailEmailwithPictureSpan>С изображениями</EMailEmailwithPictureSpan>
+<OutputSpan>Выход:</OutputSpan>
+<OutputTriggerAlarmOutputSpan>Выход триггера сигнализации</OutputTriggerAlarmOutputSpan>
+<ScheduleSpan>Расписание:</ScheduleSpan>
+<ScheduleUsetheweekmodeSpan>Режим Неделя</ScheduleUsetheweekmodeSpan>
+<ScheduleUsetheworkmodeSpan>Режим Работы</ScheduleUsetheworkmodeSpan>
+<ScheduleAlltimesdaySpan>Все День Время</ScheduleAlltimesdaySpan>
+<workdayspan>Рабочие дни</workdayspan>
+<weekendspan>Выходные дни</weekendspan> 
+<workmodeCleanSpan>Удалить</workmodeCleanSpan>
+<workmodeCloseSpan>Закрыть</workmodeCloseSpan>
+<Workmodetimeperiod1span>Время1</Workmodetimeperiod1span>
+<Workmodetimeperiod2span>Время2</Workmodetimeperiod2span>
+<Workmodetimeperiod3span>Время3</Workmodetimeperiod3span>
+<Weekkmodetimeperiod1span>Время1</Weekkmodetimeperiod1span>
+<Weekkmodetimeperiod2span>Время2</Weekkmodetimeperiod2span>
+<Weekkmodetimeperiod3span>Время3</Weekkmodetimeperiod3span>
+<weekmodeCleanSpan>Удалить</weekmodeCleanSpan>
+<weekmodeCloseSpan>Закрыть</weekmodeCloseSpan>
+<TimeSetSpan>Время</TimeSetSpan>
+<weeksunspan>ВС.</weeksunspan>
+<weekmonspan>ПН.</weekmonspan>
+<weektuespan>ВТ.</weektuespan>
+<weekwedspan>СР.</weekwedspan>
+<weekthuspan>ЧТ.</weekthuspan>
+<weekfrispan>ПТ.</weekfrispan>
+<weeksatspan>СБ.</weeksatspan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<ErrorMsg>недопустимое значение</ErrorMsg>
+<AlarmOutSpan>Выход тревоги:</AlarmOutSpan>
+<StatusSpan>Статус:</StatusSpan>
+<EnableSpan>Вкл.</EnableSpan>
+<ActivemodeSpan>Активный режим:</ActivemodeSpan>
+<ActivemodeOpenSpan>Открывать</ActivemodeOpenSpan>
+<ActivemodeGrounedSpan>Закрыть</ActivemodeGrounedSpan>
+<ContinuetimeSpan>Время:</ContinuetimeSpan>
+<aocontinueTimeSpan>Второй</aocontinueTimeSpan>
+<AlarmRecInputLabel>Сигнализация с записью</AlarmRecInputLabel>
+<AlarmSnapInputLabel>Сигнализация со сменными</AlarmSnapInputLabel>
+<SendToFtpLabel>Загрузить FTP</SendToFtpLabel>
+<FtpUploadRecLabel>Загрузить FTP</FtpUploadRecLabel>
+</alarminhtml>
+
+
+<alarmouthtml>
+<AlarmOutSpan>Выход тревоги:</AlarmOutSpan>
+<StatusSpan>Статус:</StatusSpan>
+<EnableSpan>Вкл</EnableSpan>
+<ActivemodeSpan>Активный режим:</ActivemodeSpan>
+<ActivemodeOpenSpan>Открывать</ActivemodeOpenSpan>
+<ActivemodeGrounedSpan>Закрыть</ActivemodeGrounedSpan>
+<ContinuetimeSpan>Время:</ContinuetimeSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+</alarmouthtml>
+
+<autosnaphtml>
+<SnapSpan>Захвата:</SnapSpan>
+<ntervalSpan>Интервал:</ntervalSpan>
+<ntervalMinutesSpan>Mинут</ntervalMinutesSpan>
+<ActionSpan>Действие:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<SendbyEmailSpan>Отправить</SendbyEmailSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<InputErrorMsg>включают недопустимый символ.</InputErrorMsg>
+<IntervalErrorMsg>интервал является недействительным (1-1440)</IntervalErrorMsg>
+<SettingSpan>Настройки Email </SettingSpan>
+<StatusSpan>Статус:</StatusSpan>
+<AutoSnapEnableSpan>Вкл</AutoSnapEnableSpan>
+</autosnaphtml>
+
+<timehtml>
+<Sunday>ВС.</Sunday>
+<Monday>ПН.</Monday>
+<Tuesday>ВТ.</Tuesday>
+<Wednesday>СР.</Wednesday>
+<Thursday>ЧТ.</Thursday>
+<Friday>ПТ.</Friday>
+<Saturday>СБ.</Saturday>
+<Januar>ЯНВ</Januar>
+<Februar>ФЕВ </Februar>
+<Marts>МАР </Marts>
+<April>АПР </April>
+<Maj>МАЙ</Maj>
+<Juni>ИЮНЬ </Juni>
+<Juli>ИЮЛЬ </Juli>
+<August>АВГ </August>
+<September>СЕНТ</September>
+<Oktober>ОКТ</Oktober>
+<November>НОЯ </November>
+<December>ДЕК </December>
+<AdjustSpan>Регулировать:</AdjustSpan>
+<CameradatetimeSpan>Дата &amp; Время:</CameradatetimeSpan>
+<SetmodeSpan>Режим:</SetmodeSpan>
+<SetmodeKeepcurrentsettingSpan>Держите ток</SetmodeKeepcurrentsettingSpan>
+<SetmodeManualsettingSpan>Руководство</SetmodeManualsettingSpan>
+<SetmodeManualsettingDateSpan>Дата :</SetmodeManualsettingDateSpan>
+<SetmodeManualsettingTimeSpan>Время:</SetmodeManualsettingTimeSpan>
+<SetmodeSyncwithcomputerSpan>Синхронизация с компьютером</SetmodeSyncwithcomputerSpan>
+<SetmodeSyncwithcomputerPCTimeSpan>Время компьютера:</SetmodeSyncwithcomputerPCTimeSpan>
+<SetmodeSyncwhitntpSpan>Синхронизация с NTP</SetmodeSyncwhitntpSpan>
+<SetmodeSyncwhitntpNTPservernameSpan>Имя сервера:</SetmodeSyncwhitntpNTPservernameSpan>
+<SetmodeSyncwhitntpIntervalSpan>Интервал:</SetmodeSyncwhitntpIntervalSpan>
+<SetmodeSyncwhitntpIntervalhourSpan>Час</SetmodeSyncwhitntpIntervalhourSpan>
+<TimezoneSpan>Пояс времени:</TimezoneSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<TimezoneKeepcurrentsettingSpan>Держите ток</TimezoneKeepcurrentsettingSpan>
+<TimezoneInternationalDateLineWestSpan>(GMT-12:00)Запад даты международной линии</TimezoneInternationalDateLineWestSpan>
+<TimezoneMidwayIslandSamoaSpan>(GMT-11:00) Остров Мидуэй, Самоа</TimezoneMidwayIslandSamoaSpan>
+<TimezoneHawaiiSpan>(GMT-10:00) Гавайи</TimezoneHawaiiSpan>
+<TimezoneAlaskaSpan>(GMT-09:00) Аляска</TimezoneAlaskaSpan>
+<TimezonePacificTimeUSCanadaTijuanaSpan>(GMT-08:00) Тихоокеанское время (США и Канада) Тихуана</TimezonePacificTimeUSCanadaTijuanaSpan>
+<TimezoneMountainTimeUSCanadaSpan>(GMT-07:00)Горное время (США и Канада)</TimezoneMountainTimeUSCanadaSpan>
+<TimezoneChihuahuaLaPazMazatlanSpan>(GMT-07:00) Чихуахуа, Lapaz, Масатлан</TimezoneChihuahuaLaPazMazatlanSpan>
+<TimezoneArizonaSpan>(GMT-07:00) Аризона</TimezoneArizonaSpan>
+<TimezoneSaskatchewanSpan>(GMT-06:00) Саскачеван</TimezoneSaskatchewanSpan>
+<TimezoneGuaddlajaraMexicoCityMonterreySpan>(GMT-06:00)Гвадалахара, Мексика, Монтеррей</TimezoneGuaddlajaraMexicoCityMonterreySpan>
+<TimezoneCentralTimeUSCanadaSpan>(GMT-06:00) Центральное время (США и Канада)</TimezoneCentralTimeUSCanadaSpan>
+<TimezoneCentralAmericaSpan>(GMT-06:00)Середина Амерки</TimezoneCentralAmericaSpan>
+<TimezoneIndianaEastSpan>(GMT-05:00) Индиана (Восток)</TimezoneIndianaEastSpan>
+<TimezoneEasternTimeUSCanadaSpan>(GMT-05:00) Восточное время США Канада</TimezoneEasternTimeUSCanadaSpan>
+<TimezoneBogotaLimaQuitoSpan>(GMT-05:00)Богота, Лима, Кито</TimezoneBogotaLimaQuitoSpan>
+<TimezoneSantiagoSpan>(GMT-04:00)Сантьяго</TimezoneSantiagoSpan>
+<TimezoneCaracasLaPazSpan>(GMT-04:00) Каракас, Ла-Пас</TimezoneCaracasLaPazSpan>
+<TimezoneAtlanticTimeCanadaSpan>(GMT-04:00) Атлантическое время (Канада)</TimezoneAtlanticTimeCanadaSpan>
+<TimezoneNenfoundLandSpan>(GMT-03:30) Ньюфаундленд</TimezoneNenfoundLandSpan>
+<TimezoneGreenlandSpan>(GMT-03:00) Гренландия</TimezoneGreenlandSpan>
+<TimezoneBuenosAiresGeorgentownSpan>(GMT-03:00) Буэнос-Айрес</TimezoneBuenosAiresGeorgentownSpan>
+<TimezoneBrasiliaSpan>(GMT-03:00)Бразилиа</TimezoneBrasiliaSpan>
+<TimezoneMidAtlanticSpan>(GMT-02:00) Срединно-Атлантического</TimezoneMidAtlanticSpan>
+<TimezoneCapeVerdeIsSpan>(GMT-01:00) Кабо-Верде</TimezoneCapeVerdeIsSpan>
+<TimezoneAzoresSpan>(GMT-01:00)Азорские острова</TimezoneAzoresSpan>
+<TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan>(GMT-00:00) Среднее время по Гринвичу: Дублин, Эдинбург, Лиссабон, Лондон</TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan>
+<TimezoneCasablancamonroviaSpan>(GMT+00:00) Касабланка, Монровия</TimezoneCasablancamonroviaSpan>
+<TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan>(GMT+01:00) Амстердам, Берлин, Берн, Рим, Стокгольм, Вена</TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan>
+<TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan>(GMT+01:00) Белград, Братислава, Будапешт, Любляна, Прага</TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan>
+<TimezoneBrusselsCopenhagenMadridParisSpan>(GMT+01:00) Брюссель, Копенгаген, Мадрид, Париж</TimezoneBrusselsCopenhagenMadridParisSpan>
+<TimezoneSarajevoSkopjeWarsawZagrebSpan>(GMT+01:00) Сараево, Скопье, Варшава, Загреб</TimezoneSarajevoSkopjeWarsawZagrebSpan>
+<TimezoneWestCentralAfricaSpan>(GMT+01:00) Центральная Западная Африка</TimezoneWestCentralAfricaSpan>
+<TimezonehensIstanbulMinskSpan>(GMT+02:00) Афины, Стамбул, Минск</TimezonehensIstanbulMinskSpan>
+<TimezoneBucharestSpan>(GMT+02:00) Бухарест</TimezoneBucharestSpan>
+<TimezoneCairoSpan>(GMT+02:00) Каир</TimezoneCairoSpan>
+<TimezonerarePretoriaSpan>(GMT+02:00) Хараре, Претория</TimezonerarePretoriaSpan>
+<TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan>(GMT+02:00) Хельсинки, Киев, Рига, София, Таллин, Вильнюс</TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan>
+<TimezoneJerusalemSpan>(GMT+02:00) Иерусалим</TimezoneJerusalemSpan>
+<TimezoneBaghdadSpan>(GMT+03:00) Багдад</TimezoneBaghdadSpan>
+<TimezoneKuwaitRiyadhSpan>(GMT+03:00) Кувейт, Эр-Рияд</TimezoneKuwaitRiyadhSpan>
+<TimezoneMoscowStPetersburgVolgogradSpan>(GMT+03:00) Москва, Санкт-Петербург, Волгоград</TimezoneMoscowStPetersburgVolgogradSpan>
+<TimezoneNairobiSpan>(GMT+03:00) Найроби</TimezoneNairobiSpan>
+<TimezoneTehranSpan>(GMT+03:30) Тегеран</TimezoneTehranSpan>
+<TimezoneAbuDhabiMuscatSpan>(GMT+04:00)Абу-Даби, Маскат</TimezoneAbuDhabiMuscatSpan>
+<TimezoneBakuTbilisiYerevanSpan>(GMT+04:00)Баку, Тбилиси, Ереван</TimezoneBakuTbilisiYerevanSpan>
+<TimezoneKabulSpan>(GMT+04:30) Кабул</TimezoneKabulSpan>
+<TimezoneEkaterinburgSpan>(GMT+05:00)Екатеринбург</TimezoneEkaterinburgSpan>
+<TimezoneIslamabadKarachiTashkentSpan>(GMT+05:00)Исламабад, Карачи, Ташкент</TimezoneIslamabadKarachiTashkentSpan>
+<TimezoneChennaiKolkataMumbaiNewDelhiSpan>(GMT+05:30)Ченнаи, Калькутта, Мумбаи, Нью-Дели</TimezoneChennaiKolkataMumbaiNewDelhiSpan>
+<TimezoneKathmanduSpan>(GMT+05:45) Катманду</TimezoneKathmanduSpan>
+<TimezoneAlmatyNovosibirskSpan>(GMT+06:00) Алматы, Новосибирск</TimezoneAlmatyNovosibirskSpan>
+<TimezoneAstanaDhakaSpan>(GMT+06:00) Астана Дакка</TimezoneAstanaDhakaSpan>
+<TimezoneSriJayawardenepuraSpan>(GMT+06:00) Шри Ланка</TimezoneSriJayawardenepuraSpan>
+<TimezoneRangoonSpan>(GMT+06:30) Рангун</TimezoneRangoonSpan>
+<TimezoneBangkokHanoiJakartaSpan>(GMT+07:00) Ханой, Бангкок, Джакарта</TimezoneBangkokHanoiJakartaSpan>
+<TimezoneKrasnoyarskSpan>(GMT+07:00) Красноярск</TimezoneKrasnoyarskSpan>
+<TimezoneBeijingChongqingHongKongUrumqiSpan>(GMT+08:00) Пекин, Чунцин, Гонконг, Урумчи</TimezoneBeijingChongqingHongKongUrumqiSpan>
+<TimezoneIrkutskUlaanBataarSpan>(GMT+08:00) Иркутск, Улан-Батор</TimezoneIrkutskUlaanBataarSpan>
+<TimezoneKualaLumpurSingaporeSpan>(GMT+08:00)Куала-Лумпур, Сингапур</TimezoneKualaLumpurSingaporeSpan>
+<TimezonePerthSpan>(GMT+08:00) Перт</TimezonePerthSpan>
+<TimezoneTaipeiSpan>(GMT+08:00) Тайбэй</TimezoneTaipeiSpan>
+<TimezoneOsakaSapporoTokyoSpan>(GMT+09:00) Осака, Саппоро, Токио</TimezoneOsakaSapporoTokyoSpan>
+<TimezoneSeoulSpan>(GMT+09:00) Сеул</TimezoneSeoulSpan>
+<TimezoneYakutskSpan>(GMT+09:00) Якутск</TimezoneYakutskSpan>
+<TimezoneAdelaideSpan>(GMT+09:30) Аделаида</TimezoneAdelaideSpan>
+<TimezoneBrisbaneSpan>(GMT+10:00)Брисбен</TimezoneBrisbaneSpan>
+<TimezoneCanberraMelbourneSydneySpan>(GMT+10:00) Канберра, Мельбурн, Сидней</TimezoneCanberraMelbourneSydneySpan>
+<TimezoneGuamPortMoresbySpan>(GMT+10:00) Гуам, Порт-Морсби</TimezoneGuamPortMoresbySpan>
+<TimezoneHobartSpan>(GMT+10:00) Хобарт</TimezoneHobartSpan>
+<TimezoneVladivostokSpan>(GMT+10:00) Владивосток</TimezoneVladivostokSpan>
+<TimezoneMagadanSolomonIsNewSpan>(GMT+11:00) Магадан, SolomonIs., Новая Каледония</TimezoneMagadanSolomonIsNewSpan>
+<TimezoneAucklandWellingtonSpan>(GMT+12:00)Окленд, Веллингтон</TimezoneAucklandWellingtonSpan>
+<TimezoneFijiKamchatkaMarshallIsSpan>(GMT+12:00) Фиджи, Камчатка, Маршалловы.</TimezoneFijiKamchatkaMarshallIsSpan>
+<TimezoneNukualofaSpan>(GMT+13:00) Нукуалофа</TimezoneNukualofaSpan>
+<AutomaticallyadjustclockfordaylightsavingtimechangesSpan>Автоматическая настройка часов на летнее и зимнее время</AutomaticallyadjustclockfordaylightsavingtimechangesSpan>
+<YearErrorMsg>Ваше время на компьютере является недействительным, время должны между 1971-01-01 к 2036-12-31</YearErrorMsg>
+<NtpErrorMsg>Пожалуйста, введите имя сервера NTP</NtpErrorMsg>
+<NtpServerErrorMsg>NTP имя сервера с ошибками</NtpServerErrorMsg>
+<AutoUpdateTimeSpan>Время Автоматическое обновление:</AutoUpdateTimeSpan>
+</timehtml>
+
+
+
+<initializemainhtml>
+<InitializeSpan>Инициализация</InitializeSpan>
+<RebootSpan>Перезагружать:</RebootSpan>
+<FactorydefaultSpan>Заводская настройка:</FactorydefaultSpan>
+<BackupsettingdataSpan>Резервное копирование данных:</BackupsettingdataSpan>
+<BackupsettingdataSaveSpan>Резервное копирование Установка данных Сохранить</BackupsettingdataSaveSpan>
+<RestoreSpan>Восстановление:</RestoreSpan>
+<Restorebrower>Брауэр...</Restorebrower>
+<RestoreOKSpan>Применять</RestoreOKSpan>
+<UpgradeSpan>Обновление:</UpgradeSpan>
+<UpgradeOKSpan>Применять</UpgradeOKSpan>
+<RebootOKSpan>Применять</RebootOKSpan>
+<FactoryOKSpan>Применять</FactoryOKSpan>
+<Upgradebrower>Брауэр...</Upgradebrower>
+<RebootMsg>IP камера будет перезагружена. Вы уверены?</RebootMsg>
+<RebootWaitMsg>IP-камера перезагружается,пожалуйста, не выключайте камеру ......</RebootWaitMsg>
+<ResetMsg>Данные настройки будут сброшены. Вы уверены?</ResetMsg>
+<InputFileMsg>Пожалуйста, введите файл</InputFileMsg>
+<UpgradeMsg>IP камера будет обновить. Вы уверены?</UpgradeMsg>
+<UpgradeWaitMsg>IP-камера модернизирует, пожалуйста, не выключайте камеру ......</UpgradeWaitMsg>
+<UploadMsg>IPcam будет восстановить. Ты уверен?</UploadMsg>
+<UploadWaitMsg>IP-камера будет загрузки, пожалуйста, не выключайте камеру ......</UploadWaitMsg>
+<RebootOKSpan>OK</RebootOKSpan>
+<ResetOKSpan>OK</ResetOKSpan>
+</initializemainhtml>
+
+
+
+
+<deviceinfohtml>
+<CameranameSpan>Название камеры:</CameranameSpan>
+<SerialNumberSpan>Номер серии:</SerialNumberSpan>
+<CameraTypeSpan>Модель камеры:</CameraTypeSpan>
+<connectionSpan>Cоединения:</connectionSpan>
+<SoftwareVersionSpan>Программное обеспечение версии:</SoftwareVersionSpan>
+<NetworkInfoSpan>Информация сети</NetworkInfoSpan>
+<MacaddressSpan>Mac адрес:</MacaddressSpan>
+<IPaddressSpan>IP адрес:</IPaddressSpan>
+<SubnetmaskSpan>Маска подсети:</SubnetmaskSpan>
+<GatewaySpan>Шлюз:</GatewaySpan>
+<PrimaryDNSSpan>Первичный DNS:</PrimaryDNSSpan>
+<SecondaryDNSSpan>Во-вторых DNS:</SecondaryDNSSpan>
+<StartTimeSpan>Время начала:</StartTimeSpan>
+<HardVersionSpan>Версия хардвера:</HardVersionSpan>
+</deviceinfohtml>
+
+<basehtml>
+<LanguageSpan>Язык:</LanguageSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+</basehtml>
+
+<sysloghtml>
+<syslogcleanspan>Удалить</syslogcleanspan>
+<gotospan>Перейти к:</gotospan>
+<syslogFirstspan>Первая</syslogFirstspan>
+<syslogUpspan>Предыдущая</syslogUpspan>
+<syslogDownspan>Следующая</syslogDownspan>
+<syslogEndspan>Последняя</syslogEndspan>
+<syslogBackupspan>Копировать</syslogBackupspan>
+<SearchSpan>Поиск</SearchSpan>
+<SearchTimeSpan>Время:</SearchTimeSpan>
+<SearchTypeSpan>Tип:</SearchTypeSpan>
+<SearchTypeAllSpan>Все</SearchTypeAllSpan>
+<SearchTypeAlarmSpan>Тревога</SearchTypeAlarmSpan>
+<SearchTypeOperationSpan>Операция</SearchTypeOperationSpan>
+<TabelNumSpan>Число</TabelNumSpan>
+<TabelTimeSpan>Время</TabelTimeSpan>
+<TabelTypeSpan>Тип</TabelTypeSpan>
+<TabelDetailedSpan>Подробный</TabelDetailedSpan>
+<MsgStartup>Включите сетевую камеру</MsgStartup>
+<MsgModifyTime>Изменить время</MsgModifyTime>
+<MsgRomoteLogin>Удаленный Войти</MsgRomoteLogin>
+<MsgSendEmail>Отправить E-Mail, Получатель:</MsgSendEmail>
+<MsgTimeRecord>Время Записи Начинается</MsgTimeRecord>
+<MsgManualRecord>Ручная запись начинается</MsgManualRecord>
+<MsgAlarmRecord>Запись тревоги начинается</MsgAlarmRecord>
+<MsgModifyNetwork>Изменить сеть</MsgModifyNetwork>
+<MsgIOAlarmIn>IO вход тревоги</MsgIOAlarmIn>
+<MsgIOAlarmOut>IO выход тревоги</MsgIOAlarmOut>
+<MsgMDAlarmStart>Тревоги об детекторе  движения начается</MsgMDAlarmStart>
+<MsgMDAlarmEnd>Тревоги об детекторе  движения окончится</MsgMDAlarmEnd>
+<MsgODAlarmStart>Тревоги при обнаружении Обложка начинается</MsgODAlarmStart>
+<MsgODAlarmEnd>Тревоги при обнаружении Обложка окончится</MsgODAlarmEnd>
+<Sunday>ВС.</Sunday>
+<Monday>ПН.</Monday>
+<Tuesday>ВТ.</Tuesday>
+<Wednesday>СР.</Wednesday>
+<Thursday>ЧТ.</Thursday>
+<Friday>ПТ.</Friday>
+<Saturday>СБ.</Saturday>
+<Januar>ЯНВ</Januar>
+<Februar>ФЕВ</Februar>
+<Marts>МАР </Marts>
+<April>АПР</April>
+<Maj>МАЙ </Maj>
+<Juni>ИЮНЬ  </Juni>
+<Juli>ИЮЛЬ</Juli>
+<August>АВГ </August>
+<September>СЕНТ </September>
+<Oktober>ОКТ </Oktober>
+<November>НОЯ  </November>
+<December>ДЕК </December>
+<ErrorTime>Неправильное время!</ErrorTime>
+<MINORVCAALARMSTARTDEFENCE>Оборона начинается</MINORVCAALARMSTARTDEFENCE>
+<MINORVCAALARMSTOPDEFENCE>Оборона окончится</MINORVCAALARMSTOPDEFENCE>
+<MINORVCAALARMREGISTERCMD>Зарегистрироваться команду</MINORVCAALARMREGISTERCMD>
+</sysloghtml>
+
+<ptzhtml>
+<PropertySpan>Свойство</PropertySpan>
+<ProtocolSpan>Протокол:</ProtocolSpan>
+<BaudRateSpan>Скорость передачи данных:</BaudRateSpan>
+<DataBitSpan>Биты данных:</DataBitSpan>
+<StopBitSpan>Стоп бит:</StopBitSpan>
+<ParitySpan>Паритер:</ParitySpan>
+<AddressSpan>Адрес:</AddressSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<addressErrorMsg>Адрес Между (0~255)</addressErrorMsg>
+<FilpSpan>Флип:</FilpSpan>
+<MirrorSpan>Зеркало:</MirrorSpan>
+<FlipOnSpan>Вкл.</FlipOnSpan>
+<FlipOffSpan>Выкл</FlipOffSpan>
+<MirrorOnSpan>Вкл.</MirrorOnSpan>
+<MirrorOffSpan>Выкл</MirrorOffSpan>
+<TypeSpan>PTZ Tип:</TypeSpan>
+<MotorSpan>двигатель</MotorSpan>
+<PanspdSpan>Скорость:</PanspdSpan>
+<TiltspdSpan>Вертикальная скорость:</TiltspdSpan>
+<PanspdHighSpan>Высокая</PanspdHighSpan>
+<PanspdMidSpan>Средняя</PanspdMidSpan>
+<PanspdLowSpan>Низкая</PanspdLowSpan>
+<VerticalHighSpan>Высокая</VerticalHighSpan>
+<VerticalMidSpan>Средняя</VerticalMidSpan>
+<VerticalLowSpan>Низкая</VerticalLowSpan>
+<StayTimeSpan>Время пребывания:</StayTimeSpan>
+<PatrolsSpan>Патрули:</PatrolsSpan>
+<Track0Span>Tрек1:</Track0Span>
+<Track1Span>Tрек2:</Track1Span>
+<Track2Span>Tрек3:</Track2Span>
+<Track3Span>Tрек4:</Track3Span>
+<SecondSpan>Второй</SecondSpan>
+</ptzhtml>
+
+<odhtml>
+<OcclusionSpan>Обнаружение окклюзия</OcclusionSpan>
+<StatusSpan>Статус:</StatusSpan>
+<EnableSpan>Вкл.</EnableSpan>
+<SensibilitySpan>Чувствительность:</SensibilitySpan>
+<SensibilityveryhighSpan>Очень высокая</SensibilityveryhighSpan>
+<SensibilityhighSpan>Высокая</SensibilityhighSpan>
+<SensibilitynormalSpan>Нормальная</SensibilitynormalSpan>
+<SensibilitylowSpan>Низкая</SensibilitylowSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+</odhtml>
+
+<recordhtml>
+<RecordSpan>Запись</RecordSpan>
+<FileTimeSpan>Время Файла:</FileTimeSpan>
+<Filetime0Span>Выключить</Filetime0Span>
+<MinuteSpan>Минут</MinuteSpan>
+<ManualRecordSpan>Ручная запись:</ManualRecordSpan>
+<manualrecOnSpan>Вкл.</manualrecOnSpan>
+<manualrecOffSpan>Выкл.</manualrecOffSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<NoStorageMsg>Нет карты SD Может Не Запишите!</NoStorageMsg>
+<ManualRecordChnSpan>Поток:</ManualRecordChnSpan>
+<MainFlowSpan>Главный поток</MainFlowSpan>
+<MinorFlowSpan>Вторичный поток</MinorFlowSpan>
+<ScheduleUsetheweekmodeSpan>Режим Неделя</ScheduleUsetheweekmodeSpan>
+<ScheduleUsetheworkmodeSpan>Режим работы</ScheduleUsetheworkmodeSpan>
+<ScheduleAlltimedaySpan>Все время</ScheduleAlltimedaySpan>
+<ScheduleSpan>Расписание:</ScheduleSpan>
+<TimerRecordSpan>Таймер Запись:</TimerRecordSpan>
+<timerrecOnSpan>Вкл.</timerrecOnSpan>
+<timerrecOffSpan>Выкл.</timerrecOffSpan>
+<TimeSpan>Время</TimeSpan>
+</recordhtml>
+
+<storagehtml>
+<SdcardInfoSpan>Информация SD-карты</SdcardInfoSpan>
+<StatusSpan>Статус:</StatusSpan>
+<sdstatusMsg>Не готовить</sdstatusMsg>
+<refresh>обновление</refresh>
+<removeBT>удалять</removeBT>
+<mountBT>крепление</mountBT>
+<frt>формат</frt>
+<brower>Брауэр...</brower>
+<SDCardFormatMsg>данные SD карты будут терять. Вы уверены?</SDCardFormatMsg>
+<SDCardRemoveMsg>данные SD карты будут удалить. Ты уверен?</SDCardRemoveMsg>
+<SDCardWaitMsg>SD-карта форматирования. пожалуйста, не выключайте камеру ......</SDCardWaitMsg>
+</storagehtml>
+
+<loginhtml>
+<LanguageSpan>Язык:</LanguageSpan>
+<StreamTypeSpan>Поток:</StreamTypeSpan>
+<streamHDSpan>Главный поток</streamHDSpan>
+<streamFluentSpan>Вторичный поток</streamFluentSpan>
+<ApplySpan>Применять</ApplySpan>
+<DownloadSpan>Загрузить плеер</DownloadSpan>
+</loginhtml>
+
+<wifihtml>
+<WifiStatusSpan>Wi-Fi Статус:</WifiStatusSpan>
+<WifiEnableSpan>Вкл.</WifiEnableSpan>
+<CurHotPointSpan>нынешная горячая точка</CurHotPointSpan>
+<CurHotPointSSIDSpan>SSID:</CurHotPointSSIDSpan>
+<CurHotPointStatusSpan>Подключите Статус:</CurHotPointStatusSpan>
+<ConfSSIDSpan>SSID:</ConfSSIDSpan>
+<AuthModeSpan>Шифрование:</AuthModeSpan>
+<WPAPSKKeySpan>Пароль:</WPAPSKKeySpan>
+<ShowPasswordSpan>Показать пароль</ShowPasswordSpan>
+<SearchResultHeadSignalSpan>Сигнал</SearchResultHeadSignalSpan>
+<SearchResultHeadSSIDSpan>SSID</SearchResultHeadSSIDSpan>
+<SearchResultHeadAuthModeSpan>Шифрование</SearchResultHeadAuthModeSpan>
+<SearchResultHeadSearchSpan>Поиск</SearchResultHeadSearchSpan>
+<TestSpan>Тест</TestSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<DisconnectSpan>Отключить</DisconnectSpan>
+<ConnectSpan>Подключить</ConnectSpan>
+<TestConnectSpan>Подключите, пожалуйста, подождите минуточку!</TestConnectSpan>
+<TestConnectSuccessSpan>Успешно подключили!</TestConnectSuccessSpan>
+<TestConnectFailureSpan>Не удалось подключить!</TestConnectFailureSpan>
+<PasswdLengthErrorMsg>Неправильная длина пароля!</PasswdLengthErrorMsg>
+</wifihtml>
+
+<p2phtml>
+<P2PSpan>P2P:</P2PSpan>
+<P2PStatusSpan>Статус:</P2PStatusSpan>
+<p2pEnableSpan>Вкл.</p2pEnableSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<P2PIDSpan>ID:</P2PIDSpan>
+<P2PPwdSpan>Пароль:</P2PPwdSpan>
+</p2phtml>
+
+<hltalmproxyhtml>
+<StreamEnableSpan>Включить сервер:</StreamEnableSpan>
+<StreamTypeSpan>Тип режима:</StreamTypeSpan>
+<MainStramSpan>Основной поток</MainStramSpan>
+<SubStreamSpan>Суб-поток</SubStreamSpan>
+<StreamAddressSpan>Адрес сервера:</StreamAddressSpan>
+<ServerPortSpan>Порт сервера:</ServerPortSpan>
+<UsernameSpan>Имя пользователя:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<TimeoutSpan>Тайм-аут:</TimeoutSpan>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<PlatformSetSpan>Установить платформы</PlatformSetSpan>
+<RebootMsgSpan>Изменения параметров необходимо перезапустить вступили в силу!</RebootMsgSpan>
+</hltalmproxyhtml>
+
+<replayhtml>
+<PlaySpan>Воспроизводить</PlaySpan>
+<PauseSpan>Пауза</PauseSpan>
+<FramePlaySpan>Воспроизводить Рамки </FramePlaySpan>
+<FastPlaySpan>Ускоренное воспроизведение</FastPlaySpan>
+<StopSpan>Стоп</StopSpan>
+<FileListSpan>Список файлов:</FileListSpan>
+<CommonSpan>Общий</CommonSpan>
+<AlarmSpan>Тревога</AlarmSpan>
+<AllTypeSpan>Все</AllTypeSpan>
+<SearchResultHeadSSIDSpan>Время</SearchResultHeadSSIDSpan>
+<SearchResultHeadAuthModeSpan>Размер</SearchResultHeadAuthModeSpan>
+<dayNamesMinSunday>ВС.</dayNamesMinSunday>
+<dayNamesMinMonday>ПН.</dayNamesMinMonday>
+<dayNamesMinTuesday>ВТ.</dayNamesMinTuesday>
+<dayNamesMinWednesday>СР.</dayNamesMinWednesday>
+<dayNamesMinThursday>ЧТ.</dayNamesMinThursday>
+<dayNamesMinFriday>ПТ.</dayNamesMinFriday>
+<dayNamesMinSaturday>СБ.</dayNamesMinSaturday>
+<dayNamesSunday>Воскресенье</dayNamesSunday>
+<dayNamesMonday>Понедельник</dayNamesMonday>
+<dayNamesTuesday>Вторник</dayNamesTuesday>
+<dayNamesWednesday>Среда</dayNamesWednesday>
+<dayNamesThursday>Четверг</dayNamesThursday>
+<dayNamesFriday>Пятница</dayNamesFriday>
+<dayNamesSaturday>Суббота</dayNamesSaturday>
+<dayNamesShortSunday>ВС.</dayNamesShortSunday>
+<dayNamesShortMonday>ПН.</dayNamesShortMonday>
+<dayNamesShortTuesday>ВТ.</dayNamesShortTuesday>
+<dayNamesShortWednesday>СР.</dayNamesShortWednesday>
+<dayNamesShortThursday>ЧТ.</dayNamesShortThursday>
+<dayNamesShortFriday>ПТ.</dayNamesShortFriday>
+<dayNamesShortSaturday>СБ.</dayNamesShortSaturday>
+<monthNamesJanuar>Январь</monthNamesJanuar>
+<monthNamesFebruar>Февраль</monthNamesFebruar>
+<monthNamesMarts>Mарт</monthNamesMarts>
+<monthNamesApril>Aпрель</monthNamesApril>
+<monthNamesMaj>Maй</monthNamesMaj>
+<monthNamesJuni>Июнь</monthNamesJuni>
+<monthNamesJuli>Июль</monthNamesJuli>
+<monthNamesAugust>Aвгуст</monthNamesAugust>
+<monthNamesSeptember>Сентябрь</monthNamesSeptember>
+<monthNamesOktober>Oктябрь</monthNamesOktober>
+<monthNamesNovember>Ноябрь</monthNamesNovember>
+<monthNamesDecember>Декабрь</monthNamesDecember>
+<monthNamesShortJanuar>ЯНВ</monthNamesShortJanuar>
+<monthNamesShortFebruar>ФЕВ</monthNamesShortFebruar>
+<monthNamesShortMarts>МАР</monthNamesShortMarts>
+<monthNamesShortApril>АПР </monthNamesShortApril>
+<monthNamesShortMaj>МАЙ</monthNamesShortMaj>
+<monthNamesShortJuni>ИЮНЬ </monthNamesShortJuni>
+<monthNamesShortJuli>ИЮЛЬ</monthNamesShortJuli>
+<monthNamesShortAugust>АВГ </monthNamesShortAugust>
+<monthNamesShortSeptember>СЕНТ</monthNamesShortSeptember>
+<monthNamesShortOktober>ОКТ</monthNamesShortOktober>
+<monthNamesShortNovember>НОЯ</monthNamesShortNovember>
+<monthNamesShortDecember>ДЕК</monthNamesShortDecember>
+<closeText>Закрыть</closeText>
+<prevText>предыдущий</prevText>
+<nextText>следующий</nextText>
+<weekHeader>недель</weekHeader>
+<yearSuffix>год</yearSuffix>
+</replayhtml>
+
+<ftphtml>
+<ServerSpan>Сервер:</ServerSpan>
+<PortSpan>Порт:</PortSpan>
+<UserSpan>Использователь:</UserSpan>
+<PasswdSpan>Пароль:</PasswdSpan>
+<TestSpan>Тест</TestSpan>
+<PortErrMsg>Порт с ошибками!</PortErrMsg>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+<TestConnectSpan>Тестируете, минуточку！</TestConnectSpan>
+<TestConnectSuccessSpan>Успешно тестировали！</TestConnectSuccessSpan>
+<TestConnectFailureSpan>Не удалось тестировать！</TestConnectFailureSpan>
+</ftphtml>
+
+<cdhtml>
+<ShowSpan>Показать:</ShowSpan>
+<Region1Span>Область1</Region1Span>
+<Region2Span>Область2</Region2Span>
+<Region3Span>Область3</Region3Span>
+<Region4Span>Область4</Region4Span>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+</cdhtml>
+
+<audiohtml>
+<AudioSpan>Аудио</AudioSpan>
+<AencFormat>Закодированном формате:</AencFormat>
+<AencFormatChangeRebootMsgLabel>кодируется изменение формата необходимо перезагрузить！</AencFormatChangeRebootMsgLabel>
+<RebootWaitMsg>IP-камера перезагружается, пожалуйста, не выключайте камеру ......</RebootWaitMsg>
+<InputGainSpan>Входить усиление</InputGainSpan>
+<OutputVolSpan>Выходить звук</OutputVolSpan>
+<MainStreamAudioSpan>Основной поток:</MainStreamAudioSpan>
+<SubStreamAudioSpan>Вторичный поток:</SubStreamAudioSpan>
+<MainStreamAudioGrpOn>Вкл.</MainStreamAudioGrpOn>
+<MainStreamAudioGrpOff>Выкл.</MainStreamAudioGrpOff>
+<SubStreamAudioGrpOn>Вкл.</SubStreamAudioGrpOn>
+<SubStreamAudioGrpOff>Выкл.</SubStreamAudioGrpOff>
+<ApplySpan>Применять</ApplySpan>
+<CancelSpan>Удалить</CancelSpan>
+</audiohtml>
+
+</en>

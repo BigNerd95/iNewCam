@@ -1,0 +1,8 @@
+ctrl_interface=/var/run/wpa_supplicant
+ap_scan=1
+update_config=1
+network={
+	ssid="dbt_wifi"
+	#psk="qv12345678"
+	psk=cd77a048115190f1344247365ad68383a4eeb788c8d5c55d98c78962cb1c458b
+}

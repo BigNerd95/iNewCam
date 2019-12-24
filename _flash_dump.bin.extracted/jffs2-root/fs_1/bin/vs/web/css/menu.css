@@ -1,0 +1,38 @@
+﻿
+.mainHeader{width:553px;z-index:3020;position:relative; margin:0 auto;}
+.mainHeader ul,.mainHeader li{position:relative;margin:0;padding:0;list-style:none;z-index:3020;}
+
+.mainHeader ul{border-left:1px solid #151515;border-right:1px solid #454545; height:44px; width:552px;}
+
+.headerTop{background:#222;background:linear-gradient(bottom,#171717 0,#222 10%);background:-moz-linear-gradient(bottom,#171717 0,#222 10%);background:-webkit-gradient(linear,left bottom,left top,color-stop(0,#171717),color-stop(10%,#222));z-index:3020;height:52px;}
+
+.headerBottom{border-top:1px solid #4f4f4f;border-bottom:1px solid #000;position:relative;height:34px;background:#2c2c2c;background:linear-gradient(top,#3c3c3c 0,#1d1d1d 100%);background:-moz-linear-gradient(top,#3c3c3c 0,#1d1d1d 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#3c3c3c),color-stop(100%,#1d1d1d));z-index:3010;}
+
+.navmenu{width:560px;margin:0 auto;position:relative;font-size:14px;}
+.navmenu li{display:block;position:relative;float:left;border-top:0;border-left:1px solid #454545;border-bottom:0;border-right:1px solid #151515;}
+.navmenu li a{text-shadow:1px 1px 1px black;display:block;padding:8px 18px;color:#fff;text-decoration:none;white-space:nowrap;30px;}
+.navmenu li a:hover{padding-top:5px;border-top:3px solid #ff0000;}
+.newSash{position:relative;}
+.newSash .newSashSpan{background:url("newSashRed.gif") top left no-repeat;width:26px;height:26px;position:absolute;top:-1px;right:0;}
+.downArrow{display:block;border-color:#fff transparent transparent transparent;border-style:solid;border-width:3px;height:0;width:0;position:absolute;top:16px;right:8px;_border:none;}
+
+.navmenu div{position: absolute;visibility: hidden;	padding: 0;margin-left:-1px;margin-top:2px;	background: #313131;border:1px solid #222;}
+.navmenudiv a{position: relative;display: block;margin: 0;padding: 8px 10px;border-bottom:1px solid #fff;width: auto;white-space: nowrap;text-align: left;		text-decoration: none;background: #666;color: #fff;}
+.navmenu div a:hover{background: #222;border-top:none;border-left:3px solid #ff0000;color: #FFF;padding: 8px 10px;}
+
+/*
+.mainHeader{
+	width:627px;
+	z-index:3020;
+	margin:0 auto;
+	position:relative;
+}
+
+.navmenu li{
+	display:inline;	
+}
+
+.navmenu li a{
+	font-size:24px;
+	font-weight:bold;
+}*/

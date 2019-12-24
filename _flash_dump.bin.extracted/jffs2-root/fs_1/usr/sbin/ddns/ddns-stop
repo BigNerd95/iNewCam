@@ -1,0 +1,13 @@
+#!/bin/sh
+##################################################
+# ddns client
+# Author: leitz@sin360.net 2007.04.25
+##################################################
+DIRINCLUDE="/usr/sbin/ddns"
+
+. ${DIRINCLUDE}/ddnsrc
+
+${KILLALLCMD} ${DDNSSTARTCMD}
+echo "DDNS stoped"
+
+exit 0

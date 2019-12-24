@@ -1,0 +1,27 @@
+wifidev="ra0"
+export wifidev
+drvload="/ko/mt7601.sh load"
+drvunload="/ko/mt7601.sh unload"
+drvload_ap="/ko/mt7601ap.sh load"
+drvunload_ap="/ko/mt7601ap.sh unload"
+
+######## below modify by cgi #############
+# enable default 0, 
+# if not set enable, it is disable
+# enable 0 -- disable wifi
+# enable 1 -- enable wifi, 
+#     when lined not plug in , startup with wifi, else start with lined
+#     in running state , if plug line, enable lined network
+#         unplug lined, start with wifi
+
+# enable 2 -- enable wifi , 
+#     when lined not plugin, startup with wifi, else start with lined
+#  in running state, if plug line, donn't enable lined network, still run wifi
+
+
+
+wifienable="1"
+wifiessid=wifitest
+wifikeytype=3
+wifiwhichkey=
+wifikey="wifi12345678"

@@ -1,0 +1,150 @@
+#!/bin/sh
+
+export PATH="/usr/bin:/usr/sbin:/bin:/sbin:/bin/vs/cgi-bin:/bin/vs:/usr/local/sbin:/usr/local/bin"
+export BOOTTAB_PIDFILE=/tmpfs/boottab.pid
+ifconfig eth0 up
+if [ -f $BOOTTAB_PIDFILE ]; then
+    echo on $BOOTTAB_PIDFILE, pid:`cat $BOOTTAB_PIDFILE` , EXIT NOW
+    echo If something error , delete $BOOTTAB_PIDFILE manual
+    exit 1;
+else
+    echo $$ > $BOOTTAB_PIDFILE
+    echo create : `cat $BOOTTAB_PIDFILE` 
+fi
+
+EXEC_PATH="`dirname $0`"
+
+
+killall -9 syslogd
+#killall -9 sd_detect
+#killall -9 msgproc
+#skillall -9 vs_auto.sh
+killall -9 vs_server
+sleep 1
+
+
+. /etc/board.conf
+BoardType=$boardtype
+
+#insmod /ko/extdrv/hsdx.ko board=${BoardType}
+
+#cd /ko
+###./setgpio.sh
+#./setsensor.sh
+#/bin/sensordetect.sh
+
+#GetSensorType()
+#{
+#    cat /ko/sensortype
+#}
+
+#SensorType=$(GetSensorType)
+
+. /etc/sensor.conf
+SensorType=$sensortype
+
+echo "-------------------------Sensor Type:" ${SensorType} "BoardType: ${BoardType} ----"
+
+#./load -i ${SensorType} 
+
+sleep 1
+#echo "[boottab]sync time from RTC"
+#/bin/vs/setlinuxtime
+
+#start syslogd
+syslogd -m 0 -O /tmpfs/syslog.txt -S -s 100 -b 0 &
+
+
+#log when start
+LOGINFO="`date` BOOTTAB: System Start!"
+echo "$LOGINFO" >> /tmpfs/syslog.txt
+
+#start lo for upnp
+ifconfig lo up
+
+sleep 1
+
+# if [ -x "/runnfs" ] 
+# then
+# 	echo "curr runnfs"
+# else
+# 	#if wifi, enable this
+# 	wificonnect.sh load
+ 	echo "---------------------------------ipconfig----------------------"
+ 	#ipconfig.sh
+# 
+ 	/bin/vs/cgi-bin/net_serv.sh &
+ 	sleep 2
+# fi	
+#wificonnect.sh start
+#ipconfig.sh
+#start crond
+
+#start FTPD
+
+#start ddns
+DDNSENABLE=/etc/ipcamera/ddns_enable.conf
+. $DDNSENABLE
+
+#enable=${DDNS_ENABLE}
+enable=0
+
+if [ $enable == 1 ];then
+	echo "-------------start ddns-----------"
+	/usr/sbin/ddns/ddns-stop 
+	/usr/sbin/ddns/ddns-start & 
+fi
+# /usr/sbin/ddns/ddns-update.sh &
+
+#========= start SD Detect ====================
+#echo "[boottab]start sdcard detecter"
+#echo "Not support SDcard"
+#/bin/vs/sd_detect &
+
+#add hostname
+hostname GZipc
+
+#start the program of app
+cd /bin/vs
+echo PID file $BOOTTAB_PIDFILE
+logger -t vs "ipcvs_server start !"
+
+# echo "----------Extract web-------------"
+# VSENV=`ls -l /bin/vs | awk '{ print $11 }'`
+# #echo $VSENV
+
+# if [ $VSENV = "vslocal" ]
+# then
+# 	#echo "native"
+# 	tar -xzf /bin/vs/web.tgz -C /tmpfs/
+# else
+# 	#echo "nfs"
+# 	if [ -L web ]
+# 	then
+# 		#echo "2"
+# 		rm web
+# 	fi
+# 	if [ ! -d web ]
+# 	then
+# 		#echo "1"
+# 		tar -xzf /bin/vs/web.tgz -C /bin/vs/ 
+# 	fi
+# fi
+
+
+# rm /bin/vs/web/images/logo.png
+# ln -s /bin/vs/logo.png /bin/vs/web/images/logo.png
+
+#./vs_server -sensortype ${SensorType} -boardtype ${BoardType}
+#./vs_server 
+
+RETVALUE=$?
+  
+logger -t vs "vs_server stop: $RETVALUE!"
+echo "vs_server exit $RETVALUE, remove pid file $BOOTTAB_PIDFILE"
+rm -f $BOOTTAB_PIDFILE
+  
+
+./vs_auto.sh &
+
+#wait

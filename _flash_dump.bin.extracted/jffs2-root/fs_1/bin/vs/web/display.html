@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="js/jquery.ui.slider.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getvdisplayattr&-ircutenable=&-awbswitch=&-powerfreq=&-flip=&-mirror=&-scene=&-hue=&-brightness&-saturation&-contrast&" TYPE="text/javascript"></SCRIPT>
+
+<script language="javascript">
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+});
+
+var g_hue;	 
+var g_brightness;
+var g_contrast;
+var g_saturation;
+var g_flip;
+var g_mirron;
+var g_powerfreq;
+
+function on_load()
+{
+	var form = document.form1;
+	play();
+ 
+    if(flip == "on")
+    {
+		form.flipgrp[0].checked=true;  
+    }
+    else
+    {
+		form.flipgrp[1].checked=true;
+    }
+    if(mirror == "on")
+    {
+		form.mirrorgrp[0].checked=true;
+    }
+    else
+    {
+		form.mirrorgrp[1].checked=true;
+    }
+	
+    if(powerfreq == 50)
+    {
+        form.Powerfreqgrp[0].checked=true;
+    }
+    else
+    {
+        form.Powerfreqgrp[1].checked=true;
+    }
+   	
+	 $( "#HueSlider" ).slider( "value", hue );
+	 document.getElementById('HueText').innerHTML = hue;
+	 $( "#BriSlider" ).slider( "value", brightness );
+	 document.getElementById('BriSliderText').innerHTML = brightness;
+	 $( "#ConSlider" ).slider( "value", contrast );
+	 document.getElementById('ConSliderText').innerHTML = contrast;
+	 $( "#SatSlider" ).slider( "value", saturation );
+	 document.getElementById('SatSliderText').innerHTML = saturation;
+	 
+	g_hue = hue;	 
+	g_brightness = brightness;
+	g_contrast = contrast ;
+	g_saturation = saturation;
+	g_flip = flip;
+	g_mirror = mirror;
+	g_powerfreq = powerfreq;
+	return true;
+}
+
+function do_submit()
+{
+    var form1=document.form1;
+    var form=document.form2;
+
+
+	flip = document.getElementById('Form2Flip');
+	flip.name = "-flip";
+	if(form1.flipgrp[0].checked == true)
+		flip.value = "on";
+	else
+		flip.value = "off";
+		
+	mirror = document.getElementById('Form2Mirror');
+	mirror.name = "-mirror";
+	if(form1.mirrorgrp[0].checked == true)
+		mirror.value = "on";
+	else
+		mirror.value = "off";
+		
+
+	powerfq = document.getElementById('Form2Powefq');
+	powerfq.name = "-powerfreq";
+	if(form1.Powerfreqgrp[0].checked == true)
+		powerfq.value = 50;
+	else
+		powerfq.value = 60;
+	
+	hue = document.getElementById('Form2Hue');
+	hue.name = "-hue";
+	hue.value = $( "#HueSlider" ).slider( "option", "value" );
+	
+	brightness = document.getElementById('Form2Brightness');
+	brightness.name = "-brightness";
+	brightness.value = $( "#BriSlider" ).slider( "option", "value" );
+	
+	contrast = document.getElementById('Form2Contrast');
+	contrast.name = "-contrast";
+	contrast.value = $( "#ConSlider" ).slider( "option", "value" );
+	
+	saturation = document.getElementById('Form2Saturation');
+	saturation.name = "-saturation";
+	saturation.value = $( "#SatSlider" ).slider( "option", "value" );
+	
+	form.cururl.value=document.URL ;
+	form.action="cgi-bin/hi3510/param.cgi";
+	
+	
+	form.submit();
+}
+
+function do_reload()
+{
+    var form=document.form2;
+
+	flip = document.getElementById('Form2Flip');
+	flip.name = "-flip";
+	flip.value = g_flip;
+	
+	mirror = document.getElementById('Form2Mirror');
+	mirror.name = "-mirror";
+	mirror.value  = g_mirror;
+
+	powerfq = document.getElementById('Form2Powefq');
+	powerfq.name = "-powerfreq";
+	powerfq.value = g_powerfreq;
+
+	
+	hue = document.getElementById('Form2Hue');
+	hue.name = "-hue";
+	hue.value =g_hue;
+	
+	brightness = document.getElementById('Form2Brightness');
+	brightness.name = "-brightness";
+	brightness.value = g_brightness;
+	
+	contrast = document.getElementById('Form2Contrast');
+	contrast.name = "-contrast";
+	contrast.value = g_contrast;
+	
+	saturation = document.getElementById('Form2Saturation');
+	saturation.name = "-saturation";
+	saturation.value = g_saturation;
+	
+	form.cururl.value=document.URL ;
+	form.action="cgi-bin/hi3510/param.cgi";
+	
+	form.submit();
+}
+
+function do_default()
+{
+	 var form=document.form3;
+	
+	setcscdefault = document.getElementById('Form3Setcscdefault');
+	setcscdefault.name = "-setcscdefault";
+
+	setdirdefault = document.getElementById('Form3Setdirdefault');
+	setdirdefault.name = "-setdirdefault";
+
+	
+	form.cururl.value=document.URL ;
+	form.action="cgi-bin/hi3510/param.cgi";
+	
+	form.submit();
+}
+
+function play()
+{
+		var ip=document.location.host;
+	//var url="rtsp://"+ip;
+	var url = "http://"+ip;
+	var rtsp=url+"/"+"iphone/11";
+			var form=document.form1;
+		var index = 0;
+	if (navigator.appName.indexOf("Microsoft Internet Explorer") != -1)
+	{
+	
+	}
+	else
+	{
+		data='<embed src='+rtsp+' width="320" height="270" autoplay="true" controller="true" scale="tofit" ShowStatusBar="false" type="video/quicktime"';
+		data=data+' pluginspage="http://www.apple.com/quicktime/download/index.html"> </embed>';
+		document.getElementById('mydisplay').innerHTML=data;
+	}
+
+	if (navigator.appName.indexOf("Microsoft Internet Explorer") != -1)
+	{
+		DHiMPlayer.SetUrl(url,80,12);
+		DHiMPlayer.SetWndPos(0, 0, 320, 240);
+		DHiMPlayer.play();
+		DHiMPlayer.OpenMdSetPage(0, 0, 0);
+	}
+}
+
+$(function(){
+	$( "#HueSlider" ).slider(
+			{range: "min"},
+			{min: 0},
+			{max: 100},
+			{
+				stop: function( event, ui ) 
+				{
+					document.getElementById('HueText').innerHTML = ui.value;
+
+					cgicmd =   '/cgi-bin/hi3510/setvdisplayattr.cgi?&-nosave=0'
+					cgicmd += '&-hue=' +ui.value ;
+					cgicmd += '&-brightness=' + $( "#BriSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-saturation=' + $( "#SatSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-contrast='    + $( "#ConSlider" ).slider( "option", "value" )  ;
+					$.get(cgicmd) ;
+				}
+			});
+	$( "#BriSlider" ).slider(
+			{range: "min"},
+			{min: 0},
+			{max: 100},
+			{
+				stop: function( event, ui ) 
+				{
+					document.getElementById('BriSliderText').innerHTML = ui.value;
+
+					cgicmd = '/cgi-bin/hi3510/setvdisplayattr.cgi?'
+					cgicmd += '&-hue=' + $( "#HueSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-brightness=' + ui.value; 
+					cgicmd += '&-saturation=' + $( "#SatSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-contrast='    + $( "#ConSlider" ).slider( "option", "value" )  ;
+					$.get(cgicmd) ;
+				}
+			});
+	$( "#ConSlider" ).slider(
+			{range: "min"},
+			{min: 0},
+			{max: 100},
+			{
+				stop: function( event, ui ) 
+				{
+					document.getElementById('ConSliderText').innerHTML = ui.value;
+
+					cgicmd = '/cgi-bin/hi3510/setvdisplayattr.cgi?'
+					cgicmd += '&-hue=' + $( "#HueSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-brightness=' + $( "#BriSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-saturation=' + $( "#SatSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-contrast='    + ui.value; 
+					$.get(cgicmd) ;
+				}
+			});
+	$( "#SatSlider" ).slider(
+			{range: "min"},
+			{min: 0},
+			{max: 100},
+			{
+				stop: function( event, ui ) 
+				{
+					document.getElementById('SatSliderText').innerHTML = ui.value;
+
+					cgicmd = '/cgi-bin/hi3510/setvdisplayattr.cgi?'
+					cgicmd += '&-hue=' + $( "#HueSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-brightness=' + $( "#BriSlider" ).slider( "option", "value" ) ;
+					cgicmd += '&-saturation=' + ui.value; 
+					cgicmd += '&-contrast='    + $( "#ConSlider" ).slider( "option", "value" )  ;
+					$.get(cgicmd) ;
+				}
+			});
+});
+
+function ImageFileOrMirror()
+{
+	cgicmd = '/cgi-bin/hi3510/setvdisplayattr.cgi?'
+	
+	if($('input:radio[name="flipgrp"]:checked').val() == "on")
+		cgicmd += '&-flip=on';
+	else
+		cgicmd += '&-flip=off' ;
+		
+	if($('input:radio[name="mirrorgrp"]:checked').val() == "on")
+		cgicmd += '&-mirror=on';
+	else
+		cgicmd += '&-mirror=off' ;	
+		
+	if($('input:radio[name="Powerfreqgrp"]:checked').val() == "50")
+		cgicmd += '&-powerfreq=50';
+	else
+		cgicmd += '&-powerfreq=60' ;	
+		
+	$.get(cgicmd) ;
+	
+	return 0;	
+}
+
+</script>
+</head>
+<body onLoad="on_load()" class="content">
+
+
+<div id="mydisplay" style="margin-left:232px; margin-top:10px; border:#000000 1px solid; width:336px; height:282px;"> 
+  <SCRIPT type=text/JavaScript>
+		if (navigator.appName.indexOf("Microsoft Internet Explorer") != -1)
+		{
+		document.open();
+		document.write('<object classid="clsid:D1B45656-348B-4700-BD73-623A8378870A" codebase="/ipcameraocx.cab#version=1,0,1,27" id="DHiMPlayer" align="absbottom" width="336" height="282">');
+		document.write('<param name="_Version" value="65536"> <param name="_ExtentX" value="8890"> <param name="_ExtentY" value="7461">');
+		document.write('<param name="_StockProps" value="0">');
+		document.write('<embed src="65536"  align="middle" _version="65536" width="0" height="0" _extentx="10954" _extenty="6826" _stockprops="0"> </object>');
+		document.close();
+		}
+		</SCRIPT> 
+</div>
+<form name="form1">
+  <!----------------------------Hue------------------------------>
+  <div style="margin-top:10px;margin-left:232px;"> <span id="HueSpan" style="display:inline-block;width:80px;margin-left:10px">Hue:</span>
+    <div id="HueSlider" class="slieder" style="font-size:10px;"></div>
+    <label id="HueText">0</label>
+  </div>
+  <!----------------------------brightness------------------------------>
+  <div style="margin-top:10px;margin-left:232px;"> <span id="BrightnessSpan"  style="display:inline-block;width:80px;margin-left:10px">Brightness:</span>
+    <div id="BriSlider" class="slieder" style="font-size:10px;"></div>
+    <label id="BriSliderText">0</label>
+  </div>
+  
+  <!----------------------------contrast	------------------------------>
+  <div style="margin-top:10px;margin-left:232px;"> <span id="ContrastSpan"  style="display:inline-block;width:80px;margin-left:10px">Contrast:</span>
+    <div id="ConSlider" class="slieder" style="font-size:10px;"></div>
+    <label id="ConSliderText">0</label>
+  </div>
+  <!----------------------------saturation	------------------------------>
+  <div style="margin-top:10px;margin-left:232px;"> <span id="SaturationSpan"  style="display:inline-block;width:80px;margin-left:10px">Saturation:</span>
+    <div id="SatSlider" class="slieder" style="font-size:10px;"></div>
+    <label id="SatSliderText">0</label>
+  </div>
+  <!----------------------------flip	------------------------------>
+  <div style="margin-top:10px;margin-left:232px;"> <span id="FlipSpan"  style="display:inline-block;width:80px;margin-left:10px">Flip: </span>
+    <input id="flipOn"type="radio" name="flipgrp" onclick="ImageFileOrMirror()" value="on"/>
+    <label  for="flipOn" id="FillOnSpan" style=" display:inline-block;width:37px">On </label>
+    <input id="flipOff"type="radio" name="flipgrp" onclick="ImageFileOrMirror()" value="off"/>
+    <label for="flipOff" id="FillOffSpan" style=" display:inline-block;width:37px">Off</label>
+  </div>
+  <!----------------------------mirror	------------------------------>
+  <div style="margin-top:10px;margin-left:232px;"> <span id="MirrorSpan"  style="display:inline-block;width:80px;margin-left:10px">Mirror: </span>
+    <input id="mirrorOn"type="radio" name="mirrorgrp" onclick="ImageFileOrMirror()" value="on"/>
+    <label  for="mirrorOn" id="MirrorOnSpan" style=" display:inline-block;width:37px">On </label>
+    <input id="mirrorOff"type="radio" name="mirrorgrp" onclick="ImageFileOrMirror()" value="off"/>
+    <label for="mirrorOff" id="MirrorOffSpan" style=" display:inline-block;width:37px">Off</label>
+  </div>
+  <!----------------------------power fq------------------------------>
+  <div style="margin-top:10px;margin-left:232px;"> <span id="PowerfreqSpan"  style="display:inline-block;width:80px;margin-left:10px">Powerfreq: </span>
+    <input id="powerfreq50"type="radio" name="Powerfreqgrp" value="50" onclick="ImageFileOrMirror()"/>
+    <label  for="powerfreq50">50HZ </label>
+    <input id="powerfreq60"type="radio" name="Powerfreqgrp" value="60" onclick="ImageFileOrMirror()"/>
+    <label for="powerfreq60">60HZ</label>
+  </div>
+</form>
+
+<!---------------------------------------------------------->
+<div style="display:none">
+  <form name="form2" method="post">
+    <input name="cmd" type="hidden" value="setvdisplayattr">
+    <input name="cururl" type="hidden">
+    <input id="Form2Flip" name="flip" type="hidden">
+    <input id="Form2Mirror" type="hidden">
+    <input id="Form2Powefq" type="hidden">
+    <input id="Form2Hue" type="hidden">
+    <input id="Form2Brightness" type="hidden">
+    <input id="Form2Contrast" type="hidden">
+    <input id="Form2Saturation" type="hidden">
+  </form>
+  <form name="form3" method="post">
+    <input name="cmd" type="hidden" value="setvdisplayattr">
+    <input name="cururl" type="hidden">
+    <input id="Form3Setcscdefault" type="hidden">
+    <input id="Form3Setdirdefault" type="hidden">
+  </form>
+</div>
+
+
+<div style="position:absolute; bottom:10px;left:232px;"> <a id="apply"  href="#" onClick="do_submit()">Save</a> </div>
+<div style="position:absolute; bottom:10px;left:354px;"><a id="cancel" href="#" onClick="do_reload()">Reload</a> </div>
+<div style="position:absolute; bottom:10px;left:488px;"><a id="default" href="#" onClick="do_default()">Default</a> </div>
+</body>
+</html>

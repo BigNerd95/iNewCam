@@ -1,0 +1,28 @@
+             = "1              ";0:off 1:auto 2:manual
+saturation_strength            = "144            ";[0-255]
+wdr_status                     = "1              ";0:off 1:auto 2:manual
+wdr_strength                   = "128            ";[0-255]
+ae                             = "100            ";[0-255] 
+aemode                         = "0              ";0 normal,1 bright,2 dark 3 auto  
+nr                             = "23             ";[0-255]
+nrmax                          = "255            ";[nr-255],must greater than nr
+nrenable                       = "1              "
+sfsth                          = "8              ";[0-127] 3D denoise
+stfsth                         = "16             ";
+tfsth                          = "8              ";[0-63] 3D denoise
+chromarange                    = "8              ";[0-31] 3D denoise
+slowfps                        = "16             ";1/2/3/4/5/6/8/16
+vppcontrol_auto                = "0              ";1=auto,0=manual
+dp_detected                    = "0              ";//是否需要坏点校正，0：不需要，1：需要
+badpixelnum                    = "0              ";//坏点的个数
+badpixelstr                    = "               ";//坏点的坐标 xx|xx|xx|..|
+aemenual                       = "0              ";//是否需要手动设置AE的曝光区域
+aerectnum                      = "0              ";//曝光区域的个数(7*9=63)
+aerectstr                      = "               "
+1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1| = "               "
+1|1|1|1|1|2|2|2|2|2|2|2|1|1|1|1|1| = "               "
+1|1|1|1|2|2|2|2|2|2|2|2|2|1|1|1|1| = "               "
+1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|" = "               "
+1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|";//曝光区域的权重 xx|xx|xx|..| = "               "
+awbconfig                      = "1              ";1 config ,0 default
+wbmode                         = "0              ";0:aut

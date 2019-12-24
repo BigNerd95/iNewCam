@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<en>
+  <indexhtml>
+    <HomeSpan>홈</HomeSpan>
+    <HeaderMediaSpan>미디어</HeaderMediaSpan>
+    <HeaderReplaySpan>재생</HeaderReplaySpan>
+    <HeaderParametersSpan>설정</HeaderParametersSpan>
+    <HeaderSystemSpan>시스템</HeaderSystemSpan>
+    <ScanSpan>스캔</ScanSpan>
+    <PtzPointSpan>Point:</PtzPointSpan>
+    <HueSpan>색조</HueSpan>
+    <BrightnessSpan>밝기</BrightnessSpan>
+    <ContrastSpan>대비</ContrastSpan>
+    <SaturationSpan>채도</SaturationSpan>
+    <FlipSpan>상하반전:</FlipSpan>
+    <MirrorSpan>좌우반전:</MirrorSpan>
+    <PowerfreqSpan>상용주파수:</PowerfreqSpan>
+    <MainPageSceneSpan>Scene:</MainPageSceneSpan>
+    <AutoSpan>자동</AutoSpan>
+    <IndoorSpan>실내</IndoorSpan>
+    <OutdoorSpan>실외</OutdoorSpan>
+    <MainPageIRSpan>IRCut:</MainPageIRSpan>
+    <IRLowSpan>낮음</IRLowSpan>
+    <IRHighSpan>높음</IRHighSpan>
+    <IRColorSpan>컬러</IRColorSpan>
+    <IRBWSpan>흑백</IRBWSpan>
+    <FillOnSpan>켜짐</FillOnSpan>
+    <FillOffSpan>꺼짐</FillOffSpan>
+    <MirrorOnSpan>켜짐</MirrorOnSpan>
+    <MirrorOffSpan>꺼짐</MirrorOffSpan>
+    <UpdateSpan>업데이트</UpdateSpan>
+    <DefaultSpan>기본</DefaultSpan>
+    <PlayerSpan>플레이어 :</PlayerSpan>
+    <StreamSpan>스트림:</StreamSpan>
+    <MainPageImageSpan>이미지:</MainPageImageSpan>
+    <FitSizeSpan>Fit 사이즈</FitSizeSpan>
+    <SrcSizeSpan>스크린크기</SrcSizeSpan>
+    <MainFlowSpan>MainFlow</MainFlowSpan>
+    <MinorFlowSpan>MinorFlow</MinorFlowSpan>
+    <DownloadPlayerSpan>플레이어 다운로드</DownloadPlayerSpan>
+    <LoginDownloadPlayerSpan>플레이어 다운로드</LoginDownloadPlayerSpan>
+    <DownloadOCXSpan>OCX 다운로드</DownloadOCXSpan>
+    <LoginDownloadOCXSpan>OCX 다운로드</LoginDownloadOCXSpan>
+    <LogoutSpan>로그아웃</LogoutSpan>
+    <UsernameSpan>사용자이름:</UsernameSpan>
+    <PasswordSpan>비밀번호:</PasswordSpan>
+    <LoginLanguageSpan>언어:</LoginLanguageSpan>
+    <LoginEnterSpan>로그인</LoginEnterSpan>
+    <AutologinSpan>자동로그인</AutologinSpan>
+    <LoginMainFlowSpan>MainFlow</LoginMainFlowSpan>
+    <LoginMinorFlowSpan>MinorFlow</LoginMinorFlowSpan>
+    <LoginStreamSpan>스트림:</LoginStreamSpan>
+    <QVSpan>네트워크카메라</QVSpan>
+    <HomeSpan>홈</HomeSpan>
+    <SystemSetSpan>시스템</SystemSetSpan>
+    <AboutSpan>About</AboutSpan>
+    <MediaSpan>미디어</MediaSpan>
+    <ImageSpan>이미지</ImageSpan>
+    <VideoSpan>비디오</VideoSpan>
+    <AdvanceSpan>Advance</AdvanceSpan>
+    <EventSpan>이벤트</EventSpan>
+    <NetWorkSpan>네트워크</NetWorkSpan>
+    <BasicSettingsSpan>기본설정</BasicSettingsSpan>
+    <DDNSSpan>DDNS</DDNSSpan>
+    <UserSpan>사용자</UserSpan>
+    <MobileSpan>OSD</MobileSpan>
+    <EmailSpan>이메일</EmailSpan>
+    <MDSpan>모션감지</MDSpan>
+    <AlarmInSpan>알람인</AlarmInSpan>
+    <AlarmOutSpan>알람아웃</AlarmOutSpan>
+    <AutoSnapSpan>자동캡쳐</AutoSnapSpan>
+    <SystemSpan>시스템</SystemSpan>
+    <LanguageSpan>언어</LanguageSpan>
+    <TimeSpan>시간설정</TimeSpan>
+    <InitSpan>초기화</InitSpan>
+    <DeviceinfoSpan>기기정보</DeviceinfoSpan>
+    <LogSpan>시스템로그</LogSpan>
+    <PTZSpan>PTZ</PTZSpan>
+    <ODSpan>물체감지</ODSpan>
+    <RecordSpan>녹화</RecordSpan>
+    <StorageSpan>저장장치</StorageSpan>
+    <DownLoadPlayerMsg>플레이어 설치 후, 웹페이지를 다시 열어주세요.</DownLoadPlayerMsg>
+    <HueImgTitile>색조</HueImgTitile>
+    <BrightnessImgTitile>밝기</BrightnessImgTitile>
+    <ContrastImgTitle>대비</ContrastImgTitle>
+    <SaturationImgTitile>채도</SaturationImgTitile>
+    <RecordSwitchTitile>녹화시작</RecordSwitchTitile>
+    <RecordIngSwitchTitile>녹화</RecordIngSwitchTitile>
+    <CaptureSwitchTitile>캡쳐</CaptureSwitchTitile>
+    <MicroOnSwitchTitile>음성말하기</MicroOnSwitchTitile>
+    <MicroOffSwitchTitile>음성정지</MicroOffSwitchTitile>
+    <VolOnSwitchTitile>볼륨키우기</VolOnSwitchTitile>
+    <VolOffSwitchTitile>볼륨줄이기</VolOffSwitchTitile>
+    <GotoPointTitile>바로가기</GotoPointTitile>
+    <SetPointTitile>Set</SetPointTitile>
+    <ClearPointTitile>전체삭제</ClearPointTitile>
+    <NoAuthErrorMsg>사용자가 승인되지 않았습니다!</NoAuthErrorMsg>
+    <LoginCheckErrorMsg>사용자이름 혹은 비밀번호 오류</LoginCheckErrorMsg>
+    <HltalmproxySpan>Platform setting</HltalmproxySpan>
+    <FocusSpan>초점</FocusSpan>
+    <ZoomSpan>줌</ZoomSpan>
+  </indexhtml>
+  <mainpagehtml>
+    <QVSpan>네트워크카메라</QVSpan>
+    <HomeSpan>홈</HomeSpan>
+    <SystemSetSpan>시스템</SystemSetSpan>
+    <AboutSpan>About</AboutSpan>
+    <SizeSpan>크기:</SizeSpan>
+    <PTZSpan>PTZ:</PTZSpan>
+    <ZOOMSpan>줌</ZOOMSpan>
+    <FOUCESpan>초점</FOUCESpan>
+    <IRISSpan>조리개값</IRISSpan>
+    <SpeedSpan>속도</SpeedSpan>
+  </mainpagehtml>
+  <abouthtml>
+    <QVSpan>네트워크 카메라</QVSpan>
+    <HomeSpan>홈</HomeSpan>
+    <SystemSetSpan>시스템설정</SystemSetSpan>
+    <AboutSpan>About</AboutSpan>
+  </abouthtml>
+  <systemsethtml>
+    <QVSpan>네트워크카메라</QVSpan>
+    <HomeSpan>홈</HomeSpan>
+    <SystemSetSpan>시스템</SystemSetSpan>
+    <AboutSpan>About</AboutSpan>
+    <MediaSpan>미디어</MediaSpan>
+    <ImageSpan>이미지</ImageSpan>
+    <VideoSpan>비디오</VideoSpan>
+    <AdvanceSpan>Advance</AdvanceSpan>
+    <EventSpan>이벤트</EventSpan>
+    <NetWorkSpan>네트워크</NetWorkSpan>
+    <BasicSettingsSpan>기본설정</BasicSettingsSpan>
+    <DDNSSpan>DDNS</DDNSSpan>
+    <UserSpan>사용자</UserSpan>
+    <MobileSpan>모바일</MobileSpan>
+    <EmailSpan>이메일</EmailSpan>
+    <MDSpan>모션감지</MDSpan>
+    <AlarmInSpan>알람인</AlarmInSpan>
+    <AlarmOutSpan>알람아웃 </AlarmOutSpan>
+    <AutoSnapSpan>자동캡쳐</AutoSnapSpan>
+    <SystemSpan>시스템</SystemSpan>
+    <LanguageSpan>언어</LanguageSpan>
+    <TimeSpan>시간설정</TimeSpan>
+    <InitSpan>초기화</InitSpan>
+    <DeviceinfoSpan>기기정보</DeviceinfoSpan>
+    <LogSpan>시스템로그</LogSpan>
+    <PTZSpan>PTZ</PTZSpan>
+    <ODSpan>물체감지</ODSpan>
+    <RecordSpan>녹화</RecordSpan>
+    <StorageSpan>저장장치</StorageSpan>
+  </systemsethtml>
+  <displayhtml>
+    <HueSpan>색조:</HueSpan>
+    <BrightnessSpan>밝기:</BrightnessSpan>
+    <ContrastSpan>대비:</ContrastSpan>
+    <SaturationSpan>채도:</SaturationSpan>
+    <FlipSpan>상하반전:</FlipSpan>
+    <MirrorSpan>좌우반전:</MirrorSpan>
+    <PowerfreqSpan>상용주파수:</PowerfreqSpan>
+    <SaveSpan>저장</SaveSpan>
+    <ReloadSpan>불러오기</ReloadSpan>
+    <DefaultSpan>기본</DefaultSpan>
+    <FillOnSpan>켜짐</FillOnSpan>
+    <FillOffSpan>꺼짐</FillOffSpan>
+    <MirrorOnSpan>켜짐</MirrorOnSpan>
+    <MirrorOffSpan>꺼짐</MirrorOffSpan>
+  </displayhtml>
+  <videohtml>
+    <MainstreamSpan>메인스트림</MainstreamSpan>
+    <ResolutionSpan>해상도:</ResolutionSpan>
+    <BitrateSpan>비트레이트:</BitrateSpan>
+    <ImageQualitySpan>화질:</ImageQualitySpan>
+    <QualityVeryHighSpan>아주높음</QualityVeryHighSpan>
+    <QualityHighSpan>높음</QualityHighSpan>
+    <QualityNormalSpan>보통</QualityNormalSpan>
+    <QualityLowSpan>낮음</QualityLowSpan>
+    <QualityVeryLowSpan>아주낮음</QualityVeryLowSpan>
+    <MaximumframeSpan>최대프레임:</MaximumframeSpan>
+    <VideoqualitycontrolSpan>화질조정:</VideoqualitycontrolSpan>
+    <FrameratefirstSpan>프레임률 우선</FrameratefirstSpan>
+    <QualityfirstSpan>화질 우선</QualityfirstSpan>
+    <NormSpan>기본:</NormSpan>
+    <SubstreamSpan>서브스트림</SubstreamSpan>
+    <SubResolutionSpan>해상도:</SubResolutionSpan>
+    <SubBitrateSpan>비트레이트:</SubBitrateSpan>
+    <SubImageQualitySpan>화질:</SubImageQualitySpan>
+    <SubImageQualityVeryHighSpan>아주높음</SubImageQualityVeryHighSpan>
+    <SubQualityHighSpan>높음</SubQualityHighSpan>
+    <SubQualityNormalSpan>보통</SubQualityNormalSpan>
+    <SubQualityLowSpan>낮음</SubQualityLowSpan>
+    <SubQualityVeryLowSpan>아주 낮음</SubQualityVeryLowSpan>
+    <SubMaximumframeSpan>최대 프레임:</SubMaximumframeSpan>
+    <SubVideoqualitycontrolSpan>화질조정:</SubVideoqualitycontrolSpan>
+    <SubFrameratefirstSpan>프레임률 우선</SubFrameratefirstSpan>
+    <SubQualityfirstSpan>화질 우선</SubQualityfirstSpan>
+    <NormSpan>기본:</NormSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <InputErrorMsg>비트레이트가 기본사이즈보다 작아야합니다</InputErrorMsg>
+    <MobileSpan>모바일 스트림:</MobileSpan>
+    <ResolutionSpan>해상도:</ResolutionSpan>
+    <UsernameSpan>사용자이름:</UsernameSpan>
+    <PasswordSpan>비밀번호:</PasswordSpan>
+    <PortSpan>포트:</PortSpan>
+    <QualitySpan>설정:</QualitySpan>
+    <QualityVeryHighSpan>아주 높음</QualityVeryHighSpan>
+    <QualityHighSpan>높음</QualityHighSpan>
+    <QualityNormalSpan>보통</QualityNormalSpan>
+    <QualityLowSpan>낮음</QualityLowSpan>
+    <QualityVeryLowSpan>아주 낮음</QualityVeryLowSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <PortErrorMsg>모바일 포트를 입력하세요</PortErrorMsg>
+    <PortInputMsg>유효하지 않은 기호를 포함</PortInputMsg>
+    <PortPortErrorMsg>유효하지 않은 포트 (1-65535)</PortPortErrorMsg>
+    <SubStreamCBR>CBR</SubStreamCBR>
+    <SubStreamVBR>VBR</SubStreamVBR>
+    <MainStreamCBR>CBR</MainStreamCBR>
+    <MainStreamVBR>VBR</MainStreamVBR>
+    <SubStreamBitRateTypeSpan>비트레이트 타입:</SubStreamBitRateTypeSpan>
+    <MainStreamBitRateTypeSpan>비트레이트 타입: </MainStreamBitRateTypeSpan>
+    <SubStreamUserDefineSpan>사용자정의</SubStreamUserDefineSpan>
+    <MainStreamUserDefineSpan>사용자정의</MainStreamUserDefineSpan>
+    <NormChangeRebootMsg>재부팅!</NormChangeRebootMsg>
+    <ViewSizeChangeRebootMsg>재부팅!</ViewSizeChangeRebootMsg>
+    <RebootWaitMsg>IP 카메라를 재부팅 중입니다. 카메라 전원을 끄지 마세요...</RebootWaitMsg>
+    <MainStreamFIXQP>FixQp</MainStreamFIXQP>
+    <SubStreamFIXQP>FixQp</SubStreamFIXQP>
+    <SubStreamFIXQPLevel1>아주 높음</SubStreamFIXQPLevel1>
+    <SubStreamFIXQPLevel2>높음</SubStreamFIXQPLevel2>
+    <SubStreamFIXQPLevel3>보통</SubStreamFIXQPLevel3>
+    <SubStreamFIXQPLevel4>낮음</SubStreamFIXQPLevel4>
+    <SubStreamFIXQPLevel5>아주 낮음</SubStreamFIXQPLevel5>
+    <MainStreamFIXQPLevel1>아주 높음</MainStreamFIXQPLevel1>
+    <MainStreamFIXQPLevel2>높음</MainStreamFIXQPLevel2>
+    <MainStreamFIXQPLevel3>보통</MainStreamFIXQPLevel3>
+    <MainStreamFIXQPLevel4>낮음</MainStreamFIXQPLevel4>
+    <MainStreamFIXQPLevel5>아주 낮음</MainStreamFIXQPLevel5>
+    <GopInputTipsSpan>동등하거나 크게</GopInputTipsSpan>
+    <MainStreamGopSpan>프레임:</MainStreamGopSpan>
+    <SubStreamGopSpan>프레임:</SubStreamGopSpan>
+    <MainStreamAudioSpan>오디오:</MainStreamAudioSpan>
+    <SubStreamAudioSpan>오디오:</SubStreamAudioSpan>
+    <SubStreamAudioGrpOn>켜짐</SubStreamAudioGrpOn>
+    <SubStreamAudioGrpOff>꺼짐</SubStreamAudioGrpOff>
+    <MainStreamAudioGrpOn>켜짐</MainStreamAudioGrpOn>
+    <MainStreamAudioGrpOff>꺼짐</MainStreamAudioGrpOff>
+  </videohtml>
+  <networkhtml>
+    <LANSettingsSpan>랜설정</LANSettingsSpan>
+    <IPTypeSpan>IP 타입:</IPTypeSpan>
+    <IPTypeFixedIPAddressSpan>고정 IP 주소</IPTypeFixedIPAddressSpan>
+    <IPTypeDynanicIPAddressSpan>유동 IP 주소</IPTypeDynanicIPAddressSpan>
+    <IPAddressSpan>IP 주소:</IPAddressSpan>
+    <SubnetMaskSpan>서브넷 마스크:</SubnetMaskSpan>
+    <GatewaySpan>게이트웨이:</GatewaySpan>
+    <DNSTypeSpan>DNS 타입</DNSTypeSpan>
+    <DNSTypeManualDNSSpan>수동 DNS</DNSTypeManualDNSSpan>
+    <DNSTypeFromDHCPServerSpan>DHCP 서버에서 받기</DNSTypeFromDHCPServerSpan>
+    <PrimaryDNSSpan>기본 DNS:</PrimaryDNSSpan>
+    <SecondaryDNSSpan>보조 DNS:</SecondaryDNSSpan>
+    <HTTPSpan>웹</HTTPSpan>
+    <HTTPPortnumberSpan>웹 포트 :</HTTPPortnumberSpan>
+    <ONVIFPortnumberSpan>ONVIF 포트 :</ONVIFPortnumberSpan>
+    <RTSPPortnumberSpan>RTSP 포트:</RTSPPortnumberSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <InputASCIIErrorMsg>ASCII코드를 입력해주세요 (5자 혹은 13자 )</InputASCIIErrorMsg>
+    <InputHEXErrorMsg>HEX코드를 입력해주세요 (10자 혹은 26자 )</InputHEXErrorMsg>
+    <WepKeyErrorMsg>wep키 자릿수 오류. Hex- 10자 혹은 26자; ASCII 5자 혹은 13자</WepKeyErrorMsg>
+    <InputASCIIError1Msg>ASCII코드를 입력해주세요 (8자에서 63자 )</InputASCIIError1Msg>
+    <InputInvalidMsg>유효하지 않은 코드</InputInvalidMsg>
+    <InputErrorMsg>입력 오류!</InputErrorMsg>
+    <IPChangeMsg>Ip 혹은 port 가 바뀌었습니다 , 다시 연결해 주세요.</IPChangeMsg>
+    <InputIPMsg>IP주소를 입력해주세요</InputIPMsg>
+    <InputMaskMsg>서브넷마스크 주소를 입력해주세요</InputMaskMsg>
+    <InputPortMsg>포트 오류</InputPortMsg>
+    <InputIPErrorMsg>유효하지 않은 주소. 첫번째 자리 1부터255사이</InputIPErrorMsg>
+    <InputIPError1Msg>유효하지 않은 주소. 0부터 255사이</InputIPError1Msg>
+    <InputInvalidAddressMsg>유효하지 않은 주소</InputInvalidAddressMsg>
+    <InputInvalidAddress1Msg>유효하지 않은 주소. 0부터 255사이</InputInvalidAddress1Msg>
+    <SubnetMaskMsg>서브넷 마스크</SubnetMaskMsg>
+    <GateWayMsg>게이트웨이</GateWayMsg>
+    <PrimaryDnsMsg>기본 dns</PrimaryDnsMsg>
+    <SecondDnsMsg>보조 dns</SecondDnsMsg>
+    <httpportSpan>(80 혹은 1024~32767)</httpportSpan>
+    <onvifportSpan>(1018 혹은 1024~32767)</onvifportSpan>
+    <rtspportSpan>(554 혹은 1024~32767)</rtspportSpan>
+    <WanURLInputSpan>Wan 테스트:</WanURLInputSpan>
+    <WanTestIngSpan>테스트중......</WanTestIngSpan>
+    <WanTestSuccessSpan>테스트 성공</WanTestSuccessSpan>
+    <WanTestFailureSpan>테스트 실패</WanTestFailureSpan>
+    <WanTestSpan>테스트</WanTestSpan>
+    <IPTestH4Span>네트워크 테스트:</IPTestH4Span>
+  </networkhtml>
+  <ddnshtml>
+    <DynamicDNSSpan>유동 DNS:</DynamicDNSSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <StatusOnSpan>켜짐</StatusOnSpan>
+    <StatusOffSpan>꺼짐</StatusOffSpan>
+    <ProviderSpan>공급자:</ProviderSpan>
+    <UsernameSpan>사용자이름:</UsernameSpan>
+    <PasswordSpan>비밀번호:</PasswordSpan>
+    <YourDomainSpan>사용자도메인:</YourDomainSpan>
+    <UniversalPnPSpan>upnp:</UniversalPnPSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <StatusOnSpan>켜짐</StatusOnSpan>
+    <StatusOffSpan>꺼짐</StatusOffSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <InputErrorMsg>유효하지 않음</InputErrorMsg>
+    <UserErrorMsg>사용자 이름을 입력해주세요</UserErrorMsg>
+    <PasswdErrorMsg>비밀번호를 입력해주세요</PasswdErrorMsg>
+    <DomainErrorMsg>도메인을 입력해주세요</DomainErrorMsg>
+    <UserNameErrorMsg>사용자 이름 오류, 유효하지 않음</UserNameErrorMsg>
+    <InputDomainErrorMsg>도메인 오류, 유효하지 않음</InputDomainErrorMsg>
+  </ddnshtml>
+  <osdhtml>
+    <ParenthesisOptionsSpan>OSD 옵션</ParenthesisOptionsSpan>
+    <TimeStampSpan>타임스탬프:</TimeStampSpan>
+    <TimeStampOnSpan>켜짐</TimeStampOnSpan>
+    <TimeStampOffSpan>꺼짐</TimeStampOffSpan>
+    <CameranameSpan>카메라 이름:</CameranameSpan>
+    <CameranameOnSpan>켜짐</CameranameOnSpan>
+    <CameranameOffSpan>꺼짐</CameranameOffSpan>
+    <NameSpan>이름:</NameSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+  </osdhtml>
+  <userhtml>
+    <UserIDSpan>사용자ID</UserIDSpan>
+    <UsernameSpan>사용자이름</UsernameSpan>
+    <PasswordSpan>비밀번호</PasswordSpan>
+    <RetypepasswordSpan>비밀번호 확인</RetypepasswordSpan>
+    <AdministratorSpan>Administrator</AdministratorSpan>
+    <User1Span>User1</User1Span>
+    <User2Span>User2</User2Span>
+    <User3Span>User3</User3Span>
+    <User4Span>User4</User4Span>
+    <User5Span>User5</User5Span>
+    <User6Span>User6</User6Span>
+    <User7Span>User7</User7Span>
+    <User8Span>User8</User8Span>
+    <User9Span>User9</User9Span>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <InputMsg>유효하지 않음</InputMsg>
+    <AdminMsg>adminstrator를 입력하세요.</AdminMsg>
+    <RePasswdMsg>패스워드를 다시입력하세요.</RePasswdMsg>
+    <UserNameMsg>사용자 이름을 입력해주세요</UserNameMsg>
+    <PasswdMsg>비밀번호를 입력해주세요</PasswdMsg>
+    <UserErrorMsg>사용자이름이 동일합니다 </UserErrorMsg>
+    <UserInputErrorMsg>사용자 이름에 잘못된 글자가 포함되어 있습니다.</UserInputErrorMsg>
+  </userhtml>
+  <emailhtml>
+    <EMailSettingSpan>이메일설정:</EMailSettingSpan>
+    <SMTPservernameSpan>서버이름:</SMTPservernameSpan>
+    <SMTPserverportSpan>포트:</SMTPserverportSpan>
+    <SSLSpan>SSL:</SSLSpan>
+    <AuthenticationSpan>인증</AuthenticationSpan>
+    <AuthenticationOnSpan>켜짐</AuthenticationOnSpan>
+    <AuthenticationOffSpan>꺼짐</AuthenticationOffSpan>
+    <UsernameSpan>사용자이름:</UsernameSpan>
+    <PasswordSpan>암호:</PasswordSpan>
+    <SendToSpan>받는사람:</SendToSpan>
+    <SendToeMailAddress1Span></SendToeMailAddress1Span>
+    <SendToeMailAddress2Span></SendToeMailAddress2Span>
+    <SendToeMailAddress3Span></SendToeMailAddress3Span>
+    <ShowFromasSpan>보내는사람:</ShowFromasSpan>
+    <ShowFromasReturneMailaddressSpan></ShowFromasReturneMailaddressSpan>
+    <SubjectSpan>제목:</SubjectSpan>
+    <MessageSpan>내용:</MessageSpan>
+    <Messagethemaxlengthis255Span>최대 길이255</Messagethemaxlengthis255Span>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <emailAddrErrorMsg>유효하지 않은 주소, 최소 5자 이상</emailAddrErrorMsg>
+    <emailAddrError1Msg>유효하지 않은 주소, @포함해야 함</emailAddrError1Msg>
+    <emailInputErrorMsg>유효하지 않은 글자 포함</emailInputErrorMsg>
+    <emailSMTPErrorMsg>서버이름을 입력해주세요</emailSMTPErrorMsg>
+    <emailInputAddrMsg>받는 주소를 입력해주세요</emailInputAddrMsg>
+    <emailFormAddrMsg>보내는 주소를 입력해주세요</emailFormAddrMsg>
+    <emailUserErrorMsg>사용자이름을 입력해주세요</emailUserErrorMsg>
+    <emailPasswdErrorMsg>비밀번호를 입력해주세요</emailPasswdErrorMsg>
+    <emailServerNameErrorMsg>서버이름 오류, 유효하지 않은 글자 포함</emailServerNameErrorMsg>
+    <emailFormAddrErrorMsg>보내는 주소 오류, 유효하지 않은 글자 포함</emailFormAddrErrorMsg>
+    <emailToAddrErrorMsg>받는 주소 오류, 유효하지 않은 글지 포함</emailToAddrErrorMsg>
+    <emailSubjectErrorMsg>잘못된 기호가 있어서 제목오류</emailSubjectErrorMsg>
+    <emailMessageErrorMsg>잘못된 기호가 있어서 내용오류</emailMessageErrorMsg>
+    <emailUserInputErrorMsg>잘못된 기호가 있어서 사용자이름오류</emailUserInputErrorMsg>
+    <emailPasswdInputErrorMsg>잘못된 기호가 있어서 암호오류</emailPasswdInputErrorMsg>
+    <emailMessageLenErrorMsg>최대 길이 225자</emailMessageLenErrorMsg>
+    <emailPortErrorMsg>유효하지 않은 글자 포함</emailPortErrorMsg>
+    <emailPortError1Msg>포트에러(1-65535)</emailPortError1Msg>
+  </emailhtml>
+  <timeplanhtml>
+    <workmodeCleanSpan>전체삭제</workmodeCleanSpan>
+    <weekmodeCleanSpan>전체삭제</weekmodeCleanSpan>
+    <workdayspan>주간</workdayspan>
+    <weekendspan>주말</weekendspan>
+    <Workmodetimeperiod1span>시간구간1</Workmodetimeperiod1span>
+    <Workmodetimeperiod2span>시간구간2</Workmodetimeperiod2span>
+    <Workmodetimeperiod3span>시간구간3</Workmodetimeperiod3span>
+    <Weekkmodetimeperiod1span>시간구간1</Weekkmodetimeperiod1span>
+    <Weekkmodetimeperiod2span>시간구간2</Weekkmodetimeperiod2span>
+    <Weekkmodetimeperiod3span>시간구간3</Weekkmodetimeperiod3span>
+    <weeksunspan>일</weeksunspan>
+    <weekmonspan>월</weekmonspan>
+    <weektuespan>화</weektuespan>
+    <weekwedspan>수</weekwedspan>
+    <weekthuspan>목</weekthuspan>
+    <weekfrispan>금</weekfrispan>
+    <weeksatspan>토</weeksatspan>
+  </timeplanhtml>
+  <mdhtml>
+    <AreaSpan>지역:</AreaSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <StatusEnableSpan>활성</StatusEnableSpan>
+    <SensibilitySpan>민감도:</SensibilitySpan>
+    <SensibilityveryhighSpan>아주 높음</SensibilityveryhighSpan>
+    <SensibilityhighSpan>높음</SensibilityhighSpan>
+    <SensibilitynormalSpan>보통</SensibilitynormalSpan>
+    <SensibilitylowSpan>낮음</SensibilitylowSpan>
+    <SelectAllSpan>모두선택</SelectAllSpan>
+    <CleamAllSpan>모두 해제</CleamAllSpan>
+    <ActionSpan>보내기:</ActionSpan>
+    <EMailSpan>이메일:</EMailSpan>
+    <SendEmailSpan>이메일보내기</SendEmailSpan>
+    <EmailwithPictureSpan>사진첨부</EmailwithPictureSpan>
+    <OutputSpan>출력:</OutputSpan>
+    <TriggerAlarmOutputSpan>알람발생</TriggerAlarmOutputSpan>
+    <TriggerAlarmAudioSpan>트리거 알람 오디오</TriggerAlarmAudioSpan>
+    <ScheduleSpan>스케쥴:</ScheduleSpan>
+    <ScheduleUsetheweekmodeSpan>주간모드</ScheduleUsetheweekmodeSpan>
+    <ScheduleUsetheworkmodeSpan>수동모드</ScheduleUsetheworkmodeSpan>
+    <ScheduleAlltimedaySpan>모든날짜</ScheduleAlltimedaySpan>
+    <MdSelectAllSpan>모두선택</MdSelectAllSpan>
+    <MdCleanAllSpan>모두 해제</MdCleanAllSpan>
+    <MdTimeSpan>시간</MdTimeSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <MdErrorMsg>유효하지 않은 값!</MdErrorMsg>
+    <AlarmRecInputLabel>알람시 녹화설정</AlarmRecInputLabel>
+    <AlarmSnapInputLabel>알람시 사진캡쳐</AlarmSnapInputLabel>
+    <SendToFtpLabel>FTP업로드</SendToFtpLabel>
+    <FtpUploadRecLabel>FTP업로드</FtpUploadRecLabel>
+  </mdhtml>
+  <alarminhtml>
+    <AlarmInSpan>알람인:</AlarmInSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <EnableSpan>활성</EnableSpan>
+    <ActivemodeSpan>설정모드</ActivemodeSpan>
+    <ActivemodeLowSpan>낮음</ActivemodeLowSpan>
+    <ActivemodeHighSpan>높음</ActivemodeHighSpan>
+    <ActionSpan>전송:</ActionSpan>
+    <EMailSpan>이메일:</EMailSpan>
+    <EMailSendEmailSpan>이메일보내기</EMailSendEmailSpan>
+    <EMailEmailwithPictureSpan>사진첨부</EMailEmailwithPictureSpan>
+    <OutputSpan>출력:</OutputSpan>
+    <OutputTriggerAlarmOutputSpan>알람발생</OutputTriggerAlarmOutputSpan>
+    <ScheduleSpan>스케쥴:</ScheduleSpan>
+    <ScheduleUsetheweekmodeSpan>주말모드</ScheduleUsetheweekmodeSpan>
+    <ScheduleUsetheworkmodeSpan>평일모드</ScheduleUsetheworkmodeSpan>
+    <ScheduleAlltimesdaySpan>주간설정</ScheduleAlltimesdaySpan>
+    <workdayspan>평일</workdayspan>
+    <weekendspan>주말</weekendspan>
+    <workmodeCleanSpan>전체삭제</workmodeCleanSpan>
+    <workmodeCloseSpan>닫기</workmodeCloseSpan>
+    <Workmodetimeperiod1span>시간구간1</Workmodetimeperiod1span>
+    <Workmodetimeperiod2span>시간구간2</Workmodetimeperiod2span>
+    <Workmodetimeperiod3span>시간구간3</Workmodetimeperiod3span>
+    <Weekkmodetimeperiod1span>시간구간1</Weekkmodetimeperiod1span>
+    <Weekkmodetimeperiod2span>시간구간2</Weekkmodetimeperiod2span>
+    <Weekkmodetimeperiod3span>시간구간3</Weekkmodetimeperiod3span>
+    <weekmodeCleanSpan>전체삭제</weekmodeCleanSpan>
+    <weekmodeCloseSpan>닫기</weekmodeCloseSpan>
+    <TimeSetSpan>시간</TimeSetSpan>
+    <weeksunspan>일</weeksunspan>
+    <weekmonspan>월</weekmonspan>
+    <weektuespan>화</weektuespan>
+    <weekwedspan>수</weekwedspan>
+    <weekthuspan>목</weekthuspan>
+    <weekfrispan>금</weekfrispan>
+    <weeksatspan>토</weeksatspan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <ErrorMsg>유효하지 않은 설정</ErrorMsg>
+    <AlarmOutSpan>알람아웃:</AlarmOutSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <EnableSpan>활성</EnableSpan>
+    <ActivemodeSpan>설정모드:</ActivemodeSpan>
+    <ActivemodeOpenSpan>열기</ActivemodeOpenSpan>
+    <ActivemodeGrounedSpan>닫기</ActivemodeGrounedSpan>
+    <ContinuetimeSpan>시간:</ContinuetimeSpan>
+    <aocontinueTimeSpan>초</aocontinueTimeSpan>
+    <AlarmRecInputLabel>알람시 녹화연동 </AlarmRecInputLabel>
+    <AlarmSnapInputLabel>알람시 사진캡쳐</AlarmSnapInputLabel>
+    <SendToFtpLabel>FTP업로드</SendToFtpLabel>
+    <FtpUploadRecLabel>FTP업로드</FtpUploadRecLabel>
+  </alarminhtml>
+  <alarmouthtml>
+    <AlarmOutSpan>알람아웃:</AlarmOutSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <EnableSpan>활성</EnableSpan>
+    <ActivemodeSpan>설정모드:</ActivemodeSpan>
+    <ActivemodeOpenSpan>열기</ActivemodeOpenSpan>
+    <ActivemodeGrounedSpan>닫기</ActivemodeGrounedSpan>
+    <ContinuetimeSpan>시간:</ContinuetimeSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+  </alarmouthtml>
+  <autosnaphtml>
+    <SnapSpan>캡쳐:</SnapSpan>
+    <ntervalSpan>간격:</ntervalSpan>
+    <ntervalMinutesSpan>분</ntervalMinutesSpan>
+    <ActionSpan>시작:</ActionSpan>
+    <EMailSpan>이메일:</EMailSpan>
+    <SendbyEmailSpan>보내기</SendbyEmailSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <InputErrorMsg>유효하지 않은 글자 포함</InputErrorMsg>
+    <IntervalErrorMsg>범위가 정상적이지 않다 (1-1440)</IntervalErrorMsg>
+    <SettingSpan>이메일설정</SettingSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <AutoSnapEnableSpan>가능</AutoSnapEnableSpan>
+  </autosnaphtml>
+  <timehtml>
+    <Sunday>일</Sunday>
+    <Monday>월</Monday>
+    <Tuesday>화</Tuesday>
+    <Wednesday>수</Wednesday>
+    <Thursday>목</Thursday>
+    <Friday>금</Friday>
+    <Saturday>토</Saturday>
+    <Januar>1월</Januar>
+    <Februar>2월</Februar>
+    <Marts>3월</Marts>
+    <April>4월</April>
+    <Maj>5월</Maj>
+    <Juni>6월</Juni>
+    <Juli>7월</Juli>
+    <August>8월</August>
+    <September>9월</September>
+    <Oktober>10월</Oktober>
+    <November>11월</November>
+    <December>12월</December>
+    <AdjustSpan>적용:</AdjustSpan>
+    <CameradatetimeSpan>날짜&amp;시간:</CameradatetimeSpan>
+    <SetmodeSpan>모드:</SetmodeSpan>
+    <SetmodeKeepcurrentsettingSpan>현재 유지</SetmodeKeepcurrentsettingSpan>
+    <SetmodeManualsettingSpan>수동</SetmodeManualsettingSpan>
+    <SetmodeManualsettingDateSpan>날짜:</SetmodeManualsettingDateSpan>
+    <SetmodeManualsettingTimeSpan>시간:</SetmodeManualsettingTimeSpan>
+    <SetmodeSyncwithcomputerSpan>컴퓨터와 연동</SetmodeSyncwithcomputerSpan>
+    <SetmodeSyncwithcomputerPCTimeSpan>컴퓨터 시간:</SetmodeSyncwithcomputerPCTimeSpan>
+    <SetmodeSyncwhitntpSpan>시간서버 연동</SetmodeSyncwhitntpSpan>
+    <SetmodeSyncwhitntpNTPservernameSpan>서버이름:</SetmodeSyncwhitntpNTPservernameSpan>
+    <SetmodeSyncwhitntpIntervalSpan>간격:</SetmodeSyncwhitntpIntervalSpan>
+    <SetmodeSyncwhitntpIntervalhourSpan>시간</SetmodeSyncwhitntpIntervalhourSpan>
+    <TimezoneSpan>지역:</TimezoneSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <TimezoneKeepcurrentsettingSpan>현재유지</TimezoneKeepcurrentsettingSpan>
+    <TimezoneInternationalDateLineWestSpan>(GMT-12:00) International Date Line West</TimezoneInternationalDateLineWestSpan>
+    <TimezoneMidwayIslandSamoaSpan>(GMT-11:00) Midway Island, Samoa</TimezoneMidwayIslandSamoaSpan>
+    <TimezoneHawaiiSpan>(GMT-10:00) Hawaii</TimezoneHawaiiSpan>
+    <TimezoneAlaskaSpan>(GMT-09:00) Alaska</TimezoneAlaskaSpan>
+    <TimezonePacificTimeUSCanadaTijuanaSpan>(GMT-08:00) Pacific Time(US &amp; Canada) Tijuana</TimezonePacificTimeUSCanadaTijuanaSpan>
+    <TimezoneMountainTimeUSCanadaSpan>(GMT-07:00) Mountain Time (US &amp; Canada)</TimezoneMountainTimeUSCanadaSpan>
+    <TimezoneChihuahuaLaPazMazatlanSpan>(GMT-07:00) Chihuahua, LaPaz, Mazatlan</TimezoneChihuahuaLaPazMazatlanSpan>
+    <TimezoneArizonaSpan>(GMT-07:00) Arizona</TimezoneArizonaSpan>
+    <TimezoneSaskatchewanSpan>(GMT-06:00) Saskatchewan</TimezoneSaskatchewanSpan>
+    <TimezoneGuaddlajaraMexicoCityMonterreySpan>(GMT-06:00) Guaddlajara, Mexico City, Monterrey</TimezoneGuaddlajaraMexicoCityMonterreySpan>
+    <TimezoneCentralTimeUSCanadaSpan>(GMT-06:00) Central Time(US &amp; Canada)</TimezoneCentralTimeUSCanadaSpan>
+    <TimezoneCentralAmericaSpan>(GMT-06:00) Central America</TimezoneCentralAmericaSpan>
+    <TimezoneIndianaEastSpan>(GMT-05:00) Indiana(East)</TimezoneIndianaEastSpan>
+    <TimezoneEasternTimeUSCanadaSpan>(GMT-05:00) EasternTimeUSCanada</TimezoneEasternTimeUSCanadaSpan>
+    <TimezoneBogotaLimaQuitoSpan>(GMT-05:00) Bogota, Lima, Quito</TimezoneBogotaLimaQuitoSpan>
+    <TimezoneSantiagoSpan>(GMT-04:00) Santiago</TimezoneSantiagoSpan>
+    <TimezoneCaracasLaPazSpan>(GMT-04:00) Caracas, La Paz</TimezoneCaracasLaPazSpan>
+    <TimezoneAtlanticTimeCanadaSpan>(GMT-04:00) Atlantic Time(Canada)</TimezoneAtlanticTimeCanadaSpan>
+    <TimezoneNenfoundLandSpan>(GMT-03:30) NenfoundLand</TimezoneNenfoundLandSpan>
+    <TimezoneGreenlandSpan>(GMT-03:00) Greenland</TimezoneGreenlandSpan>
+    <TimezoneBuenosAiresGeorgentownSpan>(GMT-03:00) Buenos Aires, Georgentown</TimezoneBuenosAiresGeorgentownSpan>
+    <TimezoneBrasiliaSpan>(GMT-03:00) Brasilia</TimezoneBrasiliaSpan>
+    <TimezoneMidAtlanticSpan>(GMT-02:00) Mid-Atlantic</TimezoneMidAtlanticSpan>
+    <TimezoneCapeVerdeIsSpan>(GMT-01:00) Cape Verde Is</TimezoneCapeVerdeIsSpan>
+    <TimezoneAzoresSpan>(GMT-01:00) Azores</TimezoneAzoresSpan>
+    <TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan>(GMT-00:00) Greenwich Mean Time:Dublin, Edinburgh, Lisbon, London</TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan>
+    <TimezoneCasablancamonroviaSpan>(GMT+00:00) Casablancamonrovia</TimezoneCasablancamonroviaSpan>
+    <TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan>(GMT+01:00) AmsterdamBerlinBernRomeStockholmVienna</TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan>
+    <TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan>(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan>
+    <TimezoneBrusselsCopenhagenMadridParisSpan>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</TimezoneBrusselsCopenhagenMadridParisSpan>
+    <TimezoneSarajevoSkopjeWarsawZagrebSpan>(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</TimezoneSarajevoSkopjeWarsawZagrebSpan>
+    <TimezoneWestCentralAfricaSpan>(GMT+01:00) West Centra lAfrica</TimezoneWestCentralAfricaSpan>
+    <TimezonehensIstanbulMinskSpan>(GMT+02:00) hens, Istanbul, Minsk</TimezonehensIstanbulMinskSpan>
+    <TimezoneBucharestSpan>(GMT+02:00) Bucharest</TimezoneBucharestSpan>
+    <TimezoneCairoSpan>(GMT+02:00) Cairo</TimezoneCairoSpan>
+    <TimezonerarePretoriaSpan>(GMT+02:00) Harare, Pretoria</TimezonerarePretoriaSpan>
+    <TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan>(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan>
+    <TimezoneJerusalemSpan>(GMT+02:00) Jerusalem</TimezoneJerusalemSpan>
+    <TimezoneBaghdadSpan>(GMT+03:00) Baghdad</TimezoneBaghdadSpan>
+    <TimezoneKuwaitRiyadhSpan>(GMT+03:00) Kuwait, Riyadh</TimezoneKuwaitRiyadhSpan>
+    <TimezoneMoscowStPetersburgVolgogradSpan>(GMT+03:00) Moscow, St.Petersburg, Volgograd</TimezoneMoscowStPetersburgVolgogradSpan>
+    <TimezoneNairobiSpan>(GMT+03:00) Nairobi</TimezoneNairobiSpan>
+    <TimezoneTehranSpan>(GMT+03:30) Tehran</TimezoneTehranSpan>
+    <TimezoneAbuDhabiMuscatSpan>(GMT+04:00) Abu Dhabi, Muscat</TimezoneAbuDhabiMuscatSpan>
+    <TimezoneBakuTbilisiYerevanSpan>(GMT+04:00) Baku, Tbilisi, Yerevan</TimezoneBakuTbilisiYerevanSpan>
+    <TimezoneKabulSpan>(GMT+04:30) Kabul</TimezoneKabulSpan>
+    <TimezoneEkaterinburgSpan>(GMT+05:00) Ekaterinburg</TimezoneEkaterinburgSpan>
+    <TimezoneIslamabadKarachiTashkentSpan>(GMT+05:00) Islamabad, Karachi, Tashkent</TimezoneIslamabadKarachiTashkentSpan>
+    <TimezoneChennaiKolkataMumbaiNewDelhiSpan>(GMT+05:30) Chennai, Kolkata, Mumbai, NewDelhi</TimezoneChennaiKolkataMumbaiNewDelhiSpan>
+    <TimezoneKathmanduSpan>(GMT+05:45) Kathmandu</TimezoneKathmanduSpan>
+    <TimezoneAlmatyNovosibirskSpan>(GMT+06:00) Almaty, Novosibirsk</TimezoneAlmatyNovosibirskSpan>
+    <TimezoneAstanaDhakaSpan>(GMT+06:00) AstanaDhaka</TimezoneAstanaDhakaSpan>
+    <TimezoneSriJayawardenepuraSpan>(GMT+06:00) SriJayawardenepura</TimezoneSriJayawardenepuraSpan>
+    <TimezoneRangoonSpan>(GMT+06:30) Rangoon</TimezoneRangoonSpan>
+    <TimezoneBangkokHanoiJakartaSpan>(GMT+07:00) BangkokHanoiJakarta</TimezoneBangkokHanoiJakartaSpan>
+    <TimezoneKrasnoyarskSpan>(GMT+07:00) Krasnoyarsk</TimezoneKrasnoyarskSpan>
+    <TimezoneBeijingChongqingHongKongUrumqiSpan>(GMT+08:00) Beijing, Chongqing, HongKong, Urumqi</TimezoneBeijingChongqingHongKongUrumqiSpan>
+    <TimezoneIrkutskUlaanBataarSpan>(GMT+08:00) Irkutsk, Ulaan Bataar</TimezoneIrkutskUlaanBataarSpan>
+    <TimezoneKualaLumpurSingaporeSpan>(GMT+08:00) Kuala Lumpur, Singapore</TimezoneKualaLumpurSingaporeSpan>
+    <TimezonePerthSpan>(GMT+08:00) Perth</TimezonePerthSpan>
+    <TimezoneTaipeiSpan>(GMT+08:00) Taipei</TimezoneTaipeiSpan>
+    <TimezoneOsakaSapporoTokyoSpan>(GMT+09:00) OsakaSapporoTokyo</TimezoneOsakaSapporoTokyoSpan>
+    <TimezoneSeoulSpan>(GMT+09:00) 서울</TimezoneSeoulSpan>
+    <TimezoneYakutskSpan>(GMT+09:00) Yakutsk</TimezoneYakutskSpan>
+    <TimezoneAdelaideSpan>(GMT+09:30) Adelaide</TimezoneAdelaideSpan>
+    <TimezoneBrisbaneSpan>(GMT+10:00) Brisbane</TimezoneBrisbaneSpan>
+    <TimezoneCanberraMelbourneSydneySpan>(GMT+10:00) Canberra, Melbourne, Sydney</TimezoneCanberraMelbourneSydneySpan>
+    <TimezoneGuamPortMoresbySpan>(GMT+10:00) Guam, Port Moresby</TimezoneGuamPortMoresbySpan>
+    <TimezoneHobartSpan>(GMT+10:00) Hobart</TimezoneHobartSpan>
+    <TimezoneVladivostokSpan>(GMT+10:00) Vladivostok</TimezoneVladivostokSpan>
+    <TimezoneMagadanSolomonIsNewSpan>(GMT+11:00) Magadan, SolomonIs., New Caledonia</TimezoneMagadanSolomonIsNewSpan>
+    <TimezoneAucklandWellingtonSpan>(GMT+12:00) Auckland, Wellington</TimezoneAucklandWellingtonSpan>
+    <TimezoneFijiKamchatkaMarshallIsSpan>(GMT+12:00) Fiji, Kamchatka, MarshallIs.</TimezoneFijiKamchatkaMarshallIsSpan>
+    <TimezoneNukualofaSpan>(GMT+13:00) Nuku'alofa</TimezoneNukualofaSpan>
+    <AutomaticallyadjustclockfordaylightsavingtimechangesSpan>일광절약시간 설정시 시간 동기화</AutomaticallyadjustclockfordaylightsavingtimechangesSpan>
+    <YearErrorMsg>사용자 컴퓨터 시간이 유효하지 않음, 1971-01-01~2036-12-31</YearErrorMsg>
+    <NtpErrorMsg>NTP서버 이름을 입력해주세요</NtpErrorMsg>
+    <NtpServerErrorMsg>ntp 서버 이름 오류</NtpServerErrorMsg>
+  </timehtml>
+  <initializemainhtml>
+    <InitializeSpan>초기화</InitializeSpan>
+    <RebootSpan>재부팅:</RebootSpan>
+    <FactorydefaultSpan>공장초기화:</FactorydefaultSpan>
+    <BackupsettingdataSpan>백업데이터:</BackupsettingdataSpan>
+    <BackupsettingdataSaveSpan>백업데이터저장</BackupsettingdataSaveSpan>
+    <RestoreSpan>복원:</RestoreSpan>
+    <Restorebrower>파일찾는중...</Restorebrower>
+    <RestoreOKSpan>적용</RestoreOKSpan>
+    <UpgradeSpan>업그레이드:</UpgradeSpan>
+    <UpgradeOKSpan>적용</UpgradeOKSpan>
+    <RebootOKSpan>적용</RebootOKSpan>
+    <FactoryOKSpan>적용</FactoryOKSpan>
+    <Upgradebrower>찾는중...</Upgradebrower>
+    <RebootMsg>IP카메라가 재부팅됩니다. 계속 진행하시겠습니까?</RebootMsg>
+    <RebootWaitMsg>IP카메라를 재부팅 합니다, 카메라 전원을 끄지 마세요....</RebootWaitMsg>
+    <ResetMsg>설정값이 초기화 됩니다. 계속 진행 하시겠습니까?</ResetMsg>
+    <InputFileMsg>파일경로를 입력하세요</InputFileMsg>
+    <UpgradeMsg>IP카메라를 업그레이드 합니다. 계속 진행하시겠습니까?</UpgradeMsg>
+    <UpgradeWaitMsg>IP카메라를 업그레이드 합니다. 카메라 전원을 끄지 마세요....</UpgradeWaitMsg>
+    <UploadMsg>IP카메라가 저장됩니다. 계속 진행하시겠습니까?</UploadMsg>
+    <UploadWaitMsg>IP카메라를 업로딩 하고 있습니다, 카메라 전원을 끄지 마세요....</UploadWaitMsg>
+    <RebootOKSpan>OK</RebootOKSpan>
+    <ResetOKSpan>OK</ResetOKSpan>
+  </initializemainhtml>
+  <deviceinfohtml>
+    <DeviceinfoSpan>기기정보</DeviceinfoSpan>
+    <CameranameSpan>카메라이름:</CameranameSpan>
+    <SerialNumberSpan>시리얼번호:</SerialNumberSpan>
+    <CameraTypeSpan>카메라타입:</CameraTypeSpan>
+    <connectionSpan>연결상태:</connectionSpan>
+    <SoftwareVersionSpan>소프트웨어 버전:</SoftwareVersionSpan>
+    <NetworkInfoSpan>네트워크 정보</NetworkInfoSpan>
+    <MacaddressSpan>맥주소:</MacaddressSpan>
+    <IPaddressSpan>IP:</IPaddressSpan>
+    <SubnetmaskSpan>서브넷마스크:</SubnetmaskSpan>
+    <GatewaySpan>게이트웨이:</GatewaySpan>
+    <PrimaryDNSSpan>기본DNS:</PrimaryDNSSpan>
+    <SecondaryDNSSpan>보조 DNS:</SecondaryDNSSpan>
+    <StartTimeSpan>시작시간:</StartTimeSpan>
+    <HardVersionSpan>하드웨어버젼:</HardVersionSpan>
+  </deviceinfohtml>
+  <basehtml>
+    <LanguageSpan>언어:</LanguageSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+  </basehtml>
+  <sysloghtml>
+    <syslogcleanspan>전체삭제</syslogcleanspan>
+    <gotospan>바로가기:</gotospan>
+    <syslogFirstspan>처음</syslogFirstspan>
+    <syslogUpspan>이전</syslogUpspan>
+    <syslogDownspan>다음</syslogDownspan>
+    <syslogEndspan>마지막</syslogEndspan>
+    <syslogBackupspan>백업</syslogBackupspan>
+    <SearchSpan>검색</SearchSpan>
+    <SearchTimeSpan>시간:</SearchTimeSpan>
+    <SearchTypeSpan>타입:</SearchTypeSpan>
+    <SearchTypeAllSpan>전부</SearchTypeAllSpan>
+    <SearchTypeAlarmSpan>알람</SearchTypeAlarmSpan>
+    <SearchTypeOperationSpan>이벤트</SearchTypeOperationSpan>
+    <TabelNumSpan>숫자</TabelNumSpan>
+    <TabelTimeSpan>시간</TabelTimeSpan>
+    <TabelTypeSpan>타입</TabelTypeSpan>
+    <TabelDetailedSpan>상세항목</TabelDetailedSpan>
+    <MsgStartup>네트워크카메라 재부팅</MsgStartup>
+    <MsgModifyTime>시간수정</MsgModifyTime>
+    <MsgRomoteLogin>원격로그인</MsgRomoteLogin>
+    <MsgSendEmail>이메일보내기, 받는사람:</MsgSendEmail>
+    <MsgTimeRecord>시간녹화시작</MsgTimeRecord>
+    <MsgManualRecord>수동녹화시작</MsgManualRecord>
+    <MsgAlarmRecord>알람녹화시작</MsgAlarmRecord>
+    <MsgModifyNetwork>네트워크 수정</MsgModifyNetwork>
+    <MsgIOAlarmIn>IO 알람인</MsgIOAlarmIn>
+    <MsgIOAlarmOut>IO 알람아웃</MsgIOAlarmOut>
+    <MsgMDAlarmStart>모션감지 알람 시작</MsgMDAlarmStart>
+    <MsgMDAlarmEnd>모션감지 알람 종료</MsgMDAlarmEnd>
+    <MsgODAlarmStart>물체감지 알람 시작</MsgODAlarmStart>
+    <MsgODAlarmEnd>물체감지 알람 종료</MsgODAlarmEnd>
+    <Sunday>일</Sunday>
+    <Monday>월</Monday>
+    <Tuesday>화</Tuesday>
+    <Wednesday>수</Wednesday>
+    <Thursday>목</Thursday>
+    <Friday>금</Friday>
+    <Saturday>토</Saturday>
+    <Januar>1월</Januar>
+    <Februar>2월</Februar>
+    <Marts>3월</Marts>
+    <April>4월</April>
+    <Maj>5월</Maj>
+    <Juni>6월</Juni>
+    <Juli>7월</Juli>
+    <August>8월</August>
+    <September>9월</September>
+    <Oktober>10월</Oktober>
+    <November>11월</November>
+    <December>12월</December>
+    <ErrorTime>시간오류!</ErrorTime>
+  </sysloghtml>
+  <ptzhtml>
+    <PropertySpan>속성</PropertySpan>
+    <ProtocolSpan>프로토콜:</ProtocolSpan>
+    <BaudRateSpan>보드레이트:</BaudRateSpan>
+    <DataBitSpan>데이터비트:</DataBitSpan>
+    <StopBitSpan>정지비트:</StopBitSpan>
+    <ParitySpan>패리티</ParitySpan>
+    <AddressSpan>주소:</AddressSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <addressErrorMsg>주소범위(0~255)</addressErrorMsg>
+    <FilpSpan>상하반전:</FilpSpan>
+    <MirrorSpan>좌우반전:</MirrorSpan>
+    <FlipOnSpan>켜짐</FlipOnSpan>
+    <FlipOffSpan>꺼짐</FlipOffSpan>
+    <MirrorOnSpan>켜짐</MirrorOnSpan>
+    <MirrorOffSpan>꺼짐</MirrorOffSpan>
+  </ptzhtml>
+  <odhtml>
+    <OcclusionSpan>물체감지</OcclusionSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <EnableSpan>활성</EnableSpan>
+    <SensibilitySpan>민감도:</SensibilitySpan>
+    <SensibilityveryhighSpan>아주 높음</SensibilityveryhighSpan>
+    <SensibilityhighSpan>높음</SensibilityhighSpan>
+    <SensibilitynormalSpan>보통</SensibilitynormalSpan>
+    <SensibilitylowSpan>낮음</SensibilitylowSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+  </odhtml>
+  <recordhtml>
+    <RecordSpan>녹화</RecordSpan>
+    <FileTimeSpan>파일시간:</FileTimeSpan>
+    <Filetime0Span>닫음</Filetime0Span>
+    <MinuteSpan>분</MinuteSpan>
+    <ManualRecordSpan>수동녹화:</ManualRecordSpan>
+    <manualrecOnSpan>켜짐</manualrecOnSpan>
+    <manualrecOffSpan>꺼짐</manualrecOffSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <NoStorageMsg>SD카드가 없을 시 녹화가 되지 않습니다.</NoStorageMsg>
+  </recordhtml>
+  <storagehtml>
+    <SdcardInfoSpan>SD 카드 정보</SdcardInfoSpan>
+    <StatusSpan>상태:</StatusSpan>
+    <sdstatusMsg>준비 안됨</sdstatusMsg>
+    <refresh>새로고침</refresh>
+    <removeBT>제거</removeBT>
+    <mountBT>시작</mountBT>
+    <frt>포맷</frt>
+    <brower>파일찾는중...</brower>
+    <SDCardFormatMsg>SD카드 데이터가 손실됩니다, 계속 하시겠습니까?</SDCardFormatMsg>
+    <SDCardRemoveMsg>SD카드 데이터가 제거됩니다, 계속 하시겠습니까?</SDCardRemoveMsg>
+    <SDCardWaitMsg>SD 카드를 포맷중입니다. IP카메라를 끄지 마세요</SDCardWaitMsg>
+  </storagehtml>
+  <loginhtml>
+    <LanguageSpan>언어:</LanguageSpan>
+    <StreamTypeSpan>스트림:</StreamTypeSpan>
+    <streamHDSpan>메인스트림</streamHDSpan>
+    <streamFluentSpan>서브스트림</streamFluentSpan>
+    <ApplySpan>적용</ApplySpan>
+    <DownloadSpan>플레이어 다운로드</DownloadSpan>
+  </loginhtml>
+  <wifihtml>
+    <WifiStatusSpan>와이파이 상태:</WifiStatusSpan>
+    <WifiEnableSpan>활성</WifiEnableSpan>
+    <CurHotPointSpan>CurHotPoint</CurHotPointSpan>
+    <CurHotPointSSIDSpan>네트워크이름:</CurHotPointSSIDSpan>
+    <CurHotPointStatusSpan>연결상태:</CurHotPointStatusSpan>
+    <ConfSSIDSpan>네트워크이름:</ConfSSIDSpan>
+    <AuthModeSpan>인증방법:</AuthModeSpan>
+    <WPAPSKKeySpan>비밀번호:</WPAPSKKeySpan>
+    <ShowPasswordSpan>비밀번호 보이기</ShowPasswordSpan>
+    <SearchResultHeadSignalSpan>신호</SearchResultHeadSignalSpan>
+    <SearchResultHeadSSIDSpan>네트워크이름</SearchResultHeadSSIDSpan>
+    <SearchResultHeadAuthModeSpan>인증방법</SearchResultHeadAuthModeSpan>
+    <SearchResultHeadSearchSpan>검색</SearchResultHeadSearchSpan>
+    <TestSpan>테스트</TestSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <DisconnectSpan>연결 안됨</DisconnectSpan>
+    <ConnectSpan>연결됨</ConnectSpan>
+    <TestConnectSpan>연결중입니다, 기다려주세요</TestConnectSpan>
+    <TestConnectSuccessSpan>연결 성공</TestConnectSuccessSpan>
+    <TestConnectFailureSpan>연결 실패</TestConnectFailureSpan>
+  </wifihtml>
+  <p2phtml>
+    <P2PSpan>P2P:</P2PSpan>
+    <P2PStatusSpan>상태:</P2PStatusSpan>
+    <p2pEnableSpan>활성</p2pEnableSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <P2PIDSpan>ID:</P2PIDSpan>
+    <P2PPwdSpan>비밀번호:</P2PPwdSpan>
+  </p2phtml>
+  <hltalmproxyhtml>
+    <StreamEnableSpan>서버 활성:</StreamEnableSpan>
+    <StreamTypeSpan>스트림타입:</StreamTypeSpan>
+    <MainStramSpan>메인스트림</MainStramSpan>
+    <SubStreamSpan>서브스트림</SubStreamSpan>
+    <StreamAddressSpan>서버주소:</StreamAddressSpan>
+    <ServerPortSpan>서버포트:</ServerPortSpan>
+    <UsernameSpan>사용자이름:</UsernameSpan>
+    <PasswordSpan>비밀번호:</PasswordSpan>
+    <TimeoutSpan>시간초과:</TimeoutSpan>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <PlatformSetSpan>platform setting</PlatformSetSpan>
+    <RebootMsgSpan>재부팅후 설정이 변경됩니다</RebootMsgSpan>
+  </hltalmproxyhtml>
+  <replayhtml>
+    <PlaySpan>재생</PlaySpan>
+    <PauseSpan>일시정지</PauseSpan>
+    <FramePlaySpan>프레임재생</FramePlaySpan>
+    <FastPlaySpan>빠른재생</FastPlaySpan>
+    <StopSpan>정지</StopSpan>
+    <FileListSpan>파일목록:</FileListSpan>
+    <CommonSpan>일반</CommonSpan>
+    <AlarmSpan>알람</AlarmSpan>
+    <AllTypeSpan>전부</AllTypeSpan>
+    <SearchResultHeadSSIDSpan>시간</SearchResultHeadSSIDSpan>
+    <SearchResultHeadAuthModeSpan>크기</SearchResultHeadAuthModeSpan>
+    <dayNamesMinSunday>일</dayNamesMinSunday>
+    <dayNamesMinMonday>월</dayNamesMinMonday>
+    <dayNamesMinTuesday>화</dayNamesMinTuesday>
+    <dayNamesMinWednesday>수</dayNamesMinWednesday>
+    <dayNamesMinThursday>목</dayNamesMinThursday>
+    <dayNamesMinFriday>금</dayNamesMinFriday>
+    <dayNamesMinSaturday>토</dayNamesMinSaturday>
+    <dayNamesSunday>일요일</dayNamesSunday>
+    <dayNamesMonday>월요일</dayNamesMonday>
+    <dayNamesTuesday>화요일</dayNamesTuesday>
+    <dayNamesWednesday>수요일</dayNamesWednesday>
+    <dayNamesThursday>목요일</dayNamesThursday>
+    <dayNamesFriday>금요일</dayNamesFriday>
+    <dayNamesSaturday>토요일</dayNamesSaturday>
+    <dayNamesShortSunday>일</dayNamesShortSunday>
+    <dayNamesShortMonday>월</dayNamesShortMonday>
+    <dayNamesShortTuesday>화</dayNamesShortTuesday>
+    <dayNamesShortWednesday>수</dayNamesShortWednesday>
+    <dayNamesShortThursday>목</dayNamesShortThursday>
+    <dayNamesShortFriday>금</dayNamesShortFriday>
+    <dayNamesShortSaturday>토</dayNamesShortSaturday>
+    <monthNamesJanuar>1월</monthNamesJanuar>
+    <monthNamesFebruar>2월</monthNamesFebruar>
+    <monthNamesMarts>3월</monthNamesMarts>
+    <monthNamesApril>4월</monthNamesApril>
+    <monthNamesMaj>5월</monthNamesMaj>
+    <monthNamesJuni>6월</monthNamesJuni>
+    <monthNamesJuli>7월</monthNamesJuli>
+    <monthNamesAugust>8월</monthNamesAugust>
+    <monthNamesSeptember>9월</monthNamesSeptember>
+    <monthNamesOktober>10월</monthNamesOktober>
+    <monthNamesNovember>11월</monthNamesNovember>
+    <monthNamesDecember>12월</monthNamesDecember>
+    <monthNamesShortJanuar>1월</monthNamesShortJanuar>
+    <monthNamesShortFebruar>2월</monthNamesShortFebruar>
+    <monthNamesShortMarts>3월</monthNamesShortMarts>
+    <monthNamesShortApril>4월</monthNamesShortApril>
+    <monthNamesShortMaj>5월</monthNamesShortMaj>
+    <monthNamesShortJuni>6월</monthNamesShortJuni>
+    <monthNamesShortJuli>7월</monthNamesShortJuli>
+    <monthNamesShortAugust>8월</monthNamesShortAugust>
+    <monthNamesShortSeptember>9월</monthNamesShortSeptember>
+    <monthNamesShortOktober>10월</monthNamesShortOktober>
+    <monthNamesShortNovember>11월</monthNamesShortNovember>
+    <monthNamesShortDecember>12월</monthNamesShortDecember>
+    <closeText>닫기</closeText>
+    <prevText>이전</prevText>
+    <nextText>다음</nextText>
+    <weekHeader>주말</weekHeader>
+    <yearSuffix></yearSuffix>
+  </replayhtml>
+  <ftphtml>
+    <ServerSpan>서버:</ServerSpan>
+    <PortSpan>포트:</PortSpan>
+    <UserSpan>사용자이름:</UserSpan>
+    <PasswdSpan>암호:</PasswdSpan>
+    <TestSpan>테스트</TestSpan>
+    <PortErrMsg>포트에러!</PortErrMsg>
+    <ApplySpan>적용</ApplySpan>
+    <CancelSpan>취소</CancelSpan>
+    <TestConnectSpan>테스트 중입니다, 잠시만 기다려주세요.</TestConnectSpan>
+    <TestConnectSuccessSpan>테스트 성공</TestConnectSuccessSpan>
+    <TestConnectFailureSpan>테스트 실패</TestConnectFailureSpan>
+  </ftphtml>
+</en>

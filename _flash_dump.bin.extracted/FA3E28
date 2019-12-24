@@ -1,0 +1,43 @@
+n]
+    path    =   "/etc/ipcamera/hi_nvt_config"
+    cfg_filename    =   "audio_source_configuration.ini" 
+[network]
+	path    =   "/etc/ipcamera/hi_nvt_config"
+    cfg_filename    =   "network.ini" 
+[scopes_list]
+	path    =   "/etc/ipcamera/hi_nvt_config"
+    cfg_filename    =   "scopes_list.ini" 
+[bitrate_config]
+        path    =   "/etc/ipcamera"
+            cfg_filename    =   "bitrate_config.ini"   
+[vpss_night_config]
+        path    =   "/etc/ipcamera"
+            cfg_filename    =   "vpssnight_config.ini" 	
+[gamma_config]			
+		path    =   "/etc/ipcamera"
+            cfg_filename    =   "gamma_line.ini" 
+[rotate_supporting]
+		path    =   "0"
+            cfg_filename    =   "config_rotate_support.ini" 
+[upgrade_config]
+		path    =   "/etc/ipcamera"
+            cfg_filename    =   "config_upgrade.ini"
+[wdt_config]
+		path    =   "/etc/ipcamera"
+            cfg_filename    =   "config_wdt.ini"
+[capablities]
+		path    =   "/etc/ipcamera"
+            cfg_filename    =   "hi_capablities.ini"
+[cover]                                            
+path                           = "0              "
+cfg_filename                   = "config_cover.ini "
+[netfilter]
+path			=   "/etc/ipcamera"
+cfg_filename		=   "config_netfilter.ini"  
+[schedulemng]
+path			=   "/etc/ipcamera"
+cfg_filename		=   "config_schedulemng.ini"
+[sdupgrade]
+		path    =   "/etc/ipcamera"
+            cfg_filename    =   "config_sdupgrade.ini"
+            

@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/userdefine-jquery-ui.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.progressbar.js"></script>
+<script  type="text/javascript" src="js/video.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getvencattr&-chn=011" TYPE="text/javascript"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getvencattr&-chn=012" TYPE="text/javascript"></SCRIPT>
+<!--SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getvencattr&-chn=013" TYPE="text/javascript"></SCRIPT-->
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="/cgi-bin/bconf.cgi?cmd=bconf.cgi&-action=get" TYPE="text/javascript"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getviattr" TYPE="text/javascript"></SCRIPT>
+<!--SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getaencattr&-chn=011" TYPE="text/javascript"></SCRIPT-->
+<!--SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getaencattr&-chn=012" TYPE="text/javascript"></SCRIPT-->
+<!--SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getvdisplayattr&-wdr" TYPE="text/javascript"></SCRIPT-->
+
+
+<script language="javascript">
+
+
+</script>
+</head>
+<body  class="content" style="display:none;">
+<div>
+    <form name="form1">
+        <div style=" padding-top:10px;">
+            <h4 id="MainstreamSpan">Main stream </h4>
+            <!----------------------------Resolution---------------------------------------------->
+            <div ><span id="ResolutionSpan">Resolution:</span>
+                <select id="MainStreamSizeSelect" disabled="disabled">
+                    <option >1920x1080</option>
+                    <option >1280x960</option>
+                    <option >1280x720</option>
+                    <option >640x480</option>
+                    <option >640x360</option>
+                </select>
+                <label id="ViewSizeChangeRebootMsgLabel"></label>
+            </div>
+            <!--------------------------Bit rate------------------------------------------------>
+            <div ><span id="BitrateSpan">Bit rate:</span>
+                <select id="MainStreamBitSelect" >
+                    <option value="128">128</option>
+                    <option value="256">256</option>
+                    <option value="384">384</option>
+                    <option value="512">512</option>
+                    <option value="768">768</option>
+                    <option value="1024">1024</option>
+                    <option value="1536">1536</option>
+                    <option value="2048">2048</option>
+                    <option value="3072">3072</option>
+					<!-------------- 去掉码流自定义
+                    <option value="1" id="MainStreamUserDefineSpan">User Define</option>
+					--------------------->
+                </select>
+                <input id="MainStreamUserDefineInput" type="text" maxlength="4" size="3" style="display:none" />
+            </div>
+            <!-----------------------------Image Quality---------------------------------------------> 
+            <!--div ><span id="ImageQualitySpan">Image Quality: </span>
+                <select name="qualityselect">
+                    <option value="1" id="QualityVeryHighSpan">Very High</option>
+                    <option value="2" id="QualityHighSpan">High</option>
+                    <option value="3" id="QualityNormalSpan">Normal</option>
+                    <option value="4" id="QualityLowSpan">Low</option>
+                    <option value="5" id="QualityVeryLowSpan">Very Low</option>
+                </select>
+            </div--> 
+            <!------------------------------Maximum frame-------------------------------------------->
+            <div ><span id="MaximumframeSpan">Maximum frame:</span>
+                <select id="MainStreamFpsSelect" size="1">
+                </select>
+            </div>
+            <!---------------------------------Video quality control-----------------------------------------> 
+            <!--div ><span id="VideoqualitycontrolSpan">Video&nbsp;quality&nbsp;control: </span>
+                <input type="radio" name="qualityradio" value="radiobutton" id="frameratefirst">
+                <label for="frameratefirst" id="FrameratefirstSpan">Frame rate first </label>
+                <input type="radio" name="qualityradio" value="radiobutton" id="qualityfirst">
+                <label for="qualityfirst" id="QualityfirstSpan">Quality first</span> </label>
+            </div--> 
+            <!--------------------------Norm------------------------------------------------> 
+            <!--div ><span id="NormSpan">Norm:</span>
+        <SELECT NAME="vinorm"  disabled>
+          <OPTION VALUE="0"> PAL </OPTION>
+          <OPTION VALUE="1"> NTSC </OPTION>
+        </SELECT>
+      </div--> 
+            <!--------------------------Bit Rate Ctr------------------------------------------------>
+            <div> <span id="MainStreamBitRateTypeSpan">Bit Rate Type:</span>
+                <select id="MainStreamBitRateCtrSelect">
+                    <option id="MainStreamCBR" value="1">CBR</option>
+                    <option id="MainStreamVBR" value="2">VBR</option>
+                    <option id="MainStreamFIXQP" value="4">FixQp</option>
+                </select>
+                 <select id="MainStreamFIXQPLevel">
+                    <option id="MainStreamFIXQPLevel1" value="1" selected="selected">Very High</option>
+                    <option id="MainStreamFIXQPLevel2" value="2">High</option>
+                    <option id="MainStreamFIXQPLevel3" value="3">Normal</option>
+                    <option id="MainStreamFIXQPLevel4" value="4">Low</option>
+                    <option id="MainStreamFIXQPLevel5" value="5">Very Low</option>
+                </select>
+            </div>
+            
+            
+             <!--------------------------GOP------------------------------------------------>
+            <div> <span id="MainStreamGopSpan">Gop:</span>
+              <input type="text" id="MainStreamGopInput" />
+                 <label id="MainStreamGopInputTips" style="margin:0px;"></label>
+            </div>
+               <!--------------------------Audio------------------------------------------------>
+            <!--div> <span id="MainStreamAudioSpan">Audio:</span>
+             <input  type="radio" name="MainStreamAudioGrp" value="1"/><label id="MainStreamAudioGrpOn">On</label>
+         	<input  type="radio" name="MainStreamAudioGrp" value="0"/><label id="MainStreamAudioGrpOff" >Off</label>
+            </div-->
+        </div>
+        <div class="cutoffrule"></div>
+        <div style=" padding-top:10px;">
+            <h4 id="SubstreamSpan">Sub stream </h4>
+            <!----------------------------Resolution---------------------------------------------->
+            <div ><span id="SubResolutionSpan">Resolution:</span>
+                <select id="SubStreamSizeSelect" disabled="disabled">
+                    <option>640x360</option>
+                    <option>320x180</option>
+                </select>
+                <label id="SubViewSizeChangeRebootMsgLabel"></label>
+            </div>
+            <!--------------------------Bit rate------------------------------------------------>
+            <div ><span id="SubBitrateSpan">Bit rate:</span>
+                <select id="SubStreamBitSelect" >
+                    <option value="128">128</option>
+                    <option value="256">256</option>
+                    <option value="384">384</option>
+                    <option value="512">512</option>
+                    <option value="768">768</option>
+                    <option value="1024">1024</option>
+                    <option value="1536">1536</option>
+					<!-------------- 去掉码流自定义
+                    <option value="1" id="SubStreamUserDefineSpan">User Define</option>
+					----------------------------->
+                </select>
+                <input id="SubStreamUserDefineInput" type="text" maxlength="4" size="3" style="display:none" />
+            </div>
+            <!-----------------------------Image Quality---------------------------------------------> 
+            <!--div ><span id="SubImageQualitySpan">Image Quality: </span>
+                <select name="subqualityselect">
+                    <option value="1" id="SubImageQualityVeryHighSpan">Very High</option>
+                    <option value="2" id="SubQualityHighSpan">High</option>
+                    <option value="3" id="SubQualityNormalSpan">Normal</option>
+                    <option value="4" id="SubQualityLowSpan">Low</option>
+                    <option value="5" id="SubQualityVeryLowSpan">Very Low</option>
+                </select>
+            </div--> 
+            <!------------------------------Maximum frame-------------------------------------------->
+            <div ><span id="SubMaximumframeSpan">Maximum frame:</span>
+                <select id="SubStreamFpsSelect" size="1">
+                </select>
+            </div>
+            <!---------------------------------Video quality control-----------------------------------------> 
+            <!--div ><span id="SubVideoqualitycontrolSpan">Video&nbsp;quality&nbsp;control: </span>
+                <input type="radio" name="subqualityradio" value="radiobutton" id="subframeratefirst">
+                <label for="subframeratefirst" id="SubFrameratefirstSpan">Frame rate first </label>
+                <input type="radio" name="subqualityradio" value="radiobutton" id="subqualityfirst">
+                <label for="subqualityfirst" id="SubQualityfirstSpan">Quality first</span> </label>
+            </div--> 
+            <!--------------------------Norm------------------------------------------------> 
+            <!--div ><span id="SubNormSpan">Norm:</span>
+        <select name="subvinorm"  disabled>
+          <option value="0"> PAL </option>
+          <option value="1"> NTSC </option>
+        </SELECT>
+      </div--> 
+            <!--------------------------Bit Rate Ctr------------------------------------------------>
+            <div> <span id="SubStreamBitRateTypeSpan">Bit Rate Type:</span>
+                <select id="SubStreamBitRateCtrSelect">
+                    <option id="SubStreamCBR" value="1">CBR</option>
+                    <option id="SubStreamVBR" value="2">VBR</option>
+                     <option id="SubStreamFIXQP" value="4">FixQp</option>
+                </select>
+                 <select id="SubStreamFIXQPLevel">
+                    <option id="SubStreamFIXQPLevel1" value="1" selected="selected">Very High</option>
+                    <option id="SubStreamFIXQPLevel2" value="2">High</option>
+                    <option id="SubStreamFIXQPLevel3" value="3">Normal</option>
+                    <option id="SubStreamFIXQPLevel4" value="4">Low</option>
+                    <option id="SubStreamFIXQPLevel5" value="5">Very Low</option>
+                </select>
+                
+            </div>
+              <!--------------------------GOP------------------------------------------------>
+            <div> <span id="SubStreamGopSpan">Gop:</span>
+              <input type="text" id="SubStreamGopInput" />
+                 <label id="SubStreamGopInputTips" style="margin:0px;"></label>
+            </div>
+                         <!--------------------------Audio------------------------------------------------>
+            <!--div> <span id="SubStreamAudioSpan">Audio:</span>
+             <input  type="radio" name="SubStreamAudioGrp" value="1"/><label id="SubStreamAudioGrpOn">On</label>
+         	<input  type="radio" name="SubStreamAudioGrp" value="0"/><label id="SubStreamAudioGrpOff">Off</label>
+            </div-->
+        </div>
+        <!--div class="cutoffrule"></div>
+        <div style=" padding-top:10px;">
+            <h4 id="MobileSpan">Sub Stream</h4>
+            <!-----------------------------Resolution--------------------------------------------->
+            <!--div><span id="ResolutionSpan">Resolution:</span>
+                <select id="MobileStreamSizeSelect" size="1" disabled>
+                    <option>320x180</option>
+                    <option>320x240</option>
+                </select>
+            </div-->
+            <!-----------------------------Username--------------------------------------------->
+            <!--div><span id="UsernameSpan">Username:</span>
+                <input name="mobileusername" type="text" class="image-sprites" size="19" maxlength="64">
+            </div-->
+            <!----------------------------Password---------------------------------------------->
+            <!--div><span id="PasswordSpan">Password:</span>
+                <input name="mobilepassword" type="password"  size="20" maxlength="64">
+            </div-->
+            <!------------------------------Port-------------------------------------------->
+            <!--div><span id="PortSpan">Port:</span>
+                <input name="mobileport" type="text"  size="19" maxlength="6">
+            </div-->
+            <!------------------------------Quality-------------------------------------------->
+            <!--div><span id="QualitySpan">Quality:</span>
+                <select id="MobileStreamImageQuality">
+                    <option value="1" id="QualityVeryHighSpan">Very High</option>
+                    <option value="2" id="QualityHighSpan">High</option>
+                    <option value="3" id="QualityNormalSpan">Normal</option>
+                    <option value="4" id="QualityLowSpan">Low</option>
+                    <option value="5" id="QualityVeryLowSpan">Very Low</option>
+                </select>
+            </div-->
+            <!--------------------------------------------------------------------------> 
+        <!--/div-->
+        <!---end sub stream---->
+          <!--------------------------begin P /N------------------------------------------------>
+         <!--div class="cutoffrule"></div>
+         <div>
+         <span id="NormSpan">Norm:</span>
+         <input  type="radio" name="ModeGrp" value="P"/><label>PAL</label>
+         <input  type="radio" name="ModeGrp" value="N"/><label>NTSC</label>
+         <label id="NormChangeRebootMsgLabel"></label>
+         </div-->
+         <!--------------------------end P /N------------------------------------------------>
+    </form>
+</div>
+
+<div id="MsgLayer" style="display:none; margin:10px auto; width:600px">
+  <P></p>
+  <P></P>
+  <P  style="margin-left:120px;font-size:14px;" id="Msg"></p>
+  <div id="progressbar" style="font-size:16px;height:16px;"> </div>
+</div>
+
+<div style="display:none">
+    <form name="form2" method="post">
+        <input name="cmd" type="hidden" value="setmobilesnapattr">
+        <input name="cururl" type="hidden">
+        <input name="cmd" type="hidden" value="setvencattr">
+        <input id="Form2Chn" name="chn" type="hidden">
+        <input id="Form2Bps" name="bps" type="hidden">
+        <input id="Form2Fps" name="fps" type="hidden">
+        <input id="Form2BrMode" name="brmode" type="hidden">
+        <input id="Form2FixQpLevel" name="fixqpLevel" type="hidden" disabled="disabled">
+        <input id="Form2Gop" name="gop" type="hidden">
+     
+        <input name="cmd" type="hidden" value="setvencattr">
+        <input id="Form2SubChn" name="chn" type="hidden">
+        <input id="Form2SubBps" name="bps" type="hidden">
+        <input id="Form2SubFps" name="fps" type="hidden">
+        <input id="Form2SubBrMode" name="brmode" type="hidden">
+         <input id="Form2SubFixQpLevel" name="fixqpLevel" type="hidden" disabled="disabled">
+         <input id="Form2SubGop" name="gop" type="hidden">
+         <!--
+        <input name="cmd" type="hidden" value="setvencattr">
+        <input id="Form2MobileChn" name="chn" type="hidden">
+         <input id="Form2MobileImageGrade" name="mobilequality" type="hidden">
+         <input id="Form2MobileBrMode" name="brmode" type="hidden">
+         
+        <input id="Form2SetViAttrCmd" type="hidden"  disabled="disabled">
+        <input id="Form2VideoMode" type="hidden" disabled="disabled">
+        <input id="Form2ViNorm" type="hidden" disabled="disabled">
+        -->
+        <input id="Form2SetMainVencSizeCmd" type="hidden"  disabled="disabled">
+        <input id="Form2MainChn" type="hidden" disabled="disabled">
+        <input id="Form2MainWidth"type="hidden" disabled="disabled">
+        <input id="Form2MainHeight" type="hidden" disabled="disabled">
+        
+        <input id="Form2SetSubVencSizeCmd" type="hidden"  disabled="disabled">
+        <input id="Form2SubVencSizeChn" type="hidden" disabled="disabled">
+        <input id="Form2SubWidth" name="w" type="hidden" disabled="disabled">
+        <input id="Form2SubHeight" name="h" type="hidden" disabled="disabled">
+        
+         <!--input name="cmd" type="hidden" value="setaencattr">
+         <input id="Form2MainStreamAudioChn" name="chn" type="hidden">
+         <input id="Form2MainStreamIsGetAudio" name="isgetaudio" type="hidden">    
+         <input name="cmd" type="hidden" value="setaencattr">
+         <input id="Form2SubStreamAudioChn" name="chn" type="hidden">
+         <input id="Form2SubStreamIsGetAudio" name="isgetaudio" type="hidden"--> 
+
+		<input id="Form2SetVencSizeRebootCmd" type="hidden"  disabled="disabled">
+        <input id="Form2Reboot" type="hidden" disabled="disabled">
+    </form>
+</div>
+<div class="ApplyLayerStyle"><a id="apply" href="#">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#">Cancel</a> </div>
+</body>
+</html>

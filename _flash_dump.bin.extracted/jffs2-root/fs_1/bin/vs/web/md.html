@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/areaselect.js"></script>
+<script type="text/javascript" src="js/md.js"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdalarm&-aname=email&" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdalarm&-aname=snap" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdalarm&-aname=emailsnap" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdalarm&-aname=ftpsnap" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdalarm&-aname=record" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdalarm&-aname=ftprec" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdalarm&-aname=ioalmdo&"  type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdalarm&-aname=playaudio&"  type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getschedule&-type=event&-ename=md&" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getmdattr&-chn=1&-name=1&" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=snap&" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getsdcareInfo" type="text/javascript"></script>
+
+<script language="javascript">
+
+</script>
+</head>
+<body class="content" style="display:none;">
+<div>
+    <form name="form1">
+        <h4 id="AreaSpan">Area:</h4>
+        <div><span id="StatusSpan">Status:</span>
+            <input id="mdenable" name="mdenable" value="checkbox" type="checkbox">
+            <label for="mdenable" id="StatusEnableSpan">Enable</label>
+			
+			<input id="mdfenable" name="mdfenable" value="checkbox" type="checkbox">
+            <label for="mdfenable" id="StatusEnableFollow">MotionFollowEnable</label>
+        </div>
+        <div id="MdEnableLayer" style="display:block" >
+            <div id="MdDisplayLayer"> 
+             
+                <script type="text/javascript">		
+		var str =".." + path;			
+		connent = '<img  id="mdsnap" style="position:absolute;left:0px;top:0px;width:100%;height:100%;"'
+		connent += 'src="' + str + '"';
+		connent += '/>'
+		document.open();
+		document.write(connent);
+		document.close();
+
+		 </script> 
+         <div style="position:absolute;">
+          <script type="text/javascript">
+         	var maxcol  = 20;
+			var maxrow = 12;
+        AlearselectDraw(maxcol, maxrow, parseInt($('#MdDisplayLayer').css('width')), parseInt($('#MdDisplayLayer').css('height')), 'MdAreaSelect');
+ </script> 
+         
+         </div>
+            </div>
+            <div style="margin-top:5px;"> <span id="SensibilitySpan">Sensibility:</span>
+                <select id="Sensibility">
+                    <option class="optionspan" value="0"id="SensibilityveryhighSpan"> very high </option>
+                    <option class="optionspan" value="1"id="SensibilityhighSpan"> high </option>
+                    <option class="optionspan" value="2"id="SensibilitynormalSpan"> normal </option>
+                    <option class="optionspan" value="3"id="SensibilitylowSpan"> low </option>
+                </select>
+                <div  style="display:inline-block; margin-left:82px;*display:inline;*zoom:1;"> <a href="#" id="MdSelectAllSpan" class="classname" onClick="AreaselectSelectall()">Select All</a> <a href="#" id="MdCleanAllSpan" class="classname" style="margin-left:10px" onClick="AreaselectClearall()">Clean All</a> </div>
+            </div>
+            <!----------------------------------------------------------->
+            <div class="cutoffrule"></div>
+            <h4 id="ActionSpan">Action:</h4>
+            <div  style="height:24px;"> <span id="EMailSpan">E-Mail:</span>
+            <input id="emailbox" name="emailbox" value="checkbox" type="checkbox" />
+            <label for="emailbox" id="SendEmailSpan">Send E-mail</label>
+          </div>
+            <div >
+            <div id="AlarmSnapLayer"  style="height:24px;"><span id="OutputSpan">Output:</span>
+                <input id="AlarmSnapInput"  value="checkbox" type="checkbox">
+                <label for="AlarmSnapInput" id="AlarmSnapInputLabel">Alarm With Snap</label>
+                <div id="SendPicLayer" style="display:inline">
+                <input id="SendToEmail" value="checkbox" type="checkbox">
+                <label for="SendToEmail" id="SendToEmailLaebl">Send To Email</label>
+                <!-----------不支持FTP---input id="SendToFtp" value="checkbox" type="checkbox">
+                <label for="SendToFtp" id="SendToFtpLabel">Upload Ftp</label------------>
+              </div>
+              </div>
+            
+            <div id="AlarmRecLayer"  style="height:24px;"> <span id="OutputSpanaaaaa">&nbsp;</span>
+                <input id="AlarmRecInput"  value="checkbox" type="checkbox">
+                <label for="AlarmRecInput" id="AlarmRecInputLabel">Alarm With Rec</label>
+                <!------不支持FTP--div id="UploadRecLayer" style="display:inline">
+                <input id="FtpUploadRec"  value="checkbox" type="checkbox">
+                <label for="FtpUploadRec" id="FtpUploadRecLabel">Ftp with Rec</label>
+              </div!------不支持FTP-->
+              </div>
+              
+               <div style="height:24px;"> <span id="OutputSpanaaaaa">&nbsp;</span>
+                <input id="mdalarmoutbox" value="checkbox" type="checkbox">
+                <label for="mdalarmoutbox" id="TriggerAlarmOutputSpan">Trigger Alarm Output</label>
+              </div>
+			  <div style="height:24px;"> <span id="OutputSpanaaaaa">&nbsp;</span>
+                <input id="mdalarmaudiobox" value="checkbox" type="checkbox">
+                <label for="mdalarmaudiobox" id="TriggerAlarmAudioSpan">Trigger Alarm Audio</label>
+              </div>
+          </div>
+            <!----------------------------------------------------------->
+            <div> <span id="ScheduleSpan">Schedule:</span>
+                <input id="weekmode" name="mode_radio"  type="radio" value="0">
+                <label for="weekmode" id="ScheduleUsetheweekmodeSpan">Use the week mode</label>
+                <input  id="workmode" name="mode_radio" type="radio" value="1">
+                <label  for="workmode" id="ScheduleUsetheworkmodeSpan">Use the work mode</label>
+                <input  id="alltimemode" name="mode_radio" type="radio" value="2">
+                <label for="alltimemode" id="ScheduleAlltimedaySpan">All times day</label>
+                <a id="MdTimeSpan" class="classname" style="display:inline-block; *display:inline;*zoom:1">Time </a> 
+            </div>
+            <div id="TimeFrameLayer" style="display:none;">
+                <iframe id="TimeFrame" src="timeplan.html" scrolling="no" frameborder="0" width="100%" height="280px"></iframe>
+            </div>
+        </div>
+    </form>
+</div>
+<div style="display:none">
+    <form name="form2" method="post">
+        <input name="cmd" type="hidden" value="setmdalarm">
+        <input name="cururl" type="hidden">
+        <input id="Form2SendEmail"  name="-aname" value="email" type="hidden">
+        <input id="Form2SendEmailSwitch" name="-switch" value="off" type="hidden">
+        <input name="cmd" type="hidden" value="setmdalarm">
+        <input id="Form2Snap"   name="-aname" value="snap" type="hidden">
+        <input id="Form2SnapSwitch"  name="-switch" value="off" type="hidden">
+        <input name="cmd" type="hidden" value="setmdalarm">
+        <input id="Form2EmailSnap"  name="-aname" value="emailsnap"  type="hidden">
+        <input id="Form2EmailSnapSwitch" name="-switch" value="off"  type="hidden">
+		<!------不支持FTP--input name="cmd" type="hidden" value="setmdalarm">
+        <input id="Form2FtpSnap"   name="-aname" value="ftpsnap"  type="hidden">
+        <input id="Form2FtpSnapSwitch" name="-switch" value="off"  type="hidden"!------不支持FTP-->
+        <input name="cmd" type="hidden" value="setmdalarm">
+        <input id="Form2Record"  name="-aname" value="record"  type="hidden">
+        <input id="Form2RecordSwitch" name="-switch" value="off"  type="hidden">
+         <!------不支持FTP--input name="cmd" type="hidden" value="setmdalarm">
+        <input id="Form2FtpRecord"  name="-aname" value="ftprec"  type="hidden">
+        <input id="Form2FtpRecordSwitch" name="-switch" value="off"  type="hidden"!------不支持FTP-->
+
+		 <input name="cmd" type="hidden" value="setmdalarm">
+        <input id="Form2AlarmOut"   name="-aname" value="ioalmdo"  type="hidden">
+        <input id="Form2AlarmOutSwitch" name="-switch" value="off"  type="hidden">
+        
+		<input name="cmd" type="hidden" value="setmdalarm">
+        <input id="Form2AlarmAudio"   name="-aname" value="playaudio"  type="hidden">
+		<input id="Form2AlarmAudioSwitch" name="-switch" value="off"  type="hidden">
+                
+        <input name="cmd" type="hidden" value="setschedule">
+        <input id="Form2Type" name="type" type="hidden" value="event">
+        <input id="Form2Ename" name="ename" type="hidden" value="md">
+        <input id="Form2Etm" name="etm" type="hidden">
+        <input id="Form2Wk0" name="week0" type="hidden" value="none">
+        <input id="Form2Wk1" name="week1" type="hidden" value="none">
+        <input id="Form2Wk2" name="week2" type="hidden" value="none">
+        <input id="Form2Wk3" name="week3" type="hidden" value="none">
+        <input id="Form2Wk4" name="week4" type="hidden" value="none">
+        <input id="Form2Wk5" name="week5" type="hidden" value="none">
+        <input id="Form2Wk6" name="week6" type="hidden" value="none">
+        <input id="Form2Wrkday" name="workday" type="hidden" value="none">
+        <input id="Form2Wkend" name="weekend" type="hidden" value="none">
+        <input name="cmd" type="hidden" value="setmdattr">
+        <input id="Form2MdChn" name="chn" type="hidden" value="none">
+        <input id="Form2MdEnable" name="enable" type="hidden" value="none">
+		<input id="Form2MdfEnable" name="motionfenable" type="hidden" value="none">
+        <input id="Form2MdSensitive" name="sensitive" type="hidden" value="none">
+        <input id="Form2MdName" name="name" type="hidden" value="none">
+        <script type="text/javascript">
+		document.open();
+		for(i=0; i<32; i++)
+			document.write('<input id="Form2MdRegion' + i + '" name="region' + i +'" type="hidden" value="none">');
+		document.close();	
+	</script>
+    </form>
+</div>
+
+<div class="ApplyLayerStyle"> <a id="apply" href="#">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

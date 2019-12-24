@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<title>ipCAM</title>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+<META http-equiv="Pragma" CONTENT="no-cache">
+
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">	
+
+<meta HTTP-EQUIV="Expires" CONTENT="Mon, 06 Jan 1990 00:00:01 GMT"> 
+<!-- ImageReady Preload Script (ipCAM.psd) -->
+<script type="text/javascript">
+<!--
+
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		index_08_Over = newImage("images/index_08-Over.gif");
+		index_09_Over = newImage("images/index_09-Over.gif");
+		index_11_Over = newImage("images/index_11-Over.gif");
+		index_12_Over = newImage("images/index_12-Over.gif");
+		index_13_Over = newImage("images/index_13-Over.gif");
+		index_39_Over = newImage("images/index_39-Over.gif");
+		index_39_Down = newImage("images/index_39-Down.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<!-- End Preload Script -->
+<style type="text/css">
+<!--
+body {
+	background-color: #505050;
+}
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style2 {
+	color: #999999;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+.style5 {	font-size: 12px;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style6 {color: #990000}
+-->
+</style></head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/botton/home-Over.jpg','images/botton/media-Over.jpg','images/botton/adbanced-Over.jpg','images/botton/Media2-Over.jpg','images/botton/Advanced2-Over.jpg','images/botton/System2-Over.jpg','images/botton/system-Over.jpg')">
+<table width="100%" height="76"  border="0" cellpadding="0" cellspacing="0" bgcolor="#252525" class="style2">
+  <tr>
+    <td width="76%" height="32" align="center" valign="bottom">&nbsp;</td>
+    <td width="24%" valign="middle"><div align="center"><br>
+    </div></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="bottom"><table width="874" height="44" border="0" cellpadding="0" cellspacing="0" background="images/caidanbg.jpg">
+      <tr>
+        <td align="center" valign="top"><table width="44%"  border="0" cellpadding="0" cellspacing="0">
+         <!--
+            <tr>
+              <td width="17%"><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/botton/home-Over.jpg',1)"><img src="images/botton/home.jpg" name="Image8" width="106" height="44" border="0"></a></td>
+              <td width="17%"><a href="a7.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/botton/media-Over.jpg',1)"><img src="images/botton/media.jpg" name="Image9" width="106" height="44" border="0"></a></td>
+              <td width="23%"><a href="a11.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','images/botton/adbanced-Over.jpg',1)"><img src="images/botton/adbanced.jpg" name="Image14" width="143" height="44" border="0"></a></td>
+              <td width="19%"><a href="a11.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/botton/system-Over.jpg',1)"><img src="images/botton/system.jpg" name="Image6" width="119" height="44" border="0"></a></td>
+              <td width="24%"><a href="a25.html"><img src="images/botton/help-Over.jpg" width="104" height="44" border="0"></a></td>
+            </tr>
+            -->
+            <tr>
+              <td width="17%"><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/botton/home-Over.jpg',1)"><img src="images/botton/home.jpg" name="Image8" width="106" height="44" border="0"></a></td>
+              <td width="17%"><a href="display.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/botton/media-Over.jpg',1)"><img src="images/botton/media.jpg" name="Image9" width="106" height="44" border="0"></a></td>
+              <td width="23%"><a href="network.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/botton/adbanced-Over.jpg',1)"><img src="images/botton/adbanced.jpg" name="Image10" width="143" height="44" border="0"></a></td>
+              <td width="19%"><a href="time.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/botton/system-Over.jpg',1)"><img src="images/botton/system.jpg" name="Image6" width="119" height="44" border="0"></a></td>
+              <td width="24%"><a href="help.html" ><img src="images/botton/help-Over.jpg" width="104" height="44" border="0"></a></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="872" height="465" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#444444">
+  <tr>
+    <td width="694" align="center" valign="top">&nbsp;</td>
+    <td width="178" align="right" valign="top"><table width="100%" height="465" border="0" cellpadding="0" cellspacing="0" background="images/set.jpg">
+      <tr>
+        <td width="187" align="right" valign="top"><table width="89%" height="229" border="0" align="right" cellpadding="0" cellspacing="4">
+            <tr>
+              <td height="13" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="13" align="right"><img src="images/botton/home2-Over.jpg" width="170" height="48"></td>
+            </tr>
+            <tr>
+              <td height="13" align="right"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image121','','images/botton/Media2-Over.jpg',1)"><img src="images/botton/Media2.jpg" name="Image121" width="170" height="48" border="0" id="Image121"></a></td>
+            </tr>
+            <tr>
+              <td height="48" align="right"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','images/botton/Advanced2-Over.jpg',1)"><img src="images/botton/Advanced2.jpg" name="Image11" width="170" height="48" border="0"></a></td>
+            </tr>
+            <tr>
+              <td height="48" align="right"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','images/botton/System2-Over.jpg',1)"><img src="images/botton/System2.jpg" name="Image13" width="170" height="48" border="0"></a></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="872" height="52" border="0" align="center" cellpadding="0" cellspacing="0" background="images/xingxianglan.jpg" class="style1">
+  <tr>
+    <td width="672" align="center" valign="middle"></td>
+    <td width="200" valign="top"><img src="images/xingxianglan2.jpg" width="18" height="44"> </td>
+  </tr>
+</table>
+<!-- ImageReady Slices (ipCAM.psd - Slices: 02, 05, 06, 08, 09, 11, 12, 13, 15, 21, 22, 28, 30, 35, 36, 39, 42, 46, 50, 53) -->
+<!-- End ImageReady Slices -->
+</body>
+</html>

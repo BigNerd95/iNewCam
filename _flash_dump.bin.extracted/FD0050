@@ -1,0 +1,13 @@
+ ";[0,511]
+ldc_viewtype                   = "0              ";0 crop 1 all
+[sensor_b_default]
+default                        = "0              ";
+brightness                     = "0              ";
+saturation                     = "101            ";
+sharpness                      = "4              ";
+contrast                       = "37             ";
+hue                            = "1              ";
+adnswitch                      = "off            ";
+dnt                            = "4              ";
+awbswitch                      = "off            ";
+wbr                            = "74             ";

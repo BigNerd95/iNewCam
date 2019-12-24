@@ -1,0 +1,89 @@
+[event]                                          
+number                         = "2              "
+1                              = "md             "
+2                              = "alarmin        "
+[action]                                         
+number                         = "12             "
+1                              = "email          "
+2                              = "ftp            "
+3                              = "snap           "
+4                              = "record         "
+5                              = "emailsnap      "
+6                              = "emailrec       "
+7                              = "ftpsnap        "
+8                              = "ftprec         "
+9                              = "ioalmdo        "
+10                             = "ptz            "
+11                             = "notify         "
+12                             = "playaudio      "
+[md]                                             
+etm                            = "0              "
+timetable0                     = "0~95           "
+timetable1                     = "0~95           "
+timetable2                     = "0~95           "
+timetable3                     = "0~95           "
+timetable4                     = "0~95           "
+timetable5                     = "0~95           "
+timetable6                     = "0~95           "
+interval                       = "0              "
+
+[md_workday]                                     
+timetable                      = "none           "
+
+[md_weekend]                                     
+timetable                      = "none           "
+
+[md_relation]
+relation                      = "0|0|0|0|0|0|0|0|0|0|0|0  "
+
+[alarmin]                                        
+groupnumber                    = "0              "
+bitnumber                      = "2              "
+isenable                       = "0              "
+mode                           = "0              "
+etm                            = "0              "
+timetable0                     = "0~95           "
+timetable1                     = "0~95           "
+timetable2                     = "0~95           "
+timetable3                     = "0~95           "
+timetable4                     = "0~95           "
+timetable5                     = "0~95           "
+timetable6                     = "0~95           "
+interval                       = "10              "
+[alarmin_workday]                                
+timetable                      = "none           "
+
+[alarmin_weekend]                                
+timetable                      = "none           "
+
+[alarmin_relation]
+relation                      = "0|0|0|0|0|0|0|0|0|0|0|0  "
+
+[email]                                          
+timetable0                     = "0~95           "
+timetable1                     = "0~95           "
+timetable2                     = "0~95           "
+timetable3                     = "0~95           "
+timetable4                     = "0~95           "
+timetable5                     = "0~95           "
+timetable6                     = "0~95           "
+interval                       = "30             "
+event                          = "               "
+[ftp]                                            
+timetable0                     = "0~95           "
+timetable1                     = "0~95           "
+timetable2                     = "0~95           "
+timetable3                     = "0~95           "
+timetable4                     = "0~95           "
+timetable5                     = "0~95           "
+timetable6                     = "0~95           "
+interval                       = "60             "
+event                          = "               "
+[snap]                                           
+timetable0                     = "0~95           "
+timetable1                     = "0~95           "
+timetable2                     = "0~95           "
+timetable3                     = "0~95           "
+timetable4                     = "0~95           "
+timetable5                     = "0~95           "
+timetable6         

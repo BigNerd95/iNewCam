@@ -1,0 +1,29 @@
+         ";[0-511]
+wbbg_manual                    = "452            ";[0-511]
+aimode                         = "0              ";1 on  0 off
+stopvalue                      = "0              ";
+closevalue                     = "0              ";
+holdvalue                      = "0              ";
+daynight                       = "0              ";0:auto;  1:manual night;  2:manual day; 3:timer mode
+start_time                     = "8              ";  0~23//IRCUT定时模式下的时间
+stop_time                      = "19             ";	 0~23//IRCUT定时模式下的时间
+dayexp                         = "4000           ";
+nightexp                       = "20000          ";
+antifog_status                 = "0              ";1 on  0 off
+antifalsecolor_strength        = "128            ";[0-255]
+ldc_status                     = "0              ";1 on  0 off
+ldc_xoffset                    = "12             ";[-28,28]
+ldc_yoffset                    = "13             ";[-14,14]
+ldc_ratio                      = "20             ";[0,511]
+ldc_viewtype                   = "0              ";0 crop 1 all
+[sensor_b_default]
+default                        = "0              ";
+brightness                     = "0              ";
+saturation                     = "101            ";
+sharpness                      = "4              ";
+contrast                       = "37             ";
+hue                            = "1              ";
+adnswitch                      = "off            ";
+dnt                            = "4              ";
+awbswitch                      = "off            ";
+wbr                            = "74             ";

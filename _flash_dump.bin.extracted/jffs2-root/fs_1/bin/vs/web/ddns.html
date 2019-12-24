@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+
+<style type="text/css">
+</style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+
+<script language="JavaScript1.2" src="/cgi-bin/getddnsattr.cgi" type="text/javascript"></script>
+<!--script language="JavaScript1.2" src="/cgi-bin/getupnp.cgi" type="text/javascript"></script-->
+
+
+<script language="javascript">
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+   
+setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+function checkProhibitedCharacter ( string )
+{
+	if(string.search(/[^a-zA-Z0-9_\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\`\{\|\}\~\s]/) != -1 )
+	{
+		alert(InputErrorMsg);
+		return false;
+	}
+	else if(( string.search("`") != -1 )||( string.search(/\$/) != -1 )|| ( string.search("\/") != -1 )||( string.search(/\\/) != -1 )
+			||( string.search(":") != -1 )||( string.search("&") != -1 )||( string.search("=") != -1 )||( string.search("\"") != -1 ))
+	{
+		alert(InputErrorMsg+"( ,:,&,=,\\\,\/,$,`)");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function checkProhibitedCharacterUser(string)
+{
+	if(string.search("=") != -1)
+	{
+		alert(InputErrorMsg+"( ,:,&,=,\",\\\,\/)");
+		return false
+	}
+	else 
+	{
+		return checkProhibitedCharacter ( string );
+	}
+}
+
+function do_filename()
+{
+	var form=document.form1;
+	if(form.ddnsradio[0].checked==true)
+	{
+     //  document.getElementById('DNSLayer').style.display="block";
+	}
+	else
+	{
+     //  document.getElementById('DNSLayer').style.display="none";
+	}
+}
+
+function on_load()
+{
+	var form=document.form1;
+	if( ddnsenable == "1")
+	{
+		form.ddnsradio[0].checked=true;
+	}
+	else
+	{
+		form.ddnsradio[1].checked=true;
+	}
+	do_filename();
+	
+	form.ddnsusername.value=ddnsusername ;
+	form.ddnspassword.value=ddnspassword ;
+	form.ddnsdomain.value=ddnsdomain ;
+	if(ddnsispname  == "dyndns")
+	{
+		form.ddnsserverselect.options[0].selected=true;
+	}
+ 	else if(ddnsispname  == "3322")
+	{
+		form.ddnsserverselect.options[1].selected=true;
+	}
+
+	/*
+	if(upnpenable=="1")
+	{
+		form.upnpradio[0].checked=true;
+	}
+	else
+	{
+		form.upnpradio[1].checked=true;
+	}*/
+}
+
+	
+function do_submit()
+{
+	var form1=document.form1;
+	var formddns=document.form2;
+	
+	if( form1.ddnsradio[0].checked == true)
+	{
+		if(form1.ddnsusername.value=="")
+		{
+			alert(UserErrorMsg);
+			form1.ddnsusername.select();
+			return false;
+		}
+		if(form1.ddnspassword.value=="")
+		{
+			alert(PasswdErrorMsg);
+			form1.ddnspassword.select();
+			return false;
+		}
+		if(form1.ddnsdomain.value=="")
+		{
+			alert(DomainErrorMsg);
+			form1.ddnsdomain.select();
+			return false;
+		}
+		if( checkProhibitedCharacterUser(form1.ddnsusername.value)== false )
+		{
+			form1.ddnsusername.select();
+			return false;
+		}
+		if(checkHankakuNoKana(form1.ddnsusername.value,form1.ddnsusername, UserNameErrorMsg)==false)
+		{
+			return false;
+		}
+			
+		if( checkProhibitedCharacter(form1.ddnspassword.value)==false)
+		{
+			form1.ddnspassword.select();
+			return false;
+		}
+		if( checkProhibitedCharacterUser(form1.ddnsdomain.value)== false )
+		{
+			form1.ddnsdomain.select();
+			return false;
+		}
+		if(checkHankakuNoKana(form1.ddnsdomain.value,form1.ddnsdomain, InputDomainErrorMsg)==false)
+		{
+			return false;
+		}
+		formddns.cururl.value=document.URL;
+		
+		$("#Form2DdnsEnable").val(1);
+		$("#Form2DdnsUsername").val(form1.ddnsusername.value);
+		$("#Form2DdnsPassword").val(form1.ddnspassword.value);
+		$("#Form2DdnsDomain").val(form1.ddnsdomain.value);
+		if(form1.ddnsserverselect.selectedIndex == 0)
+		{
+			$("#Form2DdnsIPSname").val("dyndns");
+		}
+		else if(form1.ddnsserverselect.selectedIndex == 1)
+		{
+			$("#Form2DdnsIPSname").val("3322");
+		}
+	}
+	else
+	{
+	$("#Form2DdnsUsername").attr("disabled", "disabled");
+	$("#Form2DdnsPassword").attr("disabled", "disabled");
+	$("#Form2DdnsDomain").attr("disabled", "disabled");
+	$("#Form2DdnsIPSname").attr("disabled", "disabled");
+	$("#Form2DdnsEnable").val(0);
+	}
+//	formddns.ddnsinterval.value="120";
+	/*
+	if(form1.upnpradio[0].checked==true)
+	{
+		formddns.upnpenable.value="1";
+	}
+	else
+	{
+		formddns.upnpenable.value="0";
+	}
+	*/
+	$("#Form2DdnsEnable").attr("name", "-ddnsenable");
+	$("#Form2DdnsUsername").attr("name", "-ddnsusername");
+	$("#Form2DdnsPassword").attr("name", "-ddnspassword");
+	$("#Form2DdnsDomain").attr("name", "-ddnsdomain");
+	$("#Form2DdnsIPSname").attr("name", "-ddnsispname");
+
+
+//	formddns.ddnsinterval.name="-ddnsinterval";
+//	formddns.upnpenable.name="-upnpenable";
+	formddns.action="/cgi-bin/setddnsattr.cgi";
+/*
+var str = "";
+	for(i=0; i<formddns.length; i++)
+	{
+	str+= formddns[i].name;
+	str+= '=';
+	str+= formddns[i].value;
+	str+='<br>';
+	}
+	myWindow=window.open('','','width=800,height=600');
+	myWindow.document.write(str);
+	myWindow.focus();
+*/
+
+	formddns.submit();
+}
+
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+<!--start content 右侧内容-->
+<form name="form1">
+  <div>
+    <h4 id="DynamicDNSSpan">Dynamic DNS </h4>
+    <div> <span id="StatusSpan">Status:</span>
+      <input id="ddnson" type="radio" name="ddnsradio" value="ddnsradiobutton" onClick="do_filename()">
+      <label for="ddnson" id="StatusOnSpan"> On</label>
+      <input id="ddnsoff" type="radio" name="ddnsradio" value="ddnsradiobutton" onClick="do_filename()">
+      <label for="ddnsoff" id="StatusOffSpan">Off</label>
+    </div>
+    <!-------------------------------------------------------------------------->
+    <div id="DNSLayer">
+      <div> <span id="ProviderSpan">Provider:</span>
+        <select name="ddnsserverselect">
+          <option>Dyndns.org </option>
+          <option>3322.org </option>
+        </select>
+      </div>
+      <!-------------------------------------------------------------------------->
+      <div> <span id="UsernameSpan">Username:</span>
+        <input name="ddnsusername" type="text" class="STYLE_font" size="22" maxlength="128">
+      </div>
+      <!-------------------------------------------------------------------------->
+      <div> <span id="PasswordSpan">Password:</span>
+        <input name="ddnspassword" type="password" class="STYLE_font" size="22" maxlength="64">
+      </div>
+      <!-------------------------------------------------------------------------->
+      <div> <span id="YourDomainSpan">Your Domain:</span>
+        <input name="ddnsdomain" type="text" class="STYLE_font" size="22" maxlength="128">
+      </div>
+      <!-------------------------------------------------------------------------->
+    </div>
+	 <!-------------------------------------------------------------------------->
+    <!--div class="cutoffrule"></div-->
+    <!--h4 id="UniversalPnPSpan">Universal PnP</h4-->
+    <!-------------------------------------------------------------------------->
+    <!--div> <span id="StatusSpan">Stsatus:</span>
+      <input id="upnpon" type="radio" name="upnpradio" value="radiobutton">
+      <label for="upnpon" id="StatusOnSpan"> On</label>
+      <input id="upnpoff" type="radio" name="upnpradio" value="radiobutton">
+      <label for="upnpoff" id="StatusOffSpan">Off </label>
+    </div-->
+    <!-------------------------------------------------------------------------->
+  </div>
+</form>
+
+<div style="display:none">
+  <form name="form2" method="get">
+    <input name="cururl" type="hidden">
+    <input id="Form2DdnsEnable" type="hidden" >
+    <input id="Form2DdnsIPSname" type="hidden">
+    <input id="Form2DdnsUsername" type="hidden">
+    <input id="Form2DdnsPassword" type="hidden">
+    <input id="Form2DdnsDomain" type="hidden">
+    <!--input name="upnpenable" type="hidden"-->
+  </form>
+</div>
+
+<div class="ApplyLayerStyle"> <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

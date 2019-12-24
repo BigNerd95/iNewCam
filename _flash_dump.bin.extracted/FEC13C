@@ -1,0 +1,20 @@
+[email]
+host                           = "smtp.163.com   "
+port                           = "25             "
+user                           = "user@163.com   "
+passwd                         = "123456         "
+logintype                      = "1              "
+ssltype                        = "0              "
+from                           = "user@163.com   "
+to                             = "info@nuove-tecnologie.it,,"
+subject                        = "               "
+text                           = "               "
+attachment                     = "               "
+
+[ftp]
+host                           = "ccc            "
+port                           = "21             "
+user                           = "ddd            "
+passwd                         = "ddd            "
+mode                           = "0              "
+filename                       = "               "

@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "umount sd"
+sync
+umount /mnt/sd1
+rm -rf /mnt/sd1
+

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#****************************************************************************
+#name:inetconfig
+#author:x57522
+#usage:inetconfig $iface $dhcp $dnsatuo $address $netmask $gateway $dns1 $dns2
+#
+#*****************************************************************************
+
+IFCONF=/etc/network/ifattr
+DHCPC=/bin/vs/dhcp.sh
+
+. IFCONF
+
+if [ $# -lt 8 ];then
+    echo "usage:inetconfig iface dhcp dnsatuo dns1 dns2 address netmask gateway"
+    exit 1
+fi
+
+iface=$1
+dhcp=$2
+dnsauto=$3
+
+if [ $dhcp = 1 ];then
+    if [ $dnsauto = 1 ];then
+       $DHCPC y
+    elif [ $dnsauto = 0 ];then
+       if [ -n ]
+
+
+    
+

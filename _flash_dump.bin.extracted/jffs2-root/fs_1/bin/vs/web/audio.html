@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/userdefine-jquery-ui.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.progressbar.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script  type="text/javascript" src="js/audio.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getviattr" TYPE="text/javascript"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getaencattr&-chn=011" TYPE="text/javascript"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getaencattr&-chn=012" TYPE="text/javascript"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getaencattr&-chn=013" TYPE="text/javascript"></SCRIPT>
+<script language="javascript">
+
+
+</script>
+</head>
+<body  class="content" style="display:block;">
+<div>
+    <div style=" padding-top:10px;">
+        <h4 id="AudioSpan">Audio</h4>
+        <!----------------------------Aenc Format---------------------------------------------->
+        <div ><span id="AencFormat">Encoded Format:</span>
+            <select id="AencFormatSelect" disabled="disabled">
+                <option value="1">G711a</option>
+                <option value="4">G726</option>
+            </select>
+            <label id="AencFormatChangeRebootMsgLabel" style="display:none"></label>
+        </div>
+        
+        <!------------------------------Audio Input Type-------------------------------------------->
+        <!--div ><span id="AudioInputSpan">Input Type:</span>
+            <select id="AudioInputSelect">
+                <option >Line In</option>
+                <option >Mic</option>
+            </select>
+        </div-->
+        <!--------------------------Input gain------------------------------------------------>
+        <div> <span id="InputGainSpan">Input Gain:</span>
+            <input id="InputVolInput" type="text" value="1"  maxlength="3" />
+        </div>   
+		
+         <!--------------------------Output vol------------------------------------------------>
+        <div> <span id="OutputVolSpan">Output Vol:</span>
+            <input id="OutputVolInput" type="text" value="1" maxlength="3"/>
+        </div>
+        <!--------------------------Aec------------------------------------------------>
+        <!--div> <span id="AecSpan">Aec:</span>
+            <input  type="radio" name="AecGrp" value="1"/><label id="AecGrpOn">On</label>
+            <input  type="radio" name="AecGrp" value="0"/><label id="AecGrpOff" >Off</label>
+        </div-->            
+        <!--------------------------Audio------------------------------------------------>
+        <div> <span id="MainStreamAudioSpan">Main Stream:</span>
+            <input  type="radio" id="MainStreamAudioOn" name="MainStreamAudioGrp" value="1"/><label id="MainStreamAudioGrpOn" for="MainStreamAudioOn">On</label>
+            <input  type="radio" id="MainStreamAudioOff" name="MainStreamAudioGrp" value="0"/><label id="MainStreamAudioGrpOff" for="MainStreamAudioOff">Off</label>
+        </div>
+        <div> <span id="SubStreamAudioSpan">Sub Stream:</span>
+            <input  type="radio" id="SubStreamAudioOn" name="SubStreamAudioGrp" value="1"/><label id="SubStreamAudioGrpOn" for="SubStreamAudioOn">On</label>
+            <input  type="radio" id="SubStreamAudioOff" name="SubStreamAudioGrp" value="0"/><label id="SubStreamAudioGrpOff" for="SubStreamAudioOff">Off</label>
+        </div>
+   </div>
+    
+</div>
+<div id="MsgLayer" style="display:none; margin:10px auto; width:600px">
+  <P></p>
+  <P></P>
+  <P  style="margin-left:120px;font-size:14px;" id="Msg"></p>
+  <div id="progressbar" style="font-size:16px;height:16px;"> </div>
+</div>
+
+<div style="display:none">
+    <form name="form2" method="post">
+        <input name="cmd" type="hidden" value="setaencattr">
+        <input name="cururl" type="hidden">
+
+		<input id="Form2AencFormatChn1" name="-chn" type="hidden">
+        <input id="Form2AencFormat1" name="-aencformat" type="hidden">
+        <input name="cmd" type="hidden" value="setaencattr">
+        <input id="Form2AencFormatChn2" name="-chn" type="hidden">
+        <input id="Form2AencFormat2" name="-aencformat" type="hidden">
+        <input name="cmd" type="hidden" value="setaencattr">
+        <input id="Form2AencFormatChn3" name="-chn" type="hidden">
+        <input id="Form2AencFormat3" name="-aencformat" type="hidden">
+
+		<input name="cmd" type="hidden" value="setaencattr">
+        <input name="-chn" value="11" type="hidden">
+        <input id="Form2InputGain" name="-inputgain" type="hidden">
+        <input id="Form2OutputGain" name="-outputvol" type="hidden">
+
+
+		<input name="cmd" type="hidden" value="setaencattr">
+        <input name="-chn" value="11" type="hidden">
+        <input id="Form2MainStreamIsGetAudio" name="-isgetaudio" type="hidden">
+        
+        <input name="cmd" type="hidden" value="setaencattr">
+        <input name="-chn" value="12" type="hidden">
+        <input id="Form2SubStreamIsGetAudio" name="-isgetaudio" type="hidden">
+
+        <input id="Form2Rebootcmd" name="cmd" type="hidden" value="setaencattr" disabled="disabled">
+        <input id="Form2RebootChn" name="-chn" type="hidden" value="11" disabled="disabled">
+        <input id="Form2Reboot" name="-reboot" type="hidden" disabled="disabled">
+    </form>
+</div>
+
+<div class="ApplyLayerStyle"><a id="apply" href="#">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#">Cancel</a> </div>
+</body>
+</html>

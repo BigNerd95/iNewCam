@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getuser" type="text/javascript"></script>
+
+<script language="javascript">
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+   
+	setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+function checkProhibitedCharacter ( string )
+{
+	if( string.search(/[^a-zA-Z0-9_\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\`\{\|\}\~\s]/) != -1 )
+	{
+	  alert(InputMsg);
+	  return false;
+	}
+	else if(( string.search("\/") != -1 )||( string.search(/\\/) != -1 )||( string.search(":") != -1 )||( string.search("&") != -1 )
+			||( string.search("=") != -1 )||( string.search(" ") != -1 )||( string.search("\"") != -1 ))
+	{
+		alert(InputMsg+"( ,:,&,=,\",\\\,\/)");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+function checkProhibitedCharacterUser(string)
+{
+	if(string.search("=") != -1)
+	{
+		alert(InputMsg+"( ,:,&,=,\",\\\,\/)");
+		return false
+	}
+else 
+	{
+		return checkProhibitedCharacter ( string );
+	}
+}
+
+
+function ckAdmin()
+{
+	var form=document.form1;
+	if(form.name1[0].value=="")
+	{
+		alert(AdminMsg);
+		form.name1[0].select();
+		return false;
+	}
+}
+function on_load()
+{
+	i = 0;
+	var j=0;
+	var form = document.form1;
+	
+	form.name1[j].value=name0;
+	form.password1[j].value=password0;
+	form.repassword1[j].value=password0;
+	j++;
+	
+	
+	form.name1[j].value=name1;
+	form.password1[j].value=password1;
+	form.repassword1[j].value=password1;
+	j++;
+	
+	/*
+	form.name1[j].value=name2;
+	form.password1[j].value=password2;
+	form.repassword1[j].value=password2;
+	j++;
+	
+	
+	form.name1[j].value=name3;
+	form.password1[j].value=password3;
+	form.repassword1[j].value=password3;
+	j++;
+	
+	
+	form.name1[j].value=name4;
+	form.password1[j].value=password4;
+	form.repassword1[j].value=password4;
+	j++;
+	
+	
+	form.name1[j].value=name5;
+	form.password1[j].value=password5;
+	form.repassword1[j].value=password5;
+	j++;
+	
+	
+	form.name1[j].value=name6;
+	form.password1[j].value=password6;
+	form.repassword1[j].value=password6;
+	j++;
+	
+	
+	form.name1[j].value=name7;
+	form.password1[j].value=password7;
+	form.repassword1[j].value=password7;
+	j++;
+	
+	form.name1[j].value=name8;
+	form.password1[j].value=password8;
+	form.repassword1[j].value=password8;
+	j++;
+	
+	form.name1[j].value=name9;
+	form.password1[j].value=password9;
+	form.repassword1[j].value=password9;
+	*/
+}
+function do_submit()
+{
+	var form1=document.form1;
+	var form=document.form2;
+	if(ckAdmin()==false) 
+	return false;
+	var i,j;
+	for(i=0;i<2;i++)
+	{
+	
+		if( checkProhibitedCharacterUser(form1.name1[i].value)== false )
+		{
+		form1.name1[i].select();
+		return false;
+		}
+		if(checkProhibitedCharacter(form1.password1[i].value)== false )
+		{
+			form1.password1[i].select();
+			return false;
+		}
+		if(checkHankakuNoKana(form1.name1[i].value,form1.name1[i], UserInputErrorMsg)==false)
+		{
+			return false;
+		}
+	
+	}
+	
+	for(i=0;i<2;i++)
+	{
+		if(form1.password1[i].value!=form1.repassword1[i].value)
+		{
+			alert(RePasswdMsg);
+			form1.repassword1[i].select();
+			return false;
+		}
+		else if(form1.password1[i].value!="" && form1.name1[i].value=="")
+		{ 
+			alert(UserNameMsg);
+			form1.name1[i].select();
+			return false;
+		}
+		
+		if((form1.name1[i].value!="")&&(form1.password1[i].value==""))
+		{
+			alert(PasswdMsg);
+			form1.password1[i].select();
+			return false;
+		}
+	}
+	
+	for(i=0;i< 2;i++)
+	{
+		for(j=i+1;j< 2;j++)
+		{
+			if((form1.name1[i].value !="")&&(form1.name1[i].value == form1.name1[j].value))
+			{
+				alert(UserErrorMsg);
+				form1.name1[j].select();
+				return false;
+			}
+		}
+	}
+	
+	form.cururl.value =document.URL ;
+	form.user0.value=form1.name1[0].value+":"+form1.password1[0].value+":"+"255"+":"+"Admin";
+	form.user1.value=form1.name1[1].value+":"+form1.password1[1].value+":"+"3"+":"+"Guest";
+/*	form.user2.value=form1.name1[2].value+":"+form1.password1[2].value+":"+"3"+":"+"Normal";
+	form.user3.value=form1.name1[3].value+":"+form1.password1[3].value+":"+"3"+":"+"Normal";
+	form.user4.value=form1.name1[4].value+":"+form1.password1[4].value+":"+"3"+":"+"Normal";
+	form.user5.value=form1.name1[5].value+":"+form1.password1[5].value+":"+"3"+":"+"Normal";
+	form.user6.value=form1.name1[6].value+":"+form1.password1[6].value+":"+"3"+":"+"Normal";
+	form.user7.value=form1.name1[7].value+":"+form1.password1[7].value+":"+"3"+":"+"Normal";
+	form.user8.value=form1.name1[8].value+":"+form1.password1[8].value+":"+"3"+":"+"Normal";
+	form.user9.value=form1.name1[9].value+":"+form1.password1[9].value+":"+"3"+":"+"Normal";*/
+	form.action="cgi-bin/hi3510/param.cgi";
+	form.submit();
+}
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+
+<div style="display:block">
+  <form name="form1">
+<table>
+<tr>
+<td style="vertical-align:middle; text-align:center; "><h4 id="UserIDSpan" style="display:inline; ">User ID </h4></td>
+<td style="vertical-align:middle; text-align:center; "><h4 id="UsernameSpan" style="display:inline;">User name </h4></td>
+<td style="vertical-align:middle; text-align:center; "><h4 id="PasswordSpan" style="display:inline;">Password </h4></td>
+<td style="vertical-align:middle; text-align:center; "><h4 id="RetypepasswordSpan" style="display:inline;">Re-type password</h4></td>
+</tr>
+
+<tr>
+<td style="vertical-align:middle; text-align:center; "><span id="AdministratorSpan" style="width:100px;">Administrator&#13;</span></td>
+<td style="vertical-align:middle; text-align:center; "><input name="name1" type="text" size="15" maxlength="8" disabled="disabled"></td>
+<td style="vertical-align:middle; text-align:center; "><input name="password1" type="password" size="25" maxlength="8"></td>
+<td style="vertical-align:middle; text-align:center; "><input name="repassword1" type="password" size="25" maxlength="8"></td>
+</tr>
+
+<!----------------User1~9-------------------->
+<script type="text/javascript">
+	document.open();
+	for(k=1; k<2; k++)
+	{
+	document.write('<tr style="height:25px;">');	//行
+	document.write('<td style="vertical-align:middle; text-align:center; "><span id="User'+k+'Span" style="width:100px;">User1&#13;</span></td>');	
+	document.write('<td style="vertical-align:middle; text-align:center; "><input name="name1" type="text" size="15" maxlength="8" disabled="disabled"></td>');	
+	document.write('<td style="vertical-align:middle; text-align:center; "><input name="password1" type="password" size="25" maxlength="8"></td>');	
+	document.write('<td style="vertical-align:middle; text-align:center; "><input name="repassword1" type="password" size="25" maxlength="8"></td>');	
+	document.write('</tr>');	//行
+	}
+	document.close();
+</script>
+</table>
+
+  </form>
+</div>
+<div style="display:none">
+  <form method="post" name="form2">
+    <input name="cmd" type="hidden" value="updateuser">
+    <input name="cururl" type="hidden">
+    <input name="user0" type="hidden">
+    <input name="user1" type="hidden">
+    <!--input name="user2" type="hidden">
+    <input name="user3" type="hidden">
+    <input name="user4" type="hidden">
+    <input name="user5" type="hidden">
+    <input name="user6" type="hidden">
+    <input name="user7" type="hidden">
+    <input name="user8" type="hidden">
+    <input name="user9" type="hidden"-->
+  </form>
+</div>
+<div class="ApplyLayerStyle"> <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

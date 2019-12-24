@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getodattr&" type="text/javascript"></script>
+
+<script language="javascript">
+$(document).ready(function(e) {	
+   LoadLanguage();
+   
+   setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+function on_load()
+{
+//	for(i=0; i<od_areanum; i++)
+//	{
+		if(od1_enable == '1')
+			$("#odenable").attr("checked", 'true');
+		else
+		  $("#odenable").removeAttr("checked");	
+//	}
+
+//	for(i=0; i<od_areanum; i++)
+//	{
+	
+		switch(od1_sensitivity)
+		{
+			case '0':
+				$("#Sensibility").val(0);
+			break;
+			case '1':
+				$("#Sensibility").val(1);
+			break;
+			case '2':
+				$("#Sensibility").val(2);
+			break;
+			default:
+			case '3':
+				$("#Sensibility").val(3);
+			break;	
+		}
+//	}
+}
+
+function do_submit()
+{
+	var form1=document.form1;
+	var form=document.form2;
+	
+	form.cururl.value =document.URL ;
+	var odenable = form1.odenable.checked == true?1:0;
+	var Sensibility = $("#Sensibility").val();
+		
+	for(i=1; i<od_areanum+1; i++)
+	{
+		/***********chn***************/
+		$('#Form2OD'+i+'Chn').attr('name', "-chn");
+		$('#Form2OD'+i+'Chn').attr('value', "1");
+		
+		/***********name***************/
+		$('#Form2OD'+i+'Name').attr('name', "-name");
+		$('#Form2OD'+i+'Name').attr('value',  i);
+		
+		/*enable*/
+		$('#Form2OD'+i+'Enable').attr('name', "-enable");
+		$('#Form2OD'+i+'Enable').attr('value',  odenable);
+		
+		/*Sensibility*/
+		$('#Form2OD'+i+'Sensibility').attr('name', "-s");
+		$('#Form2OD'+i+'Sensibility').attr('value',  Sensibility);
+	}
+	
+	form.action="cgi-bin/hi3510/param.cgi";	
+	form.submit();
+}
+
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+<div style="display:block">
+  <form name="form1">
+    <h4 id="OcclusionSpan" >Occlusion&nbsp;Detection</h4>
+    <div> <span id="StatusSpan">Status:</span>
+      <input id="odenable" name="odenable" value="checkbox" type="checkbox">
+      <label for="odenable" id="EnableSpan">Enable</label>
+    </div>
+    <div > <span id="SensibilitySpan">Sensibility:</span>
+      <select id="Sensibility">
+        <option class="optionspan" value="0" id="SensibilityveryhighSpan"> very high </option>
+        <option class="optionspan" value="1" id="SensibilityhighSpan"> high </option>
+        <option class="optionspan" value="2" id="SensibilitynormalSpan"> normal </option>
+        <option class="optionspan" value="3" id="SensibilitylowSpan"> low </option>
+      </select>
+    </div>
+  </form>
+</div>
+<div style="display:none">
+  <form name="form2" method="post">
+    <input name="cmd" type="hidden" value="setodattr">
+    <input name="cururl" type="hidden">   
+	<input id="Form2OD1Chn"  type="hidden"/>			
+    <input id="Form2OD1Name"  type="hidden">
+    <input id="Form2OD1Enable" type="hidden">
+    <input id="Form2OD1Sensibility" type="hidden">
+    <input name="cmd" type="hidden" value="setodattr">
+    <input id="Form2OD2Chn"  type="hidden"/>	
+   <input id="Form2OD2Name"  type="hidden">
+    <input id="Form2OD2Enable" type="hidden">
+     <input id="Form2OD2Sensibility" type="hidden">
+   <input name="cmd" type="hidden" value="setodattr">
+   <input id="Form2OD3Chn"  type="hidden"/>	
+   <input id="Form2OD3Name"  type="hidden">
+    <input id="Form2OD3Enable" type="hidden">
+     <input id="Form2OD3Sensibility" type="hidden">
+   <input name="cmd" type="hidden" value="setodattr">
+   <input id="Form2OD4Chn"  type="hidden"/>	
+   <input id="Form2OD4Name"  type="hidden">
+    <input id="Form2OD4Enable" type="hidden">
+    <input id="Form2OD4Sensibility" type="hidden">
+  </form>
+
+ </div>
+<div class="ApplyLayerStyle"> <a id="apply" href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+
+</body>
+</html>

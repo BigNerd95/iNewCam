@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<en>
+<indexhtml>
+<HeaderHomeSpan>Home</HeaderHomeSpan>
+<HeaderMediaSpan>Media</HeaderMediaSpan>
+<HeaderReplaySpan>Replay</HeaderReplaySpan>
+<HeaderParametersSpan>Parameters</HeaderParametersSpan>
+<HeaderSystemSpan>System</HeaderSystemSpan>
+<ScanSpan>Scan</ScanSpan>
+<PtzPointSpan>Point:</PtzPointSpan>
+<HueSpan>Hue:</HueSpan>
+<BrightnessSpan>Brightness:</BrightnessSpan>
+<ContrastSpan>Contrast:</ContrastSpan>
+<SaturationSpan>Saturation:</SaturationSpan>
+<FlipSpan>Flip:</FlipSpan>
+<MirrorSpan>Mirror:</MirrorSpan>
+<PowerfreqSpan>Powerfreq:</PowerfreqSpan>
+<MainPageSceneSpan>Scene:</MainPageSceneSpan>
+<AutoSpan>Auto</AutoSpan>
+<IndoorSpan>Indoor</IndoorSpan>
+<OutdoorSpan>Outdoor</OutdoorSpan>
+<MainPageIRSpan>IRCut:</MainPageIRSpan>
+<IRLowSpan>Day&amp;Night</IRLowSpan>
+<IRHighSpan>Day&amp;Night</IRHighSpan>
+<IRColorSpan>Color</IRColorSpan>
+<IRBWSpan>BlackWhite</IRBWSpan>
+<FillOnSpan>On</FillOnSpan>
+<FillOffSpan>Off</FillOffSpan>
+<MirrorOnSpan>On</MirrorOnSpan>
+<MirrorOffSpan>Off</MirrorOffSpan>
+<UpdateSpan>Update</UpdateSpan>
+<DefaultSpan>Default</DefaultSpan>
+<PlayerSpan>Player :</PlayerSpan>
+<StreamSpan>Stream:</StreamSpan>
+<MainPageImageSpan>Image:</MainPageImageSpan>
+<FitSizeSpan>Fit Size</FitSizeSpan>
+<SrcSizeSpan>Src Size</SrcSizeSpan>
+<MainFlowSpan>MainFlow</MainFlowSpan>
+<MinorFlowSpan>MinorFlow</MinorFlowSpan>
+<DownloadPlayerSpan>Download Player</DownloadPlayerSpan>
+<LoginDownloadPlayerSpan>Download Player</LoginDownloadPlayerSpan>
+<DownloadOCXSpan>Download OCX</DownloadOCXSpan>
+<LoginDownloadOCXSpan>Download OCX</LoginDownloadOCXSpan>
+<LogoutSpan>Logout</LogoutSpan>
+<UsernameSpan>User name:</UsernameSpan>
+<PasswordSpan>Password:</PasswordSpan>
+<LoginLanguageSpan>Language:</LoginLanguageSpan>
+<LoginEnterSpan>Login</LoginEnterSpan>
+<AutologinSpan>Auto Login</AutologinSpan>
+<LoginMainFlowSpan>MainFlow</LoginMainFlowSpan>
+<LoginMinorFlowSpan>MinorFlow</LoginMinorFlowSpan>
+<LoginStreamSpan>Stream:</LoginStreamSpan>
+<QVSpan>Network Cam</QVSpan>
+<HomeSpan>Home</HomeSpan>
+<SystemSetSpan>System</SystemSetSpan>
+<AboutSpan>About</AboutSpan>
+<MediaSpan>Media</MediaSpan>
+<ImageSpan>Image</ImageSpan>
+<VideoSpan>Video</VideoSpan>
+<AdvanceSpan>Advance</AdvanceSpan>
+<EventSpan>Event</EventSpan>
+<NetWorkSpan>Network</NetWorkSpan>
+<BasicSettingsSpan>Basic Settings</BasicSettingsSpan>
+<DDNSSpan>DDNS</DDNSSpan>
+<UserSpan>User</UserSpan>
+<MobileSpan>OSD</MobileSpan>
+<EmailSpan>E-Mail</EmailSpan>
+<MDSpan>Motion Detect</MDSpan>
+<AlarmInSpan>Alarm in out</AlarmInSpan>
+<AlarmOutSpan>Alarm out</AlarmOutSpan>
+<AutoSnapSpan>Auto capture</AutoSnapSpan>
+<SystemSpan>System</SystemSpan>
+<LanguageSpan>Language</LanguageSpan>
+<TimeSpan>Time setting</TimeSpan>
+<InitSpan>Initialize</InitSpan>
+<DeviceinfoSpan>Device info</DeviceinfoSpan>
+<LogSpan>System log</LogSpan>
+<PTZSpan>PTZ</PTZSpan>
+<ODSpan>Occlusion Detect</ODSpan>
+<RecordSpan>Record</RecordSpan>
+<StorageSpan>Storage Device</StorageSpan>
+<DownLoadPlayerMsg>Please install player, and install success open the web page again!</DownLoadPlayerMsg>
+<HueImgTitile>Hue</HueImgTitile>
+<BrightnessImgTitile>Brightness</BrightnessImgTitile>
+<ContrastImgTitle>Contrast</ContrastImgTitle>
+<SaturationImgTitile>Saturation</SaturationImgTitile>
+<RecordSwitchTitile>Start Record</RecordSwitchTitile>
+<RecordIngSwitchTitile>RecordIng</RecordIngSwitchTitile>
+<CaptureSwitchTitile>Capture</CaptureSwitchTitile>
+<MicroOnSwitchTitile>Start Talk</MicroOnSwitchTitile>
+<MicroOffSwitchTitile>Stop Talk</MicroOffSwitchTitile>
+<VolOnSwitchTitile>Open Vol</VolOnSwitchTitile>
+<VolOffSwitchTitile>Close Vol</VolOffSwitchTitile>
+<GotoPointTitile>Goto</GotoPointTitile>
+<SetPointTitile>Set</SetPointTitile>
+<ClearPointTitile>Clear</ClearPointTitile>
+<NoAuthErrorMsg>No User Permissions!</NoAuthErrorMsg>
+<LoginCheckErrorMsg>Password or User Error！</LoginCheckErrorMsg>
+<HltalmproxySpan>Platform setting</HltalmproxySpan>
+<FocusSpan>Focus</FocusSpan>
+<ZoomSpan>Zoom</ZoomSpan>
+<CoverAreaSpan>Cover Area</CoverAreaSpan>
+<PtzTrackSpan>Track:</PtzTrackSpan>
+<Speed485Span>Speed:</Speed485Span>
+<AudioSpan> Audio</AudioSpan>
+</indexhtml>
+
+<mainpagehtml>
+<QVSpan>Network Cam</QVSpan>
+<HomeSpan>Home</HomeSpan>
+<SystemSetSpan>System</SystemSetSpan>
+<AboutSpan>About</AboutSpan>
+<SizeSpan>Size:</SizeSpan>
+<PTZSpan>PTZ:</PTZSpan>
+<ZOOMSpan>Zoom</ZOOMSpan>
+<FOUCESpan>Fouce</FOUCESpan>
+<IRISSpan>IRIS</IRISSpan>
+<SpeedSpan>Speed</SpeedSpan>
+</mainpagehtml>
+
+<abouthtml>
+<QVSpan>Network Cam</QVSpan>
+<HomeSpan>Home</HomeSpan>
+<SystemSetSpan>System set</SystemSetSpan>
+<AboutSpan>About</AboutSpan>
+</abouthtml>
+
+<systemsethtml>
+<QVSpan>Network Cam</QVSpan>
+<HomeSpan>Home</HomeSpan>
+<SystemSetSpan>System</SystemSetSpan>
+<AboutSpan>About</AboutSpan>
+<MediaSpan>Media</MediaSpan>
+<ImageSpan>Image</ImageSpan>
+<VideoSpan>Video</VideoSpan>
+<AdvanceSpan>Advance</AdvanceSpan>
+<EventSpan>Event</EventSpan>
+<NetWorkSpan>Network</NetWorkSpan>
+<BasicSettingsSpan>Basic Settings</BasicSettingsSpan>
+<DDNSSpan>DDNS</DDNSSpan>
+<UserSpan>User</UserSpan>
+<MobileSpan>Mobile</MobileSpan>
+<EmailSpan>E-Mail</EmailSpan>
+<MDSpan>Motion Detection</MDSpan>
+<AlarmInSpan>Alarm in</AlarmInSpan>
+<AlarmOutSpan>Alarm out</AlarmOutSpan>
+<AutoSnapSpan>Auto capture</AutoSnapSpan>
+<SystemSpan>System</SystemSpan>
+<LanguageSpan>Language</LanguageSpan>
+<TimeSpan>Time setting</TimeSpan>
+<InitSpan>Initialize</InitSpan>
+<DeviceinfoSpan>Device info</DeviceinfoSpan>
+<LogSpan>System log</LogSpan>
+<PTZSpan>PTZ</PTZSpan>
+<ODSpan>Occlusion Detection</ODSpan>
+<RecordSpan>Record</RecordSpan>
+<StorageSpan>Storage Device</StorageSpan>
+</systemsethtml>
+
+<displayhtml>
+<HueSpan>Hue:</HueSpan>
+<BrightnessSpan>Brightness:</BrightnessSpan>
+<ContrastSpan>Contrast:</ContrastSpan>
+<SaturationSpan>Saturation:</SaturationSpan>
+<FlipSpan>Flip:</FlipSpan>
+<MirrorSpan>Mirror:</MirrorSpan>
+<PowerfreqSpan>Powerfreq:</PowerfreqSpan>
+<SaveSpan>save</SaveSpan>
+<ReloadSpan>relaoad</ReloadSpan>
+<DefaultSpan>default</DefaultSpan>
+<FillOnSpan>On</FillOnSpan>
+<FillOffSpan>Off</FillOffSpan>
+<MirrorOnSpan>On</MirrorOnSpan>
+<MirrorOffSpan>Off</MirrorOffSpan>
+</displayhtml>
+
+<videohtml>
+<MainstreamSpan>Main Stream</MainstreamSpan>
+<ResolutionSpan>Resolution:</ResolutionSpan>
+<BitrateSpan>Bit Rate:</BitrateSpan>
+<ImageQualitySpan>Image Quality:</ImageQualitySpan>
+<QualityVeryHighSpan>Very High</QualityVeryHighSpan>
+<QualityHighSpan>High</QualityHighSpan>
+<QualityNormalSpan>Normal</QualityNormalSpan>
+<QualityLowSpan>Low</QualityLowSpan>
+<QualityVeryLowSpan>Very Low</QualityVeryLowSpan>
+<MaximumframeSpan>Maximum Frame:</MaximumframeSpan>
+<VideoqualitycontrolSpan>Quality Control:</VideoqualitycontrolSpan>
+<FrameratefirstSpan>Frame Rate First</FrameratefirstSpan>
+<QualityfirstSpan>Quality First </QualityfirstSpan>
+<NormSpan>Norm:</NormSpan>
+<SubstreamSpan>Sub Stream</SubstreamSpan>
+<SubResolutionSpan>Resolution:</SubResolutionSpan>
+<SubBitrateSpan>Bit Rate:</SubBitrateSpan>
+<SubImageQualitySpan>Image Quality:</SubImageQualitySpan>
+<SubImageQualityVeryHighSpan>VeryHigh</SubImageQualityVeryHighSpan>
+<SubQualityHighSpan>High</SubQualityHighSpan>
+<SubQualityNormalSpan>Normal</SubQualityNormalSpan>
+<SubQualityLowSpan>Low</SubQualityLowSpan>
+<SubQualityVeryLowSpan>Very Low</SubQualityVeryLowSpan>
+<SubMaximumframeSpan>Maximum frame:</SubMaximumframeSpan>
+<SubVideoqualitycontrolSpan>Quality Control:</SubVideoqualitycontrolSpan>
+<SubFrameratefirstSpan>Frame Rate First</SubFrameratefirstSpan>
+<SubQualityfirstSpan>Quality First</SubQualityfirstSpan>
+<NormSpan>Norm:</NormSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<InputErrorMsg>Bitrates should be less than original size.</InputErrorMsg>
+<MobileSpan>Mobile Stream:</MobileSpan>
+<ResolutionSpan>Resolution:</ResolutionSpan>
+<UsernameSpan>Username:</UsernameSpan>
+<PasswordSpan>Password:</PasswordSpan>
+<PortSpan>Port:</PortSpan>
+<QualitySpan>Quality:</QualitySpan>
+<QualityVeryHighSpan>Very High</QualityVeryHighSpan>
+<QualityHighSpan>High</QualityHighSpan>
+<QualityNormalSpan>Normal</QualityNormalSpan>
+<QualityLowSpan>Low</QualityLowSpan>
+<QualityVeryLowSpan>Very Low</QualityVeryLowSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<PortErrorMsg>Please input mobile port！</PortErrorMsg>
+<PortInputMsg>Include invalid character!</PortInputMsg>
+<PortPortErrorMsg>invalid port (1-65535)</PortPortErrorMsg>
+<SubStreamCBR>CBR</SubStreamCBR>
+<SubStreamVBR>VBR</SubStreamVBR>
+<MainStreamCBR>CBR</MainStreamCBR>
+<MainStreamVBR>VBR</MainStreamVBR>
+<SubStreamBitRateTypeSpan>Bit Rate Type:</SubStreamBitRateTypeSpan>
+<MainStreamBitRateTypeSpan>Bit Rate Type:</MainStreamBitRateTypeSpan>
+<SubStreamUserDefineSpan>User Define</SubStreamUserDefineSpan>
+<MainStreamUserDefineSpan>User Define</MainStreamUserDefineSpan>
+<NormChangeRebootMsg>Reboot!</NormChangeRebootMsg>
+<ViewSizeChangeRebootMsg>Reboot!</ViewSizeChangeRebootMsg>
+<RebootWaitMsg>IP Camera  is rebooting,please don't turn off the camera......</RebootWaitMsg>
+<MainStreamFIXQP>FixQp</MainStreamFIXQP>
+<SubStreamFIXQP>FixQp</SubStreamFIXQP>
+<SubStreamFIXQPLevel1>Very High</SubStreamFIXQPLevel1>
+<SubStreamFIXQPLevel2>High</SubStreamFIXQPLevel2>
+<SubStreamFIXQPLevel3>Normal</SubStreamFIXQPLevel3>
+<SubStreamFIXQPLevel4>Low</SubStreamFIXQPLevel4>
+<SubStreamFIXQPLevel5>Very Low</SubStreamFIXQPLevel5>
+<MainStreamFIXQPLevel1>Very High</MainStreamFIXQPLevel1>
+<MainStreamFIXQPLevel2>High</MainStreamFIXQPLevel2>
+<MainStreamFIXQPLevel3>Normal</MainStreamFIXQPLevel3>
+<MainStreamFIXQPLevel4>Low</MainStreamFIXQPLevel4>
+<MainStreamFIXQPLevel5>Very Low</MainStreamFIXQPLevel5>
+<GopInputTipsSpan>Great than or equal to</GopInputTipsSpan>
+<MainStreamGopSpan>I Frame Gop:</MainStreamGopSpan>
+<SubStreamGopSpan>I Frame Gop:</SubStreamGopSpan>
+<MainStreamAudioSpan>Audio:</MainStreamAudioSpan>
+<SubStreamAudioSpan>Audio:</SubStreamAudioSpan>
+<SubStreamAudioGrpOn>On</SubStreamAudioGrpOn>
+<SubStreamAudioGrpOff>Off</SubStreamAudioGrpOff>
+<MainStreamAudioGrpOn>On</MainStreamAudioGrpOn>
+<MainStreamAudioGrpOff>Off</MainStreamAudioGrpOff>
+</videohtml>
+
+<networkhtml>
+<LANSettingsSpan>LAN Settings</LANSettingsSpan>
+<IPTypeSpan>IP Type:</IPTypeSpan>
+<IPTypeFixedIPAddressSpan>Fixed IP Address</IPTypeFixedIPAddressSpan>
+<IPTypeDynanicIPAddressSpan>Dynamic IP Address</IPTypeDynanicIPAddressSpan>
+<IPAddressSpan>IP Address:</IPAddressSpan>
+<SubnetMaskSpan>Subnet Mask:</SubnetMaskSpan>
+<GatewaySpan>Gateway:</GatewaySpan>
+<DNSTypeSpan>DNS Type:</DNSTypeSpan>
+<DNSTypeManualDNSSpan>Manual DNS</DNSTypeManualDNSSpan>
+<DNSTypeFromDHCPServerSpan>From DHCP Server</DNSTypeFromDHCPServerSpan>
+<PrimaryDNSSpan>Primary DNS:</PrimaryDNSSpan>
+<SecondaryDNSSpan>Second DNS:</SecondaryDNSSpan>
+<HTTPSpan>HTTP:</HTTPSpan>
+<HTTPPortnumberSpan>Port :</HTTPPortnumberSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<InputASCIIErrorMsg>Please input ASCII character (the length is 5 or 13 )</InputASCIIErrorMsg>
+<InputHEXErrorMsg>Please input HEX character (the length is 10 or 26 )</InputHEXErrorMsg>
+<WepKeyErrorMsg>Wep key length is error.Hex is 10 or 26; ASCII is 5 or 13</WepKeyErrorMsg>
+<InputASCIIError1Msg>Please input ASCII character (the length is 8 to 63 )</InputASCIIError1Msg>
+<InputInvalidMsg>Include invalid character.</InputInvalidMsg>
+<InputErrorMsg>Input is error!</InputErrorMsg>
+<IPChangeMsg>IP or port has been changed ,please Re-connect</IPChangeMsg>
+<InputIPMsg>Please input the ip address</InputIPMsg>
+<InputMaskMsg>Please input the subnet mask address</InputMaskMsg>
+<InputPortMsg>The port is error</InputPortMsg>
+<InputIPErrorMsg>Invalid address,the first number must between 1 to 255</InputIPErrorMsg>
+<InputIPError1Msg>Invalid address,the number must between 0 to 255</InputIPError1Msg>
+<InputInvalidAddressMsg>Invalid address</InputInvalidAddressMsg>
+<InputInvalidAddress1Msg> Invalid address,the number must between 0 to 255</InputInvalidAddress1Msg>
+<SubnetMaskMsg>Subnet Mask</SubnetMaskMsg>
+<GateWayMsg>Gateway</GateWayMsg>
+<PrimaryDnsMsg>Primary dns</PrimaryDnsMsg>
+<SecondDnsMsg>Second dns</SecondDnsMsg>
+<httpportSpan>(80 or 1024~32767)</httpportSpan>
+<WanURLInputSpan>Wan Test:</WanURLInputSpan>
+<WanTestIngSpan>Testing......</WanTestIngSpan>
+<WanTestSuccessSpan>Test SUccess!</WanTestSuccessSpan>
+<WanTestFailureSpan>Test Failure!</WanTestFailureSpan>
+<WanTestSpan>Test</WanTestSpan>>
+<IPTestH4Span>Network Test:</IPTestH4Span>
+<rtspportSpan>(554 or 1024~32767)</rtspportSpan>
+<RTSPPortnumberSpan>Port:</RTSPPortnumberSpan>
+<ONVIFPortnumberSpan>Port:</ONVIFPortnumberSpan>
+<onvif_httpportSpan>(1018 or 1024~32767,must reboot)</onvif_httpportSpan>
+</networkhtml>
+
+<ddnshtml>
+<DynamicDNSSpan>Dynamic DNS:</DynamicDNSSpan>
+<StatusSpan>Status:</StatusSpan>
+<StatusOnSpan>On</StatusOnSpan>
+<StatusOffSpan>Off</StatusOffSpan>
+<ProviderSpan>Provider:</ProviderSpan>
+<UsernameSpan>Username:</UsernameSpan>
+<PasswordSpan>Password:</PasswordSpan>
+<YourDomainSpan>Your Domain:</YourDomainSpan>
+<UniversalPnPSpan>Universal PNP:</UniversalPnPSpan>
+<StatusSpan>Status:</StatusSpan>
+<StatusOnSpan>On</StatusOnSpan>
+<StatusOffSpan>Off</StatusOffSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<InputErrorMsg>Include invalid character.</InputErrorMsg>
+<UserErrorMsg>Please input the username.</UserErrorMsg>
+<PasswdErrorMsg>Please input the password.</PasswdErrorMsg>
+<DomainErrorMsg>Please input your domain</DomainErrorMsg>
+<UserNameErrorMsg>User name is error,include invalid character</UserNameErrorMsg>
+<InputDomainErrorMsg>Your domain is error,include invalid character</InputDomainErrorMsg>
+</ddnshtml>
+
+
+<osdhtml>
+<ParenthesisOptionsSpan>OSD Options</ParenthesisOptionsSpan>
+<TimeStampSpan>Time Stamp:</TimeStampSpan>
+<TimeStampOnSpan>On</TimeStampOnSpan>
+<TimeStampOffSpan>Off</TimeStampOffSpan>
+<CameranameSpan>Camera Name:</CameranameSpan>
+<CameranameOnSpan>On</CameranameOnSpan>
+<CameranameOffSpan>Off</CameranameOffSpan>
+<NameSpan>Name:</NameSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<OsdNameErrorMsg>Please enter Chinese characters, letters, numbers, underline!</OsdNameErrorMsg>
+</osdhtml>
+
+
+<userhtml>
+<UserIDSpan>UserID</UserIDSpan>
+<UsernameSpan>Username</UsernameSpan>
+<PasswordSpan>Password</PasswordSpan>
+<RetypepasswordSpan>Verify Password</RetypepasswordSpan>
+<AdministratorSpan>Administrator</AdministratorSpan>
+<User1Span>User1</User1Span>
+<User2Span>User2</User2Span>
+<User3Span>User3</User3Span>
+<User4Span>User4</User4Span>
+<User5Span>User5</User5Span>
+<User6Span>User6</User6Span>
+<User7Span>User7</User7Span>
+<User8Span>User8</User8Span>
+<User9Span>User9</User9Span>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<InputMsg>Include invalid character</InputMsg>
+<AdminMsg>Please input the adminstrator name.</AdminMsg>
+<RePasswdMsg>Re-type password error.</RePasswdMsg>
+<UserNameMsg>Please input the user name.</UserNameMsg>
+<PasswdMsg>Please input the password.</PasswdMsg>
+<UserErrorMsg>The user name is same as before</UserErrorMsg>
+<UserInputErrorMsg>User name is include invalid character.</UserInputErrorMsg>
+</userhtml>
+
+<emailhtml>
+<EMailSettingSpan>E-Mail Setting:</EMailSettingSpan>
+<SMTPservernameSpan>Server name:</SMTPservernameSpan>
+<SMTPserverportSpan>Port:</SMTPserverportSpan>
+<SSLSpan>SSL:</SSLSpan>
+<AuthenticationSpan>Authentication:</AuthenticationSpan>
+<AuthenticationOnSpan>On</AuthenticationOnSpan>
+<AuthenticationOffSpan>Off</AuthenticationOffSpan>
+<UsernameSpan>User Name:</UsernameSpan>
+<PasswordSpan>Password:</PasswordSpan>
+<SendToSpan>Send To:</SendToSpan>
+<SendToeMailAddress1Span></SendToeMailAddress1Span>
+<SendToeMailAddress2Span></SendToeMailAddress2Span>
+<SendToeMailAddress3Span></SendToeMailAddress3Span>
+<ShowFromasSpan>From As:</ShowFromasSpan>
+<ShowFromasReturneMailaddressSpan></ShowFromasReturneMailaddressSpan>
+<SubjectSpan>Subject:</SubjectSpan>
+<MessageSpan>Message:</MessageSpan>
+<Messagethemaxlengthis255Span>The Max Length Is 255</Messagethemaxlengthis255Span>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<emailAddrErrorMsg>Invalid address ,the length of address must bigger than 5</emailAddrErrorMsg>
+<emailAddrError1Msg>Invalid address,the address must include '@' character</emailAddrError1Msg>
+<emailInputErrorMsg>Include invalid character.</emailInputErrorMsg>
+<emailSMTPErrorMsg>Please input server name</emailSMTPErrorMsg>
+<emailInputAddrMsg>Please input the to address</emailInputAddrMsg>
+<emailFormAddrMsg>Please input the from address</emailFormAddrMsg>
+<emailUserErrorMsg>Please input the user name</emailUserErrorMsg>
+<emailPasswdErrorMsg>Please input the password</emailPasswdErrorMsg>
+<emailServerNameErrorMsg>Server name is error,include invalid character</emailServerNameErrorMsg>
+<emailFormAddrErrorMsg>Trom address is error,include invalid character</emailFormAddrErrorMsg>
+<emailToAddrErrorMsg>To address is error,include invalid character</emailToAddrErrorMsg>
+<emailSubjectErrorMsg>Subject is error,include invalid character</emailSubjectErrorMsg>
+<emailMessageErrorMsg>Message is error,include invalid character</emailMessageErrorMsg>
+<emailUserInputErrorMsg>User name  is error,include invalid character</emailUserInputErrorMsg>
+<emailPasswdInputErrorMsg>Password  is error,include invalid character</emailPasswdInputErrorMsg>
+<emailMessageLenErrorMsg>The max length of  message is 255</emailMessageLenErrorMsg>
+<emailPortErrorMsg>Include invalid character</emailPortErrorMsg>
+<emailPortError1Msg>The port is error(1-65535)</emailPortError1Msg>
+<TestSpan>Test</TestSpan>
+<TestConnectSpan>testing，wait a monent！</TestConnectSpan>
+<TestConnectSuccessSpan>Test Success！</TestConnectSuccessSpan>
+<TestConnectFailureSpan>Test Failure！</TestConnectFailureSpan>
+</emailhtml>
+
+<timeplanhtml>
+<workmodeCleanSpan>Clean</workmodeCleanSpan>
+<weekmodeCleanSpan>Clean</weekmodeCleanSpan>
+<workdayspan>Workday</workdayspan>
+<weekendspan>Weekend</weekendspan>
+<Workmodetimeperiod1span>Time Preiod1</Workmodetimeperiod1span>
+<Workmodetimeperiod2span>Time Preiod2</Workmodetimeperiod2span>
+<Workmodetimeperiod3span>Time Preiod3</Workmodetimeperiod3span>
+<Weekkmodetimeperiod1span>Time Preiod1</Weekkmodetimeperiod1span>
+<Weekkmodetimeperiod2span>Time Preiod2</Weekkmodetimeperiod2span>
+<Weekkmodetimeperiod3span>Time Preiod3</Weekkmodetimeperiod3span>
+<weeksunspan>Sun</weeksunspan>
+<weekmonspan>Mon</weekmonspan>
+<weektuespan>Tue</weektuespan>
+<weekwedspan>Wed</weekwedspan>
+<weekthuspan>Thu</weekthuspan>
+<weekfrispan>Fri</weekfrispan>
+<weeksatspan>Sat</weeksatspan>
+</timeplanhtml>
+
+<mdhtml>
+<AreaSpan>Area:</AreaSpan>
+<StatusSpan>Status:</StatusSpan>
+<StatusEnableSpan>Enable</StatusEnableSpan>
+<SensibilitySpan>Sensibility:</SensibilitySpan>
+<SensibilityveryhighSpan>Very High</SensibilityveryhighSpan>
+<SensibilityhighSpan>High</SensibilityhighSpan>
+<SensibilitynormalSpan>Normal</SensibilitynormalSpan>
+<SensibilitylowSpan>Low</SensibilitylowSpan>
+<SelectAllSpan>SelectAll</SelectAllSpan>
+<CleamAllSpan>CleanAll</CleamAllSpan>
+<ActionSpan>Action:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<SendEmailSpan>Send E-mail</SendEmailSpan>
+<EmailwithPictureSpan>With Picture</EmailwithPictureSpan>
+<OutputSpan>Output:</OutputSpan>
+<TriggerAlarmOutputSpan>Trigger Alarm Output</TriggerAlarmOutputSpan>
+<TriggerAlarmAudioSpan>Trigger Alarm Audio </TriggerAlarmAudioSpan>
+<ScheduleSpan>Schedule:</ScheduleSpan>
+<ScheduleUsetheweekmodeSpan>Week Mode</ScheduleUsetheweekmodeSpan>
+<ScheduleUsetheworkmodeSpan>Work Mode</ScheduleUsetheworkmodeSpan>
+<ScheduleAlltimedaySpan>All Time Day</ScheduleAlltimedaySpan>
+<MdSelectAllSpan>Select All</MdSelectAllSpan>
+<MdCleanAllSpan>Clean All</MdCleanAllSpan>
+<MdTimeSpan>Time</MdTimeSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<MdErrorMsg>invalid value!</MdErrorMsg>
+<AlarmRecInputLabel>Alarm With Record</AlarmRecInputLabel>
+<AlarmSnapInputLabel>Alarm With Snap</AlarmSnapInputLabel>
+<SendToFtpLabel>Upload FTP</SendToFtpLabel>
+<FtpUploadRecLabel>Upload FTP</FtpUploadRecLabel>
+</mdhtml>
+
+
+<alarminhtml>
+<AlarmInSpan>Alarm In:</AlarmInSpan>
+<StatusSpan>Status:</StatusSpan>
+<EnableSpan>Enable</EnableSpan>
+<ActivemodeSpan>Active Mode</ActivemodeSpan>
+<ActivemodeLowSpan>Low</ActivemodeLowSpan>
+<ActivemodeHighSpan>High</ActivemodeHighSpan>
+<ActionSpan>Action:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<EMailSendEmailSpan>Send E-Mail</EMailSendEmailSpan>
+<EMailEmailwithPictureSpan>With Picture</EMailEmailwithPictureSpan>
+<OutputSpan>Output:</OutputSpan>
+<OutputTriggerAlarmOutputSpan>Trigger Alarm Output</OutputTriggerAlarmOutputSpan>
+<ScheduleSpan>Schedule:</ScheduleSpan>
+<ScheduleUsetheweekmodeSpan>Week Mode</ScheduleUsetheweekmodeSpan>
+<ScheduleUsetheworkmodeSpan>Work Mode</ScheduleUsetheworkmodeSpan>
+<ScheduleAlltimesdaySpan>All Times Day</ScheduleAlltimesdaySpan>
+<workdayspan>Workday</workdayspan>
+<weekendspan>Weekend</weekendspan> 
+<workmodeCleanSpan>Clean</workmodeCleanSpan>
+<workmodeCloseSpan>Close</workmodeCloseSpan>
+<Workmodetimeperiod1span>Time Period1</Workmodetimeperiod1span>
+<Workmodetimeperiod2span>Time Period2</Workmodetimeperiod2span>
+<Workmodetimeperiod3span>Time Period3</Workmodetimeperiod3span>
+<Weekkmodetimeperiod1span>Time Period1</Weekkmodetimeperiod1span>
+<Weekkmodetimeperiod2span>Time Period2</Weekkmodetimeperiod2span>
+<Weekkmodetimeperiod3span>Time Period3</Weekkmodetimeperiod3span>
+<weekmodeCleanSpan>Clean</weekmodeCleanSpan>
+<weekmodeCloseSpan>Close</weekmodeCloseSpan>
+<TimeSetSpan>Time</TimeSetSpan>
+<weeksunspan>Sun</weeksunspan>
+<weekmonspan>Mon</weekmonspan>
+<weektuespan>Tue</weektuespan>
+<weekwedspan>Wed</weekwedspan>
+<weekthuspan>Thu</weekthuspan>
+<weekfrispan>Fri</weekfrispan>
+<weeksatspan>Sat</weeksatspan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<ErrorMsg>Invalid value</ErrorMsg>
+<AlarmOutSpan>AlarmOut:</AlarmOutSpan>
+<StatusSpan>Status:</StatusSpan>
+<EnableSpan>Enable</EnableSpan>
+<ActivemodeSpan>Active Mode:</ActivemodeSpan>
+<ActivemodeOpenSpan>Open</ActivemodeOpenSpan>
+<ActivemodeGrounedSpan>Grouned</ActivemodeGrounedSpan>
+<ContinuetimeSpan>Time:</ContinuetimeSpan>
+<aocontinueTimeSpan>Second</aocontinueTimeSpan>
+<AlarmRecInputLabel>Alarm With Record</AlarmRecInputLabel>
+<AlarmSnapInputLabel>Alarm With Snap</AlarmSnapInputLabel>
+<SendToFtpLabel>Upload FTP</SendToFtpLabel>
+<FtpUploadRecLabel>Upload FTP</FtpUploadRecLabel>
+</alarminhtml>
+
+
+<alarmouthtml>
+<AlarmOutSpan>AlarmOut:</AlarmOutSpan>
+<StatusSpan>Status:</StatusSpan>
+<EnableSpan>Enable</EnableSpan>
+<ActivemodeSpan>Active Mode:</ActivemodeSpan>
+<ActivemodeOpenSpan>Open</ActivemodeOpenSpan>
+<ActivemodeGrounedSpan>Grouned</ActivemodeGrounedSpan>
+<ContinuetimeSpan>Time:</ContinuetimeSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+</alarmouthtml>
+
+<autosnaphtml>
+<SnapSpan>Snap:</SnapSpan>
+<ntervalSpan>Interval:</ntervalSpan>
+<ntervalMinutesSpan>Minutes</ntervalMinutesSpan>
+<ActionSpan>Action:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<SendbyEmailSpan>Send</SendbyEmailSpan>
+<SendbyFtpSpan>Send</SendbyFtpSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<InputErrorMsg>Include invalid character.</InputErrorMsg>
+<IntervalErrorMsg>The interval is invalid (1-1440)</IntervalErrorMsg>
+<SettingSpan>Email Setting</SettingSpan>
+<StatusSpan>Status:</StatusSpan>
+<AutoSnapEnableSpan>Enable</AutoSnapEnableSpan>
+</autosnaphtml>
+
+<timehtml>
+<Sunday>Su</Sunday>
+<Monday>Mo</Monday>
+<Tuesday>Tu</Tuesday>
+<Wednesday>We</Wednesday>
+<Thursday>Th</Thursday>
+<Friday>Fr</Friday>
+<Saturday>Sa</Saturday>
+<Januar>January </Januar>
+<Februar>February </Februar>
+<Marts>March </Marts>
+<April>April </April>
+<Maj>May </Maj>
+<Juni>June </Juni>
+<Juli>July </Juli>
+<August>August </August>
+<September>September </September>
+<Oktober>October </Oktober>
+<November>November </November>
+<December>December </December>
+<AdjustSpan>Adjust:</AdjustSpan>
+<CameradatetimeSpan>Date &amp; Time:</CameradatetimeSpan>
+<SetmodeSpan>Mode:</SetmodeSpan>
+<SetmodeKeepcurrentsettingSpan>Keep Current</SetmodeKeepcurrentsettingSpan>
+<SetmodeManualsettingSpan>Manual</SetmodeManualsettingSpan>
+<SetmodeManualsettingDateSpan>Date:</SetmodeManualsettingDateSpan>
+<SetmodeManualsettingTimeSpan>Time:</SetmodeManualsettingTimeSpan>
+<SetmodeSyncwithcomputerSpan>Sync With Computer</SetmodeSyncwithcomputerSpan>
+<SetmodeSyncwithcomputerPCTimeSpan>Computer Time:</SetmodeSyncwithcomputerPCTimeSpan>
+<SetmodeSyncwhitntpSpan>Sync With NTP</SetmodeSyncwhitntpSpan>
+<SetmodeSyncwhitntpNTPservernameSpan>Server Name:</SetmodeSyncwhitntpNTPservernameSpan>
+<SetmodeSyncwhitntpIntervalSpan>Interval:</SetmodeSyncwhitntpIntervalSpan>
+<SetmodeSyncwhitntpIntervalhourSpan>Hour</SetmodeSyncwhitntpIntervalhourSpan>
+<TimezoneSpan>Time Zone:</TimezoneSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<TimezoneKeepcurrentsettingSpan>Keep Current</TimezoneKeepcurrentsettingSpan>
+<TimezoneInternationalDateLineWestSpan>(GMT-12:00) International Date Line West</TimezoneInternationalDateLineWestSpan>
+<TimezoneMidwayIslandSamoaSpan>(GMT-11:00) Midway Island, Samoa</TimezoneMidwayIslandSamoaSpan>
+<TimezoneHawaiiSpan>(GMT-10:00) Hawaii</TimezoneHawaiiSpan>
+<TimezoneAlaskaSpan>(GMT-09:00) Alaska</TimezoneAlaskaSpan>
+<TimezonePacificTimeUSCanadaTijuanaSpan>(GMT-08:00) Pacific Time(US &amp; Canada) Tijuana</TimezonePacificTimeUSCanadaTijuanaSpan>
+<TimezoneMountainTimeUSCanadaSpan>(GMT-07:00) Mountain Time (US &amp; Canada)</TimezoneMountainTimeUSCanadaSpan>
+<TimezoneChihuahuaLaPazMazatlanSpan>(GMT-07:00) Chihuahua, LaPaz, Mazatlan</TimezoneChihuahuaLaPazMazatlanSpan>
+<TimezoneArizonaSpan>(GMT-07:00) Arizona</TimezoneArizonaSpan>
+<TimezoneSaskatchewanSpan>(GMT-06:00) Saskatchewan</TimezoneSaskatchewanSpan>
+<TimezoneGuaddlajaraMexicoCityMonterreySpan>(GMT-06:00) Guaddlajara, Mexico City, Monterrey</TimezoneGuaddlajaraMexicoCityMonterreySpan>
+<TimezoneCentralTimeUSCanadaSpan>(GMT-06:00) Central Time(US &amp; Canada)</TimezoneCentralTimeUSCanadaSpan>
+<TimezoneCentralAmericaSpan>(GMT-06:00) Central America</TimezoneCentralAmericaSpan>
+<TimezoneIndianaEastSpan>(GMT-05:00) Indiana(East)</TimezoneIndianaEastSpan>
+<TimezoneEasternTimeUSCanadaSpan>(GMT-05:00) EasternTimeUSCanada</TimezoneEasternTimeUSCanadaSpan>
+<TimezoneBogotaLimaQuitoSpan>(GMT-05:00) Bogota, Lima, Quito</TimezoneBogotaLimaQuitoSpan>
+<TimezoneSantiagoSpan>(GMT-04:00) Santiago</TimezoneSantiagoSpan>
+<TimezoneCaracasLaPazSpan>(GMT-04:00) Caracas, La Paz</TimezoneCaracasLaPazSpan>
+<TimezoneAtlanticTimeCanadaSpan>(GMT-04:00) Atlantic Time(Canada)</TimezoneAtlanticTimeCanadaSpan>
+<TimezoneNenfoundLandSpan>(GMT-03:30) NenfoundLand</TimezoneNenfoundLandSpan>
+<TimezoneGreenlandSpan>(GMT-03:00) Greenland</TimezoneGreenlandSpan>
+<TimezoneBuenosAiresGeorgentownSpan>(GMT-03:00) Buenos Aires, Georgentown</TimezoneBuenosAiresGeorgentownSpan>
+<TimezoneBrasiliaSpan>(GMT-03:00) Brasilia</TimezoneBrasiliaSpan>
+<TimezoneMidAtlanticSpan>(GMT-02:00) Mid-Atlantic</TimezoneMidAtlanticSpan>
+<TimezoneCapeVerdeIsSpan>(GMT-01:00) Cape Verde Is</TimezoneCapeVerdeIsSpan>
+<TimezoneAzoresSpan>(GMT-01:00) Azores</TimezoneAzoresSpan>
+<TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan>(GMT-00:00) Greenwich Mean Time:Dublin, Edinburgh, Lisbon, London</TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan>
+<TimezoneCasablancamonroviaSpan>(GMT+00:00) Casablancamonrovia</TimezoneCasablancamonroviaSpan>
+<TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan>(GMT+01:00) AmsterdamBerlinBernRomeStockholmVienna</TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan>
+<TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan>(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan>
+<TimezoneBrusselsCopenhagenMadridParisSpan>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</TimezoneBrusselsCopenhagenMadridParisSpan>
+<TimezoneSarajevoSkopjeWarsawZagrebSpan>(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</TimezoneSarajevoSkopjeWarsawZagrebSpan>
+<TimezoneWestCentralAfricaSpan>(GMT+01:00) West Centra lAfrica</TimezoneWestCentralAfricaSpan>
+<TimezonehensIstanbulMinskSpan>(GMT+02:00) hens, Istanbul, Minsk</TimezonehensIstanbulMinskSpan>
+<TimezoneBucharestSpan>(GMT+02:00) Bucharest</TimezoneBucharestSpan>
+<TimezoneCairoSpan>(GMT+02:00) Cairo</TimezoneCairoSpan>
+<TimezonerarePretoriaSpan>(GMT+02:00) Harare, Pretoria</TimezonerarePretoriaSpan>
+<TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan>(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan>
+<TimezoneJerusalemSpan>(GMT+02:00) Jerusalem</TimezoneJerusalemSpan>
+<TimezoneBaghdadSpan>(GMT+03:00) Baghdad</TimezoneBaghdadSpan>
+<TimezoneKuwaitRiyadhSpan>(GMT+03:00) Kuwait, Riyadh</TimezoneKuwaitRiyadhSpan>
+<TimezoneMoscowStPetersburgVolgogradSpan>(GMT+03:00) Moscow, St.Petersburg, Volgograd</TimezoneMoscowStPetersburgVolgogradSpan>
+<TimezoneNairobiSpan>(GMT+03:00) Nairobi</TimezoneNairobiSpan>
+<TimezoneTehranSpan>(GMT+03:30) Tehran</TimezoneTehranSpan>
+<TimezoneAbuDhabiMuscatSpan>(GMT+04:00) Abu Dhabi, Muscat</TimezoneAbuDhabiMuscatSpan>
+<TimezoneBakuTbilisiYerevanSpan>(GMT+04:00) Baku, Tbilisi, Yerevan</TimezoneBakuTbilisiYerevanSpan>
+<TimezoneKabulSpan>(GMT+04:30) Kabul</TimezoneKabulSpan>
+<TimezoneEkaterinburgSpan>(GMT+05:00) Ekaterinburg</TimezoneEkaterinburgSpan>
+<TimezoneIslamabadKarachiTashkentSpan>(GMT+05:00) Islamabad, Karachi, Tashkent</TimezoneIslamabadKarachiTashkentSpan>
+<TimezoneChennaiKolkataMumbaiNewDelhiSpan>(GMT+05:30) Chennai, Kolkata, Mumbai, NewDelhi</TimezoneChennaiKolkataMumbaiNewDelhiSpan>
+<TimezoneKathmanduSpan>(GMT+05:45) Kathmandu</TimezoneKathmanduSpan>
+<TimezoneAlmatyNovosibirskSpan>(GMT+06:00) Almaty, Novosibirsk</TimezoneAlmatyNovosibirskSpan>
+<TimezoneAstanaDhakaSpan>(GMT+06:00) AstanaDhaka</TimezoneAstanaDhakaSpan>
+<TimezoneSriJayawardenepuraSpan>(GMT+06:00) SriJayawardenepura</TimezoneSriJayawardenepuraSpan>
+<TimezoneRangoonSpan>(GMT+06:30) Rangoon</TimezoneRangoonSpan>
+<TimezoneBangkokHanoiJakartaSpan>(GMT+07:00) BangkokHanoiJakarta</TimezoneBangkokHanoiJakartaSpan>
+<TimezoneKrasnoyarskSpan>(GMT+07:00) Krasnoyarsk</TimezoneKrasnoyarskSpan>
+<TimezoneBeijingChongqingHongKongUrumqiSpan>(GMT+08:00) Beijing, Chongqing, HongKong, Urumqi</TimezoneBeijingChongqingHongKongUrumqiSpan>
+<TimezoneIrkutskUlaanBataarSpan>(GMT+08:00) Irkutsk, Ulaan Bataar</TimezoneIrkutskUlaanBataarSpan>
+<TimezoneKualaLumpurSingaporeSpan>(GMT+08:00) Kuala Lumpur, Singapore</TimezoneKualaLumpurSingaporeSpan>
+<TimezonePerthSpan>(GMT+08:00) Perth</TimezonePerthSpan>
+<TimezoneTaipeiSpan>(GMT+08:00) Taipei</TimezoneTaipeiSpan>
+<TimezoneOsakaSapporoTokyoSpan>(GMT+09:00) OsakaSapporoTokyo</TimezoneOsakaSapporoTokyoSpan>
+<TimezoneSeoulSpan>(GMT+09:00) Seoul</TimezoneSeoulSpan>
+<TimezoneYakutskSpan>(GMT+09:00) Yakutsk</TimezoneYakutskSpan>
+<TimezoneAdelaideSpan>(GMT+09:30) Adelaide</TimezoneAdelaideSpan>
+<TimezoneBrisbaneSpan>(GMT+10:00) Brisbane</TimezoneBrisbaneSpan>
+<TimezoneCanberraMelbourneSydneySpan>(GMT+10:00) Canberra, Melbourne, Sydney</TimezoneCanberraMelbourneSydneySpan>
+<TimezoneGuamPortMoresbySpan>(GMT+10:00) Guam, Port Moresby</TimezoneGuamPortMoresbySpan>
+<TimezoneHobartSpan>(GMT+10:00) Hobart</TimezoneHobartSpan>
+<TimezoneVladivostokSpan>(GMT+10:00) Vladivostok</TimezoneVladivostokSpan>
+<TimezoneMagadanSolomonIsNewSpan>(GMT+11:00) Magadan, SolomonIs., New Caledonia</TimezoneMagadanSolomonIsNewSpan>
+<TimezoneAucklandWellingtonSpan>(GMT+12:00) Auckland, Wellington</TimezoneAucklandWellingtonSpan>
+<TimezoneFijiKamchatkaMarshallIsSpan>(GMT+12:00) Fiji, Kamchatka, MarshallIs.</TimezoneFijiKamchatkaMarshallIsSpan>
+<TimezoneNukualofaSpan>(GMT+13:00) Nuku'alofa</TimezoneNukualofaSpan>
+<AutomaticallyadjustclockfordaylightsavingtimechangesSpan>Automatically adjust clock for daylight saving time changes</AutomaticallyadjustclockfordaylightsavingtimechangesSpan>
+<YearErrorMsg>Your pc time is invalid,the time must between 1971-01-01 to 2036-12-31</YearErrorMsg>
+<NtpErrorMsg>Please input ntp server name</NtpErrorMsg>
+<NtpServerErrorMsg>Ntp server name is error.</NtpServerErrorMsg>
+<AutoUpdateTimeSpan>Auto Update Time:</AutoUpdateTimeSpan>
+</timehtml>
+
+
+
+<initializemainhtml>
+<InitializeSpan>Initialize </InitializeSpan>
+<RebootSpan>Reboot:</RebootSpan>
+<FactorydefaultSpan>Factory Default:</FactorydefaultSpan>
+<BackupsettingdataSpan>Backup Data:</BackupsettingdataSpan>
+<BackupsettingdataSaveSpan>Backup Setting Data Save</BackupsettingdataSaveSpan>
+<RestoreSpan>Restore:</RestoreSpan>
+<Restorebrower>Brower...</Restorebrower>
+<RestoreOKSpan>Apply</RestoreOKSpan>
+<UpgradeSpan>Upgrade:</UpgradeSpan>
+<UpgradeOKSpan>Apply</UpgradeOKSpan>
+<RebootOKSpan>Apply</RebootOKSpan>
+<FactoryOKSpan>Apply</FactoryOKSpan>
+<Upgradebrower>Brower...</Upgradebrower>
+<RebootMsg>The ipcam will be rebooted. Are you sure?</RebootMsg>
+<RebootWaitMsg>IP Camera  is rebooting,please don't turn off the camera......</RebootWaitMsg>
+<ResetMsg>Setup data will be initialized. Are you sure?</ResetMsg>
+<InputFileMsg>Please input the file path</InputFileMsg>
+<UpgradeMsg>The ipcam will be upgrade. Are you sure?</UpgradeMsg>
+<UpgradeWaitMsg>IP Camera  is upgrading,please don't turn off the camera......</UpgradeWaitMsg>
+<UploadMsg>The ipcam will be restore. Are you sure?</UploadMsg>
+<UploadWaitMsg>IP Camera  is uploading,please don't turn off the camera......</UploadWaitMsg>
+<RebootOKSpan>OK</RebootOKSpan>
+<ResetOKSpan>OK</ResetOKSpan>
+<UpgradeFileErrorMsg>The upgrade file unmatch!</UpgradeFileErrorMsg>
+</initializemainhtml>
+
+
+
+
+<deviceinfohtml>
+<DeviceinfoSpan>Device Info</DeviceinfoSpan>
+<CameranameSpan>Camera Name:</CameranameSpan>
+<SerialNumberSpan>Serial Number:</SerialNumberSpan>
+<CameraTypeSpan>CameraType:</CameraTypeSpan>
+<connectionSpan>Connection:</connectionSpan>
+<SoftwareVersionSpan>Software Ver:</SoftwareVersionSpan>
+<NetworkInfoSpan>Network Info</NetworkInfoSpan>
+<MacaddressSpan>Mac:</MacaddressSpan>
+<IPaddressSpan>IP:</IPaddressSpan>
+<SubnetmaskSpan>Subnet Mask:</SubnetmaskSpan>
+<GatewaySpan>Gateway:</GatewaySpan>
+<PrimaryDNSSpan>Primary DNS:</PrimaryDNSSpan>
+<SecondaryDNSSpan>Second DNS:</SecondaryDNSSpan>
+<StartTimeSpan>Start Time:</StartTimeSpan>
+<HardVersionSpan>Hard Ver:</HardVersionSpan>
+</deviceinfohtml>
+
+<basehtml>
+<LanguageSpan>Language:</LanguageSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+</basehtml>
+
+<sysloghtml>
+<syslogcleanspan>Clean</syslogcleanspan>
+<gotospan>Goto:</gotospan>
+<syslogFirstspan>First</syslogFirstspan>
+<syslogUpspan>Prev</syslogUpspan>
+<syslogDownspan>Next</syslogDownspan>
+<syslogEndspan>Last </syslogEndspan>
+<syslogBackupspan>Backup</syslogBackupspan>
+<SearchSpan>Search</SearchSpan>
+<SearchTimeSpan>Time:</SearchTimeSpan>
+<SearchTypeSpan>Type:</SearchTypeSpan>
+<SearchTypeAllSpan>All</SearchTypeAllSpan>
+<SearchTypeAlarmSpan>Alarm</SearchTypeAlarmSpan>
+<SearchTypeOperationSpan>Operation</SearchTypeOperationSpan>
+<TabelNumSpan>Number</TabelNumSpan>
+<TabelTimeSpan>Time</TabelTimeSpan>
+<TabelTypeSpan>Type</TabelTypeSpan>
+<TabelDetailedSpan>Detailed</TabelDetailedSpan>
+<MsgStartup>Network Camera Boot</MsgStartup>
+<MsgModifyTime>Modify Time</MsgModifyTime>
+<MsgRomoteLogin>Remote Login </MsgRomoteLogin>
+<MsgSendEmail>Send E-Mail, Send To:</MsgSendEmail>
+<MsgTimeRecord>Time Record Start</MsgTimeRecord>
+<MsgManualRecord>Manual Record Start</MsgManualRecord>
+<MsgAlarmRecord>Alarm Record Start</MsgAlarmRecord>
+<MsgModifyNetwork>Modify Network</MsgModifyNetwork>
+<MsgIOAlarmIn>IO Alarm In</MsgIOAlarmIn>
+<MsgIOAlarmOut>IO Alarm Out</MsgIOAlarmOut>
+<MsgMDAlarmStart>Motion Detection Alarm Start</MsgMDAlarmStart>
+<MsgMDAlarmEnd>Motion Detection Alarm End</MsgMDAlarmEnd>
+<MsgODAlarmStart>Occlusion Detection Alarm Start</MsgODAlarmStart>
+<MsgODAlarmEnd>Occlusion Detection Alarm End</MsgODAlarmEnd>
+<Sunday>Su</Sunday>
+<Monday>Mo</Monday>
+<Tuesday>Tu</Tuesday>
+<Wednesday>We</Wednesday>
+<Thursday>Th</Thursday>
+<Friday>Fr</Friday>
+<Saturday>Sa</Saturday>
+<Januar>January </Januar>
+<Februar>February </Februar>
+<Marts>March </Marts>
+<April>April </April>
+<Maj>May </Maj>
+<Juni>June </Juni>
+<Juli>July </Juli>
+<August>August </August>
+<September>September </September>
+<Oktober>October </Oktober>
+<November>November </November>
+<December>December </December>
+<ErrorTime>Time error!</ErrorTime>
+<MINORVCAALARMSTARTDEFENCE>Start Defence</MINORVCAALARMSTARTDEFENCE>
+<MINORVCAALARMSTOPDEFENCE>Stop Defence</MINORVCAALARMSTOPDEFENCE>
+<MINORVCAALARMREGISTERCMD>Register Command</MINORVCAALARMREGISTERCMD>
+</sysloghtml>
+
+<ptzhtml>
+<PropertySpan>Property</PropertySpan>
+<ProtocolSpan>Protocol:</ProtocolSpan>
+<BaudRateSpan>Baud Rate:</BaudRateSpan>
+<DataBitSpan>Databit:</DataBitSpan>
+<StopBitSpan>Stopbit:</StopBitSpan>
+<ParitySpan>Parity:</ParitySpan>
+<AddressSpan>Address:</AddressSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<addressErrorMsg>Address Between (0~255)</addressErrorMsg>
+<FilpSpan>Flip:</FilpSpan>
+<MirrorSpan>Mirror:</MirrorSpan>
+<FlipOnSpan>On</FlipOnSpan>
+<FlipOffSpan>Off</FlipOffSpan>
+<MirrorOnSpan>On</MirrorOnSpan>
+<MirrorOffSpan>Off</MirrorOffSpan>
+<TypeSpan>PTZ Type:</TypeSpan>
+<MotorSpan>Motor</MotorSpan>
+<PanspdSpan>Speed:</PanspdSpan>
+<TiltspdSpan>Vertical Speed:</TiltspdSpan>
+<PanspdHighSpan>High</PanspdHighSpan>
+<PanspdMidSpan>Mid</PanspdMidSpan>
+<PanspdLowSpan>Low</PanspdLowSpan>
+<VerticalHighSpan>High</VerticalHighSpan>
+<VerticalMidSpan>Mid</VerticalMidSpan>
+<VerticalLowSpan>Low</VerticalLowSpan>
+<StayTimeSpan>Stay Time:</StayTimeSpan>
+<PatrolsSpan>Patrols:</PatrolsSpan>
+<Track0Span>Track1:</Track0Span>
+<Track1Span>Track2:</Track1Span>
+<Track2Span>Track3:</Track2Span>
+<Track3Span>Track4:</Track3Span>
+<SecondSpan>Second</SecondSpan>
+</ptzhtml>
+
+<odhtml>
+<OcclusionSpan>Occlusion Detection</OcclusionSpan>
+<StatusSpan>Status:</StatusSpan>
+<EnableSpan>Enable</EnableSpan>
+<SensibilitySpan>Sensibility:</SensibilitySpan>
+<SensibilityveryhighSpan>Very high</SensibilityveryhighSpan>
+<SensibilityhighSpan>High</SensibilityhighSpan>
+<SensibilitynormalSpan>Normal</SensibilitynormalSpan>
+<SensibilitylowSpan>Low</SensibilitylowSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+</odhtml>
+
+<recordhtml>
+<RecordSpan>Record</RecordSpan>
+<FileTimeSpan>File Time:</FileTimeSpan>
+<Filetime0Span>Close</Filetime0Span>
+<MinuteSpan>Minute</MinuteSpan>
+<ManualRecordSpan>Manual Record:</ManualRecordSpan>
+<manualrecOnSpan>On</manualrecOnSpan>
+<manualrecOffSpan>Off</manualrecOffSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<NoStorageMsg>No SD Card Can Not Record!</NoStorageMsg>
+<ManualRecordChnSpan>Stream:</ManualRecordChnSpan>
+<MainFlowSpan>MainFlow</MainFlowSpan>
+<MinorFlowSpan>MinorFlow</MinorFlowSpan>
+<ScheduleUsetheweekmodeSpan>Week Mode</ScheduleUsetheweekmodeSpan>
+<ScheduleUsetheworkmodeSpan>Work Mode</ScheduleUsetheworkmodeSpan>
+<ScheduleAlltimedaySpan>All Time Day</ScheduleAlltimedaySpan>
+<ScheduleSpan>Schedule:</ScheduleSpan>
+<TimerRecordSpan>Timer Record:</TimerRecordSpan>
+<timerrecOnSpan>On</timerrecOnSpan>
+<timerrecOffSpan>Off</timerrecOffSpan>
+<TimeSpan>Time</TimeSpan>
+</recordhtml>
+
+<storagehtml>
+<SdcardInfoSpan>SD Card Info</SdcardInfoSpan>
+<StatusSpan>Status:</StatusSpan>
+<sdstatusMsg>No ready</sdstatusMsg>
+<refresh>Refresh</refresh>
+<removeBT>Remove</removeBT>
+<mountBT>Mount</mountBT>
+<frt>Format</frt>
+<brower>Brower...</brower>
+<SDCardFormatMsg>The sd card data will be lose. Are you sure?</SDCardFormatMsg>
+<SDCardRemoveMsg>The sd card data will be remove. Are you sure?</SDCardRemoveMsg>
+<SDCardWaitMsg>The sd card is formating. Please don't turn off the camera......</SDCardWaitMsg>
+</storagehtml>
+
+<loginhtml>
+<LanguageSpan>Language:</LanguageSpan>
+<StreamTypeSpan>Stream:</StreamTypeSpan>
+<streamHDSpan>MainFlow</streamHDSpan>
+<streamFluentSpan>MinorFlow</streamFluentSpan>
+<ApplySpan>Apply</ApplySpan>
+<DownloadSpan>Download player</DownloadSpan>
+</loginhtml>
+
+<wifihtml>
+<WifiStatusSpan>Wifi Status:</WifiStatusSpan>
+<WifiEnableSpan>Enable</WifiEnableSpan>
+<CurHotPointSpan>CurHotPoint</CurHotPointSpan>
+<CurHotPointSSIDSpan>SSID:</CurHotPointSSIDSpan>
+<CurHotPointStatusSpan>Connect Status:</CurHotPointStatusSpan>
+<ConfSSIDSpan>SSID:</ConfSSIDSpan>
+<AuthModeSpan>Auth Mode:</AuthModeSpan>
+<WPAPSKKeySpan>Password:</WPAPSKKeySpan>
+<ShowPasswordSpan>Show Password</ShowPasswordSpan>
+<SearchResultHeadSignalSpan>Signal</SearchResultHeadSignalSpan>
+<SearchResultHeadSSIDSpan>SSID</SearchResultHeadSSIDSpan>
+<SearchResultHeadAuthModeSpan>Auth Mode</SearchResultHeadAuthModeSpan>
+<SearchResultHeadSearchSpan>Search</SearchResultHeadSearchSpan>
+<TestSpan>Test</TestSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<DisconnectSpan>Disconnect</DisconnectSpan>
+<ConnectSpan>Connected</ConnectSpan>
+<TestConnectSpan>Connecting , Please wait a moment!</TestConnectSpan>
+<TestConnectSuccessSpan>Connect Success!</TestConnectSuccessSpan>
+<TestConnectFailureSpan>Connect Failure!</TestConnectFailureSpan>
+<PasswdLengthErrorMsg>Password Length Error!</PasswdLengthErrorMsg>
+</wifihtml>
+
+<p2phtml>
+<P2PSpan>P2P:</P2PSpan>
+<P2PStatusSpan>Status:</P2PStatusSpan>
+<p2pEnableSpan>Enable</p2pEnableSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<P2PIDSpan>ID:</P2PIDSpan>
+<P2PPwdSpan>Password:</P2PPwdSpan>
+</p2phtml>
+
+<hltalmproxyhtml>
+<StreamEnableSpan>Server Enable:</StreamEnableSpan>
+<StreamTypeSpan>Stream Type:</StreamTypeSpan>
+<MainStramSpan>Main Stream</MainStramSpan>
+<SubStreamSpan>Sub Stream</SubStreamSpan>
+<StreamAddressSpan>Server Address:</StreamAddressSpan>
+<ServerPortSpan>Server Port:</ServerPortSpan>
+<UsernameSpan>Username:</UsernameSpan>
+<PasswordSpan>Password:</PasswordSpan>
+<TimeoutSpan>Timeout:</TimeoutSpan>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<PlatformSetSpan>Platform setting</PlatformSetSpan>
+<RebootMsgSpan>Parameter changes need to restart to take effect!</RebootMsgSpan>
+</hltalmproxyhtml>
+
+<replayhtml>
+<PlaySpan>Play</PlaySpan>
+<PauseSpan>Pause</PauseSpan>
+<FramePlaySpan>FramePlay</FramePlaySpan>
+<FastPlaySpan>FastPlay</FastPlaySpan>
+<StopSpan>Stop</StopSpan>
+<FileListSpan>FileList:</FileListSpan>
+<CommonSpan>Common</CommonSpan>
+<AlarmSpan>Alarm</AlarmSpan>
+<AllTypeSpan>All</AllTypeSpan>
+<SearchResultHeadSSIDSpan>Time</SearchResultHeadSSIDSpan>
+<SearchResultHeadAuthModeSpan>Size</SearchResultHeadAuthModeSpan>
+<dayNamesMinSunday>Su</dayNamesMinSunday>
+<dayNamesMinMonday>Mo</dayNamesMinMonday>
+<dayNamesMinTuesday>Tu</dayNamesMinTuesday>
+<dayNamesMinWednesday>We</dayNamesMinWednesday>
+<dayNamesMinThursday>Th</dayNamesMinThursday>
+<dayNamesMinFriday>Fr</dayNamesMinFriday>
+<dayNamesMinSaturday>Sa</dayNamesMinSaturday>
+<dayNamesSunday>Sunday</dayNamesSunday>
+<dayNamesMonday>Monday</dayNamesMonday>
+<dayNamesTuesday>Tuesday</dayNamesTuesday>
+<dayNamesWednesday>Wednesday</dayNamesWednesday>
+<dayNamesThursday>Thursday</dayNamesThursday>
+<dayNamesFriday>Friday</dayNamesFriday>
+<dayNamesSaturday>Saturday</dayNamesSaturday>
+<dayNamesShortSunday>Sun</dayNamesShortSunday>
+<dayNamesShortMonday>Mon</dayNamesShortMonday>
+<dayNamesShortTuesday>Tue</dayNamesShortTuesday>
+<dayNamesShortWednesday>Wed</dayNamesShortWednesday>
+<dayNamesShortThursday>Thu</dayNamesShortThursday>
+<dayNamesShortFriday>Fri</dayNamesShortFriday>
+<dayNamesShortSaturday>Sat</dayNamesShortSaturday>
+<monthNamesJanuar>January</monthNamesJanuar>
+<monthNamesFebruar>February</monthNamesFebruar>
+<monthNamesMarts>March</monthNamesMarts>
+<monthNamesApril>April</monthNamesApril>
+<monthNamesMaj>May</monthNamesMaj>
+<monthNamesJuni>June</monthNamesJuni>
+<monthNamesJuli>July</monthNamesJuli>
+<monthNamesAugust>August</monthNamesAugust>
+<monthNamesSeptember>September</monthNamesSeptember>
+<monthNamesOktober>October</monthNamesOktober>
+<monthNamesNovember>November</monthNamesNovember>
+<monthNamesDecember>December</monthNamesDecember>
+<monthNamesShortJanuar>Jan</monthNamesShortJanuar>
+<monthNamesShortFebruar>Feb</monthNamesShortFebruar>
+<monthNamesShortMarts>Mar</monthNamesShortMarts>
+<monthNamesShortApril>Apr</monthNamesShortApril>
+<monthNamesShortMaj>May</monthNamesShortMaj>
+<monthNamesShortJuni>Jun</monthNamesShortJuni>
+<monthNamesShortJuli>Jul</monthNamesShortJuli>
+<monthNamesShortAugust>Aug</monthNamesShortAugust>
+<monthNamesShortSeptember>Sep</monthNamesShortSeptember>
+<monthNamesShortOktober>Oct</monthNamesShortOktober>
+<monthNamesShortNovember>Nov</monthNamesShortNovember>
+<monthNamesShortDecember>Dec</monthNamesShortDecember>
+<closeText>Close</closeText>
+<prevText>Prev</prevText>
+<nextText>Next</nextText>
+<weekHeader>Wk</weekHeader>
+<yearSuffix></yearSuffix>
+</replayhtml>
+
+<ftphtml>
+<ServerSpan>Server:</ServerSpan>
+<PortSpan>Port:</PortSpan>
+<UserSpan>User:</UserSpan>
+<PasswdSpan>Password:</PasswdSpan>
+<TestSpan>Test</TestSpan>
+<PortErrMsg>Port Error!</PortErrMsg>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<TestConnectSpan>Testing，wait a monent！</TestConnectSpan>
+<TestConnectSuccessSpan>Test Success！</TestConnectSuccessSpan>
+<TestConnectFailureSpan>Test Failure！</TestConnectFailureSpan>
+</ftphtml>
+
+<cdhtml>
+<ShowSpan>Show:</ShowSpan>
+<Region1Span>Region1</Region1Span>
+<Region2Span>Region2</Region2Span>
+<Region3Span>Region3</Region3Span>
+<Region4Span>Region4</Region4Span>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+</cdhtml>
+
+<audiohtml>
+<AudioSpan>Audio</AudioSpan>
+<AencFormat>Encoded Format:</AencFormat>
+<AencFormatChangeRebootMsgLabel>Encoded format change need to reboot！</AencFormatChangeRebootMsgLabel>
+<RebootWaitMsg>IP Camera  is rebooting,please don't turn off the camera......</RebootWaitMsg>
+<InputGainSpan>Input Gain:</InputGainSpan>
+<OutputVolSpan>Output Vol:</OutputVolSpan>
+<MainStreamAudioSpan>Main Stream:</MainStreamAudioSpan>
+<SubStreamAudioSpan>Sub Stream:</SubStreamAudioSpan>
+<MainStreamAudioGrpOn>On</MainStreamAudioGrpOn>
+<MainStreamAudioGrpOff>Off</MainStreamAudioGrpOff>
+<SubStreamAudioGrpOn>On</SubStreamAudioGrpOn>
+<SubStreamAudioGrpOff>Off</SubStreamAudioGrpOff>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+</audiohtml>
+
+<imagehtml>
+<CamParamSpan>Cam Param</CamParamSpan>
+<ExposureModeSpan>Exposure:</ExposureModeSpan>
+<AutoSpan>Auto</AutoSpan>
+<Manual1Span>Manual_1/25</Manual1Span>
+<Manual2Span>Manual_1/50</Manual2Span>
+<Manual3Span>Manual_1/100</Manual3Span>
+<Manual4Span>Manual_1/500</Manual4Span>
+<DayNightModeSpan>Day/Night:</DayNightModeSpan>
+<ColoursSpan>Colours</ColoursSpan>
+<BlackSpan>Black</BlackSpan>
+<BLCSpan>BLC:</BLCSpan>
+<OpenSpan>Open</OpenSpan>
+<CloseSpan>Close</CloseSpan>
+<AutoIrisSpan>Auto Iris:</AutoIrisSpan>
+<BackgroundModeSpan>Background:</BackgroundModeSpan>
+<IndoorSpan>Indoor</IndoorSpan>
+<OutdoorSpan>Outdoor</OutdoorSpan>
+<AEParamSpan>AE Param:</AEParamSpan>
+<AEParamDefaultSpan>Default</AEParamDefaultSpan>
+<DNSwitchValueSpan>DNSwitch:</DNSwitchValueSpan>
+<AESensitivitySpan>AE Sensitivity:</AESensitivitySpan>
+<WideDynamicSpan>WideDynamic:</WideDynamicSpan>
+<WideDynamicOpenSpan>Open</WideDynamicOpenSpan>
+<WideDynamicCloseSpan>Close</WideDynamicCloseSpan>
+<UpperLimitValuSpan>UpperLimit:</UpperLimitValuSpan>
+<AutoGainControlSpan>AutoGain Control:</AutoGainControlSpan>
+<AutoGainControlOpenSpan>Open</AutoGainControlOpenSpan>
+<AutoGainControlCloseSpan>Close</AutoGainControlCloseSpan>
+<ElectronicShutterSpan>Electronic Shutter:</ElectronicShutterSpan>
+<ElectronicShutterOpenSpan>Open</ElectronicShutterOpenSpan>
+<ElectronicShutterCloseSpan>Close</ElectronicShutterCloseSpan>
+<IRCUTSpan>IR_CUT：</IRCUTSpan>
+<IRCUTAutoSwitchSpan>auto</IRCUTAutoSwitchSpan>
+<IRCUTCloseSpan>close</IRCUTCloseSpan>
+<DDenoiseRankSpan>DDenoise Rank:</DDenoiseRankSpan>
+<NDenoiseRankSpan>NDenoise Rank:</NDenoiseRankSpan>
+<FrontEndOrderSpan>FrontEnd Order:</FrontEndOrderSpan>
+<FrontEndOrderSendSpan>Send</FrontEndOrderSendSpan>
+<FrontEndOrderSaveSpan>Save</FrontEndOrderSaveSpan>
+<mirrorSpan>Mirror</mirrorSpan>
+<overturnSpan>Flip</overturnSpan>
+<LightAntiSpan>Light Anti</LightAntiSpan>
+<IRLensAntitoneSpan>IR LensAntitone</IRLensAntitoneSpan>
+<cut>---------------------------------------------------------------------</cut>
+<wdrSpan>WDR:</wdrSpan>
+<wdrLevel0>Low</wdrLevel0>
+<wdrLevel1>Normal</wdrLevel1>
+<wdrLevel2>High</wdrLevel2>
+<ApplySpan>Apply</ApplySpan>
+<CancelSpan>Cancel</CancelSpan>
+<RebootWaitMsg>IP Camera  is rebooting,please don't turn off the camera......</RebootWaitMsg>
+<WdrChangeRebootMsg>Wdr change need reboot！</WdrChangeRebootMsg>
+</imagehtml>
+
+</en>

@@ -1,0 +1,644 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css">
+
+
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getnetinfo&cmd=gethttpport&" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getrtsplisnport&" type="text/javascript"></script>
+<script language="javascript">
+
+var NextUrl="";
+
+$(function(){
+	
+	$(document).ready(function(e) {	
+
+   LoadLanguage();
+   
+	setTimeout(function(){$("body").css("display", "block");}, 100);
+	});
+	
+})
+
+
+
+function checkIsHex(value) 
+{
+	for (var i = 0; i < value.length; ++i) 
+	{
+		var c = value.charAt(i);
+		if( false == ( ((c >= 0)&&(c <= 9 ))||((c >= "a")&&(c <= "f")) ||((c >= "A")&&(c <= "F"))) )
+		{
+		 	return false;
+		}
+	}
+    return true;
+}
+function checkIsAsc(value)
+{
+	for (var i = 0; i < value.length; ++i) 
+	{
+		var c = value.charCodeAt(i);
+		if (c > 255 ) 
+		{
+			return false;
+		}
+	}
+    return true;
+}
+
+function checkwepkey(str)
+{
+	if((str.length == 5)||(str.length == 13))
+	{
+		if(checkIsAsc(str)==false)
+		{
+			alert(InputASCIIErrorMsg);
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	else if( (str.length == 10)||(str.length == 26) )
+	{
+		if(checkIsHex(str)==false)
+		{
+			alert(InputHEXErrorMsg);
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	else
+	{
+		alert(WepKeyErrorMsg);
+		return false;
+	}
+}
+
+function checkwpakey(str)
+{
+	if ((str.length < 8) || (str.length > 63))
+	{
+		alert(InputASCIIError1Msg);
+		return false;
+	}
+	
+	return true;
+}
+
+
+function do_FimeName1()
+{
+	var form=document.form1;
+	if(form.ipselect.selectedIndex == 0)
+	{
+		document.getElementById('fixIPlayer').style.display="block";
+	}
+	else
+	{
+			document.getElementById('fixIPlayer').style.display="none";
+	}
+	if(form.ipselect.selectedIndex==0)
+	{ 
+		form.dnsselect.selectedIndex=0;
+	}
+	else
+	{ 
+		form.dnsselect.selectedIndex=1;
+	}
+	if(form.dnsselect.selectedIndex == 0)
+	{
+			document.getElementById('manualDNSlayer').style.display="block";
+	}
+	else
+	{
+			document.getElementById('manualDNSlayer').style.display="none";
+	}
+}
+function do_FimeName2()
+{
+	var form=document.form1;
+	
+	if(form.ipselect.selectedIndex==0)
+	{ 
+		form.dnsselect.selectedIndex=0;
+	}
+	
+	if(form.dnsselect.selectedIndex == 0)
+	{
+			document.getElementById('manualDNSlayer').style.display="block";
+	}
+	else
+	{
+			document.getElementById('manualDNSlayer').style.display="none";
+	}
+}
+
+function checkProhibitedCharacter (obj, string )
+{
+	if( string.search(/[^a-zA-Z0-9_\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\`\{\|\}\~\s]/) != -1 )
+	{
+		obj.select();
+		alert(InputInvalidMsg);
+		return false;
+	}
+	else if(( string.search("`") != -1 )||( string.search(/\$/) != -1 )||( string.search("\/") != -1 )||( string.search(/\\/) != -1 )
+			||( string.search(":") != -1 )||( string.search("&") != -1 )||( string.search("=") != -1 )||( string.search("\"") != -1 ))
+	{
+		obj.select();
+		alert(InputInvalidMsg+"(:,&,=,\\\,\/,\",\$,`)");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+function checkProhibitedCharacter2 (obj, string )
+{
+	if( string.search(/[^a-zA-Z0-9_\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\`\{\|\}\~\s]/) != -1 )
+	{
+		obj.select();
+		alert(InputInvalidMsg);
+		return false;
+	}
+	else if(( string.search("`") != -1 )||( string.search(/\$/) != -1 )|| ( string.search("\/") != -1 )||( string.search(/\\/) != -1 )
+			||( string.search(":") != -1 )||( string.search("&") != -1 )||( string.search("=") != -1 )||( string.search(" ") != -1 ))
+	{
+		obj.select();
+		alert(InputInvalidMsg+"( ,:,&,=,\\\,\/,$,`)");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function hasZenKaku(str)
+{
+	var code;
+	for (var i = 0; i < str.length; ++i) 
+	{
+		code = str.charCodeAt(i);
+		if (code > 256 && (code < 0xff61 || code > 0xff9f))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+var errfound;
+function error(elem,itemcname,text)  
+{
+	if (errfound)
+		return;
+		
+	window.alert(itemcname+ InputErrorMsg+" \n\n"+text);
+	elem.select();
+	elem.focus();
+	errfound = true;
+}
+  
+function ValidIp(itemc,itemcname) 
+{
+	var i,n,st,j;
+	n=0;j=0;
+	for (i=0;i<itemc.value.length;i++)
+	{
+		st=itemc.value.substr(i,1);
+		if (st==".") 
+		{
+			j++;
+			if (j==1 && n==0) error(itemc,itemcname, InputIPErrorMsg);
+			if (0>n || n>255) error(itemc,itemcname, InputIPError1Msg);
+			n=0;
+		}
+		else
+		{
+			if ("0">st || st>"9") error(itemc,itemcname, InputInvalidMsg);
+			n=n*10+parseInt(st);
+		}
+	}
+	if (j!=3) error(itemc,itemcname, InputInvalidAddressMsg);
+	if (0>n || n>255) error(itemc,itemcname, InputInvalidAddress1Msg);
+	if (n==0) error(itemc,itemcname, InputIPErrorMsg);
+}
+
+function ValidSubnet(itemc,itemcname)  //?ì2éê?·?o?·¨×óí??ú??
+{
+	var i,n,st,j;
+	n=0;j=0;
+	for (i=0;i<itemc.value.length;i++)
+	{
+		st=itemc.value.substr(i,1);
+		if (st==".") 
+		{
+			j++;
+			if ( (0 > n) || (n > 255)) error(itemc,itemcname, InputInvalidAddress1Msg);
+			n=0;
+		}
+		else
+		{
+			if ("0">st || st>"9") error(itemc,itemcname, InputInvalidMsg);
+			n=n*10+parseInt(st);
+		}
+	}
+	
+	if (j!=3) error(itemc,itemcname, InputInvalidAddressMsg);
+	if ((0 > n) || (n > 255)) error(itemc,itemcname, InputInvalidAddress1Msg);
+
+}
+
+function on_load()
+{
+	var i=0;
+	var j=0;
+	form=document.form1;
+	if(dhcpflag=="on")
+	{
+		form.ipselect.options[1].selected=true;
+	}
+	else
+	{
+		form.ipselect.options[0].selected=true;
+	}
+
+	form.ipaddr.value = ip;
+	form.netmask.value = netmask;
+	
+	if( gateway == "0.0.0.0")
+	{
+		form.gateway.value = "";
+	}
+    else
+	{
+	    form.gateway.value = gateway;
+    }
+
+	// Yoics fix cross platform int convert
+	i=(+dnsstat);
+	form.dnsselect.options[i].selected=true;
+	do_FimeName1();
+	
+	form.pdns.value = fdnsip;
+	form.sdns.value = sdnsip;
+	form.httpport.value = httpport;
+	
+	$("#rtspport").val(rtsplisnport);
+	
+	$("#onvif_httpport").val(onvif_http_port);
+
+}
+
+function alertChang()
+{
+	alert(IPChangeMsg + NextUrl);
+    
+    top.location.href=NextUrl;
+    //top.location.reload(true);
+}
+
+function do_submit()
+{
+	var i;
+	var j;
+	errfound=false;
+	var form = document.form2;
+	var form1 = document.form1;
+	//form.cururl.value =document.URL ;
+	if(document.form1.ipselect[1].selected==true)
+	{
+		form.dhcp.value="on";
+	}
+  else
+	{
+		form.dhcp.value="off";
+	
+	 if(form1.ipaddr.value == "")
+	 {
+	 		alert(InputIPMsg);
+	 		form1.ipaddr.select();
+	 		return false;
+	 }
+	 
+	 if(form1.netmask.value == "")
+	 {
+	 		alert(InputMaskMsg);
+	 		form1.netmask.select();
+	 		return false;
+	 }
+
+	 if(form1.ipaddr.value != "")
+	  {
+	  	ValidIp(form1.ipaddr,"ip");
+		}
+		if(form1.netmask.value != "")
+		{
+	    ValidSubnet(form1.netmask, SubnetMaskMsg);
+	  }
+	  if( form1.gateway.value != "" )
+	  {
+	  ValidIp(form1.gateway, GateWayMsg);
+	  }
+	  if(errfound)
+	  {
+	    return false;
+	   }
+	  form.ipaddr.value=document.form1.ipaddr.value;
+	  form.netmask.value=document.form1.netmask.value;
+	  if( document.form1.gateway.value == "")
+	  {
+	  	form.gateway.value="";
+	  }
+	else
+		{
+	  	form.gateway.value=document.form1.gateway.value;
+		}
+	}
+	
+	if(document.form1.dnsselect[1].selected==true)
+	{
+		form.dnsstat.value=1;
+	}
+    else
+	{
+		form.dnsstat.value=0;
+		
+		if(form1.pdns.value != "")
+		{
+		 ValidIp(form1.pdns, PrimaryDnsMsg);
+	  }
+	  if(form1.sdns.value != "")
+	  {
+	  ValidIp(form1.sdns, SecondDnsMsg);
+	  }
+	  if(errfound)
+	  {
+	    return false;
+	   }
+	  else
+	  {
+				form.fdnsip.value=form1.pdns.value;
+				form.sdnsip.value=form1.sdns.value;
+	  }
+	  if(form1.pdns.value == "")
+		{
+			form.fdnsip.value= "";
+		}
+	 if(form1.sdns.value == "")
+		{
+			form.sdnsip.value = "";
+		}
+	  
+	}
+	var httpportvalue = form1.httpport.value;
+	for(j=0;j<(httpportvalue.length);j++)
+		{
+			var ch=httpportvalue.substring(j,j+1);
+      if ("0">ch || ch>"9") 
+      {
+      	alert(InputInvalidMsg);
+		 	  form1.httpport.select();
+		   	return false;
+      }
+		}
+  if(((form1.httpport.value != 80)&&(form1.httpport.value < 1024))||(form1.httpport.value >32767))
+  {
+  	  alert(InputPortMsg);
+  		form1.httpport.select();
+  		return false;
+  }
+  form.httpport.value = form1.httpport.value;
+
+  
+    if (form.dhcp.value == "off")
+    {
+        NextUrl="http://"+form1.ipaddr.value + ":" +  form1.httpport.value;
+        //alert(top.location.href);
+    }
+    
+  if(( form1.ipaddr.value != ip )||( form.dhcp.value != dhcpflag )||(form1.httpport.value != httpport))
+  {
+    //alert("chg " + NextUrl);
+  	setTimeout("alertChang()",1000);
+  }    
+	form.dhcp.name="-dhcp";
+	form.ipaddr.name="-ipaddr";
+	form.netmask.name="-netmask";
+	form.gateway.name="-gateway";
+	form.dnsstat.name="-dnsstat";
+	form.fdnsip.name="-fdnsip";
+	form.sdnsip.name="-sdnsip";
+	form.httpport.name="-httpport";
+    
+    form.cururl.value =document.URL ;
+
+	if($("#rtspport").val() != rtsplisnport)
+	{
+		$("#Form2SetRtspPortcmd").removeAttr("disabled");
+		$("#Form2Rtspport").removeAttr("disabled");
+		
+		$("#Form2SetRtspPortcmd").attr("name", "cmd");
+		$("#Form2SetRtspPortcmd").val("setrtsplisnport");
+		
+		$("#Form2Rtspport").attr("name", "-rtsplisnport");
+		$("#Form2Rtspport").val($("#rtspport").val());
+	}
+	
+	if($("#onvif_httpport").val() != onvif_http_port)
+	{
+		$("#Form2SetOnvifPortcmd").removeAttr("disabled");
+		$("#Form2Onvifport").removeAttr("disabled");
+		
+		$("#Form2SetOnvifPortcmd").attr("name", "cmd");
+		$("#Form2SetOnvifPortcmd").val("setonvifhttpport");
+		
+		$("#Form2Onvifport").attr("name", "-onvifhttpport");
+		$("#Form2Onvifport").val($("#onvif_httpport").val());
+	}
+
+	form.action="cgi-bin/hi3510/param.cgi";	
+    //form.action="/cgi-bin/setinetattr.cgi";	
+	form.submit();
+}
+	
+function select_chanage()
+{
+	var form=document.form1;
+
+//	alert(form.key_index.value);
+	form.key.value = form.key_index.value;
+	form.rekey.value = form.key.value;
+}
+
+function do_changemode()
+{
+	var form=document.form1;
+	var i;
+	
+//	alert("do_changemode");
+	
+	if(form.security[0].selected==true)
+	{
+	    for(i=3;i<=7;i++)
+		{
+			document.getElementById('mode_layer'+i).style.visibility="hidden";
+        }
+	}
+	else if((form.security[1].selected==true)||((form.security[2].selected==true)))
+	{
+		for(i=3;i<=7;i++)
+		{
+			document.getElementById('mode_layer'+i).style.visibility="visible";
+        }
+
+		document.getElementById('mode_layer'+3).style.visibility="hidden";
+        
+	}
+	else
+	{
+		for(i=3;i<=7;i++)
+		{
+			document.getElementById('mode_layer'+i).style.visibility="visible";
+        }
+
+		document.getElementById('mode_layer'+4).style.visibility="hidden";
+		document.getElementById('mode_layer'+5).style.visibility="hidden";
+
+	}
+}
+
+
+$(function(){
+$("#WanTest").click(function(){
+	  var cgiurl = "http://" + window.document.location.host + "/cgi-bin/iptest.cgi?cmd=iptest.cgi";
+	  if( $("#WanURLInput").val().length == 0)
+	  	return true;
+		
+	   cgiurl += '&-url=' + $("#WanURLInput").val();
+       cgiurl += '&-time="' + new Date().getTime() + '"';
+	   $("#WanTestResult").html(WanTestIngSpan);
+	  $.get(cgiurl, function(data){
+		eval(data);
+		if(loss != 0)  $("#WanTestResult").html(WanTestFailureSpan);
+		else  $("#WanTestResult").html(WanTestSuccessSpan);		
+	},
+	"text");
+})	
+})
+
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+<div>
+<form name="form1">
+  <h4 id="LANSettingsSpan">LAN Settings </h4>
+  <div> <span id="IPTypeSpan"  >IP Type:</span>
+    <select id="ipselect" onChange="do_FimeName1()" >
+      <option id="IPTypeFixedIPAddressSpan">Fixed IP Address </option>
+      <option id="IPTypeDynanicIPAddressSpan">Dynamic IP Address </option>
+    </select>
+  </div>
+  <!--------------------------------------------------------------->
+  <div id="fixIPlayer">
+    <div > <span id="IPAddressSpan"> IP Address:</span>
+      <input name="ipaddr" type="text"  size="25" maxlength="15">
+    </div>
+    <div ><span id="SubnetMaskSpan"> Subnet Mask:</span>
+      <input name="netmask" type="text"  size="25" maxlength="15">
+    </div>
+    <div> <span id="GatewaySpan">Gateway:</span>
+      <input name="gateway" type="text" size="25" maxlength="15">
+    </div>
+  </div>
+  <!--------------------------------------------------------------->
+  <div> <span id="DNSTypeSpan">DNS  Type:</span>
+    <select id="dnsselect" onChange="do_FimeName2()"  >
+      <option id="DNSTypeManualDNSSpan">Manual DNS </option>
+      <option id="DNSTypeFromDHCPServerSpan">From DHCP Server </option>
+    </select>
+  </div>
+  <!--------------------------------------------------------------->
+  <div id="manualDNSlayer">
+    <div> <span id="PrimaryDNSSpan">Primary DNS:</span>
+      <input id="pdns" type="text"  size="25" maxlength="15">
+    </div>
+    <div> <span id="SecondaryDNSSpan">Secondary DNS:</span>
+      <input id="sdns" type="text" size="25" maxlength="15">
+    </div>
+  </div>
+  <!--------------------------------------------------------------->
+  <div class="cutoffrule"></div>
+  <h4>HTTP:</h4>
+  <div ><span id="HTTPPortnumberSpan">Port:</span>
+    <input id="httpport" type="text" value="80" size="10" disabled="disabled" />
+    <label id="httpportSpan"></label>
+  </div>
+   <div class="cutoffrule"></div>
+  <h4>RTSP:</h4>
+  <div ><span id="RTSPPortnumberSpan">Port:</span>
+    <input id="rtspport" type="text" size="10" disabled="disabled" />
+    <label id="rtspportSpan"></label>
+  </div>
+   <!------- 不支持Onvif
+  <div class="cutoffrule"></div>
+  <h4>Onvif:</h4>
+  <div ><span id="ONVIFPortnumberSpan">Port:</span>
+    <input id="onvif_httpport" type="text" size="10" />
+    <label id="onvif_httpportSpan"></label>
+  </div>
+  ---------------------------------->
+   <!--------------------------------------------------------------->
+  <div class="cutoffrule"></div>
+  <h4 id="IPTestH4Span">IP Test:</h4>
+  <div ><span id="WanURLInputSpan"> WAN Test:</span>
+    <input id="WanURLInput" type="text" size="25" >
+	<a id="WanTest" href="javascript:;" class="classname"><label id="WanTestSpan">Test</label></a>
+    <label id="WanTestResult"></label>
+  </div>
+</form>
+</div>
+<div>
+  <form name="form2" method="post">
+    <input name="cmd" type="hidden" value="setnetinfo">
+    <input name="cururl" type="hidden">    
+    <input name="ipaddr" type="hidden">
+    <input name="netmask" type="hidden">
+    <input name="gateway" type="hidden">
+    <input name="dhcp" type="hidden">
+    <input name="dnsstat" type="hidden">
+    <input name="fdnsip" type="hidden">
+    <input name="sdnsip" type="hidden">
+    <input name="cmd" type="hidden" value="sethttpport">
+    <input name="httpport" type="hidden">
+    <input id="Form2SetRtspPortcmd" type="hidden" value="setrtsplisnport" disabled="disabled">
+    <input id="Form2Rtspport" type="hidden" disabled="disabled">
+    <input id="Form2SetOnvifPortcmd" type="hidden" value="setonvifhttpport" disabled="disabled">
+     <input id="Form2Onvifport" type="hidden" disabled="disabled">
+  </form>
+</div>
+<div class="ApplyLayerStyle"> <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

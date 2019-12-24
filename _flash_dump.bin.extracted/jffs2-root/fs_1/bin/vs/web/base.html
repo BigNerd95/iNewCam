@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+
+<script language="javascript">
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+});
+
+function on_load()
+{
+	var language = getCookie("language");
+	if((language == "zh-cn")
+		||(language == "zh-CN"))
+	{
+		 $("#lanSelect").get(0).selectedIndex=0;
+	}
+	else if(language == "en")
+	{
+		 $("#lanSelect").get(0).selectedIndex=1;
+	}
+	else
+	{
+		 $("#lanSelect").get(0).selectedIndex=1;
+	}
+	return true;	
+}
+
+function do_submit()
+{
+	selectIndex = $("#lanSelect").children('option:selected').val();   
+	delCookie("language");
+
+	switch(selectIndex)  
+	{
+		case "0":
+			setCookie("language", "zh-cn", 365);
+		break;			
+		case "1":
+			setCookie("language","en",365);
+		break;
+		default:
+			setCookie("language","en",365);
+		break;
+	}
+	parent.location.reload(true);
+	
+	return true;
+}
+
+</script>
+</head>
+<body onLoad="on_load()" class="content">
+<div style="display:block">
+  <div style="margin-top:10px"><span id="LanguageSpan">Language</span>
+    <select id="lanSelect">
+      <option value="0">简体中文</option>
+      <option value="1">English</option>
+    </select>
+  </div>
+</div>
+<div style="display:none"> </div>
+<div style="position:absolute; bottom:10px;left:250px;">  <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div style="position:absolute; bottom:10px;left:400px;"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

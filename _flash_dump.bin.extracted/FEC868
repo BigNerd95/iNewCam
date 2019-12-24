@@ -1,0 +1,106 @@
+[sysinfo]
+serial_number                  = "XXXXXX123456778"
+hardware_ver                   = "v1.3.2.0       "
+software_ver                   = "v1.3.2.1       "
+name                           = "ipcam          "
+model                          = "ZNY10.22       "
+interface                      = "4 video in     ";4 audio in
+
+[telnet]
+port                           = "88             "
+[tz]
+timezone                       = "Europe/Amsterdam"
+dst_flag                       = "off            "
+autoupdate                     = "1              "
+[config]
+dorestore                      = "y              "
+sd_reserved                    = "120            ";预留SD卡空间大小单位M
+sd_clearsize                   = "100            ";SD卡旧文件每次删除大小单位M
+[v_ad_0_0]
+default                        = "0              "
+brightness                     = "0              "
+saturation                     = "101            "
+sharpness                      = "4              "
+contrast                       = "37             "
+hue                            = "1              "
+adnswitch                      = "off            "
+dnt                            = "4              "
+awbswitch                      = "off            "
+wbr                            = "74             "
+wbb                            = "84             "
+aecswitch                      = "off            "
+ec                             = "1              "
+agcswitch                      = "on             "
+gc                             = "12             "
+ablcswitch                     = "off            "
+color                          = "color          "
+scene                          = "outdoor        "
+powerfreq                      = "50             "
+flip                           = "off            "
+mirror                         = "off            "
+
+[a_ad_io_0]
+bitwide                        = "32             "
+samplingfreq                   = "8              "
+
+[a_ad_i_0_0]
+switch                         = "on             "
+volume                         = "100            "
+enhance                        = "on             "
+
+[a_ad_o_0_0]
+switch                         = "on             "
+volume                         = "110            "
+
+[sensor]
+type                           = "3              "
+                                                ;OV10630_C      :1
+                                                ;OV10630_B      :2   
+                                                ;MT9D111        :3  
+                                                ;UC1500         :4
+                                                ;9M033_IP2986  :5
+
+[rtc]
+file                           = "/dev/hi_rtc    "
+
+[upgrade]
+startaddr                      = "0x87800000     "
+
+[reset]
+groupnumber                    = "7              "
+bitnumber                      = "6              "
+
+
+[ir_cut]
+groupnumber                    = "0              "
+bitnumber                      = "4              "
+groupnumber_1                  = "2              "
+bitnumber_1                    = "3              "
+groupnumber_2                  = "2              "
+bitnumber_2                    = "5              "
+
+[red_light]
+groupnumber                    = "2              "
+bitnumber                      = "2              "
+
+[wifi]
+power_group                    = "5              "
+power_bit                      = "1              "
+mode_group                     = "0              "
+mode_bit                       = "0              "
+wps_group                      = "2              "
+wps_bit                        = "4              "
+
+[audio]
+mute_group                     = "7              "
+mute_bit                       = "5              "
+pa_group                       = "7              "
+pa_bit                         = "7              "
+
+[sensor_rest]
+groupnumber                    = "0              "
+bitnumber                      = "1              "
+
+[eth_rest]
+groupnumber                    = "0              "
+bitnumber                      = "5              "

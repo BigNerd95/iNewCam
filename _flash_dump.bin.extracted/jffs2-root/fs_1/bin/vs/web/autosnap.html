@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/getsnaptimer.cgi" TYPE="text/javascript"></SCRIPT>
+
+
+<script language="javascript">
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+      
+   setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+function on_load()
+{
+	var form = document.form1;
+	form.snapinterval.value = snapinterval;
+	form.snapemailbox.checked = false;
+	
+	if(snapenable == 1)
+	{
+		$("#AutoSnapEnable").prop("checked",  true);
+		if((snapoperation == 4)||(snapoperation == 5)||(snapoperation == 20))
+		{
+			form.snapemailbox.checked = true;
+		}
+		/*------------ 去掉FTP
+		if((snapoperation == 16)||(snapoperation == 17)||(snapoperation == 20))
+		{
+			form.snapftpbox.checked = true;
+		}
+		*/		
+	}
+	else
+	{
+		$("#AutoSnapEnable").prop("checked",  false);
+	}
+}
+
+function do_submit()
+{
+	var form1=document.form1;
+	var form=document.form2;
+	var i=0;
+	var j=0;
+	
+	var intervalvalue = form1.snapinterval.value;
+	for(j=0;j<(intervalvalue.length);j++)
+	{
+		var ch=intervalvalue.substring(j,j+1);
+		if ("0">ch || ch>"9") 
+		{
+			alert(InputErrorMsg);
+			form1.snapinterval.select();
+			return false;
+		}
+	}
+	
+	if((form1.snapinterval.value < 1)||(form1.snapinterval.value >1440))
+	{
+		alert(IntervalErrorMsg);
+		form1.snapinterval.select();
+		return false;
+	}
+	
+	if(form1.snapemailbox.checked == true)
+	{
+		i = i+4;
+	}
+	/*------------ 去掉FTP
+	if(form1.snapftpbox.checked == true)
+	{
+		i = i+16;
+	}
+	*/
+	
+	snapoperation = document.getElementById('Form2SnapOperation');
+	snapenable = document.getElementById('Form2SnapEnable');
+	snapenable.name="-enable";
+	snapoperation.name="-operation";
+	if(i==0)
+	{
+		snapoperation.value = 1;
+		snapenable.value = 1;
+	}
+	else
+	{
+		snapoperation.value = i;
+		snapenable.value = 1;
+	}
+	
+	if(	$("#AutoSnapEnable").prop("checked"))
+		snapenable.value = 1;
+	else
+		snapenable.value = 0;
+	
+	snapinterval = document.getElementById('Form2SnapInterval');
+	snapinterval.value = form1.snapinterval.value;
+	snapinterval.name="-interval";
+	
+	form.cururl.value = document.URL;
+	form.action="cgi-bin/hi3510/setsnaptimer.cgi";
+	form.submit();
+}
+
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+
+<div style="display:block">
+  <form name="form1">
+    <h4 id="SnapSpan">Snap</h4>
+    <div> <span id="StatusSpan" style="width:60px;">Status:</span>
+      <input id="AutoSnapEnable" type="checkbox">
+      <label for="AutoSnapEnable" id="AutoSnapEnableSpan">Enable</label>
+    </div>
+    <div> <span id="ntervalSpan" style="width:60px;">Interval:</span>
+      <input name="snapinterval" value="" maxlength="6" size="2" type="text">
+      <label id="ntervalMinutesSpan">minutes</label>
+    </div>
+    <div class="cutoffrule"></div>
+    <h4 id="ActionSpan">Action</h4>
+    <div> <span id="EMailSpan" style="width:60px;">e-Mail:</span>
+        <input id="snapemailbox" name="snapemailbox" value="checkbox" type="checkbox">
+        <label for="snapemailbox" id="SendbyEmailSpan">Send by Email</label>
+        <a href="#" id="SettingSpan" style="text-decoration:underline; color:#F00" onclick="window.location='email.html'">Email Setting</a> </div>
+    <!---------去掉FTPdiv> <span id="FtpSpan" style="width:60px;">FTP:</span>
+        <input id="snapftpbox" name="snapftpbox" value="checkbox" type="checkbox" />
+        <label for="snapftpbox" id="SendbyFtpSpan">Send by FTP</label>
+    </div---------->    
+  </form>
+</div>
+
+<div style="display:none">
+  <form name="form2" method="post">
+    <input name="cururl" type="hidden">
+    <input id="Form2SnapInterval"name="snapinterval" type="hidden">
+    <input id="Form2SnapEnable" name="snapenable" type="hidden">
+    <input id="Form2SnapOperation" name="snapoperation" type="hidden">
+  </form>
+</div>
+
+<div class="ApplyLayerStyle"> <a id="apply" href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

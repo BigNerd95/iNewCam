@@ -1,0 +1,35 @@
+[sensor_a_factory_default]
+default                        = "1              "
+[sensor_a_base_default]
+default                        = "0              ";
+brightness                     = "50             ";
+contrast                       = "50             ";
+hue                            = "50             ";
+saturation                     = "50             ";
+mirror                         = "0              ";
+flip                           = "0              ";
+powerfreq_enable               = "1              ";
+powerfreq_strength             = "50             ";
+ircutmode                      = "1              ";
+
+[sensor_a_base]
+brightness                     = "50             ";
+contrast                       = "50             ";
+hue                            = "50             ";
+saturation                     = "50             ";
+mirror                         = "0              ";
+flip                           = "0              ";
+powerfreq_enable               = "1              ";
+powerfreq_strength             = "50             ";
+ircutmode                      = "1              ";
+
+[sensor_a_advance_default]
+default                        = "0              ";
+dp                             = "0              ";0:off 1:on
+dp_min                         = "50             ";
+dp_max                         = "1023           ";
+sharpen_status                 = "1              ";0:off 1:auto 2:manual
+sharpen_strength               = "80             ";[0-255]
+saturation_status              = "1              ";0:off 1:auto 2:manual
+saturation_strength            = "128            ";[0-255]
+wdr_

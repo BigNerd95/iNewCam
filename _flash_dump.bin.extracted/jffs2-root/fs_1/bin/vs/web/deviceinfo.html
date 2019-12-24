@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/vbscript" src="js/gbk2utf8.vbs"></script>
+<script type="text/javascript" src="js/gbk2utf8.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getserverinfo&-encode&cmd=getnetinfo" type="text/javascript"></script>
+<script language="javascript">
+
+
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+   
+setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+function on_load()
+{
+	var form = document.form1;
+	
+	BrowserVer = GetBrowserVer();
+
+	if ((BrowserVer.brower == "IE")&&(parseInt(BrowserVer.ver) < 10)) {
+		var cameraname = URLDecode(ipcname);
+		$("#cameraname1").html(cameraname);
+	} else {
+		JSURLDecode(ipcname,
+		function(cameraname) {
+			$("#cameraname1").html(cameraname);
+		});
+	}
+	
+	//$("#cameraname1").html(ipcname);
+	$("#networktype").html(networktype);
+
+	if((typeof(swver) != 'undefined')&&(swver.length > 0)&&(swver != null)&&(swver != "null"))
+	{
+		$("#firmware").html(swver+softVersion.substring(softVersion.indexOf("-")));	
+	}
+	else
+	{
+		$("#firmware").html(softVersion);	
+	}
+	
+	$("#devmacaddress").html(macaddress.toUpperCase());
+	if((typeof(wifimac) != 'undefined')&&(wifimac.length >0))
+	{
+		$("#wifimacaddress").html(wifimac.toUpperCase());	
+		$("#WifiMacaddressLayer").css("display", "block");
+	}
+	
+	$("#devipaddr").html(ip);
+	$("#devsubmask").html(netmask);
+
+
+    if( gateway == "0.0.0.0")
+	{
+		$("#devrouter").html("");
+	}
+    else
+	{
+		$("#devrouter").html(gateway);
+    }
+	$("#devpdns").html(fdnsip);
+	$("#devsdns").html(sdnsip);
+	//bt tmp modify
+	$("#starttime").html(runtimes);
+	$("#serialnum").html(serialNum);
+	//$("#cameratype").html(model);
+	//$("#HardVersion").html(hardVersion);
+
+	if((typeof(hwver) != 'undefined')&&(hwver.length > 0)&&(hwver != null)&&(hwver != "null"))
+	{
+		$("#HardVersion").html(hwver+ "-" + hardVersion);	
+	}
+	else
+	{
+		$("#HardVersion").html(hardVersion);	
+	}
+
+	if((typeof(productmodel) != 'undefined')&&(productmodel.length > 0)&&(productmodel != null)&&(productmodel != "null"))
+	{
+		$("#ProductModel").html(productmodel);
+		$("#ProductModelLayer").css("display", "block");	
+	}
+}
+
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+
+<div style="display:block" id="ContentLayer">
+    <form name="form1">
+        <h4 id="DeviceinfoSpan">Device info </h4>
+        <!------------------------------------------>
+        <div style="border:1px solid  #9097a9; margin-left:19px; margin-right:10px;">
+            <div > <span id="CameranameSpan" style=" font-weight:bold">Camera name: </span>
+                <label id="cameraname1" style="border:0px; font-size:16px" ></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="SerialNumberSpan" style=" font-weight:bold">Serial Number: </span>
+                <label id="serialnum" style="border:0px; font-size:16px"></label>
+            </div>
+            <div> <span id="WebVersionSpan" style=" font-weight:bold">Web Version: </span>
+                <label style="border:0px; font-size:16px">V1.1.1.0</label>
+            </div>
+             <div id="ProductModelLayer" style="display:none"> <span id="ProductModelSpan" style=" font-weight:bold">Product Model: </span>
+                <label id="ProductModel" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <!--div> <span id="CameraTypeSpan" style=" font-weight:bold">Camera Type: </span>
+                <label id="cameratype" style="border:0px; font-size:16px"></label>
+            </div-->
+           <!------------------------------------------>
+            <div> <span id="HardVersionSpan" style=" font-weight:bold">Hard Version: </span>
+                <label id="HardVersion" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="SoftwareVersionSpan" style=" font-weight:bold">Software Version: </span>
+                <label id="firmware" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="StartTimeSpan" style=" font-weight:bold">Start Time: </span>
+                <label id="starttime" style="border:0px; font-size:16px"></label>
+            </div>
+        </div>
+        <h4 id="NetworkInfoSpan">Network Info:</h4>
+        <div style="border:1px solid  #9097a9; margin-left:19px; margin-right:10px;"> 
+            <!------------------------------------------>
+            <div> <span id="connectionSpan" style=" font-weight:bold">connection: </span>
+                <label id="networktype" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="MacaddressSpan" style=" font-weight:bold">Mac address: </span>
+                <label id="devmacaddress" style="border:0px; font-size:16px"></label>
+            </div>
+            <div id="WifiMacaddressLayer" style="display:none;"> <span id="WifiMacaddressSpan" style=" font-weight:bold">Wireless MAC:</span>
+                <label id="wifimacaddress" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="IPaddressSpan" style=" font-weight:bold">IP address: </span>
+                <label id="devipaddr" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="SubnetmaskSpan" style=" font-weight:bold">Subnet mask: </span>
+                <label id="devsubmask" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="GatewaySpan" style=" font-weight:bold">Gateway: </span>
+                <label id="devrouter" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="PrimaryDNSSpan" style=" font-weight:bold">Primary DNS: </span>
+                <label id="devpdns" style="border:0px; font-size:16px"></label>
+            </div>
+            <!------------------------------------------>
+            <div> <span id="SecondaryDNSSpan" style=" font-weight:bold">Secondary DNS: </span>
+                <label id="devsdns" style="border:0px; font-size:16px"></label>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div style="display:none"> </div>
+</body>
+</html>

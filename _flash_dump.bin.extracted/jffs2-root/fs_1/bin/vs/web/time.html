@@ -1,0 +1,828 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getservertime&cmd=getntp" type="text/javascript"></script>
+
+<script language="javascript">
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+   
+	setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+var now;
+var w_now=new Date();
+var js_year;
+var js_month;
+var js_day;
+var js_hour;
+var js_minute;
+var js_second;
+var w_year;
+var w_month;
+var w_day;
+var w_hour;
+var w_minute;
+var w_second;
+var w_week;
+var year;
+var month;
+var day;
+var hour;
+var minute;
+var second;
+var sel_flg=0;
+var pcdata;
+var data;
+var ManualSetData;
+
+function Watch()
+{
+    now=new Date(); 
+    year=now.getYear();
+    month=now.getMonth()+1;
+    day=now.getDate();
+    hour=now.getHours();
+    minute=now.getMinutes();
+    second=now.getSeconds();
+    if(year<1000) year+=1900;
+    if(hour<10) hour="0"+hour;
+    if(month<10) month="0"+month;
+    if(day<10) day="0"+day;
+    if(minute<10) minute="0"+minute;
+    if(second<10) second="0"+second;
+    document.form1.pctime.value=year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;;
+    webWatchUp();
+    setTimeout("Watch()",1000);
+}
+
+function webWatchUp()
+{
+    w_second=w_second+1;
+    if(w_second==60)
+    {
+        w_second=0;
+        w_minute=w_minute+1;
+    }
+    if(w_minute==60)
+    {
+        w_minute=0;
+        w_hour=w_hour+1;
+    }
+    if(w_hour==24)
+    {
+        w_hour=0;
+        switch(w_month)
+        {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            w_day=w_day+1;
+            if(w_day==32)
+            {
+                w_day=1;
+                w_month=w_month+1;
+            }
+            break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+            w_day=w_day+1;
+            if(w_day==31){
+            w_day=1;
+            w_month=w_month+1;
+            }
+            break;
+            case 2:
+            w_day=w_day+1;
+            amari=w_year%4;
+            amari1=w_year%100;
+            amari4=w_year%400;
+            if(amari4==0)
+            {
+                if(w_day==30)
+                {
+                    w_day=1;
+                    w_month=w_month+1;
+                }
+            }
+            else if(amari1==0)
+            {
+                if(w_day==29)
+                {
+                w_day=1;
+                w_month=w_month+1;
+                }
+            }
+            else if(amari==0)
+            {
+                if(w_day==30)
+                {
+                    w_day=1;
+                    w_month=w_month+1;
+                }
+            }
+            else 
+            {
+                if(w_day==29)
+                {
+                    w_day=1;
+                    w_month=w_month+1;
+                }
+            }
+            break;
+        }
+    }
+    if(w_month==13)
+    {
+        w_month=1;
+        w_year=w_year+1;
+    }
+    if(w_month<10) D1month="0"+w_month;
+    else D1month=""+w_month;
+    if(w_day<10) D1day="0"+w_day;
+    else D1day=""+w_day;
+    if(w_hour<10) D1hour="0"+w_hour;
+    else D1hour=""+w_hour;
+    if(w_minute<10) D1minute="0"+w_minute;
+    else D1minute=""+w_minute;
+    if(w_second<10) D1second="0"+w_second;
+    else D1second=""+w_second;
+    	
+    document.form1.stime.value=w_year+'-'+D1month+'-'+D1day+' '+D1hour+':'+D1minute+':'+D1second;
+
+}
+
+function tzSet()
+{
+	//Time Zone
+	var tz=new Array(
+			"Etc/GMT-12",
+			"Pacific/Apia",
+			"Pacific/Honolulu",
+			"America/Anchorage",
+			"America/Los_Angeles",
+			"America/Denver",
+			"America/Tegucigalpa",
+			"America/Phoenix",
+			"America/Winnipeg",
+			"America/Mexico_City",
+			"America/Chicago",
+			"America/Costa_Rica",
+			"America/Indianapolis",
+			"America/New_York",
+			"America/Bogota",
+			"America/Santiago",
+			"America/Caracas",
+			"America/Montreal",
+			"America/St_Johns",
+			"America/Thule",
+			"America/Buenos_Aires",
+			"America/Sao_Paulo",
+			"Atlantic/South_Georgia",
+			"Atlantic/Cape_Verde",
+			"Atlantic/Azores",
+			"Europe/Dublin",
+			"Africa/Casablanca",
+			"Europe/Amsterdam",
+			"Europe/Belgrade",
+			"Europe/Brussels",
+			"Europe/Warsaw",
+			"Africa/Lagos",
+			"Europe/Athens",
+			"Europe/Bucharest",
+			"Africa/Cairo",
+			"Africa/Harare",
+			"Europe/Helsinki",
+			"Asia/Jerusalem",
+			"Asia/Baghdad",
+			"Asia/Kuwait",
+			"Europe/Moscow",
+			"Africa/Nairobi",
+			"Asia/Tehran",
+			"Asia/Dubai",
+			"Asia/Baku",
+			"Asia/Kabul",
+			"Asia/Yekaterinburg",
+			"Asia/Karachi",
+			"Asia/Calcutta",
+			"Asia/Katmandu",
+			"Asia/Almaty",
+			"Asia/Dhaka",
+			"Asia/Colombo",
+			"Asia/Rangoon",
+			"Asia/Bangkok",
+			"Asia/Krasnoyarsk",
+			"Asia/Hong_Kong",
+			"Asia/Irkutsk",
+			"Asia/Kuala_Lumpur",
+			"Australia/Perth",
+			"Asia/Taipei",
+			"Asia/Tokyo",
+			"Asia/Seoul",
+			"Asia/Yakutsk",
+			"Australia/Adelaide",
+			"Australia/Brisbane",
+			"Australia/Sydney",
+			"Pacific/Guam",
+			"Australia/Hobart",
+			"Asia/Vladivostok",
+			"Asia/Magadan",
+			"Pacific/Auckland",
+			"Pacific/Fiji",
+			"Pacific/Tongatapu"
+		);
+		for(i=0;i<74;i++){
+		if(timeZone==tz[i]){
+			break;
+		}
+	}
+	document.form1.TimeZone.options[i+1].selected=true;
+}
+function doDst()
+{
+	no=document.form1.TimeZone.selectedIndex;
+	
+	var display = new Array(4,5,6,7,10,11,14,16,18,19,20,22,23,25,26,28,29,30,31,33,34,35,37,39,41,43,45,47,51,56,58,64,65,67,69,70,72);
+
+	document.getElementById('DstLayer').style.display="none";
+	for(i=0; i<display.length; i++)
+	{
+		if(no == display[i])
+		{
+			document.getElementById('DstLayer').style.display="block";
+			return true;
+		}
+	}
+}
+
+var g_tz_hour=0;
+var g_tz_minute=0;
+var g_tzdl_hour=0;
+var g_tzdl_minute=0;
+var g_tzdl_select=false;
+
+function tz_setnetpage()
+{
+    document.form1.TZ_Hour.options[12-g_tz_hour].selected=true;
+    document.form1.TZ_Minutes.options[g_tz_minute].selected=true;
+    document.form1.DL_Hour.options[12-g_tzdl_hour].selected=true;
+    document.form1.DL_Minutes.options[g_tzdl_minute].selected=true;
+    if(g_tzdl_select==true)
+    {
+        document.form1.tz_dl_select[0].checked=true;
+    }
+    else
+    {
+        document.form1.tz_dl_select[1].checked=true;
+    }
+}
+
+function SetModeChange()
+{
+	document.getElementById('ManualSettingLayer').style.display = "none";
+	document.getElementById("NtpLayer").style.display = "none";
+	document.getElementById("SyncComputerLayer").style.display = "none";
+	
+	switch(document.getElementById('setmode').selectedIndex)
+	{
+		case 0:
+		break;
+		case 1:
+			document.getElementById('ManualSettingLayer').style.display = "block";
+		break;
+		case 2:
+			document.getElementById('SyncComputerLayer').style.display = "block";
+		break;
+		case 3:
+			document.getElementById('NtpLayer').style.display = "block";
+		break;	
+	}
+	
+	return true;	
+}
+
+function on_load()
+{
+    i=0;
+    js_year=time.substring(0,4);
+    js_month=time.substring(4,6);
+    js_day=time.substring(6,8);
+    js_hour=time.substring(8,10);
+    js_minute=time.substring(10,12);
+    js_second=time.substring(12,14);
+    w_year=Number(js_year);
+    w_year=w_year;
+    w_month=Number(js_month);
+    w_day=Number(js_day);
+    w_hour=Number(js_hour);
+    w_minute=Number(js_minute);
+    w_second=Number(js_second);
+    
+
+    //NTP 
+    if(ntpenable=="true")
+    {
+		document.form1.setmode.options[3].selected=true;
+    }
+	else
+	{
+		document.form1.setmode.options[0].selected=true;
+	}
+	document.form1.ntpname.value=ntpserver;
+	//document.form1.ntpinterval.options[ntpinterval-1].selected=true;
+    $('select[name="ntpinterval"]').children("option[value=" + ntpinterval +"]").attr("selected", true);
+	
+	SetModeChange();
+	
+	//PC time
+    Watch();
+    
+    var a=document.form1.stime.value.split(" ");
+	var manuldate = a[0];
+	
+	$("#datepickertext").val(a[0]);
+	a = manuldate.split("-");
+	
+	/*初始化日期控件 year month day*/
+	var tmpdata = new Date(a[0], a[1]-1, a[2]);
+
+//	$( "#datepicker" ).datepicker( "setDate", tmpdata );
+
+		$("#ManualYear").val(a[0]);
+		$("#ManualMonth").val(a[1]);
+		$("#ManualDay").val(a[2]);
+	
+	/*hour minute second*/
+	a=document.form1.stime.value.split(" ");
+	var manultime = a[1];
+	a = manultime.split(":");
+	document.getElementById('ManulTimeHour').selectedIndex = a[0];
+	document.getElementById('ManulTimeMinute').selectedIndex = a[1];
+	document.getElementById('ManulTimeSecond').selectedIndex = a[2];
+	
+    //TimeZone
+  	tzSet();
+	//DstMode
+	//document.form1.DstMode.value=dstMode;
+	if(dstmode=="on"){
+		document.form1.Dst.checked=true;
+	}
+	else{
+		document.form1.Dst.checked=false;
+	}
+	doDst();
+    
+	if(autoupdate == "1"){
+	 	$("#AutoUpdateInput").prop("checked", true);
+	}
+	else{
+	 	$("#AutoUpdateInput").prop("checked", false);
+	}
+    return true;
+
+}
+
+
+function do_submit()
+{
+	var form=document.form4;
+	var form1=document.form1;
+	
+	selectIndex = document.getElementById('setmode').selectedIndex;
+	
+	if(selectIndex == 1)/*手动设置*/
+	{
+			form=document.form3;	
+			var datet = new Array;
+			var timet = new Array;
+			
+			
+//			var tmpdata = $("#datepicker").datepicker( "getDate" );
+		/*	
+			datet[0] = tmpdata.getYear()+1900;
+			datet[1] =	 tmpdata.getMonth()+1;
+			datet[2] = tmpdata.getDate();
+		*/	
+			datet[0] = parseInt($("#ManualYear").val());
+			datet[1] = parseInt($("#ManualMonth").val());
+			datet[2] = parseInt($("#ManualDay").val());	
+		
+			timet[0] = document.getElementById('ManulTimeHour').selectedIndex;
+			timet[1] = document.getElementById('ManulTimeMinute').selectedIndex;
+			timet[2] = document.getElementById('ManulTimeSecond').selectedIndex; 
+			
+			if(datet[1]<10) datet[1] ="0"+datet[1];//month
+			if(datet[2]<10)datet[2] ="0"+datet[2];//day
+			if(timet[0]< 10)timet[0] ="0"+timet[0];//hour
+			if(timet[1]< 10)timet[1] ="0"+timet[1];//minute
+			if(timet[2]< 10)timet[2] ="0"+timet[2];//second
+			
+							
+			document.getElementById('Form3Stime').value=datet[0]+'.'+datet[1]+'.'+datet[2]+'.'+timet[0]+'.'+timet[1]+'.'+timet[2];
+			document.getElementById('Form3Stime').name = "-time";
+			
+			timezone = document.getElementById('Form3TimeZone');
+			dstmode = document.getElementById('Form3DstMode');
+	}
+    else if(selectIndex ==2)/*PC 同步*/
+	{
+		form=document.form3;	
+		pcyear=now.getYear();
+		
+		if( pcyear < 1000 )
+    	   	pcyear += 1900;
+				
+		if((pcyear < 1971)||(pcyear > 2036))
+		{
+			
+			alert(YearErrorMsg );
+			return false;
+		}
+    		
+		pcmonth=now.getMonth()+1;
+		if(pcmonth<10) pcmonth="0"+pcmonth;
+		pcday=now.getDate();
+		if(pcday<10) pcday="0"+pcday;
+		pchour=now.getHours();
+		if(pchour<10) pchour="0"+pchour;
+		pcminute=now.getMinutes();
+		if(pcminute<10) pcminute="0"+pcminute;
+		pcsecond=now.getSeconds();
+		if(pcsecond<10) pcsecond="0"+pcsecond;
+
+		document.getElementById('Form3Stime').value=pcyear+'.'+pcmonth+'.'+pcday+'.'+pchour+'.'+pcminute+'.'+pcsecond;
+		document.getElementById('Form3Stime').name = "-time";	
+		
+		timezone = document.getElementById('Form3TimeZone');
+		dstmode = document.getElementById('Form3DstMode');
+		autoupdate = document.getElementById('Form3AutoUpdate');					
+	}
+    else if(selectIndex ==3)/*网络 同步*/
+	{
+		form=document.form2;
+		
+		if(form1.ntpname.value == "")
+		{
+			alert(NtpErrorMsg);
+			form1.ntpname.select();
+			return false;
+		}		
+		if(checkProhibitedCharacter ( null, form1.ntpname.value ) == false)
+		{
+			form1.ntpname.select();
+			return false;
+		}
+		if(checkHankakuNoKana(form1.ntpname.value,form1.ntpname, NtpServerErrorMsg)==false)
+		{
+			return false;
+		}
+						
+		document.getElementById('Form2NtpInterval').value = $('select[name="ntpinterval"]').val();
+		document.getElementById('Form2NtpInterval').name = "-ntpinterval";
+		document.getElementById('Form2NtpSetver').value = form1.ntpname.value;
+		document.getElementById('Form2NtpSetver').name =  "-ntpserver";
+		
+		timezone = document.getElementById('Form2TimeZone');
+		dstmode = document.getElementById('Form2DstMode');
+		
+		autoupdate = document.getElementById('Form2AutoUpdate');
+	}
+	else
+	{
+		timezone = document.getElementById('Form4TimeZone');
+		dstmode = document.getElementById('Form4DstMode');
+		
+		autoupdate = document.getElementById('Form4AutoUpdate');
+	}
+	
+	timezone.value = form1.TimeZone.value;
+	if(form1.Dst.checked == true)
+	{
+		dstmode.value = "on";
+	}
+	else
+	{
+		dstmode.value = "off";
+	}
+	
+	if( $("#AutoUpdateInput").prop("checked"))
+		autoupdate.value = 1;
+	else
+		autoupdate.value = 0;
+	
+	form.action="cgi-bin/hi3510/param.cgi";
+	form.cururl.value =document.URL ;	
+	timezone.name = "-timezone";
+	dstmode.name = "-dstmode";
+	autoupdate.name ="-autoupdate";	
+	
+	form.submit();
+	 return true;
+}
+
+$(function(){
+	    /****************限定数字输入*********************/
+    $("#ManualYear, #ManualMonth, #ManualDay").keypress(function(event) {
+        if (((event.which >= 48) && (event.which <= 57)) || event.which == 8 || event.which == 0) return event.which;
+        else return false;
+    })
+	
+})
+	
+
+/*
+$(function(){
+
+	$( "#datepicker" ).datepicker(
+						{inline: true},
+		{
+			
+		});
+		
+			$( "#datepicker").datepicker( "option", "monthNames", [ Januar,  Februar, Marts, April, Maj, Juni,  Juli, August, September, Oktober, November, December] );
+		$( "#datepicker").datepicker( "option", "dayNamesMin", [ Sunday,  Monday,  Tuesday,  Wednesday,  Thursday,  Friday,  Saturday ] );
+
+});
+*/
+function showDatepicker()
+{
+	document.getElementById('datepickerIcon').style.display = "none";
+		document.getElementById('datepickerLayer').style.display = "inline";
+}
+
+function ManualsettingDateOnblur()
+{
+	year = parseInt($("#ManualYear").val()) || 0;	
+	
+	if(year < 1970)
+		$("#ManualYear").val(1970);
+	
+	month = 	parseInt($("#ManualMonth").val()) || 0;	
+	
+	if(month < 1)
+		$("#ManualMonth").val("01");
+	else if(month > 12)
+		$("#ManualMonth").val("12");
+		
+	day = 	parseInt($("#ManualDay").val()) || 0;		
+	switch(month)
+	{
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			maxday=31;
+		break;	
+		case 2:
+			if((year%4 == 0)&&( year%100 != 0) || (year%400 == 0))
+				maxday = 29;
+			else
+				maxday = 28;	
+		break;
+		default:
+			maxday=30;
+	}
+	
+	if(day < 0)
+		$("#ManualDay").val("01");
+	else 	if(day > maxday)
+		$("#ManualDay").val(maxday);
+	
+}
+
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+<div style="display:block">
+  <form name="form1">
+    <h4 id="AdjustSpan">Adjust</h4>
+    <div style="vertical-align:middle;"> <span id="CameradatetimeSpan">Camera date &amp; time:</span>
+      <input name="stime" type="text"  size="20" readonly="readonly" onfocus="this.blur()"/>
+    </div>
+    <div style="vertical-align:middle;"> <span id="SetmodeSpan">Set mode:</span>
+      <select  id="setmode" name="setmode" onchange="SetModeChange()" style="width:auto;">
+        <option  id="SetmodeKeepcurrentsettingSpan" value="0" selected="selected">Keep current setting</option>
+        <option  id="SetmodeManualsettingSpan" value="1">Manual setting</option>
+        <option  id="SetmodeSyncwithcomputertimeSpan"  value="2">Sync with computer time</option>
+        <option  id="SetmodeSyncwhitntpSpan" value="3">Sync with ntp </option>
+      </select>
+    </div>
+    
+    <!-------------------Manual setting------------------------>
+    <div id="ManualSettingLayer" style="display:block;">
+      <div class="timepagediv" style="position:relative"><span id="SetmodeManualsettingDateSpanaaaa"></span>
+        <label id="SetmodeManualsettingDateSpan" >Date:</label>
+        <div style="background:#FFF; border:#CCC 1px solid; display:inline; padding:2px;">
+          <input id="ManualYear" style="border:0px; text-align:center" maxlength="4" size="5" onblur="ManualsettingDateOnblur()"/>
+          -
+          <input id="ManualMonth" style="border:0px; text-align:center;" maxlength="2"  size="5" onblur="ManualsettingDateOnblur()"/>
+          -
+          <input id="ManualDay" style="border:0px; text-align:center" maxlength="2"  size="5" onblur="ManualsettingDateOnblur()"/>
+        </div>
+        
+        <!--input id="datepicker" type="text" readonly="readonly" onfocus="this.blur()"--> 
+      </div>
+      <div  class="timepagediv"><span id="SetmodeManualsettingTimeSpanaaa"></span>
+        <label id="SetmodeManualsettingTimeSpan">Time:</label>
+        <select id="ManulTimeHour">
+          <!------------hour------------------> 
+          <script type="text/javascript">
+			document.open();
+			for(i=0; i<24; i++)
+				document.write('<option>'+i+'</option>');
+			document.close();	
+			</script>
+        </select>
+        :
+        <select id="ManulTimeMinute">
+          <!------------minute------------------> 
+          <script type="text/javascript">
+			document.open();
+			for(i=0; i<60; i++)
+				document.write('<option>'+i+'</option>');
+			document.close();	
+			</script>
+        </select>
+        :
+        <select id="ManulTimeSecond">
+          <!------------second------------------> 
+          <script type="text/javascript">
+			document.open();
+			for(i=0; i<60; i++)
+				document.write('<option>'+i+'</option>');
+			document.close();	
+			</script>
+        </select>
+      </div>
+    </div>
+    
+    <!---------------------Sync with computer time ---------------------->
+    <div id="SyncComputerLayer" class="timepagediv" style="display:none"> <span id="SetmodeSyncwithcomputerPCTimeSpanaaa"></span>
+      <label id="SetmodeSyncwithcomputerPCTimeSpan">PC Time:</label>
+      <input name="pctime" type="text"  size="20"  readonly="readonly" onfocus="this.blur()"/>
+    </div>
+    
+    <!-----------------------Network Time Protocol-------------------->
+    <div id="NtpLayer" style="display:none">
+      <div class="timepagediv"> <span id="SetmodeSyncwhitntpNTPservernameSpanaaa"></span>
+        <label id="SetmodeSyncwhitntpNTPservernameSpan">NTP server name:</label>
+        <input name="ntpname" type="text"  size="20" maxlength="32"/>
+      </div>
+      <div class="timepagediv"> <span id="SetmodeSyncwhitntpIntervalSpanaaaaaaa"></span>
+        <label id="SetmodeSyncwhitntpIntervalSpan">Interval:</label>
+        <select name="ntpinterval">
+        <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="12">12</option>
+         <option value="24">24</option>
+        </select>
+        <label id="SetmodeSyncwhitntpIntervalhourSpan">hour</label>
+      </div>
+    </div>
+    <div style="vertical-align:middle;"> <span id="TimezoneSpan">Time zone :</span>
+      <select name="TimeZone" onChange="doDst()" style="width:auto;">
+        <option  id="TimezoneKeepcurrentsettingSpan" value="current/set">Keep current setting</option>
+        <option  id="TimezoneInternationalDateLineWestSpan" value="Etc/GMT-12">(GMT-12:00) International Date Line West</option>
+        <option  id="TimezoneMidwayIslandSamoaSpan" value="Pacific/Apia">(GMT-11:00) Midway Island, Samoa</option>
+        <option  id="TimezoneHawaiiSpan" value="Pacific/Honolulu">(GMT-10:00) Hawaii</option>
+        <option  id="TimezoneAlaskaSpan" value="America/Anchorage">(GMT-09:00) Alaska</option>
+        <option id="TimezonePacificTimeUSCanadaTijuanaSpan" value="America/Los_Angeles">(GMT-08:00) Pacific Time (US & Canada); Tijuana</option>
+        <option  id="TimezoneMountainTimeUSCanadaSpan" value="America/Denver">(GMT-07:00) Mountain Time (US & Canada)</option>
+        <option  id="TimezoneChihuahuaLaPazMazatlanSpan" value="America/Tegucigalpa">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+        <option  id="TimezoneArizonaSpan" value="America/Phoenix">(GMT-07:00) Arizona</option>
+        <option  id="TimezoneSaskatchewanSpan" value="America/Winnipeg">(GMT-06:00) Saskatchewan</option>
+        <option  id="TimezoneGuaddlajaraMexicoCityMonterreySpan" value="America/Mexico_City">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+        <option  id="TimezoneCentralTimeUSCanadaSpan" value="America/Chicago">(GMT-06:00) Central Time (US & Canada)</option>
+        <option  id="TimezoneCentralAmericaSpan" value="America/Costa_Rica">(GMT-06:00) Central America</option>
+        <option  id="TimezoneIndianaEastSpan" value="America/Indianapolis">(GMT-05:00) Indiana (East)</option>
+        <option  id="TimezoneEasternTimeUSCanadaSpan" value="America/New_York">(GMT-05:00) Eastern Time (US & Canada)</option>
+        <option  id="TimezoneBogotaLimaQuitoSpan" value="America/Bogota">(GMT-05:00) Bogota, Lima, Quito</option>
+        <option  id="TimezoneSantiagoSpan" value="America/Santiago">(GMT-04:00) Santiago</option>
+        <option  id="TimezoneCaracasLaPazSpan" value="America/Caracas">(GMT-04:00) Caracas, La Paz</option>
+        <option  id="TimezoneAtlanticTimeCanadaSpan"value="America/Montreal">(GMT-04:00) Atlantic Time (Canada)</option>
+        <option  id="TimezoneNenfoundLandSpan" value="America/St_Johns">(GMT-03:30) Newfoundland</option>
+        <option  id="TimezoneGreenlandSpan" value="America/Thule">(GMT-03:00) Greenland</option>
+        <option  id="TimezoneBuenosAiresGeorgentownSpan" value="America/Buenos_Aires">(GMT-03:00) Buenos Aires, Georgetown</option>
+        <option  id="TimezoneBrasiliaSpan" value="America/Sao_Paulo">(GMT-03:00) Brasilia</option>
+        <option  id="TimezoneMidAtlanticSpan" value="Atlantic/South_Georgia">(GMT-02:00) Mid-Atlantic</option>
+        <option  id="TimezoneCapeVerdeIsSpan" value="Atlantic/Cape_Verde">(GMT-01:00) Cape Verde Is.</option>
+        <option  id="TimezoneAzoresSpan" value="Atlantic/Azores">(GMT-01:00) Azores</option>
+        <option  id="TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan" value="Europe/Dublin">(GMT) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+        <option  id="TimezoneCasablancamonroviaSpan" value="Africa/Casablanca">(GMT) Casablanca, Monrovia</option>
+        <option  id="TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan" value="Europe/Amsterdam">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+        <option  id="TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan" value="Europe/Belgrade">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+        <option  id="TimezoneBrusselsCopenhagenMadridParisSpan" value="Europe/Brussels">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+        <option  id="TimezoneSarajevoSkopjeWarsawZagrebSpan" value="Europe/Warsaw">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+        <option  id="TimezoneWestCentralAfricaSpan" value="Africa/Lagos">(GMT+01:00) West Central Africa</option>
+        <option  id="TimezonehensIstanbulMinskSpan" value="Europe/Athens">(GMT+02:00) Athens, Istanbul, Minsk</option>
+        <option  id="TimezoneBucharestSpan" value="Europe/Bucharest">(GMT+02:00) Bucharest</option>
+        <option  id="TimezoneCairoSpan" value="Africa/Cairo">(GMT+02:00) Cairo</option>
+        <option  id="TimezonerarePretoriaSpan" value="Africa/Harare">(GMT+02:00) Harare, Pretoria</option>
+        <option  id="TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan" value="Europe/Helsinki">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+        <option  id="TimezoneJerusalemSpan" value="Asia/Jerusalem">(GMT+02:00) Jerusalem</option>
+        <option  id="TimezoneBaghdadSpan" value="Asia/Baghdad">(GMT+03:00) Baghdad</option>
+        <option  id="TimezoneKuwaitRiyadhSpan" value="Asia/Kuwait">(GMT+03:00) Kuwait, Riyadh</option>
+        <option  id="TimezoneMoscowStPetersburgVolgogradSpan" value="Europe/Moscow">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+        <option  id="TimezoneNairobiSpan" value="Africa/Nairobi">(GMT+03:00) Nairobi</option>
+        <option  id="TimezoneTehranSpan" value="Asia/Tehran">(GMT+03:30) Tehran</option>
+        <option  id="TimezoneAbuDhabiMuscatSpan" value="Asia/Dubai">(GMT+04:00) Abu Dhabi, Muscat</option>
+        <option  id="TimezoneBakuTbilisiYerevanSpan" value="Asia/Baku">(GMT+04:00) Baku, Tbilisi, Yerevan</option>
+        <option  id="TimezoneKabulSpan" value="Asia/Kabul">(GMT+04:30) Kabul</option>
+        <option  id="TimezoneEkaterinburgSpan" value="Asia/Yekaterinburg">(GMT+05:00) Ekaterinburg</option>
+        <option  id="TimezoneIslamabadKarachiTashkentSpan" value="Asia/Karachi">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+        <option  id="TimezoneChennaiKolkataMumbaiNewDelhiSpan" value="Asia/Calcutta">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+        <option  id="TimezoneKathmanduSpan" value="Asia/Katmandu">(GMT+05:45) Kathmandu</option>
+        <option  id="TimezoneAlmatyNovosibirskSpan" value="Asia/Almaty">(GMT+06:00) Almaty, Novosibirsk</option>
+        <option  id="TimezoneAstanaDhakaSpan" value="Asia/Dhaka">(GMT+06:00) Astana, Dhaka</option>
+        <option  id="TimezoneSriJayawardenepuraSpan" value="Asia/Colombo">(GMT+06:00) Sri Jayawardenepura</option>
+        <option  id="TimezoneRangoonSpan" value="Asia/Rangoon">(GMT+06:30) Rangoon</option>
+        <option  id="TimezoneBangkokHanoiJakartaSpan" value="Asia/Bangkok">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+        <option  id="TimezoneKrasnoyarskSpan" value="Asia/Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option>
+        <option  id="TimezoneBeijingChongqingHongKongUrumqiSpan" value="Asia/Hong_Kong">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+        <option  id="TimezoneIrkutskUlaanBataarSpan" value="Asia/Irkutsk">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+        <option  id="TimezoneKualaLumpurSingaporeSpan" value="Asia/Kuala_Lumpur">(GMT+08:00) Kuala Lumpur, Singapore</option>
+        <option  id="TimezonePerthSpan" value="Australia/Perth">(GMT+08:00) Perth</option>
+        <option  id="TimezoneTaipeiSpan" value="Asia/Taipei">(GMT+08:00) Taipei</option>
+        <option  id="TimezoneOsakaSapporoTokyoSpan" value="Asia/Tokyo">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+        <option  id="TimezoneSeoulSpan" value="Asia/Seoul">(GMT+09:00) Seoul</option>
+        <option  id="TimezoneYakutskSpan" value="Asia/Yakutsk">(GMT+09:00) Yakutsk</option>
+        <option  id="TimezoneAdelaideSpan" value="Australia/Adelaide">(GMT+09:30) Adelaide</option>
+        <option  id="TimezoneBrisbaneSpan" value="Australia/Brisbane">(GMT+10:00) Brisbane</option>
+        <option  id="TimezoneCanberraMelbourneSydneySpan" value="Australia/Sydney">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+        <option  id="TimezoneGuamPortMoresbySpan" value="Pacific/Guam">(GMT+10:00) Guam, Port Moresby</option>
+        <option  id="TimezoneHobartSpan" value="Australia/Hobart">(GMT+10:00) Hobart</option>
+        <option  id="TimezoneVladivostokSpan" value="Asia/Vladivostok">(GMT+10:00) Vladivostok</option>
+        <option  id="TimezoneMagadanSolomonIsNewSpan" value="Asia/Magadan">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+        <option  id="TimezoneAucklandWellingtonSpan" value="Pacific/Auckland">(GMT+12:00) Auckland, Wellington</option>
+        <option  id="TimezoneFijiKamchatkaMarshallIsSpan" value="Pacific/Fiji">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+        <option  id="TimezoneNukualofaSpan" value="Pacific/Tongatapu">(GMT+13:00) Nuku'alofa</option>
+      </select>
+      <div id="DstLayer"><span id="Dstbbbb"></span>
+        <input  id="Dst" type=checkbox name=Dst>
+        <label for="Dst" id="AutomaticallyadjustclockfordaylightsavingtimechangesSpan">Automatically adjust clock for daylight saving time changes</label>
+      </div>
+    </div>
+    <div class="cutoffrule"></div>
+    <div>
+     <div id="DstLayer"><span id="AutoUpdateTimeSpan">Auto Update Time:</span>
+        <input  id="AutoUpdateInput" type=checkbox >
+      </div>
+    </div>
+  </form>
+</div>
+<div style="display:none"> 
+  <form name=form2 method="post" >
+    <input name="cmd" type="hidden" value="setntp">
+    <input name="cururl" type="hidden">
+    <input id="Form2NtpSetver" name="ntpserver" type="hidden">
+    <input id="Form2NtpInterval"name="ntpinterval" type="hidden">
+    <input name="cmd" type="hidden" value="setservertime">
+    <input id="Form2TimeZone" name="timezone" type="hidden">
+    <input id="Form2DstMode" name="dstmode" type="hidden">
+    <input id="Form2AutoUpdate"  name="autoupdate" type="hidden">
+  </form>
+  <form name=form3 method="post">
+    <input name="cmd" type="hidden" value="setservertime">
+    <input name="cururl" type="hidden">
+    <input id="Form3Stime" name="stime" type="hidden">
+    <input id="Form3TimeZone" name="timezone" type="hidden">
+    <input id="Form3DstMode"name="dstmode" type="hidden">
+    <input id="Form3AutoUpdate"  name="autoupdate" type="hidden">
+  </form>
+  <form name=form4 method="post">
+    <input name="cmd" type="hidden" value="setservertime">
+    <input name="cururl" type="hidden">
+    <input id="Form4TimeZone" name="timezone" type="hidden">
+    <input id="Form4DstMode"  name="dstmode" type="hidden">
+    <input id="Form4AutoUpdate"  name="autoupdate" type="hidden">
+  </form>
+</div>
+<div class="ApplyLayerStyle"> <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/userdefine-jquery-ui.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.progressbar.js"></script>
+<script type="text/javascript" src="js/initializemain.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="/cgi-bin/bconf.cgi?cmd=bconf.cgi&-action=get" TYPE="text/javascript"></SCRIPT>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getserverinfo&-encode&cmd=getnetinfo" type="text/javascript"></script>
+
+<script language="javascript">
+</script>
+</head>
+<body class="content" style="display:none;">
+<div style="display:block" id="ContentLayer">
+  <h4 id="InitializeSpan">Initialize</h4>
+  <div  style="margin-top:5px;vertical-align:middle;"> <span id="RebootSpan">Reboot:</span> <a class="classname"  id="Reboot" href="#">
+    <label id="RebootOKSpan">OK</label>
+    </a> </div>
+  <!-------------------------------------------------->
+  <div style="margin-top:5px;vertical-align:middle"> <span id="FactorydefaultSpan">Factory default:</span> <a id="Factorydefault" class="classname" href="#">
+    <label id="ResetOKSpan">OK</label>
+    </a> </div>
+  <!-------------------------------------------------->
+  <div  style="margin-top:5px;vertical-align:middle;"> <span id="BackupsettingdataSpan">Backup setting data:</span> <a id="SaveToFile" class="classname" href="#">
+    <label id="BackupsettingdataOkSpan">OK</label>
+    </a> </div>
+  <!-------------------------------------------------->
+  <div style="vertical-align:middle;"> <span id="RestoreSpan">Restore:</span>
+    <input id="RestoreInputText" type="text" />
+    <div style="position:relative; display:inline-block; *display:inline; *zoom:1; vertical-align:baseline;">
+      <div  id="RestoreLayer" style="position:absolute; left:0px; top:-22px;overflow: hidden;">
+        <form name="form4" method="post"  enctype="multipart/form-data" action="cgi-bin/hi3510/restore.cgi">
+          <input id="Restore" class="inputfile" type="file" name="setting_file" >
+        </form>
+        <div > <a  id="Restorebrower" class="classname"  href="#">brower...</a> </div>
+      </div>
+    </div>
+    <a id="RestoreOKSpan" class="classname" style="position:relative; left:86px;top:0px;" href="#"> ok </a> </div>
+  <!-------------------------------------------------->
+  
+  <div style="vertical-align:middle;"> <span id="UpgradeSpan">Upgrade:</span>
+    <input id="UpgradeInputText" type="text" />
+    <div style="position:relative; display:inline-block; *display:inline; *zoom:1;vertical-align:baseline;">
+      <div  style="position:absolute; left:0px; top:-22px;overflow: hidden;">
+        <form name="form5" method="post"  enctype="multipart/form-data" action="cgi-bin/hi3510/upgrade.cgi">
+          <input id="Upgrade" class="inputfile" type="file" name="setting_file">
+        </form>
+        <div > <a  id="Upgradebrower" class="classname" href="#">brower...</a> </div>
+      </div>
+    </div>
+    <a id="UpgradeOKSpan" class="classname"  href="#" style="position:relative; left:86px;top:0px;"> ok </a> </div>
+  <!--------------------------------------------------> 
+</div>
+<div id="MsgLayer" style="display:none; margin:10px auto; width:600px">
+  <P></p>
+  <P></P>
+  <P  style="margin-left:120px;font-size:14px;" id="Msg"></p>
+  <div id="progressbar" style="font-size:16px;height:16px;"> </div>
+</div>
+</body>
+</html>

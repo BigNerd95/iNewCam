@@ -1,0 +1,74 @@
+[sensor_a_factory_default]
+default                        = "1              "
+[sensor_a_base_default]
+default                        = "0              ";
+brightness                     = "50             ";
+contrast                       = "50             ";
+hue                            = "50             ";
+saturation                     = "50             ";
+mirror                         = "0              ";
+flip                           = "0              ";
+powerfreq_enable               = "1              ";
+powerfreq_strength             = "50             ";
+ircutmode                      = "1              ";
+
+[sensor_a_base]
+brightness                     = "50             ";
+contrast                       = "50             ";
+hue                            = "49             ";
+saturation                     = "54             ";
+mirror                         = "0              ";
+flip                           = "0              ";
+powerfreq_enable               = "1              ";
+powerfreq_strength             = "50             ";
+ircutmode                      = "1              ";
+
+[sensor_a_advance_default]
+default                        = "0              ";
+dp                             = "0              ";0:off 1:on
+dp_min                         = "50             ";
+dp_max                         = "1023           ";
+sharpen_status                 = "1              ";0:off 1:auto 2:manual
+sharpen_strength               = "80             ";[0-255]
+saturation_status              = "1              ";0:off 1:auto 2:manual
+saturation_strength            = "128            ";[0-255]
+wdr_status                     = "0              ";1:auto 2:manual
+wdr_strength                   = "128            ";[0-255]
+ae                             = "128            ";[0-255] 
+aemode                         = "0              ";0 normal,1 bright,2 dark 3 auto  
+nr                             = "21             ";[0-255]
+nrenable                       = "1              "
+sfsth                          = "32             ";[0-127] 3D denoise
+stfsth                         = "16             ";
+tfsth                          = "8              ";[0-63] 3D denoise
+chromarange                    = "8              ";[0-31] 3D denoise
+slowfps                        = "16             ";1/2/3/4/5/6/8/16
+wbmode                         = "0              ";0:auto 1:indoor 2:outdoor 3:lamp
+wbrg_indoor                    = "407            ";[0-511]
+wbbg_indoor                    = "810            ";[0-511]
+wbgg_indoor                    = "312            ";[0-511]
+wbrg_outdoor                   = "455            ";[0-511]
+wbbg_outdoor                   = "450            ";[0-511]
+wbgg_outdoor                   = "284            ";[0-511]
+wbrg_lamp                      = "400            ";[0-511]
+wbbg_lamp                      = "1126           ";[0-511]
+wbgg_lamp                      = "385            ";[0-511]
+wbrg_manual                    = "256            ";[0-511]
+wbbg_manual                    = "256            ";[0-511]
+aimode                         = "0              ";1 on  0 off
+daynight                       = "0              "; 0:auto;  1:manual night;  2:manual day; 3:timer mode
+antifog_status                 = "0              ";1 on  0 off
+antifalsecolor_strength        = "128            ";[0-255]
+ldc_status                     = "0              ";1 on  0 off
+ldc_xoffset                    = "0              ";[-28,28]
+ldc_yoffset                    = "0              ";[-14,14]
+ldc_ratio                      = "0              ";[0,511]
+ldc_viewtype                   = "0              ";0 crop 1 all
+[sensor_a_advance]
+dp                             = "1              ";0:off 1:on
+dp_min                         = "50             ";
+dp_max                         = "1023           ";
+sharpen_status                 = "1              ";0:off 1:auto 2:manual
+sharpen_strength               = "128            ";[0-255]
+sharpenmin                     = "0              ";[0-sharpen_strength],must less than sharpen_strength
+saturation_status 

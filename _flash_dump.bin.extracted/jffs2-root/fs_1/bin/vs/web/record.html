@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css">
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script  type="text/javascript" src="js/record.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getrecattr&-chn=11" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getrecattr&-chn=12" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getrecschedule&-timesheetname=timesheet1" type="text/javascript"></script>
+<script language="javascript"></script>
+
+</head>
+<body class="content" style="display:none;">
+<div style="display:block">
+ <form name="form1">
+    <h4 id="RecordSpan"  >Record:</h4>
+     <div><span id="ManualRecordChnSpan">Manual Chn:</span>
+    <select id="RecStreamSelect" disabled="disabled">
+    <option value="11" class="optionspan" id="MainFlowSpan"> MainFlow</option>
+    <option value="12" class="optionspan" id="MinorFlowSpan"> MinorFlow</option>
+    </select>
+    </div>
+    <div > <span id="FileTimeSpan">File Time:</span>
+      <select id="filetime" disabled="disabled">
+            <option class="optionspan" value="60">60S</option>
+            <option class="optionspan" value="120">120S</option>
+            <option class="optionspan" value="180">180S</option>
+            <option class="optionspan" value="240">240S</option>
+            <option class="optionspan" value="300">300S</option>
+      </select>
+       <!--span id="MinuteSpan">minute</span-->
+    </div>
+    <div><span id="ManualRecordSpan">Manual Record:</span>
+    <input  type="radio" id="manualrecOn" name="manualrecgrp" /><label  id=" manualrecOnSpan" for="manualrecOn">On</label>
+    <input  type="radio" id="manualrecOff" name="manualrecgrp" checked="checked"/><label id=" manualrecOffSpan" for="manualrecOff">Off</label>
+    <label id="RecordMsg"  style="color:#F00;"></label>
+    </div>
+     <div><span id="TimerRecordSpan">Timer Record:</span>
+    <input  type="radio" id="timerrecOn" name="timerrecgrp" /><label  id="timerrecOnSpan" for="timerrecOn">On</label>
+    <input  type="radio" id="timerrecOff" name="timerrecgrp" checked="checked"/><label id=" timerrecOffSpan" for="timerrecOff">Off</label>
+    <label id="RecordMsg"  style="color:#F00;"></label>
+    </div>
+    <div> <span id="ScheduleSpan">Schedule:</span>
+        <input id="weekmode" name="mode_radio"  type="radio" value="0">
+        <label for="weekmode" id="ScheduleUsetheweekmodeSpan">Use the week mode</label>
+        <input  id="workmode" name="mode_radio" type="radio" value="1">
+        <label  for="workmode" id="ScheduleUsetheworkmodeSpan">Use the work mode</label>
+        <input  id="alltimemode" name="mode_radio" type="radio" value="2">
+        <label for="alltimemode" id="ScheduleAlltimedaySpan">All times day</label>
+        <a id="MdTimeSpan" class="classname" style="display:inline-block; *display:inline;*zoom:1"><label id="TimeSpan">Time</label></a> 
+    </div>
+    <div id="TimeFrameLayer" style="display:none;">
+        <iframe id="TimeFrame" src="timeplan.html" scrolling="no" frameborder="0" width="100%" height="280px"></iframe>
+    </div>
+  </form>  
+</div>
+
+<div style="display:none">
+  <form name="form2">
+    <input name="cmd" type="hidden" value="setrecattr">
+    <input name="cururl" type="hidden">   
+	<input id="Form2Chn1"  type="hidden" />			
+    <input id="Form2FileTime1" type="hidden"/>
+     <input name="cmd" type="hidden" value="setrecattr">
+     <input id="Form2Chn2"  type="hidden" />			
+    <input id="Form2FileTime2" type="hidden"/>
+    <input name="cmd" type="hidden" value="setrecschedule">
+    <input id="Form2Timesheetname" name="timesheet1" type="hidden">
+    <input id="Form2Etm" name="etm" type="hidden">
+    <input id="Form2Wk0" name="week0" type="hidden" value="none">
+    <input id="Form2Wk1" name="week1" type="hidden" value="none">
+    <input id="Form2Wk2" name="week2" type="hidden" value="none">
+    <input id="Form2Wk3" name="week3" type="hidden" value="none">
+    <input id="Form2Wk4" name="week4" type="hidden" value="none">
+    <input id="Form2Wk5" name="week5" type="hidden" value="none">
+    <input id="Form2Wk6" name="week6" type="hidden" value="none">
+    <input id="Form2Wrkday" name="workday" type="hidden" value="none">
+    <input id="Form2Wkend" name="weekend" type="hidden" value="none">
+    <input id="Form2ManualReccmd" type="hidden" >
+    <input id="Form2ManualRecChn"  type="hidden"/>
+    <input id="Form2ManualRecType"  type="hidden"/>
+    <input id="Form2TimerReccmd" type="hidden" >
+    <input id="Form2TimerRecChn"  type="hidden"/>
+    <input id="Form2TimerRecType"  type="hidden"/>
+    <input name="cmd" type="hidden" value="saverecattr">			
+  </form>
+</div>
+<div class="ApplyLayerStyle"> <a id="apply" href="#">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

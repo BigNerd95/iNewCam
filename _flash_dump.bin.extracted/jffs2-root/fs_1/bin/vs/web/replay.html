@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/userdefine-jquery-ui.css"/>
+
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="js/jquery.ui.progressbar.js"></script>
+<script type="text/javascript" src="js/jquery.ui.slider.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/qv.js"></script>
+<script type="text/javascript" src="js/replay.js"></script>
+<script type="text/javascript" src="js/replayer.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getservertime" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getuser" type="text/javascript"></script>
+<script language="javascript"></script>
+</head>
+<body style="display:none;">
+<div id="ReplayLayer" style="display:block">
+  <div id="ReplaySearchListLayer" class="LeftToolLayerStyle">
+    <div id="SearchCalenderLayer">
+      <div id="SearchCalender"></div>
+      <div><a href="#"  id="Refresh"></a> </div>
+      <div style="clear:both"></div>
+    </div>
+    <div id="RecSearchListLayer">
+      <label id="FileListSpan">File List:</label>
+      <select id="SearchType">
+        <option value="1" class="optionspan" id="CommonSpan">Common</option>
+        <option value="2" class="optionspan" id="AlarmSpan">Alarm</option>
+        <option value="3" class="optionspan" id="AllTypeSpan"selected="selected">All Type</option>
+      </select>
+      <a href="#"  id="Search"></a>
+      <table id="SearchResultHead">
+        <tr>
+          <td width="80%" ><label id="SearchResultHeadSSIDSpan">Time</label></td>
+          <td  width="20%"><label id="SearchResultHeadAuthModeSpan">size</label></td>
+        </tr>
+      </table>
+      <div style="overflow-y:scroll; overflow-x: hidden; height:220px; width:100%; ">
+        <table id="SearchResultTable" style="width:100%;border-collapse: collapse;">
+        </table>
+      </div>
+      <div id="SearchResultPage"><a href="#"  id="FirstPage"></a> <a href="#"  id="PrevPage"></a> <a href="#"  id="NextPage" ></a> <a href="#"  id="EndPage" ></a> </div>
+      <div><a href="#"  id="Download"></a> </div>
+    </div>
+  </div>
+  <div id="ReplayPlayerLayer"> 
+    <script type="text/javascript">LoadPlayer();</script>
+    <div id="RePlayerCtrLayer">
+      <div  id="RePlayerCtr"> <a href="#"  id="Stop"></a> <a href="#"  id="Pause"></a> <a href="#"  id="Play"></a> <a href="#"  id="FastPlay"></a> <a href="#"  id="FramePlay"></a>
+        <label id="RePlayerCtrInfo"></label>
+      </div>
+      <div id="RePlayerTSeekLayer">
+        <div id="DownloadProgress"></div>
+        <div id="RePlayerTimeSlider"></div>
+        <!--label id="PlayTimeInfo" style="display:none; width:100px;">00:00:00/00:00:00</label-->
+      </div>
+      <div id="RePlayerVolCtrLayer">
+        <a id="VolDisplaySpan1" href="javascript:;" style="display:none;"></a>
+        <a id="VolDisplaySpan2" href="javascript:;" ></a>
+        <a id="VolDisplaySpan3" href="javascript:;"  style="display:none;"></a>
+        <a id="VolDisplaySpan4" href="javascript:;"  style="display:none;"></a>
+        <div id="RePlayerVolSlider"></div>
+        <label id="RePlayerVolInfo">50</label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

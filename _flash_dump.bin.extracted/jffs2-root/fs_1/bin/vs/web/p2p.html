@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script  type="text/javascript" src="js/p2p.js"></script>
+<script language="JavaScript1.2" src="/cgi-bin/p2p.cgi?cmd=p2p.cgi&-action=get" type="text/javascript"></script>
+
+<script language="javascript"></script>
+
+
+
+</head>
+<body class="content">
+<div style="display:block">
+  <div id="P2PEnableLayer">
+  <h4 id="P2PSpan">P2P</h4>
+  <span id="P2PStatusSpan">Status:</span>
+  <input type="checkbox" id="p2pEnable"  /><label for="p2pEnable" id="p2pEnableSpan">Enable</label>
+  </div>
+  
+  <div>
+   <span id="P2PIDSpan">ID:</span>
+  <label id="P2PIDLabel"></label>
+  </div>
+  <div>
+   <span id="P2PPwdSpan">Password:</span>
+  <input type="text" maxlength="8"  id="P2PPwdInput"/>
+  </div>
+</div>
+<div style="display:none">
+<form name="form2">
+<input name="cmd" type="hidden" value="psp">
+<input name="cururl" type="hidden">
+<input type="hidden" id="Form2Enable"/>
+<input type="hidden" id="Form2Pwd"/>
+</form>
+</div>
+<div class="ApplyLayerStyle"><a id="apply" href="#">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a></div>
+</body>
+</html>

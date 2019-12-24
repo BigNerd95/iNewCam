@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/userdefine-jquery-ui.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+<script  type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.progressbar.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getsdcareInfo" type="text/javascript"></script>
+
+<script language="javascript">
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+   
+  $("#progressbar").progressbar({
+        value: 0
+    });
+	
+	setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+
+
+
+    progress = function() {
+
+        var val = $("#progressbar").progressbar("value") || 0;
+
+        $("#progressbar").progressbar("value", val + 1);
+
+        if (val >= 100) window.location.reload(true);
+
+    }
+
+
+
+function on_load()
+{
+	var form = document.form1;
+	if(sdstatus == "out")
+	{
+		$("#brower").css("display", "none");
+		$("#mountBT").css("display", "inline-block");
+		$("#removeBT").css("display", "none");
+		$("#frt").css("display", "none");
+
+		$("#sdsize").html(sdstatusMsg);
+		//form.tbinfo.width = 0;
+	}
+	else
+	{	
+		$("#brower").css("display", "inline-block");
+		$("#mountBT").css("display", "none");
+		$("#removeBT").css("display", "inline-block");
+		$("#frt").css("display", "inline-block");
+			
+		//form.sdsize.value = Math.round((sdfreespace*1)/1024)+'M'+'\/'+Math.round((sdtotalspace*1)/1024)+'M';
+		$("#sdsize").html(Math.round((sdfreespace*1)/1024)+'M'+'\/'+Math.round((sdtotalspace*1)/1024)+'M');
+	}
+}
+
+function sdfrmt()
+{
+	if(confirm(SDCardFormatMsg)==true)
+	{ 		
+		  $("body div:first").css("display", "none");
+            $("#MsgLayer").css("display", "block");
+            $("#Msg").html(SDCardWaitMsg);
+            setInterval("progress()", 300); //0.5min
+		
+		cgicmd =  '/cgi-bin/hi3510/sdfrmt.cgi?&'
+		$.get(cgicmd) ;
+		
+		return true;
+
+	}
+	else
+	{
+		return false;
+	}
+	
+}
+function sdInfo()
+{
+	window.location.reload(true);
+}
+
+function sdRemove()
+{
+	if(confirm(SDCardRemoveMsg)==true)
+	{ 
+		var form=document.form2;
+		form.cururl.value = document.URL;
+		form.action="cgi-bin/hi3510/param.cgi";
+		form.submit();
+		return true;
+
+	}
+	else
+	{
+		return false;
+	}	
+}
+
+function sdMount()
+{
+	var form=document.form4;
+	form.cururl.value = document.URL;
+	form.action="cgi-bin/hi3510/param.cgi";
+	form.submit();
+	return true;
+
+	
+}
+
+function brower_sd()
+{
+	if($("#SDBrowerLayer").css("display") == "none"){
+		$("#SDBrowerLayer").css("display", "block")
+		$("#SDBrowerLayer iframe").attr("src", "../sd/");
+	}
+	else $("#SDBrowerLayer").css("display", "none")
+
+	return true;	
+}
+
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;" >
+<div style="display:block; position:relative;" id="ContentLayer" >
+  <form name="form1">
+    <!------------------------------------------>
+    <h4 id="SdcardInfoSpan">Sdcard Info:</h4>
+    <div id="SDLayer">
+      <div><span id="StatusSpan" style=" font-weight:bold">Status: </span>
+        <label id="sdsize"  style="border:0px; font-size:21px"></label>
+      </div>
+      <!------------------------------------------>
+      <div  style="margin-bottom:10px;"> <span id="aaaaa"></span> 
+      <a href="#"  id="refresh" class="classname" onClick="sdInfo()" >refresh</a> 
+      <a href="#"  id="removeBT" class="classname" onClick="sdRemove()" style="display:none;">remove</a> 
+      <a href="#"  id="mountBT" class="classname" onClick="sdMount()" style="display:none;">remount</a> 
+      <a href="#"  id="frt" class="classname" onClick="sdfrmt()" style="display:none;">format</a> 
+      <a href="#"  id="brower" class="classname" onClick="brower_sd()" style="display:none;">brower</a> </div>
+      <div id="SDBrowerLayer" style="display:none;">
+      <iframe scrolling="auto"  style="height:430px; width:600px; border:0px" frameborder="0"></iframe>
+    </div>
+    </div>
+  </form>
+</div>
+<div style="display:none">
+  <form name="form2" method="post">
+    <input name="cmd" type="hidden" value="removesdcare">
+    <input name="cururl" type="hidden">
+  </form>
+  <form name="form3" method="post">
+    <input name="cmd" type="hidden" value="sdfrmt">
+    <input name="cururl" type="hidden">
+  </form>
+  <form name="form4" method="post">
+    <input name="cmd" type="hidden" value="mountsdcare">
+    <input name="cururl" type="hidden">
+  </form>
+  <form name="form5" id="form5" method="post" >
+  </form>
+</div>
+<div id="MsgLayer" style="display:none; margin:10px auto; width:600px">
+  <P></p>
+  <P></P>
+  <P  style="margin-left:120px;font-size:14px;" id="Msg"></p>
+  <div id="progressbar" style="font-size:16px;height:16px;"> </div>
+</div>
+</body>
+</html>

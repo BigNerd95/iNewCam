@@ -1,0 +1,183 @@
+#### BT Debug
+ISBUSYBOX="yes"
+
+if [ "$ISBUSYBOX" == "yes" ] 
+then
+	IFCONFIGCMD="/bin/busybox ifconfig"
+	SEDCMD="/bin/busybox sed"
+	AWKCMD="/bin/busybox awk"
+	GREPCMD="/bin/busybox grep"
+	WGETCMD="/bin/busybox wget "
+	DIRPATH="/usr/sbin/ddns"
+	SLEEPCMD="/bin/busybox sleep"
+	KILLALLCMD="/bin/busybox killall"
+	LINKCMD="/bin/busybox ln -s"
+	RMCMD="/bin/busybox rm -f"
+	CONFIGPATH="/etc/ipcamera/"
+    TMPFSPATH="/tmpfs"
+else
+	IFCONFIGCMD="ifconfig"
+	SEDCMD="sed"
+	AWKCMD="awk"
+	GREPCMD="grep"
+	WGETCMD="wget"
+	DIRPATH=`pwd`
+	SLEEPCMD="sleep"
+	KILLALLCMD="killall"
+	LINKCMD="ln -s"
+	RMCMD="rm -f"
+	CONFIGPATH="/config"
+    TMPFSPATH="/config"
+fi
+CONFIGFILE="${CONFIGPATH}/ddns.conf"
+OUTPUTFILE="${TMPFSPATH}/ddns.out"
+INTERVALTIME=90
+PIDFILE="${DIRPATH}/ddns.pid"
+LOGFILE="${TMPFSPATH}/ddns.log"
+
+DDNSSTARTCMD="ddns-start"
+
+RUNDDNSCMD="${DIRPATH}/ddnsrun"
+
+DeviceName=""
+DeviceNameList="ppp0 eth0"
+IPAddress=""
+
+copyfile()
+{
+    cp $1 $2
+    if [ "$?" != 0 ] ; then
+	echo "*** Error copying $1 to $2"
+	echo "*** Quitting."
+	exit 1
+    fi
+}
+
+deletefile()
+{
+	if [ -f $1 ]; then
+		rm -f $1
+	fi
+}
+
+#find first device
+checkDevice()
+{
+	for dev in $DeviceNameList 
+	do
+		echo "detecting $dev"
+		${IFCONFIGCMD} $dev > /dev/null
+		ret=$?
+		if [ "$ret" == "0" ]
+		then
+			DeviceName=$dev
+			echo "Device=${DeviceName}"
+			return $ret
+		fi
+	done
+	echo "Network Error"
+	exit 1
+}
+### old name as GetIPAddress, rename to GetLocalIPAddress
+GetLocalIPAddress()
+{
+	checkDevice 
+	IPAddress=`${IFCONFIGCMD} ${DeviceName} | ${GREPCMD} 'inet addr:' | ${SEDCMD} -e 's/inet addr://' | ${AWKCMD} '{print \$1}'`
+	result="$?"
+	echo "${DeviceName} Result:${result}"
+	if ! [ "${result}" == "0" ]
+	then
+		echo "Get IPAddress ${DeviceName} Failed!"
+		exit 3
+	fi
+	if [ "${IPAddress}" == "" ]
+	then
+		echo "Get IPAddress Failed All!"
+		exit 3
+	fi
+	echo "IPAddress=${IPAddress}"
+}
+
+GetWANIP_3322()
+{
+    rm -f /tmpfs/WANIP > /dev/null
+    wget -q -O /tmpfs/WANIP http://ip.3322.net
+    
+    if [ -e /tmpfs/WANIP ]
+    then
+        WANIP=`cat /tmpfs/WANIP`
+        if [ ! $WANIP"A" = "A" ] 
+        then
+            echo $WANIP
+            return 0
+        fi
+    fi
+    
+    #echo 0.0.0.0
+    return 1
+}
+
+GetWANIP_dyndns()
+{
+    rm -f /tmpfs/WANIP > /dev/null
+	wget -q -O /tmpfs/WANIP "http://checkip.dyndns.org" ;
+    
+    if [ -e /tmpfs/WANIP ]
+    then
+        WANIP=`cat /tmpfs/WANIP | awk -F ": " '{print $2}' | awk -F "<" '{print $1}'`
+        if [ ! $WANIP"A" = "A" ];
+        then
+            #cat /tmpfs/WANIP | awk -F ": " '{print $2}' | awk -F "<" '{print $1}'
+            echo $WANIP
+            return 0
+        fi
+    fi
+    #echo "0.0.0.0"
+    return 1
+}
+
+GetWANIP_dnspark()
+{
+    rm -f /tmpfs/WANIP > /dev/null
+	wget -q -O /tmpfs/WANIP "http://ipdetect.dnspark.com/"
+    
+    if [ -e /tmpfs/WANIP ]
+    then
+        #WANIP=`cat /tmpfs/WANIP | awk -F ": " '{print $2}' | awk -F "<" '{print $1}'`
+        WANIP=`grep "Current Address" /tmpfs/WANIP | awk -F ": " '{print $2}' | awk -F "<" '{print $1}'`
+        if [ ! $WANIP"A" = "A" ];
+        then
+            #cat /tmpfs/WANIP | awk -F ": " '{print $2}' | awk -F "<" '{print $1}'
+            echo $WANIP
+            return 0
+        fi
+    fi
+    #echo "0.0.0.0"
+    return 1
+}
+
+
+GetIPAddress()
+{
+     ##wip=`GetWANIP_dnspark ||  GetWANIP_3322  || GetWANIP_dyndns`
+     #GetWANIP_dyndns || GetWANIP_dnspark ||  GetWANIP_3322  
+     #GetWANIP_3322   || GetWANIP_dyndns || GetWANIP_dnspark 
+     #wip=`GetWANIP_dyndns`
+     wip=`GetWANIP_dnspark ||  GetWANIP_3322  || GetWANIP_dyndns`
+     if [ $wip"A" = "A" ]
+     then
+        echo "IPAddress=0.0.0.0"
+     else
+        echo "IPAddress=${wip}"
+     fi
+     
+}
+
+
+GetWANIPAddress()
+{
+     GetWANIP_dnspark ||  GetWANIP_3322  || GetWANIP_dyndns
+}
+
+cd ${DIRPATH}
+

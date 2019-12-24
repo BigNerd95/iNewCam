@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<kk>
+<indexhtml>
+<HomeSpan>Басты</HomeSpan>
+<HeaderMediaSpan>Медиа</HeaderMediaSpan>
+<HeaderReplaySpan>Қайталау</HeaderReplaySpan>
+<HeaderParametersSpan>Параметрлер</HeaderParametersSpan>
+<HeaderSystemSpan>Жүйе</HeaderSystemSpan>
+<ScanSpan>Көшіріп алу</ScanSpan>
+<PtzPointSpan>Нүкте :</PtzPointSpan>
+<HueSpan>Реңк:</HueSpan>
+<BrightnessSpan>Ашықтық:</BrightnessSpan>
+<ContrastSpan>Қарама-қарсылық:</ContrastSpan>
+<SaturationSpan>Қанықтық:</SaturationSpan>
+<FlipSpan>Сәуле түс:</FlipSpan>
+<MirrorSpan>Айна:</MirrorSpan>
+<PowerfreqSpan>Жиілік:</PowerfreqSpan>
+<MainPageSceneSpan>Сахна:</MainPageSceneSpan>
+<AutoSpan>Авто</AutoSpan>
+<IndoorSpan>Ішінде</IndoorSpan>
+<OutdoorSpan>Сыртында</OutdoorSpan>
+<MainPageIRSpan>IRCut:</MainPageIRSpan>
+<IRLowSpan>Low</IRLowSpan>
+<IRHighSpan>High</IRHighSpan>
+<IRColorSpan>Color</IRColorSpan>
+<IRBWSpan>BlackWhite</IRBWSpan>
+<FillOnSpan>Қос</FillOnSpan>
+<FillOffSpan>Сөндір</FillOffSpan>
+<MirrorOnSpan>Қос</MirrorOnSpan>
+<MirrorOffSpan>Сөндір</MirrorOffSpan>
+<UpdateSpan>Жаңарту</UpdateSpan>
+<DefaultSpan>Тыныштықта</DefaultSpan>
+<PlayerSpan>Плеер:</PlayerSpan>
+<StreamSpan>Түйдек:</StreamSpan>
+<MainPageImageSpan>Сурет:</MainPageImageSpan>
+<FitSizeSpan>Мөлшерін орнату</FitSizeSpan>
+<SrcSizeSpan>Экранның өлшемі</SrcSizeSpan>
+<MainFlowSpan>Негізгі түйдек</MainFlowSpan>
+<MinorFlowSpan>Экстра түйдек</MinorFlowSpan>
+<DownloadPlayerSpan>Плеерді көшіру</DownloadPlayerSpan>
+<LoginDownloadPlayerSpan>Плеерді көшіру</LoginDownloadPlayerSpan>
+<DownloadOCXSpan> OCX-ті көшіру</DownloadOCXSpan>
+<LoginDownloadOCXSpan> OCX-ті көшіру</LoginDownloadOCXSpan>
+<LogoutSpan>Шығу</LogoutSpan>
+<UsernameSpan>Пайдаланушының аты:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<LoginLanguageSpan>Тіл:</LoginLanguageSpan>
+<LoginEnterSpan>Кір</LoginEnterSpan>
+<AutologinSpan>Автоматты кіру</AutologinSpan>
+<LoginMainFlowSpan>Негізгі түйдек</LoginMainFlowSpan>
+<LoginMinorFlowSpan>Экстра түйдек</LoginMinorFlowSpan>
+<LoginStreamSpan>Түйдек:</LoginStreamSpan>
+<QVSpan>Камера желісі</QVSpan>
+<HomeSpan>Басты</HomeSpan>
+<SystemSetSpan>Жүйе</SystemSetSpan>
+<AboutSpan>Сипаттама</AboutSpan>
+<MediaSpan>Медиа</MediaSpan>
+<ImageSpan>Сурет</ImageSpan>
+<VideoSpan>Бейне</VideoSpan>
+<AdvanceSpan>Кеңейтілген</AdvanceSpan>
+<EventSpan>Оқиға</EventSpan>
+<NetWorkSpan>Желі</NetWorkSpan>
+<BasicSettingsSpan>Негізгі баптаулар</BasicSettingsSpan>
+<DDNSSpan>DDNS</DDNSSpan>
+<UserSpan>Пайдаланушы</UserSpan>
+<MobileSpan>OSD</MobileSpan>
+<EmailSpan>E-Mail</EmailSpan>
+<MDSpan>Қозғалыс детекторы</MDSpan>
+<AlarmInSpan>Алаңдаушылық кіру шығу</AlarmInSpan>
+<AlarmOutSpan>Алаңдаушылық шығу</AlarmOutSpan>
+<AutoSnapSpan>Авто алым</AutoSnapSpan>
+<SystemSpan>Жүйе</SystemSpan>
+<LanguageSpan>Тіл</LanguageSpan>
+<TimeSpan>Уақыттың қондырғысы</TimeSpan>
+<InitSpan>Инициаландыру</InitSpan>
+<DeviceinfoSpan>Құрылым туралы ақпарат</DeviceinfoSpan>
+<LogSpan>Жүйелі журнал</LogSpan>
+<PTZSpan>PTZ</PTZSpan>
+<ODSpan>Окклюзия анықталды </ODSpan>
+<RecordSpan>Жазба</RecordSpan>
+<StorageSpan>Жинақтаушы</StorageSpan>
+<DownLoadPlayerMsg>Плеерді орнатып,  веб-страницаны жаңалайсыңдар!</DownLoadPlayerMsg>
+<HueImgTitile>Реңк</HueImgTitile>
+<BrightnessImgTitile>Ашықтық</BrightnessImgTitile>
+<ContrastImgTitle>Қарама-қарсылық</ContrastImgTitle>
+<SaturationImgTitile>Қанықтық</SaturationImgTitile>
+<RecordSwitchTitile>Жазбаны баста</RecordSwitchTitile>
+<RecordIngSwitchTitile>Жазба</RecordIngSwitchTitile>
+<CaptureSwitchTitile>Алым</CaptureSwitchTitile>
+<MicroOnSwitchTitile>Тексеруді баста</MicroOnSwitchTitile>
+<MicroOffSwitchTitile>Тексеруді тоқтат</MicroOffSwitchTitile>
+<VolOnSwitchTitile>Ашық Vol</VolOnSwitchTitile>
+<VolOffSwitchTitile>Жап- Vol</VolOffSwitchTitile>
+<GotoPointTitile>Goto</GotoPointTitile>
+<SetPointTitile>Алу</SetPointTitile>
+<ClearPointTitile>Тазалау</ClearPointTitile>
+<NoAuthErrorMsg>Пайдаланушыға рұқсат жоқ!</NoAuthErrorMsg>
+<LoginCheckErrorMsg>Пароль немесе пайдаланушының аты дұрыс емес！</LoginCheckErrorMsg>
+<HltalmproxySpan>Платформа баптаулары</HltalmproxySpan>
+<FocusSpan>Фокус</FocusSpan>
+<ZoomSpan>Зум</ZoomSpan>
+</indexhtml>
+
+<mainpagehtml>
+<QVSpan>Камера желісі</QVSpan>
+<HomeSpan>Басты</HomeSpan>
+<SystemSetSpan>Жүйе</SystemSetSpan>
+<AboutSpan>Сипаттама</AboutSpan>
+<SizeSpan>Өлшем:</SizeSpan>
+<PTZSpan>PTZ:</PTZSpan>
+<ZOOMSpan>Зум</ZOOMSpan>
+<FOUCESpan>Фокус</FOUCESpan>
+<IRISSpan>Диафрагма</IRISSpan>
+<SpeedSpan>Жылдамдық</SpeedSpan>
+</mainpagehtml>
+
+<abouthtml>
+<QVSpan>Cam желісі</QVSpan>
+<HomeSpan>Басты</HomeSpan>
+<SystemSetSpan>Жүйенің қондырғысы</SystemSetSpan>
+<AboutSpan>Сипаттама</AboutSpan>
+</abouthtml>
+
+<systemsethtml>
+<QVSpan>Cam желісі</QVSpan>
+<HomeSpan>Басты</HomeSpan>
+<SystemSetSpan>Жүйе</SystemSetSpan>
+<AboutSpan>Сипаттама</AboutSpan>
+<MediaSpan>Медиа</MediaSpan>
+<ImageSpan>Сурет</ImageSpan>
+<VideoSpan>Бейне</VideoSpan>
+<AdvanceSpan>Кеңейтілген</AdvanceSpan>
+<EventSpan>Оқиға</EventSpan>
+<NetWorkSpan>Желі</NetWorkSpan>
+<BasicSettingsSpan>Негізгі баптаулар</BasicSettingsSpan>
+<DDNSSpan>DDNS</DDNSSpan>
+<UserSpan>Пайдаланушы</UserSpan>
+<MobileSpan>Ұтқыр</MobileSpan>
+<EmailSpan>E-Mail</EmailSpan>
+<MDSpan>Қозғалыс детекторы</MDSpan>
+<AlarmInSpan>Алаңдаушылық кіру</AlarmInSpan>
+<AlarmOutSpan>Алаңдаушылық шығу</AlarmOutSpan>
+<AutoSnapSpan>Авто алым</AutoSnapSpan>
+<SystemSpan>Жүйе</SystemSpan>
+<LanguageSpan>Тіл</LanguageSpan>
+<TimeSpan>Уақыт қондырғысы</TimeSpan>
+<InitSpan>Инициаландыру</InitSpan>
+<DeviceinfoSpan>Құрылым туралы ақпарат</DeviceinfoSpan>
+<LogSpan>Жүйе журналы</LogSpan>
+<PTZSpan>PTZ</PTZSpan>
+<ODSpan> Окклюзия анықталуы</ODSpan>
+<RecordSpan>Жазба</RecordSpan>
+<StorageSpan>Жинақтаушы</StorageSpan>
+</systemsethtml>
+
+<displayhtml>
+<HueSpan>Реңк:</HueSpan>
+<BrightnessSpan>Ашықтық::</BrightnessSpan>
+<ContrastSpan>Қарама-қарсылық:</ContrastSpan>
+<SaturationSpan>Қанықтық:</SaturationSpan>
+<FlipSpan>Сәуле түс:</FlipSpan>
+<MirrorSpan>Айна:</MirrorSpan>
+<PowerfreqSpan>Жиілік:</PowerfreqSpan>
+<SaveSpan>Жазба</SaveSpan>
+<ReloadSpan>Жүктелу</ReloadSpan>
+<DefaultSpan>default</DefaultSpan>
+<FillOnSpan>Қосу</FillOnSpan>
+<FillOffSpan>Өшіру</FillOffSpan>
+<MirrorOnSpan>Қосу</MirrorOnSpan>
+<MirrorOffSpan>Өшіру</MirrorOffSpan>
+</displayhtml>
+
+<videohtml>
+<MainstreamSpan>Негізгі түйдек</MainstreamSpan>
+<ResolutionSpan>Рұқсат:</ResolutionSpan>
+<BitrateSpan>Деректердің алмасуының жылдамдығы:</BitrateSpan>
+<ImageQualitySpan>Суреттің сапасы:</ImageQualitySpan>
+<QualityVeryHighSpan>Өте жоғары</QualityVeryHighSpan>
+<QualityHighSpan>Жоғары</QualityHighSpan>
+<QualityNormalSpan>Бір қалыпты</QualityNormalSpan>
+<QualityLowSpan>Төмен</QualityLowSpan>
+<QualityVeryLowSpan>Өте төмен</QualityVeryLowSpan>
+<MaximumframeSpan>Ең жоғарғы жиілік:</MaximumframeSpan>
+<VideoqualitycontrolSpan>Сапаны тексеру:</VideoqualitycontrolSpan>
+<FrameratefirstSpan>Кадрдың жиілігі Бірінші</FrameratefirstSpan>
+<QualityfirstSpan>Сапа Бірінші </QualityfirstSpan>
+<NormSpan>Бір қалыпты:</NormSpan>
+<SubstreamSpan>Қосымша түйдек</SubstreamSpan>
+<SubResolutionSpan>Рұқсат:</SubResolutionSpan>
+<SubBitrateSpan>Деректер алмасуының жылдамдығы:</SubBitrateSpan>
+<SubImageQualitySpan>Суреттің сапасы:</SubImageQualitySpan>
+<SubImageQualityVeryHighSpan>Өте жоғары</SubImageQualityVeryHighSpan>
+<SubQualityHighSpan>Жоғары</SubQualityHighSpan>
+<SubQualityNormalSpan>Бір қалыпты</SubQualityNormalSpan>
+<SubQualityLowSpan>Төмен</SubQualityLowSpan>
+<SubQualityVeryLowSpan>Өте төмен</SubQualityVeryLowSpan>
+<SubMaximumframeSpan>Кадрдың ең көп саны:</SubMaximumframeSpan>
+<SubVideoqualitycontrolSpan>Сапаны тексеру:</SubVideoqualitycontrolSpan>
+<SubFrameratefirstSpan>Кадрдың жиілігі Бірінші</SubFrameratefirstSpan>
+<SubQualityfirstSpan>Сапа Бірінші</SubQualityfirstSpan>
+<NormSpan>Бір қалыпты:</NormSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<InputErrorMsg>Битрейттер  бастапқы мөлшерінен кіші болу керек</InputErrorMsg>
+<MobileSpan>Ұтқыр түйдек</MobileSpan>
+<ResolutionSpan>Рұқсат:</ResolutionSpan>
+<UsernameSpan>Пайдаланушының аты:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<PortSpan>Порт:</PortSpan>
+<QualitySpan>Сапа:</QualitySpan>
+<QualityVeryHighSpan>Өте жоғары</QualityVeryHighSpan>
+<QualityHighSpan>Жоғары</QualityHighSpan>
+<QualityNormalSpan>Бір қалыпты</QualityNormalSpan>
+<QualityLowSpan>Төмен</QualityLowSpan>
+<QualityVeryLowSpan>Өте төмен</QualityVeryLowSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<PortErrorMsg>Ұтқыр портты еңгіз！</PortErrorMsg>
+<PortInputMsg>Рұқсат етілмеген символдар қосылған!</PortInputMsg>
+<PortPortErrorMsg>Жарамсыз порт(1-65535 )</PortPortErrorMsg>
+<SubStreamCBR>CBR</SubStreamCBR>
+<SubStreamVBR>VBR</SubStreamVBR>
+<MainStreamCBR>CBR</MainStreamCBR>
+<MainStreamVBR>VBR</MainStreamVBR>
+<SubStreamBitRateTypeSpan>Битрейт үлгісі:</SubStreamBitRateTypeSpan>
+<MainStreamBitRateTypeSpan>Битрейт үлгісі:</MainStreamBitRateTypeSpan>
+<SubStreamUserDefineSpan>Пайдаланушының баптаулары</SubStreamUserDefineSpan>
+<MainStreamUserDefineSpan>Пайдаланушының баптаулары</MainStreamUserDefineSpan>
+<NormChangeRebootMsg>Жүктелу!</NormChangeRebootMsg>
+<ViewSizeChangeRebootMsg>Жүктелу!</ViewSizeChangeRebootMsg>
+<RebootWaitMsg>IP- камера қайта қосылады, камераны өшірме........</RebootWaitMsg>
+<MainStreamFIXQP>FixQp</MainStreamFIXQP>
+<SubStreamFIXQP>FixQp</SubStreamFIXQP>
+<SubStreamFIXQPLevel1>Өте жоғары</SubStreamFIXQPLevel1>
+<SubStreamFIXQPLevel2>Жоғары</SubStreamFIXQPLevel2>
+<SubStreamFIXQPLevel3>Бір қалыпты</SubStreamFIXQPLevel3>
+<SubStreamFIXQPLevel4>Төмен</SubStreamFIXQPLevel4>
+<SubStreamFIXQPLevel5>Өте төмен</SubStreamFIXQPLevel5>
+<MainStreamFIXQPLevel1>Өте жоғары</MainStreamFIXQPLevel1>
+<MainStreamFIXQPLevel2>Жоғары</MainStreamFIXQPLevel2>
+<MainStreamFIXQPLevel3>Бір қалыпты</MainStreamFIXQPLevel3>
+<MainStreamFIXQPLevel4>Төмен</MainStreamFIXQPLevel4>
+<MainStreamFIXQPLevel5>Өте төмен</MainStreamFIXQPLevel5>
+<GopInputTipsSpan>Жоғары немесе тең</GopInputTipsSpan>
+<MainStreamGopSpan>I Frame Gop:</MainStreamGopSpan>
+<SubStreamGopSpan>I Frame Gop:</SubStreamGopSpan>
+<MainStreamAudioSpan>Аудио:</MainStreamAudioSpan>
+<SubStreamAudioSpan>Аудио:</SubStreamAudioSpan>
+<SubStreamAudioGrpOn>Қосу</SubStreamAudioGrpOn>
+<SubStreamAudioGrpOff>Өшіру</SubStreamAudioGrpOff>
+<MainStreamAudioGrpOn>Қосу</MainStreamAudioGrpOn>
+<MainStreamAudioGrpOff>Өшіру</MainStreamAudioGrpOff>
+</videohtml>
+
+<networkhtml>
+<LANSettingsSpan>LAN баптауы</LANSettingsSpan>
+<IPTypeSpan>IP үлгісі:</IPTypeSpan>
+<IPTypeFixedIPAddressSpan>Статитикалық IP адрес</IPTypeFixedIPAddressSpan>
+<IPTypeDynanicIPAddressSpan>Динамикалық IP адрес</IPTypeDynanicIPAddressSpan>
+<IPAddressSpan>IP- адрес:</IPAddressSpan>
+<SubnetMaskSpan>Подсети қалқасы:</SubnetMaskSpan>
+<GatewaySpan>Шлюз:</GatewaySpan>
+<DNSTypeSpan>DNS үлгі:</DNSTypeSpan>
+<DNSTypeManualDNSSpan>DNS басшылығы</DNSTypeManualDNSSpan>
+<DNSTypeFromDHCPServerSpan>DHCP- серверден</DNSTypeFromDHCPServerSpan>
+<PrimaryDNSSpan>Алғашқы DNS :</PrimaryDNSSpan>
+<SecondaryDNSSpan>Екігші DNS:</SecondaryDNSSpan>
+<HTTPSpan>HTTP:</HTTPSpan>
+<HTTPPortnumberSpan>HTTP :порты</HTTPPortnumberSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<InputASCIIErrorMsg>ASCII-ді еңгізініз (ұзындығы 5 немесе 13)</InputASCIIErrorMsg>
+<InputHEXErrorMsg> HEX символдарды еңгізініз(ұзындығы 10 немесе 26 )</InputHEXErrorMsg>
+<WepKeyErrorMsg>WEP- кілттің ұзындығының қатесі. Hex символдар ұзындығы 10 немесе 26  ; ASCII ұзындығы 5  немесе 13  болады</WepKeyErrorMsg>
+<InputASCIIError1Msg>ASCII символдарын еңгізініз  (ұзындығы 8 днемесе 63 ) </InputASCIIError1Msg>
+<InputInvalidMsg>Жарамайтын символ еңгізілген</InputInvalidMsg>
+<InputErrorMsg>Кіру қатесі!</InputErrorMsg>
+<IPChangeMsg>Ip адрес немесе порт өзгерілген болды,  қайта қосыңыз</IPChangeMsg>
+<InputIPMsg>IP-адресті еңгізініз</InputIPMsg>
+<InputMaskMsg> Подсети қалқасын еңгіз</InputMaskMsg>
+<InputPortMsg>Порттың қатесі!</InputPortMsg>
+<InputIPErrorMsg>Дұрыс емес адрес, бірінші нөмір 1-ден 255-ке дейін болу керек</InputIPErrorMsg>
+<InputIPError1Msg>Дұрыс емес адрес, нөмір диапазонда болуға 0-ден 255-ке дейін болу керек</InputIPError1Msg>
+<InputInvalidAddressMsg>Дұрыс емес адрес</InputInvalidAddressMsg>
+<InputInvalidAddress1Msg> Дұрыс емес адрес, нөмір диапазонда болуға 0-ден 255-ке дейін болу керек.</InputInvalidAddress1Msg>
+<SubnetMaskMsg>Подсети қалқасы</SubnetMaskMsg>
+<GateWayMsg>Шлюз</GateWayMsg>
+<PrimaryDnsMsg>Алғашқы DNS</PrimaryDnsMsg>
+<SecondDnsMsg>Екінші DNS</SecondDnsMsg>
+<httpportSpan>(80 немесе 1024 ~ 32767 )</httpportSpan>
+<WanURLInputSpan>WAN тест:</WanURLInputSpan>
+<WanTestIngSpan>Тестеу ......</WanTestIngSpan>
+<WanTestSuccessSpan>Тест жақсы өтті!</WanTestSuccessSpan>
+<WanTestFailureSpan>Тесттің қатесі !</WanTestFailureSpan>
+<WanTestSpan>Тест</WanTestSpan>>
+<IPTestH4Span>Желіні тексеру</IPTestH4Span>
+</networkhtml>
+
+<ddnshtml>
+<DynamicDNSSpan>Үдемелі DNS:</DynamicDNSSpan>
+<StatusSpan>Мәртебе:</StatusSpan>
+<StatusOnSpan>Қосу</StatusOnSpan>
+<StatusOffSpan>Өшіру</StatusOffSpan>
+<ProviderSpan>Қызмет атқару жеткізушісі:</ProviderSpan>
+<UsernameSpan>Пайдаланушының аты:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<YourDomainSpan>Сіздің доменіңіз :</YourDomainSpan>
+<UniversalPnPSpan>Әмбебап PNP :</UniversalPnPSpan>
+<StatusSpan>Мәртебе:</StatusSpan>
+<StatusOnSpan>Қосу</StatusOnSpan>
+<StatusOffSpan>Өшіру</StatusOffSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<InputErrorMsg>Рұқсат етілмеген символ еңгізілген</InputErrorMsg>
+<UserErrorMsg>Пайдаланушының атын еңгіз</UserErrorMsg>
+<PasswdErrorMsg>Парольді еңгізініз</PasswdErrorMsg>
+<DomainErrorMsg>Доменінізді еңгізініз</DomainErrorMsg>
+<UserNameErrorMsg>Пайдаланушының атының қатесі, рұқсат етілмеген символ еңгізілген</UserNameErrorMsg>
+<InputDomainErrorMsg>доменнің қатесі, рұқсат етілмеген символ еңгізілген</InputDomainErrorMsg>
+</ddnshtml>
+
+
+<osdhtml>
+<ParenthesisOptionsSpan>Мәзір  OSD</ParenthesisOptionsSpan>
+<TimeStampSpan>Уақыттың белгісі:</TimeStampSpan>
+<TimeStampOnSpan>Қосу</TimeStampOnSpan>
+<TimeStampOffSpan>Өшіру</TimeStampOffSpan>
+<CameranameSpan>Камераның атауы:</CameranameSpan>
+<CameranameOnSpan>Қосу</CameranameOnSpan>
+<CameranameOffSpan>Өшіру</CameranameOffSpan>
+<NameSpan>Ат:</NameSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+</osdhtml>
+
+
+<userhtml>
+<UserIDSpan>Пайдаланушының ID-і</UserIDSpan>
+<UsernameSpan>Пайдаланушының аты</UsernameSpan>
+<PasswordSpan>Пароль</PasswordSpan>
+<RetypepasswordSpan>Парольді раста</RetypepasswordSpan>
+<AdministratorSpan>Әкімші</AdministratorSpan>
+<User1Span>1 пайдаланушы</User1Span>
+<User2Span>2 пайдаланушы</User2Span>
+<User3Span>3 пайдаланушы</User3Span>
+<User4Span>4 пайдаланушы</User4Span>
+<User5Span>5 пайдаланушы</User5Span>
+<User6Span>6 пайдаланушы</User6Span>
+<User7Span>7 пайдаланушы</User7Span>
+<User8Span>8 пайдаланушы</User8Span>
+<User9Span>9 пайдаланушы</User9Span>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<InputMsg>Рұқсат етілмеген символ еңгізілген</InputMsg>
+<AdminMsg>Әкімшінің тексеретін атын еңгізініз</AdminMsg>
+<RePasswdMsg>Қате,  парольді қайта тер</RePasswdMsg>
+<UserNameMsg>Пайдаланушының атын еңгіз</UserNameMsg>
+<PasswdMsg>Парольді еңгіз</PasswdMsg>
+<UserErrorMsg>Пайдаланушының қазіргі аты, сол бұрынғы аты </UserErrorMsg>
+<UserInputErrorMsg>Пайдаланушының атында рұқсат етілмеген символ бар</UserInputErrorMsg>
+</userhtml>
+
+<emailhtml>
+<EMailSettingSpan> Е- Mail  баптауы:</EMailSettingSpan>
+<SMTPservernameSpan>Сервер аты:</SMTPservernameSpan>
+<SMTPserverportSpan>Порт:</SMTPserverportSpan>
+<SSLSpan>SSL:</SSLSpan>
+<AuthenticationSpan>Аутентификация:</AuthenticationSpan>
+<AuthenticationOnSpan>Қосу</AuthenticationOnSpan>
+<AuthenticationOffSpan>Өшіру</AuthenticationOffSpan>
+<UsernameSpan>Пайдаланушының аты:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<SendToSpan>Адреске жіберу:</SendToSpan>
+<SendToeMailAddress1Span></SendToeMailAddress1Span>
+<SendToeMailAddress2Span></SendToeMailAddress2Span>
+<SendToeMailAddress3Span></SendToeMailAddress3Span>
+<ShowFromasSpan>От:</ShowFromasSpan>
+<ShowFromasReturneMailaddressSpan></ShowFromasReturneMailaddressSpan>
+<SubjectSpan>Тақырып:</SubjectSpan>
+<MessageSpan>Хабарлама:</MessageSpan>
+<Messagethemaxlengthis255Span>Ең жоғарғы ұзындығы 255 символ</Messagethemaxlengthis255Span>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<emailAddrErrorMsg>Дұрыс емес адрес, адрестің ұзындығы 5 символдан көп болу керек</emailAddrErrorMsg>
+<emailAddrError1Msg>Дұрыс емес адрес, адреста @ символы болу керек</emailAddrError1Msg>
+<emailInputErrorMsg>Рұқсат етілмеген символ қосылған</emailInputErrorMsg>
+<emailSMTPErrorMsg>Сервердің атын еңгізініз</emailSMTPErrorMsg>
+<emailInputAddrMsg>Қайда адресін еңгіз</emailInputAddrMsg>
+<emailFormAddrMsg>Қайдан адресін еңгіз</emailFormAddrMsg>
+<emailUserErrorMsg>Пайдаланушының атын еңгіз</emailUserErrorMsg>
+<emailPasswdErrorMsg>Парольді еңгіз</emailPasswdErrorMsg>
+<emailServerNameErrorMsg>Сервердің қатесі, рұқсат етілмеген символ еңгізілген</emailServerNameErrorMsg>
+<emailFormAddrErrorMsg>Адресте қате, рұқсат етілмеген символ еңгізілген</emailFormAddrErrorMsg>
+<emailToAddrErrorMsg>Рұқсат етілмеген символ еңгізілген</emailToAddrErrorMsg>
+<emailSubjectErrorMsg>Объект қате, рұқсат етілмеген символ еңгізілген</emailSubjectErrorMsg>
+<emailMessageErrorMsg>Қате туралы хабарлама, рұқсат етілмеген символ еңгізілген</emailMessageErrorMsg>
+<emailUserInputErrorMsg>Пайдаланушының атында рұқсат етілмеген символ бар</emailUserInputErrorMsg>
+<emailPasswdInputErrorMsg>Пайдаланушының аты дұрыс еңгізілмеген</emailPasswdInputErrorMsg>
+<emailMessageLenErrorMsg>Хабарламаның ең жоғарғы ұзындығы 255 символ</emailMessageLenErrorMsg>
+<emailPortErrorMsg>Рұқсат етілмеген символ еңгізілген</emailPortErrorMsg>
+<emailPortError1Msg>Порт қатесі (1-65535 )</emailPortError1Msg>
+</emailhtml>
+
+<timeplanhtml>
+<workmodeCleanSpan>Тазалау</workmodeCleanSpan>
+<weekmodeCleanSpan>Тазалау</weekmodeCleanSpan>
+<workdayspan>Жұмыс күні</workdayspan>
+<weekendspan>Демалыс күндер</weekendspan>
+<Workmodetimeperiod1span>Уақыт кезеңі 1</Workmodetimeperiod1span>
+<Workmodetimeperiod2span>Уақыт кезеңі 2</Workmodetimeperiod2span>
+<Workmodetimeperiod3span>Уақыт кезеңі 3</Workmodetimeperiod3span>
+<Weekkmodetimeperiod1span>Уақыт кезеңі 1</Weekkmodetimeperiod1span>
+<Weekkmodetimeperiod2span>Уақыт кезеңі 2</Weekkmodetimeperiod2span>
+<Weekkmodetimeperiod3span>Уақыт кезеңі 3</Weekkmodetimeperiod3span>
+<weeksunspan>Жексенбі</weeksunspan>
+<weekmonspan>Дүйсенбі</weekmonspan>
+<weektuespan>Сейсенбі</weektuespan>
+<weekwedspan>Сәрсенбі</weekwedspan>
+<weekthuspan>Бейсенбі</weekthuspan>
+<weekfrispan>Жұма</weekfrispan>
+<weeksatspan>Сенбі</weeksatspan>
+</timeplanhtml>
+
+<mdhtml>
+<AreaSpan>Алаң:</AreaSpan>
+<StatusSpan>Статус:</StatusSpan>
+<StatusEnableSpan>Қосу</StatusEnableSpan>
+<SensibilitySpan>Сезімділік:</SensibilitySpan>
+<SensibilityveryhighSpan>Өте жоғары</SensibilityveryhighSpan>
+<SensibilityhighSpan>Жоғары</SensibilityhighSpan>
+<SensibilitynormalSpan>Бір қалыпты</SensibilitynormalSpan>
+<SensibilitylowSpan>Төмен</SensibilitylowSpan>
+<SelectAllSpan>Бәрін таңдау</SelectAllSpan>
+<CleamAllSpan>Бәрін тазалау</CleamAllSpan>
+<ActionSpan>Әрекет:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<SendEmailSpan>Хат жазу</SendEmailSpan>
+<EmailwithPictureSpan>Суретпен</EmailwithPictureSpan>
+<OutputSpan>Шығу:</OutputSpan>
+<TriggerAlarmOutputSpan>Белгі берудің триггерлік шығуы</TriggerAlarmOutputSpan>
+<TriggerAlarmAudioSpan>Trigger Alarm Audio</TriggerAlarmAudioSpan>
+<ScheduleSpan>Жұмыс кестесі:</ScheduleSpan>
+<ScheduleUsetheweekmodeSpan>Апта тәртібі</ScheduleUsetheweekmodeSpan>
+<ScheduleUsetheworkmodeSpan>Жұмыс тәртібі</ScheduleUsetheworkmodeSpan>
+<ScheduleAlltimedaySpan>Барлық уақыт кезеңі</ScheduleAlltimedaySpan>
+<MdSelectAllSpan>Бәрін таңдау</MdSelectAllSpan>
+<MdCleanAllSpan>Бәрін тазалау</MdCleanAllSpan>
+<MdTimeSpan>Уақыт</MdTimeSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<MdErrorMsg>Рұқсат етілмеген мағына</MdErrorMsg>
+<AlarmRecInputLabel>Сигнализация жазбамен</AlarmRecInputLabel>
+<AlarmSnapInputLabel>Сигнализация с оснасткой</AlarmSnapInputLabel>
+<SendToFtpLabel>Жұмыс жүктеу FTP</SendToFtpLabel>
+<FtpUploadRecLabel>Жұмыс жүктеу FTP</FtpUploadRecLabel>
+</mdhtml>
+
+
+<alarminhtml>
+<AlarmInSpan>Алаңдаушылықтар</AlarmInSpan>
+<StatusSpan>Статус:</StatusSpan>
+<EnableSpan>Қосу</EnableSpan>
+<ActivemodeSpan>Белсенді жүйе</ActivemodeSpan>
+<ActivemodeLowSpan>Төмен</ActivemodeLowSpan>
+<ActivemodeHighSpan>Жоғары</ActivemodeHighSpan>
+<ActionSpan>Әрекет:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<EMailSendEmailSpan> Е-Mail жіберу</EMailSendEmailSpan>
+<EMailEmailwithPictureSpan>Суретпен</EMailEmailwithPictureSpan>
+<OutputSpan>Шығу:</OutputSpan>
+<OutputTriggerAlarmOutputSpan>Белгі берудің триггерлік шығуы</OutputTriggerAlarmOutputSpan>
+<ScheduleSpan>Жұмыс кестесі:</ScheduleSpan>
+<ScheduleUsetheweekmodeSpan>Апта тәртібі</ScheduleUsetheweekmodeSpan>
+<ScheduleUsetheworkmodeSpan>Жұмыс тәртібі</ScheduleUsetheworkmodeSpan>
+<ScheduleAlltimesdaySpan>Барлық уақыт кезеңі</ScheduleAlltimesdaySpan>
+<workdayspan>Жұмыс күндер</workdayspan>
+<weekendspan>Демалыс күндер</weekendspan> 
+<workmodeCleanSpan>Тазалау</workmodeCleanSpan>
+<workmodeCloseSpan>Жабу</workmodeCloseSpan>
+<Workmodetimeperiod1span>Уақыт  кезеңі 1</Workmodetimeperiod1span>
+<Workmodetimeperiod2span>Уақыт  кезеңі 2</Workmodetimeperiod2span>
+<Workmodetimeperiod3span>Уақыт  кезеңі 3</Workmodetimeperiod3span>
+<Weekkmodetimeperiod1span>Уақыт  кезеңі 1</Weekkmodetimeperiod1span>
+<Weekkmodetimeperiod2span>Уақыт  кезеңі 2</Weekkmodetimeperiod2span>
+<Weekkmodetimeperiod3span>Уақыт  кезеңі 3</Weekkmodetimeperiod3span>
+<weekmodeCleanSpan>Тазалау</weekmodeCleanSpan>
+<weekmodeCloseSpan>Жабу</weekmodeCloseSpan>
+<TimeSetSpan>Уақыт</TimeSetSpan>
+<weeksunspan>Жексенбі</weeksunspan>
+<weekmonspan>Дүйсенбі</weekmonspan>
+<weektuespan>Сейсенбі</weektuespan>
+<weekwedspan>Сәрсенбі</weekwedspan>
+<weekthuspan>Бейсенбі</weekthuspan>
+<weekfrispan>Жұма</weekfrispan>
+<weeksatspan>Сенбі</weeksatspan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<ErrorMsg>Рұқсат етілмеген мағына</ErrorMsg>
+<AlarmOutSpan>Алаңдаушылық шығуы</AlarmOutSpan>
+<StatusSpan>Статус:</StatusSpan>
+<EnableSpan>Қосу</EnableSpan>
+<ActivemodeSpan>Белсенді жүйе:</ActivemodeSpan>
+<ActivemodeOpenSpan>Ашу</ActivemodeOpenSpan>
+<ActivemodeGrounedSpan>  Grouned</ActivemodeGrounedSpan>
+<ContinuetimeSpan>Уақыт:</ContinuetimeSpan>
+<aocontinueTimeSpan>Екінші</aocontinueTimeSpan>
+<AlarmRecInputLabel>Сигнализация жазбамен</AlarmRecInputLabel>
+<AlarmSnapInputLabel>Сигнализация </AlarmSnapInputLabel>
+<SendToFtpLabel>Жұмыс жүктеу FTP</SendToFtpLabel>
+<FtpUploadRecLabel>Жұмыс жүктеу FTP</FtpUploadRecLabel>
+</alarminhtml>
+
+
+<alarmouthtml>
+<AlarmOutSpan>Қауып-қатер шығуы:</AlarmOutSpan>
+<StatusSpan>Статус:</StatusSpan>
+<EnableSpan>Қосу</EnableSpan>
+<ActivemodeSpan>Белсенді жүйе</ActivemodeSpan>
+<ActivemodeOpenSpan>Ашу</ActivemodeOpenSpan>
+<ActivemodeGrounedSpan> Grouned</ActivemodeGrounedSpan>
+<ContinuetimeSpan>Уақыт:</ContinuetimeSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+</alarmouthtml>
+
+<autosnaphtml>
+<SnapSpan>Оснастка:</SnapSpan>
+<ntervalSpan>Аралық:</ntervalSpan>
+<ntervalMinutesSpan>Минуттар</ntervalMinutesSpan>
+<ActionSpan>Әрекет:</ActionSpan>
+<EMailSpan>E-Mail:</EMailSpan>
+<SendbyEmailSpan>Жіберу</SendbyEmailSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<InputErrorMsg>Рұқсат етілмеген символ енгізілген</InputErrorMsg>
+<IntervalErrorMsg>Аралық рұқсат етілмейді  ( 1-1440 )</IntervalErrorMsg>
+<SettingSpan>E-mail баптауы</SettingSpan>
+<StatusSpan>Статус:</StatusSpan>
+<AutoSnapEnableSpan>Қосу</AutoSnapEnableSpan>
+</autosnaphtml>
+
+<timehtml>
+<Sunday>Su</Sunday>
+<Monday>Mo</Monday>
+<Tuesday>Tu</Tuesday>
+<Wednesday>We</Wednesday>
+<Thursday>Th</Thursday>
+<Friday>Fr</Friday>
+<Saturday>Sa</Saturday>
+<Januar>Қаңтар </Januar>
+<Februar>Ақпан </Februar>
+<Marts>Наурыз </Marts>
+<April>Сәуір </April>
+<Maj>Мамыр </Maj>
+<Juni>Маусым </Juni>
+<Juli>Шілде </Juli>
+<August>Август </August>
+<September>Қыркүйек </September>
+<Oktober>Қазан </Oktober>
+<November>Қараша </November>
+<December>Желтоқсан </December>
+<AdjustSpan>Реттеу:</AdjustSpan>
+<CameradatetimeSpan>Күн және уақыт:</CameradatetimeSpan>
+<SetmodeSpan>Тәртіп:</SetmodeSpan>
+<SetmodeKeepcurrentsettingSpan>Ағымдағы баптауларды сақтау</SetmodeKeepcurrentsettingSpan>
+<SetmodeManualsettingSpan>Басшылық</SetmodeManualsettingSpan>
+<SetmodeManualsettingDateSpan>Күн :</SetmodeManualsettingDateSpan>
+<SetmodeManualsettingTimeSpan>Уақыт:</SetmodeManualsettingTimeSpan>
+<SetmodeSyncwithcomputerSpan>Компьютермен сәйкес келуі</SetmodeSyncwithcomputerSpan>
+<SetmodeSyncwithcomputerPCTimeSpan>Компьютердің уақыты:</SetmodeSyncwithcomputerPCTimeSpan>
+<SetmodeSyncwhitntpSpan>NTP-мен сәйкес келуі</SetmodeSyncwhitntpSpan>
+<SetmodeSyncwhitntpNTPservernameSpan>Сервердің аты:</SetmodeSyncwhitntpNTPservernameSpan>
+<SetmodeSyncwhitntpIntervalSpan>Аралық:</SetmodeSyncwhitntpIntervalSpan>
+<SetmodeSyncwhitntpIntervalhourSpan>Сағат</SetmodeSyncwhitntpIntervalhourSpan>
+<TimezoneSpan>Уақыт белдеуі:</TimezoneSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<TimezoneKeepcurrentsettingSpan>Ағымдағы баптауларды сақтау</TimezoneKeepcurrentsettingSpan>
+<TimezoneInternationalDateLineWestSpan>(GMT- 12 : 00) Халықаралық сызық</TimezoneInternationalDateLineWestSpan>
+<TimezoneMidwayIslandSamoaSpan> (GMT- 11 : 00)  Мидуэй аралы, Самоа</TimezoneMidwayIslandSamoaSpan>
+<TimezoneHawaiiSpan>(GMT- 10 : 00) Гавайи</TimezoneHawaiiSpan>
+<TimezoneAlaskaSpan> (GMT- 09 : 00) Аляска</TimezoneAlaskaSpan>
+<TimezonePacificTimeUSCanadaTijuanaSpan>(GMT- 08: 00) Тынық мұхиты уақыты (АҚШ и Канада) Тихуана</TimezonePacificTimeUSCanadaTijuanaSpan>
+<TimezoneMountainTimeUSCanadaSpan> (GMT-07 : 00) Тау уақыты (АҚШ и Канада)</TimezoneMountainTimeUSCanadaSpan>
+<TimezoneChihuahuaLaPazMazatlanSpan> (GMT-07 : 00) Чиуауа, Лапас , Мазатлан</TimezoneChihuahuaLaPazMazatlanSpan>
+<TimezoneArizonaSpan>(GMT-07 : 00) Аризона</TimezoneArizonaSpan>
+<TimezoneSaskatchewanSpan> (GMT-06 : 00) Саскачеван</TimezoneSaskatchewanSpan>
+<TimezoneGuaddlajaraMexicoCityMonterreySpan>(GMT-06 : 00) Гуадахара , Мехико , Монтеррей</TimezoneGuaddlajaraMexicoCityMonterreySpan>
+<TimezoneCentralTimeUSCanadaSpan> (GMT-06 : 00) Орталық уақыт (АҚШ и Канада)</TimezoneCentralTimeUSCanadaSpan>
+<TimezoneCentralAmericaSpan> (GMT- 06: 00 ) Орталық Америка</TimezoneCentralAmericaSpan>
+<TimezoneIndianaEastSpan>GMT-05 : 00) Индиана (Шығыс)</TimezoneIndianaEastSpan>
+<TimezoneEasternTimeUSCanadaSpan> (GMT-05 : 00) Шығыс уақыты АҚШ канада</TimezoneEasternTimeUSCanadaSpan>
+<TimezoneBogotaLimaQuitoSpan> (GMT-05 : 00) Богота, Лима, Кито</TimezoneBogotaLimaQuitoSpan>
+<TimezoneSantiagoSpan>(GMT-04 : 00) Сантьяго</TimezoneSantiagoSpan>
+<TimezoneCaracasLaPazSpan>(GMT-04 : 00) Каракас , Ла-Пас</TimezoneCaracasLaPazSpan>
+<TimezoneAtlanticTimeCanadaSpan>(GMT-04 : 00) Атлант мұхиты уақыты (Канада)</TimezoneAtlanticTimeCanadaSpan>
+<TimezoneNenfoundLandSpan>(GMT- 03: 30) NenfoundLand</TimezoneNenfoundLandSpan>
+<TimezoneGreenlandSpan> (GMT- 03: 00) Гренландия</TimezoneGreenlandSpan>
+<TimezoneBuenosAiresGeorgentownSpan> (GMT- 03: 00) Буэнос-Айрес, Джорджтаун</TimezoneBuenosAiresGeorgentownSpan>
+<TimezoneBrasiliaSpan>(GMT- 03: 00) Бразилия</TimezoneBrasiliaSpan>
+<TimezoneMidAtlanticSpan>(GMT- 02 : 00) Орталық-Атлант мұхиты</TimezoneMidAtlanticSpan>
+<TimezoneCapeVerdeIsSpan>(GMT- 01 : 00) Жасыл Мыс аралы</TimezoneCapeVerdeIsSpan>
+<TimezoneAzoresSpan>(GMT- 01 : 00) Азор аралдары</TimezoneAzoresSpan>
+<TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan>(GMT- 00: 00 ) Уақыт Гринвичпен : Дублин, Эдинбург , Лиссабон , Лондон</TimezoneGreenwichMeanTimeDublinEdinburghLisbonLondonSpan>
+<TimezoneCasablancamonroviaSpan>(GMT +00:00) Касабланкасонровия</TimezoneCasablancamonroviaSpan>
+<TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan>(GMT +01:00) Амстердам Берлін Берн Рим Стокгольм Виенна</TimezoneAmsterdamBerlinBernRomeStockholmViennaSpan>
+<TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan>(GMT +01:00) Белград, Братислава, Будапешт, Любляна , Прага</TimezoneBelgradeBratislavaBudapestLjubljanaPragueSpan>
+<TimezoneBrusselsCopenhagenMadridParisSpan>(GMT +01:00) Брюссель, Копенгаген , Мадрид, Париж</TimezoneBrusselsCopenhagenMadridParisSpan>
+<TimezoneSarajevoSkopjeWarsawZagrebSpan>(GMT +01:00) Сараево , Скопье, Варшава, Загреб</TimezoneSarajevoSkopjeWarsawZagrebSpan>
+<TimezoneWestCentralAfricaSpan>(GMT +01:00 ) Батыс Орталық Африкеа</TimezoneWestCentralAfricaSpan>
+<TimezonehensIstanbulMinskSpan>(GMT +02:00) кур , Стамбул, Минск</TimezonehensIstanbulMinskSpan>
+<TimezoneBucharestSpan>(GMT +02:00) Бухарест</TimezoneBucharestSpan>
+<TimezoneCairoSpan>(GMT +02:00 ) Каир</TimezoneCairoSpan>
+<TimezonerarePretoriaSpan>(GMT +02:00) Хараре , Претория</TimezonerarePretoriaSpan>
+<TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan>(GMT +02:00 ) Хельсинки, Киев, Рига, София, Таллин, Вильнюс</TimezoneHelsinkiKyivRigaSofiaTallinnVilniusSpan>
+<TimezoneJerusalemSpan>(GMT +02:00 ) Иерусалим</TimezoneJerusalemSpan>
+<TimezoneBaghdadSpan>GMT +03:00) Бағдад</TimezoneBaghdadSpan>
+<TimezoneKuwaitRiyadhSpan>(GMT +03:00) Кувейт, Эр-Рияд</TimezoneKuwaitRiyadhSpan>
+<TimezoneMoscowStPetersburgVolgogradSpan>(GMT +03:00) Мәскеу, Санкт-Петербург, Волгоград</TimezoneMoscowStPetersburgVolgogradSpan>
+<TimezoneNairobiSpan>(GMT +03:00 ) Найроби</TimezoneNairobiSpan>
+<TimezoneTehranSpan> (GMT +03:30 ) Тегеран</TimezoneTehranSpan>
+<TimezoneAbuDhabiMuscatSpan>(GMT +04:00) Абу-Даби, Маскат</TimezoneAbuDhabiMuscatSpan>
+<TimezoneBakuTbilisiYerevanSpan> (GMT +04:00) Баку, Тбилиси , Ереван</TimezoneBakuTbilisiYerevanSpan>
+<TimezoneKabulSpan>GMT +04:30 ) Кабул</TimezoneKabulSpan>
+<TimezoneEkaterinburgSpan> (GMT +05:00) Екатеринбург</TimezoneEkaterinburgSpan>
+<TimezoneIslamabadKarachiTashkentSpan>(GMT +05:00) Исламабад , Карачи, Ташкент</TimezoneIslamabadKarachiTashkentSpan>
+<TimezoneChennaiKolkataMumbaiNewDelhiSpan>MT +05:30 ) Ченнаи, Калькутте , Мумбаи, ЖаңаДели</TimezoneChennaiKolkataMumbaiNewDelhiSpan>
+<TimezoneKathmanduSpan>(GMT +05:45 ) Катманду</TimezoneKathmanduSpan>
+<TimezoneAlmatyNovosibirskSpan>( GMT +06:00 ) Алматы, Новосибирск</TimezoneAlmatyNovosibirskSpan>
+<TimezoneAstanaDhakaSpan>( GMT +06:00 ) Астана Дакка</TimezoneAstanaDhakaSpan>
+<TimezoneSriJayawardenepuraSpan>( GMT +06:00 ) SriJayawardenepura</TimezoneSriJayawardenepuraSpan>
+<TimezoneRangoonSpan>(GMT +06:30 ) Рангун</TimezoneRangoonSpan>
+<TimezoneBangkokHanoiJakartaSpan>(GMT +07:00 )Бангкок Ханой Жакарта</TimezoneBangkokHanoiJakartaSpan>
+<TimezoneKrasnoyarskSpan>(GMT +07:00 ) Красноярск</TimezoneKrasnoyarskSpan>
+<TimezoneBeijingChongqingHongKongUrumqiSpan>(GMT +08:00) Бежін Чунцин , Гонконг, Үрімші</TimezoneBeijingChongqingHongKongUrumqiSpan>
+<TimezoneIrkutskUlaanBataarSpan>(GMT +08:00) Иркутск , Ұлан- Батыр</TimezoneIrkutskUlaanBataarSpan>
+<TimezoneKualaLumpurSingaporeSpan>(GMT +08:00) Куала-Лумпур , Сингапур</TimezoneKualaLumpurSingaporeSpan>
+<TimezonePerthSpan>(GMT +08:00) Перт</TimezonePerthSpan>
+<TimezoneTaipeiSpan>(GMT +08:00) Тайбэй</TimezoneTaipeiSpan>
+<TimezoneOsakaSapporoTokyoSpan>(GMT +09:00 ) ОсакаСаппороТокио</TimezoneOsakaSapporoTokyoSpan>
+<TimezoneSeoulSpan>(GMT +09:00 ) Сеуіл</TimezoneSeoulSpan>
+<TimezoneYakutskSpan>(GMT +09:00 ) Якутск</TimezoneYakutskSpan>
+<TimezoneAdelaideSpan>(GMT +09:30 ) Аделаида</TimezoneAdelaideSpan>
+<TimezoneBrisbaneSpan>(GMT +10:00 ) Брисбен</TimezoneBrisbaneSpan>
+<TimezoneCanberraMelbourneSydneySpan>(GMT +10:00 ) Канберра, Мельбурн, Сидней</TimezoneCanberraMelbourneSydneySpan>
+<TimezoneGuamPortMoresbySpan>(GMT +10:00 ) Гуам, Порт-Морсби</TimezoneGuamPortMoresbySpan>
+<TimezoneHobartSpan>(GMT +10:00 ) Хобарт</TimezoneHobartSpan>
+<TimezoneVladivostokSpan>(GMT +10:00 ) Владивосток</TimezoneVladivostokSpan>
+<TimezoneMagadanSolomonIsNewSpan>(GMT +11:00 ) Магадан, SolomonIs . , Жаңа Каледония</TimezoneMagadanSolomonIsNewSpan>
+<TimezoneAucklandWellingtonSpan>(GMT +12:00 ) Окленд, Веллингтон</TimezoneAucklandWellingtonSpan>
+<TimezoneFijiKamchatkaMarshallIsSpan>(GMT +12:00 ) Фиджи , Камчатка, Махачкала .</TimezoneFijiKamchatkaMarshallIsSpan>
+<TimezoneNukualofaSpan>(GMT +13:00 ) Нукуалофе</TimezoneNukualofaSpan>
+<AutomaticallyadjustclockfordaylightsavingtimechangesSpan>Жазғы маусым уақытына өту үшін автоматты түрде уақытты түзету</AutomaticallyadjustclockfordaylightsavingtimechangesSpan>
+<YearErrorMsg>Уақыт пен күн дұрыс орнатылмаған, уақыт пен күн осы аралықта болу керек 01.01.1971 31.12.2036</YearErrorMsg>
+<NtpErrorMsg>NTP сервердің атын енгізініз</NtpErrorMsg>
+<NtpServerErrorMsg>NTP-сервер дұрыс енгізілмеген</NtpServerErrorMsg>
+</timehtml>
+
+
+
+<initializemainhtml>
+<InitializeSpan>Инициаландыру </InitializeSpan>
+<RebootSpan>Жүктелу:</RebootSpan>
+<FactorydefaultSpan>Зауыттық орнатылым:</FactorydefaultSpan>
+<BackupsettingdataSpan>Резервтік көшірілім:</BackupsettingdataSpan>
+<BackupsettingdataSaveSpan>Резервтік көшірілім. Сақтау</BackupsettingdataSaveSpan>
+<RestoreSpan>Бастапқы қалпына келтіру:</RestoreSpan>
+<Restorebrower>Браузер...</Restorebrower>
+<RestoreOKSpan>Қолдану</RestoreOKSpan>
+<UpgradeSpan>Жетілдіру:</UpgradeSpan>
+<UpgradeOKSpan>Қолдану</UpgradeOKSpan>
+<RebootOKSpan>Қолдану</RebootOKSpan>
+<FactoryOKSpan>Қолдану</FactoryOKSpan>
+<Upgradebrower>Браузер...</Upgradebrower>
+<RebootMsg>IP камера жүктеледі. Сіз сенімдісіз ба?</RebootMsg>
+<RebootWaitMsg>IP камера жүктеліп жатыр, камераны өщірмеңіз</RebootWaitMsg>
+<ResetMsg>Осы баптаулар инициаланады. Сіз сенімдісіз ба?</ResetMsg>
+<InputFileMsg>Файлға кіретін жолды нұсқаныз</InputFileMsg>
+<UpgradeMsg>IP камера жаңартылады. Сіз сенеімдісіз ба?</UpgradeMsg>
+<UpgradeWaitMsg>IP камера жетілдіреді, камераны өшірмеңіз</UpgradeWaitMsg>
+<UploadMsg>IP камера жүктелінеді. Сіз сенімдісіз ба?</UploadMsg>
+<UploadWaitMsg>IP камера жұмысы жүктеліп жатыр , камераны өщірмеңіз</UploadWaitMsg>
+<RebootOKSpan>Жақсы</RebootOKSpan>
+<ResetOKSpan>Жақсы</ResetOKSpan>
+</initializemainhtml>
+
+
+
+
+<deviceinfohtml>
+<DeviceinfoSpan>Құрылғы туралы мәлімет</DeviceinfoSpan>
+<CameranameSpan>Камераның атауы</CameranameSpan>
+<SerialNumberSpan>Серийялық номері:</SerialNumberSpan>
+<CameraTypeSpan>Камераның түрі:</CameraTypeSpan>
+<connectionSpan>Қосылу:</connectionSpan>
+<SoftwareVersionSpan>Ақпараттық қамсыздандыру версиясы</SoftwareVersionSpan>
+<NetworkInfoSpan>Желі туралы ақпарат</NetworkInfoSpan>
+<MacaddressSpan>Мак:</MacaddressSpan>
+<IPaddressSpan>IP:</IPaddressSpan>
+<SubnetmaskSpan>Маска қалқаны:</SubnetmaskSpan>
+<GatewaySpan>Шлюз:</GatewaySpan>
+<PrimaryDNSSpan>Алғашқы DNS:</PrimaryDNSSpan>
+<SecondaryDNSSpan>Екінші DNS:</SecondaryDNSSpan>
+<StartTimeSpan>Уақыттың басы:</StartTimeSpan>
+<HardVersionSpan>Қатты Ver:</HardVersionSpan>
+</deviceinfohtml>
+
+<basehtml>
+<LanguageSpan>Тіл:</LanguageSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+</basehtml>
+
+<sysloghtml>
+<syslogcleanspan>Тазалау</syslogcleanspan>
+<gotospan>Бетке:</gotospan>
+<syslogFirstspan>Бірінші</syslogFirstspan>
+<syslogUpspan>Алдыңғы</syslogUpspan>
+<syslogDownspan>Келесі</syslogDownspan>
+<syslogEndspan>Соңғы </syslogEndspan>
+<syslogBackupspan>Резервті көшірілім</syslogBackupspan>
+<SearchSpan>Іздеу</SearchSpan>
+<SearchTimeSpan>Уақыт:</SearchTimeSpan>
+<SearchTypeSpan>Түр:</SearchTypeSpan>
+<SearchTypeAllSpan>Бәрі</SearchTypeAllSpan>
+<SearchTypeAlarmSpan>Алаңдаушылық</SearchTypeAlarmSpan>
+<SearchTypeOperationSpan>Операция</SearchTypeOperationSpan>
+<TabelNumSpan>Сан</TabelNumSpan>
+<TabelTimeSpan>Уақыт</TabelTimeSpan>
+<TabelTypeSpan>Түр</TabelTypeSpan>
+<TabelDetailedSpan>Нақты</TabelDetailedSpan>
+<MsgStartup>Желілік камераның жүктелуі</MsgStartup>
+<MsgModifyTime>Уақытты өзгерту</MsgModifyTime>
+<MsgRomoteLogin>Өшірілген тіркеу</MsgRomoteLogin>
+<MsgSendEmail>E -Mail-ді жіберу</MsgSendEmail>
+<MsgTimeRecord>Жазбаның басталуының уақыты</MsgTimeRecord>
+<MsgManualRecord>Жазба басталуының басы</MsgManualRecord>
+<MsgAlarmRecord>Алаңдаушылық бойынша жазбаны бастау</MsgAlarmRecord>
+<MsgModifyNetwork>Желіні өзгерту</MsgModifyNetwork>
+<MsgIOAlarmIn>IO -  алаңдаушылықтар</MsgIOAlarmIn>
+<MsgIOAlarmOut>IO Alarm Out</MsgIOAlarmOut>
+<MsgMDAlarmStart>Қозғалыстың басын анықтайтын  дабылдар</MsgMDAlarmStart>
+<MsgMDAlarmEnd>Қозғалыстың соңын анықтайтын дабылдар </MsgMDAlarmEnd>
+<MsgODAlarmStart>Алаңдаушылық қосылғанын анықтайтын окклюзия</MsgODAlarmStart>
+<MsgODAlarmEnd>Соңын анықтайтын окклюзия дабылдары</MsgODAlarmEnd>
+<Sunday>Su</Sunday>
+<Monday>Mo</Monday>
+<Tuesday>Tu</Tuesday>
+<Wednesday>We</Wednesday>
+<Thursday>Th</Thursday>
+<Friday>Fr</Friday>
+<Saturday>Sa</Saturday>
+<Januar>Қаңтар </Januar>
+<Februar>Ақпан </Februar>
+<Marts>Наурыз </Marts>
+<April>Сәуір </April>
+<Maj>Мамыр </Maj>
+<Juni>Маусым </Juni>
+<Juli>Шілде </Juli>
+<August>Август </August>
+<September>Қыркүйек </September>
+<Oktober>Қазан </Oktober>
+<November>Қараша </November>
+<December>Желтоқсан </December>
+<ErrorTime>Қате!</ErrorTime>
+</sysloghtml>
+
+<ptzhtml>
+<PropertySpan>Меншік</PropertySpan>
+<ProtocolSpan>Хаттама:</ProtocolSpan>
+<BaudRateSpan>Мәліметтер алмасуының жылдамдығы:</BaudRateSpan>
+<DataBitSpan>Мәліметтер биті:</DataBitSpan>
+<StopBitSpan>Тоқта-бит:</StopBitSpan>
+<ParitySpan>Жұптылық:</ParitySpan>
+<AddressSpan>Адрес:</AddressSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<addressErrorMsg>Адрес аралық ( 0 ~ 255 )</addressErrorMsg>
+<FilpSpan>Сәуле түс:</FilpSpan>
+<MirrorSpan>Айна:</MirrorSpan>
+<FlipOnSpan>Қосу</FlipOnSpan>
+<FlipOffSpan>Өшіру</FlipOffSpan>
+<MirrorOnSpan>Қосу</MirrorOnSpan>
+<MirrorOffSpan>Өшіру</MirrorOffSpan>
+</ptzhtml>
+
+<odhtml>
+<OcclusionSpan>Окклюзия анықталуы</OcclusionSpan>
+<StatusSpan>Статус:</StatusSpan>
+<EnableSpan>Қосу</EnableSpan>
+<SensibilitySpan>Сезімділік:</SensibilitySpan>
+<SensibilityveryhighSpan>Өте жоғары</SensibilityveryhighSpan>
+<SensibilityhighSpan>Жоғары</SensibilityhighSpan>
+<SensibilitynormalSpan>Бір қалыпты</SensibilitynormalSpan>
+<SensibilitylowSpan>Төмен</SensibilitylowSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+</odhtml>
+
+<recordhtml>
+<RecordSpan>Жазба</RecordSpan>
+<FileTimeSpan>Файл уақыт:</FileTimeSpan>
+<Filetime0Span>Жабу</Filetime0Span>
+<MinuteSpan>Минут</MinuteSpan>
+<ManualRecordSpan>Қол жазба:</ManualRecordSpan>
+<manualrecOnSpan>Қосу</manualrecOnSpan>
+<manualrecOffSpan>Өшіру</manualrecOffSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<NoStorageMsg>SD-карт жоқ</NoStorageMsg>
+</recordhtml>
+
+<storagehtml>
+<SdcardInfoSpan>SD Card ақпарат</SdcardInfoSpan>
+<StatusSpan>Статус:</StatusSpan>
+<sdstatusMsg>Дайыны жоқ</sdstatusMsg>
+<refresh>Жаңару</refresh>
+<removeBT>Жою</removeBT>
+<mountBT>Құрастыру</mountBT>
+<frt>Үлгі</frt>
+<brower>Браузер...</brower>
+<SDCardFormatMsg>SD-карта мәліметтері жоғалады. Сіз сенімдісіз ба?</SDCardFormatMsg>
+<SDCardRemoveMsg>SD-карта мәліметтері жойылады. Сіз сенімдісіз ба?</SDCardRemoveMsg>
+<SDCardWaitMsg>SD-карта форматталады, камераны өшірмеңіз</SDCardWaitMsg>
+</storagehtml>
+
+<loginhtml>
+<LanguageSpan>Тіл:</LanguageSpan>
+<StreamTypeSpan>Түйдек:</StreamTypeSpan>
+<streamHDSpan>Негізгі түйдек</streamHDSpan>
+<streamFluentSpan>Кіші түйдек</streamFluentSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<DownloadSpan>Плеерді жазу</DownloadSpan>
+</loginhtml>
+
+<wifihtml>
+<WifiStatusSpan>Статус Wi-Fi :</WifiStatusSpan>
+<WifiEnableSpan>Қосу</WifiEnableSpan>
+<CurHotPointSpan>CurHotPoint</CurHotPointSpan>
+<CurHotPointSSIDSpan>SSID:</CurHotPointSSIDSpan>
+<CurHotPointStatusSpan>Қосылу күйін тексеру</CurHotPointStatusSpan>
+<ConfSSIDSpan>SSID:</ConfSSIDSpan>
+<AuthModeSpan>Auth режимі:</AuthModeSpan>
+<WPAPSKKeySpan>Пароль:</WPAPSKKeySpan>
+<ShowPasswordSpan>Парольді көрсету</ShowPasswordSpan>
+<SearchResultHeadSignalSpan>Дабыл</SearchResultHeadSignalSpan>
+<SearchResultHeadSSIDSpan>SSID</SearchResultHeadSSIDSpan>
+<SearchResultHeadAuthModeSpan>Auth Mode</SearchResultHeadAuthModeSpan>
+<SearchResultHeadSearchSpan>Іздеу</SearchResultHeadSearchSpan>
+<TestSpan>Тест</TestSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<DisconnectSpan>Өшірулі</DisconnectSpan>
+<ConnectSpan>Қосылулы</ConnectSpan>
+<TestConnectSpan>Қосылу, біраз секунд күте тұрыңыз</TestConnectSpan>
+<TestConnectSuccessSpan>Қосылды</TestConnectSuccessSpan>
+<TestConnectFailureSpan>Қосылмады</TestConnectFailureSpan>
+</wifihtml>
+
+<p2phtml>
+<P2PSpan>P2P:</P2PSpan>
+<P2PStatusSpan>Статус:</P2PStatusSpan>
+<p2pEnableSpan>Қосу</p2pEnableSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<P2PIDSpan>ID:</P2PIDSpan>
+<P2PPwdSpan>Пароль:</P2PPwdSpan>
+</p2phtml>
+
+<hltalmproxyhtml>
+<StreamEnableSpan>Сервер қосылулы:</StreamEnableSpan>
+<StreamTypeSpan>Түйдек түрі:</StreamTypeSpan>
+<MainStramSpan>Негізгі түйдек</MainStramSpan>
+<SubStreamSpan>Қосымша түйдек</SubStreamSpan>
+<StreamAddressSpan>Сервер адресі:</StreamAddressSpan>
+<ServerPortSpan>Сервер порты:</ServerPortSpan>
+<UsernameSpan>Пайдаланушының аты:</UsernameSpan>
+<PasswordSpan>Пароль:</PasswordSpan>
+<TimeoutSpan>Уақыт аяқталды:</TimeoutSpan>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<PlatformSetSpan>Платформа баптауы</PlatformSetSpan>
+<RebootMsgSpan>Параметрлер өзгеруі үшін  жүктеңіз</RebootMsgSpan>
+</hltalmproxyhtml>
+
+<replayhtml>
+<PlaySpan>Жүргізу </PlaySpan>
+<PauseSpan>Пауза</PauseSpan>
+<FramePlaySpan>Жүргізу рамкасы</FramePlaySpan>
+<FastPlaySpan>Тез жүргізу</FastPlaySpan>
+<StopSpan>Тоқтату</StopSpan>
+<FileListSpan>Файлдар тізімі:</FileListSpan>
+<CommonSpan>Жалпы</CommonSpan>
+<AlarmSpan>Қауып-қатер</AlarmSpan>
+<AllTypeSpan>All</AllTypeSpan>
+<SearchResultHeadSSIDSpan>Time</SearchResultHeadSSIDSpan>
+<SearchResultHeadAuthModeSpan>Мөлшер</SearchResultHeadAuthModeSpan>
+<dayNamesMinSunday>Su</dayNamesMinSunday>
+<dayNamesMinMonday>Mo</dayNamesMinMonday>
+<dayNamesMinTuesday>Tu</dayNamesMinTuesday>
+<dayNamesMinWednesday>We</dayNamesMinWednesday>
+<dayNamesMinThursday>Th</dayNamesMinThursday>
+<dayNamesMinFriday>Fr</dayNamesMinFriday>
+<dayNamesMinSaturday>Sa</dayNamesMinSaturday>
+<dayNamesSunday>Жексенбі</dayNamesSunday>
+<dayNamesMonday>Дүйсенбі</dayNamesMonday>
+<dayNamesTuesday>Сейсенбі</dayNamesTuesday>
+<dayNamesWednesday>Сәрсенбі</dayNamesWednesday>
+<dayNamesThursday>Бейсенбі</dayNamesThursday>
+<dayNamesFriday>Жұма</dayNamesFriday>
+<dayNamesSaturday>Сенбі</dayNamesSaturday>
+<dayNamesShortSunday>Sun</dayNamesShortSunday>
+<dayNamesShortMonday>Mon</dayNamesShortMonday>
+<dayNamesShortTuesday>Tue</dayNamesShortTuesday>
+<dayNamesShortWednesday>Wed</dayNamesShortWednesday>
+<dayNamesShortThursday>Thu</dayNamesShortThursday>
+<dayNamesShortFriday>Fri</dayNamesShortFriday>
+<dayNamesShortSaturday>Sat</dayNamesShortSaturday>
+<monthNamesJanuar>Қаңтар</monthNamesJanuar>
+<monthNamesFebruar>Ақпан</monthNamesFebruar>
+<monthNamesMarts>Наурыз</monthNamesMarts>
+<monthNamesApril>Сәуір</monthNamesApril>
+<monthNamesMaj>Мамыр</monthNamesMaj>
+<monthNamesJuni>Маусым</monthNamesJuni>
+<monthNamesJuli>Шілде</monthNamesJuli>
+<monthNamesAugust>Август</monthNamesAugust>
+<monthNamesSeptember>Қыркүйек</monthNamesSeptember>
+<monthNamesOktober>Қазан</monthNamesOktober>
+<monthNamesNovember>Қараша</monthNamesNovember>
+<monthNamesDecember>Желтоқсан</monthNamesDecember>
+<monthNamesShortJanuar>Jan</monthNamesShortJanuar>
+<monthNamesShortFebruar>Feb</monthNamesShortFebruar>
+<monthNamesShortMarts>Mar</monthNamesShortMarts>
+<monthNamesShortApril>Apr</monthNamesShortApril>
+<monthNamesShortMaj>May</monthNamesShortMaj>
+<monthNamesShortJuni>Jun</monthNamesShortJuni>
+<monthNamesShortJuli>Jul</monthNamesShortJuli>
+<monthNamesShortAugust>Aug</monthNamesShortAugust>
+<monthNamesShortSeptember>Sep</monthNamesShortSeptember>
+<monthNamesShortOktober>Oct</monthNamesShortOktober>
+<monthNamesShortNovember>Nov</monthNamesShortNovember>
+<monthNamesShortDecember>Dec</monthNamesShortDecember>
+<closeText>close</closeText>
+<prevText>prev</prevText>
+<nextText>next</nextText>
+<weekHeader>Wk</weekHeader>
+<yearSuffix></yearSuffix>
+</replayhtml>
+
+<ftphtml>
+<ServerSpan>Сервер:</ServerSpan>
+<PortSpan>Порт:</PortSpan>
+<UserSpan>Пайдаланушы:</UserSpan>
+<PasswdSpan>Пароль:</PasswdSpan>
+<TestSpan>Тест</TestSpan>
+<PortErrMsg>Порт қатесі</PortErrMsg>
+<ApplySpan>Қолдану</ApplySpan>
+<CancelSpan>Бұйрықты бұзу</CancelSpan>
+<TestConnectSpan>Тестен өтіп жатыр, біраз секунд күте тұр</TestConnectSpan>
+<TestConnectSuccessSpan>Тест жақсы өтті!</TestConnectSuccessSpan>
+<TestConnectFailureSpan>Тест нашар  өтті!</TestConnectFailureSpan>
+</ftphtml>
+
+</kk>

@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Video Mobile</title>
+<meta http-equiv="Content-Type" content="text/html">
+<script language="javascript">
+<!--
+var img = new Image();
+var imgObj;
+
+function preload()
+{
+	img.src='tmpfs/auto.jpg?'+new Date;
+}
+
+function changesrc()
+{
+	img1.src=img.src;
+	preload();
+	setTimeout(changesrc,3500);
+}
+
+function update()
+{
+	imgObj = document.getElementById('img1');
+	
+	imgObj.src = img.src;
+	img.src = "tmpfs/auto.jpg?" + (new Date()).getTime();
+}
+
+function takeError()
+{
+	img.src = "tmpfs/auto.jpg?" + (new Date()).getTime();
+}
+
+function startonload()
+{
+	img.src = "tmpfs/auto.jpg?" + (new Date()).getTime();
+	img.onerror=takeError;
+	img.onload=update;
+}
+
+function load()
+{
+	if (navigator.appName.indexOf("Microsoft IE Mobile") != -1)
+	{
+		preload();
+		changesrc();
+		return;
+	}
+	startonload();
+}
+
+//-->
+</script>
+</head>
+<body onload="load()">
+<form name="form1" method="get" target="test">
+</form>
+<p> 
+<input type="button" value="Refresh" name="B4" onclick="location.reload()"></p>
+<p><img id="img1" border="0" src="tmpfs/auto.jpg"></p>
+<iframe name="test" style="none" width="0" height="0"></iframe>
+</body>
+</html>

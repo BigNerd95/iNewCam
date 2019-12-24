@@ -1,0 +1,632 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+
+<style type="text/css">
+</style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getsmtp" type="text/javascript"></script>
+
+<script language="javascript">
+
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+      
+   setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+function ValidEmail(itemc) 
+ {
+  if (itemc.value.length>0)
+   {
+    
+    if (itemc.value.length < 6)
+    {
+    	alert(emailAddrErrorMsg);
+    	itemc.select();
+    	return false;
+    }
+    
+     if ((itemc.value.indexOf('@',0) == -1) || (itemc.value.indexOf("'",0) != -1))
+    {
+   	   alert(emailAddrError1Msg);
+    	 itemc.select();
+    	 return false;
+    }
+    }
+  }
+
+function checkProhibitedCharacter2 (obj, string )
+{
+	if( string.search(/[^a-zA-Z0-9_\!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\\\]\^\`\{\|\}\~\s]/) != -1 )
+	{
+		obj.select();
+		alert(emailInputErrorMsg);
+		return false;
+	}
+	else if(( string.search("\/") != -1 )||( string.search(/\\/) != -1 )||( string.search(":") != -1 )
+			||( string.search("&") != -1 )||( string.search("=") != -1 )||( string.search("\"") != -1 ))
+	{
+		obj.select();
+		alert(emailInputErrorMsg+"(:,&,=,\"\,\\\,\/)");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function on_load()
+{
+	var form=document.form1;
+	form.stmpname.value=emailserver;
+	
+	if(logintype==3 )
+	{
+		form.authentication[1].checked="true";
+	}
+	else
+	{
+		form.authentication[0].checked="true";
+	}
+	
+	form.smtpport.value = emailport;
+	if(ssl == 1)
+	{
+		form.sslcheck.checked = true;
+	}
+	else
+	{
+		form.sslcheck.checked = false;
+	}
+	
+	form.username.value=emailusername;
+	form.password.value=emailpassword;
+	splits = to.split(",");
+	
+	if(splits.length>=1)
+		form.address1.value=splits[0];
+		
+	if(splits.length>=2)
+	form.address2.value=splits[1];
+	
+	if(splits.length>=3)
+		form.address3.value=splits[2];
+		
+	if(splits.length == 0)
+	{
+		form.address1.value = "";
+		form.address2.value = "";
+		form.address3.value = "";
+	}	
+	
+	form.fromaddress.value=from;
+	form.subject.value=subject;
+	form.message.value=text;
+	
+	do_FimeName();
+}
+
+function do_FimeName()
+{
+	var form=document.form1;
+	if(form.authentication[0].checked==true)
+	{
+		document.getElementById('AuthenticationLayer').style.display="block";
+	}
+	else
+	{
+		document.getElementById('AuthenticationLayer').style.display="none";
+	}
+}
+function do_submit()
+{
+	var form=document.form2;
+	var form1=document.form1;
+	
+	if(form1.stmpname.value == "")
+	{
+		alert(emailSMTPErrorMsg);
+		form1.stmpname.select();
+		return false;
+	}
+	
+	if((form1.address1.value=="")&&(form1.address2.value=="")&&(form1.address3.value==""))
+	{
+		alert(emailInputAddrMsg);
+		form1.address1.select();
+		return false;
+	}
+	
+	if(form1.fromaddress.value=="")
+	{
+		alert(emailFormAddrMsg);
+		form1.fromaddress.select();
+		return false;
+	}
+	
+	if(form1.authentication[0].checked==true)
+	{
+		if(form1.username.value == "")
+		{
+			alert(emailUserErrorMsg);
+			form1.username.select();
+			return false;
+		}
+		if(form1.password.value == "")
+		{
+			alert(emailPasswdErrorMsg);
+			form1.password.select();
+			return false;
+		}
+	}
+	
+	if(checkHankakuNoKana(form1.stmpname.value,form1.stmpname, emailServerNameErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.fromaddress.value,form1.fromaddress, emailFormAddrErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.address1.value,form1.address1, emailToAddrErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.address2.value,form1.address2, emailToAddrErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.address3.value,form1.address3, emailToAddrErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.subject.value,form1.subject, emailSubjectErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.message.value,form1.message, emailMessageErrorMsg)==false)return false;
+	//if(checkHankakuNoKana(form1.attachpath.value,form1.attachpath,"attachpath is erro.")==false)return false;
+	if(checkHankakuNoKana(form1.username.value,form1.username, emailUserInputErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.password.value,form1.password, emailPasswdInputErrorMsg)==false)return false;
+	
+	if(checkProhibitedCharacter(form1.stmpname, form1.stmpname.value )==false)return false;
+	if(checkProhibitedCharacter(form1.fromaddress, form1.fromaddress.value )==false)return false;
+	if(checkProhibitedCharacter(form1.address1, form1.address1.value )==false)return false;
+	if(checkProhibitedCharacter(form1.address2, form1.address2.value )==false)return false;
+	if(checkProhibitedCharacter(form1.address3, form1.address3.value )==false)return false;
+	if(checkProhibitedCharacter2(form1.subject, form1.subject.value )==false)return false;
+	if(checkProhibitedCharacter2(form1.message, form1.message.value )==false)return false;
+	if(checkProhibitedCharacter(form1.username, form1.username.value )==false)return false;
+	if(checkProhibitedCharacter(form1.password, form1.password.value )==false)return false;
+	
+	if( ValidEmail(form1.address1)==false)return false;
+	if( ValidEmail(form1.address2)==false)return false;
+	if( ValidEmail(form1.address3)==false)return false;
+	if( ValidEmail(form1.fromaddress)==false)return false;
+	
+	if(form1.message.value.length >255)
+	{
+		alert(emailMessageLenErrorMsg);
+		return false;
+	}
+	
+	var j;
+	var portvalue = form1.smtpport.value;
+	for(j=0;j<(portvalue.length);j++)
+	{
+		var ch=portvalue.substring(j,j+1);
+		if ("0">ch || ch>"9") 
+		{
+			alert(emailPortErrorMsg);
+			form1.smtpport.select();
+			return false;
+		}
+	}
+	
+	if((form1.smtpport.value < 1)||(form1.smtpport.value >65535))
+	{
+		alert(emailPortError1Msg);
+		form1.smtpport.select();
+		return false;
+	}
+	
+	form.cururl.value =document.URL ;
+	form.emailserver.value=form1.stmpname.value;
+	form.from.value=form1.fromaddress.value;
+	if(form1.address2.value=="")
+	{
+		str2=form1.address1.value;
+	}
+	else
+	{
+		str1=form1.address1.value.concat(",");
+		str2=str1.concat(form1.address2.value);
+	}
+	
+	if(form1.address3.value=="")
+	{
+		str4=str2;
+	}
+	else
+	{
+		str3=str2.concat(",");
+		str4=str3.concat(form1.address3.value);
+	}
+
+	form.to.value=str4;
+	if(form1.subject.value=="")
+	{
+		form.subject.value=" ";
+	}
+	else
+	{
+		form.subject.value=form1.subject.value;
+	}
+	if(form1.message.value=="")
+	{
+		form.text.value = " ";
+	}
+	else
+	{
+		form.text.value=form1.message.value;
+	}
+	
+	var area_flag;
+	
+	area_flag = 0;
+	while(form.text.value.indexOf("\r\n")>=0)
+	{
+		area_flag = 1;
+		form.text.value=form.text.value.replace("\r\n","\\r\\n");
+	}
+	
+	if (area_flag == 0)
+	{
+		while(form.text.value.indexOf("\n")>=0)
+		{
+			form.text.value=form.text.value.replace("\n","\\r\\n");
+		}
+	}
+	
+	//form.attachment.value=form1.attachpath.value;
+	if(form1.authentication[0].checked==true)
+	{
+		form.emailusername.value=form1.username.value;
+		form.emailpassword.value=form1.password.value;
+		form.logintype.value="1";
+	}
+	else
+	{
+		form.logintype.value="3";
+	}
+	
+	if(form1.sslcheck.checked == true)
+	{
+		form.ssl.value = 1;
+	}
+	else
+	{
+		form.ssl.value = 0;
+	}
+	
+	form.emailport.value = form1.smtpport.value;	
+	//Email
+	form.emailserver.name="-emailserver";
+	form.from.name="-from";
+	form.to.name="-to";
+	form.subject.name="-subject";
+	form.text.name="-text";
+	form.emailusername.name="-emailusername";
+	form.emailpassword.name="-emailpassword";
+	form.logintype.name="-logintype";
+	form.ssl.name="-ssl";
+	form.emailport.name="-emailport";
+	form.action="cgi-bin/hi3510/param.cgi";
+	form.submit(); 
+	
+	return true;
+}
+
+function do_submit_test()
+{
+	var form=document.form2;
+	var form1=document.form1;
+	var timestamp = Date.parse(new Date());  
+	
+	if(form1.stmpname.value == "")
+	{
+		alert(emailSMTPErrorMsg);
+		form1.stmpname.select();
+		return false;
+	}
+	
+	if((form1.address1.value=="")&&(form1.address2.value=="")&&(form1.address3.value==""))
+	{
+		alert(emailInputAddrMsg);
+		form1.address1.select();
+		return false;
+	}
+	
+	if(form1.fromaddress.value=="")
+	{
+		alert(emailFormAddrMsg);
+		form1.fromaddress.select();
+		return false;
+	}
+	
+	if(form1.authentication[0].checked==true)
+	{
+		if(form1.username.value == "")
+		{
+			alert(emailUserErrorMsg);
+			form1.username.select();
+			return false;
+		}
+		if(form1.password.value == "")
+		{
+			alert(emailPasswdErrorMsg);
+			form1.password.select();
+			return false;
+		}
+	}
+	
+	if(checkHankakuNoKana(form1.stmpname.value,form1.stmpname, emailServerNameErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.fromaddress.value,form1.fromaddress, emailFormAddrErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.address1.value,form1.address1, emailToAddrErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.address2.value,form1.address2, emailToAddrErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.address3.value,form1.address3, emailToAddrErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.subject.value,form1.subject, emailSubjectErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.message.value,form1.message, emailMessageErrorMsg)==false)return false;
+	//if(checkHankakuNoKana(form1.attachpath.value,form1.attachpath,"attachpath is erro.")==false)return false;
+	if(checkHankakuNoKana(form1.username.value,form1.username, emailUserInputErrorMsg)==false)return false;
+	if(checkHankakuNoKana(form1.password.value,form1.password, emailPasswdInputErrorMsg)==false)return false;
+	
+	if(checkProhibitedCharacter(form1.stmpname, form1.stmpname.value )==false)return false;
+	if(checkProhibitedCharacter(form1.fromaddress, form1.fromaddress.value )==false)return false;
+	if(checkProhibitedCharacter(form1.address1, form1.address1.value )==false)return false;
+	if(checkProhibitedCharacter(form1.address2, form1.address2.value )==false)return false;
+	if(checkProhibitedCharacter(form1.address3, form1.address3.value )==false)return false;
+	if(checkProhibitedCharacter2(form1.subject, form1.subject.value )==false)return false;
+	if(checkProhibitedCharacter2(form1.message, form1.message.value )==false)return false;
+	if(checkProhibitedCharacter(form1.username, form1.username.value )==false)return false;
+	if(checkProhibitedCharacter(form1.password, form1.password.value )==false)return false;
+	
+	if( ValidEmail(form1.address1)==false)return false;
+	if( ValidEmail(form1.address2)==false)return false;
+	if( ValidEmail(form1.address3)==false)return false;
+	if( ValidEmail(form1.fromaddress)==false)return false;
+	
+	if(form1.message.value.length >255)
+	{
+		alert(emailMessageLenErrorMsg);
+		return false;
+	}
+	
+	var j;
+	var portvalue = form1.smtpport.value;
+	for(j=0;j<(portvalue.length);j++)
+	{
+		var ch=portvalue.substring(j,j+1);
+		if ("0">ch || ch>"9") 
+		{
+			alert(emailPortErrorMsg);
+			form1.smtpport.select();
+			return false;
+		}
+	}
+	
+	if((form1.smtpport.value < 1)||(form1.smtpport.value >65535))
+	{
+		alert(emailPortError1Msg);
+		form1.smtpport.select();
+		return false;
+	}
+	
+	form.cururl.value =document.URL ;
+	form.emailserver.value=form1.stmpname.value;
+	form.from.value=form1.fromaddress.value;
+	if(form1.address2.value=="")
+	{
+		str2=form1.address1.value;
+	}
+	else
+	{
+		str1=form1.address1.value.concat(";");
+		str2=str1.concat(form1.address2.value);
+	}
+	
+	if(form1.address3.value=="")
+	{
+		str4=str2;
+	}
+	else
+	{
+		str3=str2.concat(";");
+		str4=str3.concat(form1.address3.value);
+	}
+
+	form.to.value=str4;
+	if(form1.subject.value=="")
+	{
+		form.subject.value=" ";
+	}
+	else
+	{
+		form.subject.value=form1.subject.value;
+	}
+	if(form1.message.value=="")
+	{
+		form.text.value = " ";
+	}
+	else
+	{
+		form.text.value=form1.message.value;
+	}
+	
+	var area_flag;
+	
+	area_flag = 0;
+	while(form.text.value.indexOf("\r\n")>=0)
+	{
+		area_flag = 1;
+		form.text.value=form.text.value.replace("\r\n","\\r\\n");
+	}
+	
+	if (area_flag == 0)
+	{
+		while(form.text.value.indexOf("\n")>=0)
+		{
+			form.text.value=form.text.value.replace("\n","\\r\\n");
+		}
+	}
+	
+	//form.attachment.value=form1.attachpath.value;
+	if(form1.authentication[0].checked==true)
+	{
+		form.emailusername.value=form1.username.value;
+		form.emailpassword.value=form1.password.value;
+		form.logintype.value="1";
+	}
+	else
+	{
+		form.logintype.value="3";
+	}
+	
+	if(form1.sslcheck.checked == true)
+	{
+		form.ssl.value = 1;
+	}
+	else
+	{
+		form.ssl.value = 0;
+	}
+	
+	form.emailport.value = form1.smtpport.value;	
+	//Email
+//	form.emailserver.name="-emailserver";
+//	form.from.name="-from";
+//	form.to.name="-to";
+//	form.subject.name="-subject";
+//	form.text.name="-text";
+//	form.emailusername.name="-emailusername";
+//	form.emailpassword.name="-emailpassword";
+//	form.logintype.name="-logintype";
+//	form.ssl.name="-ssl";
+//	form.emailport.name="-emailport";
+//	form.action="cgi-bin/hi3510/param.cgi";
+//	form.submit(); 
+
+	var cgiurl = "http://" + window.document.location.host + "/web/cgi-bin/hi3510/param.cgi?cmd=testsmtp"
+		cgiurl += "&-act=" + "test";
+		cgiurl += "&-emailserver=" + form.emailserver.value;
+		cgiurl += "&-from=" + form.from.value;
+		cgiurl += "&-to=" + form.to.value;
+		cgiurl += "&-subject=" + window.document.location.host + "test"
+		cgiurl += "&-text=" + "test email function";
+		cgiurl += "&-emailusername=" + form.emailusername.value;
+		cgiurl += "&-emailpassword=" + form.emailpassword.value;
+		cgiurl += "&-logintype=" + form.logintype.value;
+		cgiurl += "&-ssl=" + form.ssl.value;
+		cgiurl += "&-emailport=" + form.emailport.value;
+		cgiurl += "&-timestamp=" + timestamp;
+	
+		$("#TestMsgSpan").html(TestConnectSpan);
+        $.get(cgiurl, function(data){
+			eval(data);
+			if(("undefined" != typeof result)&&(result == "1"))$("#TestMsgSpan").html(TestConnectSuccessSpan);
+			else $("#TestMsgSpan").html(TestConnectFailureSpan);
+			},
+			 "text");
+	return true;
+}
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+
+<div style="display:block">
+  <form name="form1">
+    <h4 id="EMailSettingSpan">E-Mail Setting </h4>
+    <!----------------------------------------------------------->
+    <div> <span id="SMTPservernameSpan">SMTP server name: </span>
+      <input name="stmpname" type="text" maxlength="30" size="23">
+    </div>
+    <!----------------------------------------------------------->
+    <div> <span id="SMTPserverportSpan">SMTP server port : </span>
+      <input name="smtpport" type="text" maxlength="6" size="2" value="25">
+    </div>
+    <!----------------------------------------------------------->
+    <div> <span id="SSLSpan">SSL : </span>
+      <input type="checkbox" name="sslcheck"   value="checkbox">
+    </div>
+    <!----------------------------------------------------------->
+    <div> <span id="AuthenticationSpan">Authentication : </span>
+      <input id="authenticationOn" type="radio" name="authentication"  onclick="do_FimeName()" value="radiobutton">
+      <label for="authenticationOn" id="AuthenticationOnSpan">On</label>
+      <input id="authenticationOff" type="radio" name="authentication"  onclick="do_FimeName()" value="radiobutton">
+      <label for="authenticationOff" id="AuthenticationOffSpan">Off</label>
+    </div>
+    <!----------------------------------------------------------->
+	<div id="AuthenticationLayer">
+		<div> <span id="UsernameSpan">User name : </span>
+		  <input name="username" type="text" class="STYLE_font" size="23" maxlength="30">
+		</div>
+		<!----------------------------------------------------------->
+		<div> <span id="PasswordSpan">Password : </span>
+		  <input name="password" type="password" class="STYLE_font" size="23" maxlength="30">
+		</div>
+	</div>
+    <!----------------------------------------------------------->
+    <div> <span id="SendToSpan">Send To:&#13; </span>
+      <input name="address1" maxlength="30" type="text" size="23">
+      <label id="SendToeMailAddress1Span">(e-Mail Address 1)</label>
+    </div>
+    <!----------------------------------------------------------->
+    <div> <span id="SendToSpan2">&nbsp;&#13; </span>
+      <input name="address2" maxlength="30" type="text" size="23">
+      <label id="SendToeMailAddress2Span">(e-Mail Address 2)</label>
+    </div>
+    <!----------------------------------------------------------->
+    <div> <span id="SendToSpan3">&nbsp;&#13; </span>
+      <input name="address3" maxlength="30" type="text" size="23">
+      <label id="SendToeMailAddress3Span">(e-Mail Address 3)</label>
+    </div>
+    <!----------------------------------------------------------->
+    <div> <span id="ShowFromasSpan"> Show &quot;From&quot; as: </span>
+      <input name="fromaddress" maxlength="30" type="text" size="23">
+      <label id="ShowFromasReturneMailaddressSpan"> (Return e-Mail address)</label>
+      <a id="TestConnect" href="javascript:;" onClick="do_submit_test()" class="classname"><label id="TestSpan">Test</label></a> 
+      <label id="TestMsgSpan"></label>
+    </div>
+    <!----------------------------------------------------------->
+    <div style="display:none"> <span id="SubjectSpan">Subject:</span>
+      <input name="subject" type="text" class="STYLE_font" size="23" maxlength="30">
+    </div>
+    <!----------------------------------------------------------->
+    <div  style="display:none"> <span id="MessageSpan"  style=" float:left">Message:</span>
+      <textarea name="message" cols="50" rows="5"></textarea>
+      <label id="Messagethemaxlengthis255Span">(the max length is 255)</label>
+    </div>
+    <!----------------------------------------------------------->
+  </form>
+</div>
+
+<div style="display:none">
+  <form method="post" name="form2">
+    <input name="cmd" type="hidden" value="setsmtp">
+    <input name="cururl" type="hidden">
+    <input name="emailserver" type="hidden">
+    <input name="from" type="hidden">
+    <input name="to" type="hidden">
+    <input name="subject" type="hidden">
+    <input name="text" type="hidden">
+    <input name="logintype" type="hidden">
+    <input name="emailusername" type="hidden">
+    <input name="emailpassword" type="hidden">
+    <input name="emailport" type="hidden">
+    <input name="ssl" type="hidden">
+  </form>
+</div>
+
+<div class="ApplyLayerStyle"> <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

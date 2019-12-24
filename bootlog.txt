@@ -1,0 +1,1187 @@
+
+U-Boot 2010.06 (Oct 08 2016 - 18:19:00)
+
+Check spi flash controller v350... Found
+Spi(cs1) ID: 0xEF 0x40 0x18 0x00 0x00 0x00
+Spi(cs1): Block:64KB Chip:16MB Name:"W25Q128B"
+MMC:   MID:0x9f RBlock:512 WBlock:512 Chip:29832MB Name:"SD32G"
+SD:   Ver:2.0 High Capacity Speed:25000000Hz Bus Width:4bit
+In:    serial
+Out:   serial
+Err:   serial
+Interface:  MMC
+  Device 0: Vendor: Man 9f5449 Snr 651c7c0e Rev: 3.0 Prod: SD32G
+            Type: Removable Hard Disk
+            Capacity: 29832.0 MB = 29.1 GB (61095936 x 512)
+Partition 1: Filesystem: FAT32 ""
+cmdstr is sf probe 0;mw.b 82000000 0xff 0x1000000 
+16384 KiB hi_sfc at 0:0 is now current device
+reading gz_upgrade.ov
+gz_upgrade.ov not found  0xffffffff
+UpgradeSoftware:eee6ba3e
+ROOTFS_STARTADDR 582c0000 ROOTFS_ENDADDR 58f00000 
+UpgradeSoftware:eee6ba3e
+Check start addr invalid(0xeee6ba3e)
+checkupgrade no need upgrade
+Hit any key to stop autoboot:  1  0 
+Unknown command 'upgrade' - try 'help'
+16384 KiB hi_sfc at 0:0 is now current device
+
+## Booting kernel from Legacy Image at 82000000 ...
+   Image Name:   Linux-3.0.8
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2619844 Bytes = 2.5 MiB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Linux version 3.0.8 (lvzhuqing@gaozhi99) (gcc version 4.4.1 (Hisilicon_v100(gcc4.4-290+uclibc_0.9.32.1+eabi+linuxpthread)) ) #4 Tue Mar 10 14:53:24 CST 2015
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+CPU: VIVT data cache, VIVT instruction cache
+Machine: hi3518
+Memory policy: ECC disabled, Data cache writeback
+AXI bus clock 200000000.
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 11684
+Kernel command line: mem=46M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=jffs2 mtdparts=hi_sfc:256K(boot),2560K(kernel),12544K(rootfs),64K(key),960K(config)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 46MB = 46MB total
+Memory: 41744k/41744k available, 5360k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+    vmalloc : 0xc3000000 - 0xfe000000   ( 944 MB)
+    lowmem  : 0xc0000000 - 0xc2e00000   (  46 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .init : 0xc0008000 - 0xc0026000   ( 120 kB)
+      .text : 0xc0026000 - 0xc0494000   (4536 kB)
+      .data : 0xc0494000 - 0xc04b2320   ( 121 kB)
+       .bss : 0xc04b2344 - 0xc04c56a0   (  77 kB)
+SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS:32 nr_irqs:32 32
+sched_clock: 32 bits at 100MHz, resolution 10ns, wraps every 42949ms
+Console: colour dummy device 80x30
+Calibrating delay loop... 218.72 BogoMIPS (lpj=1093632)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+Serial: AMBA PL011 UART driver
+uart:0: ttyAMA0 at MMIO 0x20080000 (irq = 5) is a PL011 rev2
+console [ttyAMA0] enabled
+uart:1: ttyAMA1 at MMIO 0x20090000 (irq = 5) is a PL011 rev2
+bio: create slab <bio-0> at 0
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+cfg80211: Calling CRDA to update world regulatory domain
+Switching to clocksource timer1
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+NetWinder Floating Point Emulator V0.97 (double precision)
+JFFS2 version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.16)
+msgmni has been set to 81
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered (default)
+io scheduler cfq registered
+brd: module loaded
+loop: module loaded
+Spi id table Version 1.22
+Spi(cs1) ID: 0xEF 0x40 0x18 0x00 0x00 0x00
+SPI FLASH start_up_mode is 3 Bytes
+Spi(cs1): 
+Block:64KB 
+Chip:16MB 
+Name:"W25Q128B"
+spi size: 16MB
+chip num: 1
+5 cmdlinepart partitions found on MTD device hi_sfc
+Creating 5 MTD partitions on "hi_sfc":
+0x000000000000-0x000000040000 : "boot"
+0x000000040000-0x0000002c0000 : "kernel"
+0x0000002c0000-0x000000f00000 : "rootfs"
+0x000000f00000-0x000000f10000 : "key"
+0x000000f10000-0x000001000000 : "config"
+Fixed MDIO Bus: probed
+himii: probed
+usbcore: registered new interface driver rt2500usb
+usbcore: registered new interface driver rt73usb
+usbmon: debugfs is not available
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+hiusb-ehci hiusb-ehci.0: HIUSB EHCI
+hiusb-ehci hiusb-ehci.0: new USB bus registered, assigned bus number 1
+hiusb-ehci hiusb-ehci.0: irq 15, io mem 0x100b0000
+hiusb-ehci hiusb-ehci.0: USB 0.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+hiusb-ohci hiusb-ohci.0: HIUSB OHCI
+hiusb-ohci hiusb-ohci.0: new USB bus registered, assigned bus number 2
+hiusb-ohci hiusb-ohci.0: irq 16, io mem 0x100a0000
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver mdc800
+mdc800: v0.7.5 (30/10/2000):USB Driver for Mustek MDC800 Digital Camera
+TCP cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+lib80211: common routines for IEEE802.11 drivers
+Registering the dns_resolver key type
+registered taskstats version 1
+drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+ømmc0: new SDHC card at address 0001
+mmcblk0: mmc0:0001 SD32G 29.1 GiB 
+ mmcblk0: p1
+usb 1-1: new high speed USB device number 2 using hiusb-ehci
+VFS: Mounted root (jffs2 filesystem) on device 31:2.
+Freeing init memory: 120K
+
+            _ _ _ _ _ _ _ _ _ _ _ _
+            \  _  _   _  _ _ ___
+            / /__/ \ |_/
+           / __   /  -  _ ___
+          / /  / /  / /
+  _ _ _ _/ /  /  \_/  \_ ______
+___________\___\__________________
+
+[RCS]: /etc/init.d/S00devs
+[RCS]: /etc/init.d/S01udev
+udevd (472): /proc/472/oom_adj is deprecated, please use /proc/472/oom_score_adj instead.
+dosfsck 3.0.12, 29 Oct 2011, FAT32, LFN
+/dev/mmcblk0p1: 1258 files, 1836728/1908060 clusters
+mount sd 
+[RCS]: /etc/init.d/S04tmpfs
+[RCS]: /etc/init.d/S10mpp
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+vm.dirty_background_ratio = 1
+vm.dirty_background_bytes = 0
+vm.dirty_ratio = 1
+vm.dirty_bytes = 0
+vm.dirty_writeback_centisecs = 100
+vm.dirty_expire_centisecs = 300
+vm.min_free_kbytes = 1400
+vm.vfs_cache_pressure = 200
+vm.swappiness = 40
+vm.drop_caches = 3
+vm.overcommit_memory = 1
+net.ipv4.tcp_keepalive_time = 20
+net.ipv4.tcp_keepalive_probes = 6
+net.ipv4.tcp_keepalive_intvl = 15
+net.ipv4.tcp_fin_timeout = 15
+net.ipv4.tcp_tw_recycle = 1
+net.ipv4.tcp_max_tw_buckets = 60
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_orphan_retries = 4
+create default_dev id
+write IPC: did INEW-000634-DNWLM api_license KJPDXR pwd 123456
+[RCS]: /etc/init.d/S80network
+ADDRCONF(NETDEV_UP): eth0: link is not ready
+[RCS]: /etc/init.d/S90start_app.sh
+create : 498
+check update now...
+load sys ko
+killall: syslogd: no process killed
+killall: vs_server: no process killed
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x200f0138: 0x00000001 --> 0x00000000 
+[END]
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x20140400: 0x00000030 --> 0x00000061 
+[END]
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:166}cmdstr:himm
+0x20140100: 0x00000040 --> 0x00000040 
+[END]
+Hisilicon Media Memory Zone Manager
+hi3518_base: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+Hisilicon UMAP device driver interface: v3.00
+pa:82e00000, va:c3200000
+load sys.ko for Hi3518...OK!
+-------------------------Sensor Type: ov9712a BoardType: 5100 ----
+load viu.ko for Hi3518...OK!
+ISP Mod init!
+load vpss.ko ....OK!
+PHY: himii:01 - Link is Up - 100/Full
+ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+load vou.ko ....OK!
+load venc.ko for Hi3518...OK!
+load group.ko for Hi3518...OK!
+load chnl.ko for Hi3518...OK!
+load h264e.ko for Hi3518...OK!
+load jpege.ko for Hi3518...OK!
+load rc.ko for Hi3518...OK!
+load region.ko ....OK!
+load vda.ko ....OK!
+hi_i2c init is ok!
+Hisilicon Watchdog Timer: 0.01 initialized. default_margin=60 sec (nowayout= 0, nodeamon= 0)
+PTZ initialized. s32Range_X=6400  s32Range_Y=3200, s32PTZSpeed=1000
+Kernel: ssp initial ok!
+acodec inited!
+insert audio
+==== Your input Sensor type is ov9712 ====
+---------------------------------ipconfig----------------------
+[32m start net_serv daemon 706 [0m
+[35m debug Net Action Change NONE [0m
+[32m [ipconfig]Set MAC [0m
+[32m set MAC C0:72:01:15:A9:08 [0m
+[32m wifi_realenable is 1 [0m
+[35m debug linestate_change NONE TO 1. [0m
+[35m debug Net Action Change PLUGLINE [0m
+[32m process netaction plug line [0m
+[35m debug CurrWifiMode NONE switchto LINED, isforce:Y [0m
+[32m Enter LINED Mode [0m
+[32m wifi setmode to NONE [0m
+[35m debug wifi state Change NONE [0m
+ifconfig: SIOCSIFADDR: No such device
+[35m debug Net Action Change NONE [0m
+[32m iface:eth0,dhcp:n,ip:192.168.2.130,netmask:255.255.255.0,gateway:192.168.2.130 [0m
+Auto login as root ...[32m net change, cache it.nettype eth0 ip 192.168.2.130 dhcp 0 [0m
+[32m ledflash mode 0 [0m
+[35m func wifi_sta_start [0m
+LOAD wifi
+********** Init Fastlink Success ,Copyright@aiert. All Rights Reserved. "http://www.aiert.net/"
+rtusb init rtusbSTA --->
+usbcore: registered new interface driver rtusbSTA
+[32m wifi setmode to STA [0m
+
+
+(none) login: PID file /tmpfs/boottab.pid
+vs_server exit 0, remove pid file /tmpfs/boottab.pid
+.
+vs_server
+1. LDO_CTR0(6c) = a64799, PMU_OCLEVEL c
+2. LDO_CTR0(6c) = a6478d, PMU_OCLEVEL 6
+0x1300 = 00064300
+smtcn_channel_switch_stop
+SMT_DEBUG: _pfsm_rst:0,0
+SMT DEBUG smtcn_flag: 0
+usr_SetUsrkey usr_usrkey_flag:1 
+
+===================INEWCAM G6 build[H002_V10R00C01_0116(sw):V2.0.0(hw)]===================
+
+
+[0;32;34m[1970-01-01 01:00:21] [-main-180]crit:init system...!
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-133]crit:bSysLog = 2 
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-91]crit:==================================
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-92]crit:debug log file1 : /var/log/accesslog.txt 
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-93]crit:==================================
+
+[mlog path=mkdir -p /var/log
+
+
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-115]crit:==================================
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-116]crit:debug log file2 : /var/log/accesslog.txt 
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-117]crit:==================================
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-133]crit:bSysLog = 0 
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-91]crit:==================================
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-92]crit:debug log file1 : /var/log/debuglog.txt 
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-93]crit:==================================
+
+[mlog path=mkdir -p /var/log
+
+
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-115]crit:==================================
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-116]crit:debug log file2 : /var/log/debuglog.txt 
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-117]crit:==================================
+
+[m
+
+[0;32;34m[1970-01-01 01:00:22] [LOG-log_app.c-133]crit:bSysLog = 0 
+
+[m[m[   log][  INFO][Thu Jan  1 01:00:22 1970]:HTTP_WebLogInit Success
+
+[m[m[   log][  INFO][Thu Jan  1 01:00:22 1970]:INIT_Log Success
+
+[mWDT_Init 
+
+
+
+[0;32;34m[1970-01-01 01:00:22] [-main-218]crit:start to init PTZ motor ...!
+[m[1;31m[SYSInfo_Init][CRITICAL][Thu Jan  1 01:00:23 1970]:get system time :1970-1-1 1:0:23 4
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VI-media_vi.c-1229]crit:[Success] enable vi pub.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-759]crit:camera.1:vschncnt = 3.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-816]crit:vschn.11:vechnno = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-828]crit:vschn.11:vgroupid = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-854]crit:vschn.11:ismainstream = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-866]crit:vschn.11:ve_chn_mode = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-640]crit:ve_chn_mode.0:picx = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-651]crit:ve_chn_mode.0:picy = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-662]crit:ve_chn_mode.0:picwidth = 1280.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-693]crit:ve_chn_mode.0:picheight = 720.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-707]crit:ve_chn_mode.0:isviinputfield = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-719]crit:ve_chn_mode.0:isencfield = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-327]crit:enc.11:vencbps = 1024000.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-339]crit:enc.11:vencfps = 20.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-352]crit:enc.11:u32SrcFps = 20.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-89]crit:enc.11:vencvbrminqplevelgood = 10.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-102]crit:enc.11:vencvbrmaxqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-115]crit:enc.11:vencvbrminqpleveldefault = 20.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-128]crit:enc.11:vencvbrmaxqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-141]crit:enc.11:vencvbrminqplevelbad = 35.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-154]crit:enc.11:vencvbrmaxqplevelBad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-167]crit:enc.11:venccbrmaxstartqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-180]crit:enc.11:venccbrmaxqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-193]crit:enc.11:venccbrmaxstartqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-205]crit:enc.11:venccbrmaxqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-218]crit:enc.11:venccbrmaxstartqplevelbad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-230]crit:enc.11:venccbrmaxqplevelbad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-242]crit:enc.11:vencctrltype = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-254]crit:enc.11:vencvideoquality = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-266]crit:enc.11:vencIsmoothenable = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-279]crit:enc.11:vencvbrmaxipropon = 3.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-291]crit:enc.11:vencvbrmaxipropoff = 100.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-816]crit:vschn.12:vechnno = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-828]crit:vschn.12:vgroupid = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-854]crit:vschn.12:ismainstream = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-866]crit:vschn.12:ve_chn_mode = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-640]crit:ve_chn_mode.1:picx = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-651]crit:ve_chn_mode.1:picy = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-662]crit:ve_chn_mode.1:picwidth = 640.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-693]crit:ve_chn_mode.1:picheight = 360.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-707]crit:ve_chn_mode.1:isviinputfield = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-719]crit:ve_chn_mode.1:isencfield = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-327]crit:enc.12:vencbps = 256000.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-339]crit:enc.12:vencfps = 20.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-352]crit:enc.12:u32SrcFps = 20.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-89]crit:enc.12:vencvbrminqplevelgood = 10.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-102]crit:enc.12:vencvbrmaxqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-115]crit:enc.12:vencvbrminqpleveldefault = 20.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-128]crit:enc.12:vencvbrmaxqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-141]crit:enc.12:vencvbrminqplevelbad = 35.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-154]crit:enc.12:vencvbrmaxqplevelBad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-167]crit:enc.12:venccbrmaxstartqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-180]crit:enc.12:venccbrmaxqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-193]crit:enc.12:venccbrmaxstartqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-205]crit:enc.12:venccbrmaxqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-218]crit:enc.12:venccbrmaxstartqplevelbad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-230]crit:enc.12:venccbrmaxqplevelbad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-242]crit:enc.12:vencctrltype = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-254]crit:enc.12:vencvideoquality = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-266]crit:enc.12:vencIsmoothenable = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-279]crit:enc.12:vencvbrmaxipropon = 3.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-291]crit:enc.12:vencvbrmaxipropoff = 100.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-816]crit:vschn.13:vechnno = 2.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-828]crit:vschn.13:vgroupid = 2.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-854]crit:vschn.13:ismainstream = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-866]crit:vschn.13:ve_chn_mode = 2.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-640]crit:ve_chn_mode.2:picx = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-651]crit:ve_chn_mode.2:picy = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-662]crit:ve_chn_mode.2:picwidth = 320.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-693]crit:ve_chn_mode.2:picheight = 160.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-707]crit:ve_chn_mode.2:isviinputfield = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-719]crit:ve_chn_mode.2:isencfield = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-327]crit:enc.13:vencbps = 96000.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-339]crit:enc.13:vencfps = 15.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-352]crit:enc.13:u32SrcFps = 20.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-89]crit:enc.13:vencvbrminqplevelgood = 10.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-102]crit:enc.13:vencvbrmaxqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-115]crit:enc.13:vencvbrminqpleveldefault = 20.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-128]crit:enc.13:vencvbrmaxqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-141]crit:enc.13:vencvbrminqplevelbad = 35.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-154]crit:enc.13:vencvbrmaxqplevelBad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-167]crit:enc.13:venccbrmaxstartqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-180]crit:enc.13:venccbrmaxqplevelgood = 40.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-193]crit:enc.13:venccbrmaxstartqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-205]crit:enc.13:venccbrmaxqpleveldefault = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-218]crit:enc.13:venccbrmaxstartqplevelbad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-230]crit:enc.13:venccbrmaxqplevelbad = 51.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-242]crit:enc.13:vencctrltype = 1.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-254]crit:enc.13:vencvideoquality = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-266]crit:enc.13:vencIsmoothenable = 0.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:23] [VENC-media_venc.c-279]crit:enc.13:vencvbrmaxipropon = 3.
+
+[m
+
+[0;32;34m[1970-01-01 01:00:24] [VENC-media_venc.c-291]crit:enc.13:vencvbrmaxipropoff = 100.
+
+[m
+
+[0;32;31m[1970-01-01 01:00:24] [OSD-osd_adpt.c-54]fatal:HI_MPI_RGN_Create failed:0xa0128003[m
+
+[1;31m[1970-01-01 01:00:24] [OSD-osd.c-933]error:OSD_ADPT_Create failed:0xa0128003[m
+
+[1;31m[1970-01-01 01:00:24] [OSD-osd.c-1022]error:del osd: The reginon 1 doesn't exist
+[m
+
+[1;31m[1970-01-01 01:00:24] [OSD-osd.c-487]error:OSD_Insert failed:0xffffffff
+[m[/home/yuanzhenkun/base/media/snap.c, 699] auto snap:0, interval:1, actions:0
+the chn :11 sps pps is :Z00AH5WoFAFuQA==,aO48gA== 
+the chn :12 sps pps is :Z00AHpWoKAv+VA==,aO48gA== 
+the chn :13 sps pps is :Z00AFJWoUFZA,aO48gA== 
+FILETRANSFER_LOCAL_Init regsister g_stLOCALMethod 0
+FILETRANSFER_WEBSERVER_Init regsister g_stWebServerMethod 0
+FILETRANSFER_HTTPCLIENT_Init regsister g_stHttpClientMethod 0
+[info]FILETRANSFER_Traversal_Method(/home/yuanzhenkun/base/core/swupgrade/filetransfer_common.c: 246) : traversal_method type: local
+[info]FILETRANSFER_Traversal_Method(/home/yuanzhenkun/base/core/swupgrade/filetransfer_common.c: 246) : traversal_method type: webserver
+[info]FILETRANSFER_Traversal_Method(/home/yuanzhenkun/base/core/swupgrade/filetransfer_common.c: 246) : traversal_method type: httpclient
+UPGRADE_SDUpgradeInit start!
+UPGRADE_SDUpgradeInit pszValue auto
+UPGRADE_SDUpgradeInit end! s32Rtn = 0
+
+
+[1;37m[1970-01-01 01:00:27] [MEDIABUF-mediabuf.c-187]debug:MediaBuf_Init [0] ,mem= 0x273078
+[m[MediaBuf_Init:215]:u32ChnNum 3 
+
+
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-237]debug:MediaBuf_Init [0] ,chn[0] pstIndex->pvStartAddr=0x46c77200 len:0x1f8
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-257]debug:MediaBuf_Init [0] ,pstHandle->pvStartAddr=0x46c87600 len:0x105f8
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-283]debug:MediaBuf_Init [0] ,chn[0] pstMediaData->pvStartAddr=0x46c87980 len:0x18c978
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-237]debug:MediaBuf_Init [0] ,chn[1] pstIndex->pvStartAddr=0x46e03980 len:0x18c978
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-257]debug:MediaBuf_Init [0] ,pstHandle->pvStartAddr=0x46e10180 len:0x199178
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-283]debug:MediaBuf_Init [0] ,chn[1] pstMediaData->pvStartAddr=0x46e10500 len:0x21b4f8
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-237]debug:MediaBuf_Init [0] ,chn[2] pstIndex->pvStartAddr=0x46e92500 len:0x21b4f8
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-257]debug:MediaBuf_Init [0] ,pstHandle->pvStartAddr=0x46e99d00 len:0x222cf8
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-283]debug:MediaBuf_Init [0] ,chn[2] pstMediaData->pvStartAddr=0x46e9a080 len:0x273078
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-291]debug:
+start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-292]debug:MediaBuf_Init [0] ,enMediaBufStatus=0x9 pstMeidaBuf:0x46c77008
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-293]debug:MediaBuf_Init [0] ,pstMeida=0x46c77008 len:0x273078
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-305]debug:pstMeida,
+u32MagicNum:0x45ad91e2 
+u32CamID:0x0 
+u32ChnNum:0x3
+u32MediaHanle:0x45ad0008
+u32TotalSize:0x273078
+s32MaxFrameNum:0x70000
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-331]debug:stIndex[0],
+u32ChnID:0xb 
+u32TotalFrameNum:0x680 
+u32User_MediaType:0x7
+u32IndexSN_Begin:0x0
+u32IndexSN_End:0x0
+bRecEanble:0x1
+S32PerRECTime:0x5
+u32DataLen:0x10400
+pvStartAddr:0x46c77200
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-344]debug:stHandle,
+u32HandleTotal:0x6 
+u32ConnectedNum:0x0 
+u32LiveHandleUsed:0x0 
+u32RecHandleNum:0x0
+u32DataLen:0x380
+pvStartAddr:0x46c87600
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-351]debug:stVideo[0],
+S32MaxFrameSize:0x1cc00 
+u32ResvSize:0x1
+u32LosePFrame:0x0
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-359]debug:,u32DataOFFSET_Begin:0x1cc00 
+u32DataOFFSET_End:0x0 
+u32DataLen:0x17c000
+pvStartAddr:0x46c87980
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-331]debug:stIndex[1],
+u32ChnID:0xc 
+u32TotalFrameNum:0x500 
+u32User_MediaType:0x7
+u32IndexSN_Begin:0x0
+u32IndexSN_End:0x0
+bRecEanble:0x0
+S32PerRECTime:0x0
+u32DataLen:0xc800
+pvStartAddr:0x46e03980
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-344]debug:stHandle,
+u32HandleTotal:0x6 
+u32ConnectedNum:0x0 
+u32LiveHandleUsed:0x0 
+u32RecHandleNum:0x0
+u32DataLen:0x380
+pvStartAddr:0x46e10180
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-351]debug:stVideo[0],
+S32MaxFrameSize:0x12c00 
+u32ResvSize:0x1
+u32LosePFrame:0x0
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-359]debug:,u32DataOFFSET_Begin:0x12c00 
+u32DataOFFSET_End:0x0 
+u32DataLen:0x82000
+pvStartAddr:0x46e10500
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-331]debug:stIndex[2],
+u32ChnID:0xd 
+u32TotalFrameNum:0x300 
+u32User_MediaType:0x7
+u32IndexSN_Begin:0x0
+u32IndexSN_End:0x0
+bRecEanble:0x0
+S32PerRECTime:0x0
+u32DataLen:0x7800
+pvStartAddr:0x46e92500
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-344]debug:stHandle,
+u32HandleTotal:0x6 
+u32ConnectedNum:0x0 
+u32LiveHandleUsed:0x0 
+u32RecHandleNum:0x0
+u32DataLen:0x380
+pvStartAddr:0x46e99d00
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-351]debug:stVideo[0],
+S32MaxFrameSize:0xb400 
+u32ResvSize:0x1
+u32LosePFrame:0x0
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-359]debug:,u32DataOFFSET_Begin:0xb400 
+u32DataOFFSET_End:0x0 
+u32DataLen:0x50000
+pvStartAddr:0x46e9a080
+[m
+
+[1;37m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-361]debug:
+info end [0] ,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[m[Mbuf_Init:1159] u32MediaHandle:0x45ad0008 s32Ret =0x0 
+[MTMng_GeStream_Init:1286]: 
+
+ [/home/yuanzhenkun/base/GZ20/snap/photosnap.c, 39] msgQ list[46] , start :0x907838
+[yuanzhenkun]-------------  busy list  --------------
+[yuanzhenkun]-------------  free list  --------------
+0x907838
+0x907864
+0x907890
+0x9078bc
+0x9078e8
+0x907914
+0x907940
+0x90796c
+0x907998
+0x9079c4
+0x9079f0
+0x907a1c
+0x907a48
+0x907a74
+0x907aa0
+0x907acc
+0x907af8
+0x907b24
+0x907b50
+0x907b7c
+[yuanzhenkun]-----------------  end ------------------
+public msgQ init. 
+[Msg_SDmng_Init:180]:!!! 
+
+
+
+[0;32;32m[1970-01-01 01:00:28] [REC-record.c-99]info:[REC] REC init chnnum:1
+[m==yuanzhenkun== [/home/yuanzhenkun/base/core/record/record.c, 139]pstRecInfoSingle->u32RecState:0
+
+
+[1;33m[1970-01-01 01:00:28] [REC-record.c-177]warning:the singleFile time is :180 
+[m==yuanzhenkun== [/home/yuanzhenkun/base/core/record/record.c, 282]pstRecInfoSingle->u32RecState:0 ==> 0
+
+
+[0;32;32m[1970-01-01 01:00:28] [REC-record.c-304]info:[REC]init the buffer: video gop:20.
+[m
+
+[0;32;32m[1970-01-01 01:00:28] [REC-record.c-306]info:the rec011 rect (x,y) is (0,0), w is 1280, h is 720
+[m
+
+[0;32;32m[1970-01-01 01:00:28] [REC-record.c-312]info:[REC]init the buffer: video gop:20 audio bps:16000 .
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=2 
+[mpublic msgQ distributer running!
+[MsgQ_distributer_SD:213]:INIT!!! 
+
+[SDmng_sendMsg:430]:msgType 3d0001 
+
+[MsgQ_distributer_SD:240] msgType:0x3d0001 
+
+
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=3 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=2 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][2],920,u32LosePFrame=2 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=4 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=3 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][2],920,u32LosePFrame=3 
+[m
+
+[0;32;32m[1970-01-01 01:00:28] [REC-record.c-358]info:REC init the chn 11 success
+
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=5 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=4 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=6 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=5 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=7 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=6 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=8 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=7 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=9 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=8 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][0],920,u32LosePFrame=10 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=9 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=10 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=11 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=12 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=13 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=14 
+[m
+
+[1;33m[1970-01-01 01:00:28] [MEDIABUF-mediabuf.c-920]warning:MediaBuf_Write [0][1],920,u32LosePFrame=15 
+[m[MsgQ_distributer_SD:374] msgType:0x3d0001  exit
+
+
+
+[0;32;32m[1970-01-01 01:00:30] [REC-record.c-223]info:RECLOGFILE:/mnt/sd1/reclog.ini
+[m[/home/yuanzhenkun/base/core/record/record.c, 259] rec thread handle:0x0
+
+
+[1;37m[1970-01-01 01:00:30] [REC-record.c-405]debug:REC_Init success returned,chn num is 1  s_enRecInited :1
+[m[0;32;32m[  AUTH][  WARN][Thu Jan  1 01:00:30 1970]:AUTH_Init success!
+[m[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 908] ret:2, begin:0, end :95
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 703]=================================================
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+=================================================
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 908] ret:2, begin:0, end :95
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 703]=================================================
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+=================================================
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 908] ret:2, begin:0, end :95
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 703]=================================================
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+=================================================
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 908] ret:2, begin:0, end :95
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 703]=================================================
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+=================================================
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 908] ret:2, begin:0, end :95
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 703]=================================================
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+=================================================
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 908] ret:2, begin:0, end :95
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 703]=================================================
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+=================================================
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 908] ret:2, begin:0, end :95
+[/home/yuanzhenkun/base/GZ20/safe_mng/schedule.c, 703]=================================================
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+=================================================
+[0;32;32m[AlarmMng][  WARN][Thu Jan  1 01:00:34 1970]:AlarmMng_Init success!
+[m[/home/yuanzhenkun/base/core/record/record.c, 1020]
+
+
+[1;33m[1970-01-01 01:00:34] [REC-record.c-1034]warning:REC Start the rec thread success, the thread id is:4CCC64C0 
+
+[m[0;32;32m[  EMng][  WARN][Thu Jan  1 01:00:34 1970]:EMng_Init success!
+[m===================List Pool===================
+0x912810
+0x912824
+0x912838
+0x91284c
+0x912860
+0x912874
+0x912888
+0x91289c
+0x9128b0
+0x9128c4
+0x9128d8
+0x9128ec
+usrLink[0].taskList:0x21c7dc, usrLink[idx].taskList.next:0x21c7dc
+usrLink[1].taskList:0x21c824, usrLink[idx].taskList.next:0x21c824
+usrLink[2].taskList:0x21c86c, usrLink[idx].taskList.next:0x21c86c
+usrLink[3].taskList:0x21c8b4, usrLink[idx].taskList.next:0x21c8b4
+usrLink[4].taskList:0x21c8fc, usrLink[idx].taskList.next:0x21c8fc
+usrLink[5].taskList:0x21c944, usrLink[idx].taskList.next:0x21c944
+usrLink[6].taskList:0x21c98c, usrLink[idx].taskList.next:0x21c98c
+usrLink[7].taskList:0x21c9d4, usrLink[idx].taskList.next:0x21c9d4
+mtmng init start 
+
+MTMNGGetCfgFrmIni start 
+
+mtmng rtspsvr:enable = 1.
+
+[WDT_Realloc]:WD_USR_MNG, 0 
+
+[WDT_Realloc]:USR_RECV0, 1 
+
+[WDT_Realloc]:USR_RECV1, 2 
+
+[WDT_Realloc]:USR_RECV2, 3 
+
+[WDT_Realloc]:USR_RECV3, 4 
+
+[WDT_Realloc]:USR_RECV4, 5 
+
+[WDT_Realloc]:USR_RECV5, 6 
+
+[WDT_Realloc]:USR_RECV6, 7 
+
+[WDT_Realloc]:USR_RECV7, 8 
+
+[WDT_Realloc]:WD_NET_MNG, 9 
+
+
+
+[0;32;34m[1970-01-01 01:00:34] [-net_mng_running-645]crit:start net management thread!
+[mStart VOD_Init.vod Successed.
+
+
+[0;32;34m[1970-01-01 01:00:34] [HTTP_LIVE-msession_http.c-1625]crit:http Live svr Init ok.
+[mStart MediaTrans.http_streamsvr Successed.
+Start MediaTrans.rtsp_streamsvr Successed.
+Start rtspOhttp svr Successed.
+[/home/yuanzhenkun/base/common_c/web_serv/web_serv.c:278]:/bin/vs/thttpd -C  /etc/ipcamera/webserver.conf & 
+
+WebServProc 
+killall: thttpd: no process killed
+net init ok, start usr listen...
+PPCS_API Version: 1.5.4.1
+open AF_INET socket . 
+
+
+[1;33m[1970-01-01 01:00:36] [-p2p_sys_init-76]warning:PPCS_Initialize ret = 0
+[m[WDT_Realloc]:WD_USR_LISTEN, 10 
+
+192.168.2.130
+255.255.255.0
+192.168.2.130
+c0:72:01:15:a9:08
+
+
+[0;32;34m[1970-01-01 01:00:38] [-main-465]crit:Init end start to Run server ...!
+time.nist.gov: Unknown host
+[m
+
+[0;32;34m[1970-01-01 01:00:56] [-p2p_network_detect-26]crit:PPCS_NetworkDetect() ret = 0
+[m-------------- NetInfo: -------------------
+Internet Reachable     : NO
+P2P Server IP resolved : NO
+P2P Server Hello Ack   : NO
+NAT Type               : unknown
+My LAN IP              : 0.0.0.0
+My WAN IP              : 0.0.0.0
+
+
+GZipc login: root
+Password: 
+[1;32mWelcome to HiLinux.[0;39m
+None of nfsroot found in cmdline.
+# id
+uid=0(root) gid=0(root) groups=0(root)
+# 
+

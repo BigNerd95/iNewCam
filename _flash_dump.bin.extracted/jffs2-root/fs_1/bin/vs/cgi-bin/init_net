@@ -1,0 +1,5 @@
+##!/bin/sh
+/bin/vs/cgi-bin/inetconfig.cgi
+/bin/vs/cgi-bin/inetwificonfig.cgi
+#/bin/vs/cgi-bin/upnp_start.cgi
+#/bin/vs/cgi-bin/ddns_start.cgi

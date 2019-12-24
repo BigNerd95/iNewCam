@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getioalmdoattr&" type="text/javascript"></script>
+
+<script language="javascript">
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+});
+
+function do_FimeName_alarmout()
+{
+	var form=document.form1;
+	var i;
+	if(form.aoenable.checked==true)
+	{
+		document.getElementById('AoenableLayer').style.display="block";
+	}
+	else
+	{
+		document.getElementById('AoenableLayer').style.display="none";
+	}
+}
+
+function on_load()
+{
+	var form=document.form1;
+	//Alarm_out
+	if (aoenable == 0)
+	{
+		form.aoenable.checked = false;
+	}
+	else
+	{
+		form.aoenable.checked = true;
+	}
+	
+	if (aoactivemode == 0)
+	{
+		form.aoactivemode.options[0].selected=true;
+	}
+	else
+	{
+		form.aoactivemode.options[1].selected=true;
+	}
+	
+	form.aocontinue.value=aocontinuetime;
+	do_FimeName_alarmout();
+}
+
+	
+function do_submit()
+{
+	var form1=document.form1;
+	var form=document.form2;
+	
+	form.cururl.value =document.URL ;
+	//Alarm_out
+	aoenable = document.getElementById('Form2Aoenable');
+	aoenable.name="-aoenable";
+	if (form1.aoenable.checked == false)
+	{
+		aoenable.value = 0;
+	}
+	else
+	{
+		aoenable.value = 1;
+	}
+	
+	aoactivemode = document.getElementById('Form2AoactiveMode');
+	aoactivemode.name="-aoactivemode";
+	aoactivemode.value=form1.aoactivemode[form1.aoactivemode.selectedIndex].value;
+	
+	aocontinue = document.getElementById('Form2Aocontinue');
+	aocontinue.name="-aocontinue";
+	aocontinue.value=form1.aocontinue.value;
+	
+	form.action="cgi-bin/hi3510/param.cgi";	
+	form.submit();
+}
+</script>
+</head>
+<body onLoad="on_load()" class="content">
+<div style="display:block">
+  <form name="form1">
+    <h4 id="AlarmOutSpan" > Alarm Out</h4>
+    <div> <span id="StatusSpan">Status:</span>
+      <input id="aoenable" name="aoenable" value="checkbox" type="checkbox" onClick="do_FimeName_alarmout()" >
+      <label for="aoenable" id="EnableSpan">Enable</label>
+    </div>
+    <div id="AoenableLayer">
+      <div> <span id="ActivemodeSpan">Active mode:</span>
+        <select name="aoactivemode" >
+          <option value="0" id="ActivemodeOpenSpan">Open</option>
+          <option value="1" id="ActivemodeGrounedSpan">Grouned</option>
+        </select>
+      </div>
+      <div> <span id="ContinuetimeSpan">Continue time:</span>
+        <input name="aocontinue" type="text" class="STYLE_font" size="20" maxlength="6">
+      </div>
+    </div>
+  </form>
+</div>
+<div style="display:none">
+  <form name="form2" method="post">
+    <input name="cmd" type="hidden" value="setioalmdoattr">
+    <input name="cururl" type="hidden">
+    <input id="Form2Aoenable" name="aoenable" type="hidden">
+    <input id="Form2AoactiveMode" name="aoactivemode" type="hidden">
+    <input id="Form2Aocontinue" name="aocontinue" type="hidden">
+  </form>
+</div>
+<div style="position:absolute; bottom:10px;left:250px;"> <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div style="position:absolute; bottom:10px;left:400px;"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

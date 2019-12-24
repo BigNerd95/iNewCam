@@ -1,0 +1,73 @@
+﻿@charset "gb2312";
+/* CSS Document */
+/***************************公共部分***************************************/
+div#progressbar {
+/*	background: #272b34;
+	border-color: #202229;*/
+	width: 538px;
+	height: 16px;
+	margin: 0 auto;
+}
+div#progressbar .ui-widget-header {
+/*	background: #308fcc;
+	border: none;*/
+}
+div#progressbar > div {
+	margin-top: 0px
+}
+
+/**************************index.html***************************************/
+div#ImageAdjustLayer  .ui-corner-all, div#ImageAdjustLayer  .ui-corner-bottom,div#ImageAdjustLayer  .ui-corner-right, div#ImageAdjustLayer  .ui-corner-br，
+div#ImageAdjustLayer .ui-corner-all, div#ImageAdjustLayer  .ui-corner-bottom,div#ImageAdjustLayer  .ui-corner-left, div#ImageAdjustLayer  .ui-corner-bl,
+div#ImageAdjustLayer  .ui-corner-all, div#ImageAdjustLayer  .ui-corner-top, div#ImageAdjustLayer  .ui-corner-right, div#ImageAdjustLayer  .ui-corner-tr,
+div#ImageAdjustLayer .ui-corner-all, div#ImageAdjustLayer  .ui-corner-top,div#ImageAdjustLayer   .ui-corner-left, div#ImageAdjustLayer  .ui-corner-tl {
+    border-bottom-right-radius:none;
+}
+
+div#ImageAdjustLayer .ui-widget-content {
+	border:none;
+	height: 11px;
+    width: 167px;
+}
+div#ImageAdjustLayer .ui-state-default, div#ImageAdjustLayer  .ui-widget-content .ui-state-default, div#ImageAdjustLayer  .ui-widget-header .ui-state-default{
+	   height: 24px;
+    width: 24px;
+	border:none;
+}
+div#ImageAdjustLayer  .ui-state-hover{border:none;}
+	
+div#ImageAdjustLayer  .ui-widget-header{
+	border:none;
+}
+div#ImageAdjustLayer  .ui-slider-horizontal .ui-slider-handle {
+    margin-left: -12px;
+    top: -6px;
+}
+
+/***************************replay.html***************************************/
+div#SearchCalenderLayer .ui-datepicker{width:18em; padding:0px;}
+div#SearchCalenderLayer .ui-widget{font-size: 12px;}
+div#SearchCalenderLayer .ui-widget-header{background:none; border:none; padding:0px;}
+div#SearchCalenderLayer .ui-widget-content{background:none; border:none;}
+div#SearchCalenderLayer .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{background:#008dd4;}
+div#SearchCalenderLayer .ui-datepicker table{border-top:1px solid #212129; border-bottom:1px solid #212129}
+div#SearchCalenderLayer table.ui-datepicker-calendar thead tr th span{color:#008dd1}
+/*div#SearchCalenderLayer .ui-state-hover, .ui-widget-content .ui-state-hover{background:#008dd4;}*/
+/*div#SearchCalenderLayer .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{background:#008dd4;}*/
+div#SearchCalender a.ui-datepicker-prev{background:url(../images/left_ico.png); width:9px; height:9px; top:5px;}
+div#SearchCalender .ui-state-hover,
+div#SearchCalender .ui-widget-content .ui-state-hover,
+div#SearchCalender .ui-widget-header .ui-state-hover{border:none;}
+div#SearchCalender a.ui-datepicker-next{background:url(../images/right_ico.png); width:9px; height:9px; top:5px;}
+div#DownloadProgress{position:absolute;  height:11px; display:inline-block;font-size:12px; top:5px;}
+div#DownloadProgress .ui-widget-header{background:#308fcc; border:none;}
+div#DownloadProgress > div{margin-top:0px}
+div#RePlayerTimeSlider{background:none; border:none;height:11px; display:inline-block; font-size:12px; top:5px;}
+
+div#RePlayerVolSlider{border:none;height: 11px; width: 167px;display:inline-block;margin-left:10px;margin-top:-14px; font-size:12px;}
+
+div#RePlayerVolSlider .ui-widget-header{border:none;}
+div#RePlayerVolSlider .ui-slider-horizontal .ui-slider-handle{margin-left: -12px; top: -6px;}
+div#SearchCalender div.ui-datepicker-inline table.ui-datepicker-calendar tbody tr td a.SearchCalenderHighlight{background:#d04c4a; border:none; position:relative;left:0px; color:#FFF; width:20px;}
+div#SearchCalender div.ui-datepicker-inline table.ui-datepicker-calendar tbody tr td a.ui-state-default{background:none; border:none; color:#FFF; width:20px;}
+div#SearchCalender div.ui-datepicker-inline table.ui-datepicker-calendar tbody tr td a.ui-state-active{background:#008DD1; border:none; color:#FFF; width:20px;}

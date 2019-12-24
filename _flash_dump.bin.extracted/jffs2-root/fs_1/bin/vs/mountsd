@@ -1,0 +1,1 @@
+mkdir -p /bin/vs/sd;  mount -t vfat /dev/mmc/blk0/part1 /bin/vs/sd

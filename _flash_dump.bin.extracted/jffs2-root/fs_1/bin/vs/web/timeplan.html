@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<style type="text/css">
+select{font-size:13px; width:38px; text-align:left;}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+
+
+<script language="javascript">
+/*多语言加载*/
+$(document).ready(function(e) {	
+   LoadLanguage();
+   
+   $("#WeekmodeLayer tr td:first-child").css("width", "60px");
+   $("#WorkmodeLayer tr td:first-child").css("width", "90px");
+});
+var LayerStat = 0;
+function DisplayTimeLayer(Layer)//0 work 1 week
+{
+	LayerStat = Layer;
+	return true;	
+}
+
+function on_load()
+{
+	//md schedule
+	if(parent.etm==0)/***********Use the week mode*****************/
+	{
+		$("#WeekmodeLayer").css("display", "block");
+		wkstart = 0;
+		wkend = 7;
+	}
+	else if(parent.etm==1)/***********Use the work mode*****************/
+	{
+		$("#WorkmodeLayer").css("display", "block");
+		wkstart = 7;//wok mode 模式的控件从7开始算
+		wkend = 9;
+	}
+	else/***********All times day *****************/
+	{
+		$("#WeekmodeLayer").css("display", "none");
+			$("#WorkmodeLayer").css("display", "none");
+		wkstart = 0;
+		wkend = 0;
+	}
+	
+	var i =0;
+	var j =0;
+	var startHour = 0;
+	var startMinute = 0;
+	var endHour = 0;
+	var endMinute = 0;
+	var form = document.form1;
+	
+	for(i=wkstart;i<wkend;i++)/**********week***********/
+	{
+		if((wkend == 9)&&(i == 7))
+		{
+			etemValue = parent.workday;
+		}
+		else if((wkend == 9)&&(i == 8))
+		{
+			etemValue = parent.weekend;
+		}
+		else
+		{
+			etemValue = parent.week[i];
+		}
+		
+		/**************当前时间这空************/
+		if(etemValue  == "")
+		{
+			form.daycheck[i].checked = false;
+			continue;
+		}
+			
+		form.daycheck[i].checked = true;
+				
+		var a=etemValue.split(",");
+		/*****************当前 时间分段处理************************/
+		if(a.length>0)
+		{
+			for(j=0;j<(a.length -1);j++)
+			{
+				var b=a[j].split("~");
+				if(b.length == 2)
+				{
+					/**********开始时间*************/
+					startHour = Math.floor((parseInt(b[0]))/4);
+					startMinute = (parseInt(b[0]))%4;
+					
+					/**********结束时间*************/		
+					b[1] = parseInt(b[1])+1;				
+					endHour = Math.floor((parseInt(b[1]))/4);
+					endMinute = (parseInt(b[1]))%4;
+
+					var key = i*3+j;//几行几列
+					
+					/*************设置选中的项*************/
+					form.sun_startHour[key].options[startHour].selected=true;
+					form.sun_startMinute[key].options[startMinute].selected=true;
+					
+					form.sun_endHour[key].options[endHour].selected=true;
+					form.sun_endMinute[key].options[endMinute].selected=true;
+					do_EndHour(key);
+				}
+				else if(b.length == 1)
+				{
+					/**********开始时间*************/
+					startHour = Math.floor((parseInt(b[0]))/4);
+					startMinute = (parseInt(b[0]))%4;
+					
+					/**********结束时间*************/						
+					endHour = Math.floor((parseInt(b[0]))/4);
+					endMinute = (parseInt(b[0]))%4 + 1;
+					if (endMinute >= 4)
+					{
+						endHour = endHour + 1;
+						endMinute = 0;
+					}
+					var key = i*3+j;
+					
+					/*************设置选中的项*************/
+					form.sun_startHour[key].options[startHour].selected=true;
+					form.sun_startMinute[key].options[startMinute].selected=true;
+					
+					form.sun_endHour[key].options[endHour].selected=true;
+					form.sun_endMinute[key].options[endMinute].selected=true;
+					do_EndHour(key);
+				}
+			}
+    	}
+	}
+	
+}
+
+
+ 
+
+$(function() {
+
+   $(" select[name='sun_endHour']").change(function() {
+        do_EndHour($(" select[name='sun_endHour']").index($(this)));
+    });
+
+    do_EndHour = function(key) {
+        if ($("select[name='sun_endHour']:eq(" + key + ") option:selected").text() == "24") {
+            $("select[name='sun_endMinute']:eq(" + key + ") ").get(0).selectedIndex = 0;
+            $("select[name='sun_endMinute']:eq(" + key + ")").attr("disabled", "disabled");
+        } else {
+            $("select[name='sun_endMinute']:eq(" + key + ")").removeAttr("disabled");
+
+        }
+    }
+
+$("#weekmodeCleanSpan").click(function(){
+	$("#WeekmodeLayer select").val(0);
+})
+
+$("#workmodeCleanSpan").click(function(){
+	$("#WorkmodeLayer select").val(0);
+})	
+	
+})
+
+</script>
+</head>
+<body onLoad="on_load()" class="content">
+<div style="display:block">
+    <form name="form1">
+        <!---------------------  Use the week mode ---------------------------->
+        <div id="WeekmodeLayer">
+            <table>
+                <tr style="background:#D8DCE6">
+                    <td><label>&nbsp;</label></td>
+                    <td><label id="Weekkmodetimeperiod1span" >time period 1</label></td>
+                    <td><label id="Weekkmodetimeperiod2span" >time period 2</label></td>
+                    <td><label id="Weekkmodetimeperiod3span" >time period 3</label></td>
+                </tr>
+                <script type="text/javascript">
+	document.open();
+	for(k=0; k<7; k++)
+	{
+		document.write('<tr style="height:25px;">');	//行
+				/*第一列*/
+		document.write('<td style="vertical-align:middle; text-align:left;">');	
+		document.write('<input type="checkbox" value="checkbox" name="daycheck"></input>');	
+		switch(k)
+		{
+			case 0:
+				document.write('<label id="weeksunspan" style="margin:0px;">Sun</label>');		
+			break;
+			case 1:
+				document.write('<label id="weekmonspan" style="margin:0px;">Mon</label>');		
+			break;
+			case 2:
+				document.write('<label id="weektuespan" style="margin:0px;">Tue</label>');		
+			break;
+			case 3:
+				document.write('<label id="weekwedspan" style="margin:0px;">Wed</label>');		
+			break;
+			case 4:
+				document.write('<label id="weekthuspan" style="margin:0px;">Thu</label>');		
+			break;
+			case 5:
+				document.write('<label id="weekfrispan" style="margin:0px;">Fri</label>');		
+			break;
+			case 6:
+				document.write('<label id="weeksatspan" style="margin:0px;">Sat</label>');		
+			break;
+		}
+	document.write('</td>');	
+		for(j=0; j<3; j++)
+		{
+			document.write('<td style="vertical-align:middle; text-align:center;">');	
+			/********************************开始 小时***************************************/
+			document.write('<select name="sun_startHour">');
+			for(i=0; i<=23; i++)
+			{
+				document.write(' <option>'+i+'</option>');
+			}
+			document.write('</select>');
+			document.write(':');
+			/********************************开始 分钟***************************************/
+			document.write('<select name="sun_startMinute">');
+			for(i=0; i<60; i+=15)
+			{
+				document.write(' <option>'+i+'</option>');
+			}
+			document.write('</select>');
+			document.write('~');
+			/********************************结束 小时***************************************/
+			document.write('<select name="sun_endHour">');
+			for(i=0; i<=24; i++)
+			{
+				document.write(' <option>'+i+'</option>');
+			}
+			document.write('</select>');
+			document.write(':');
+			/********************************结束 分钟***************************************/
+			document.write('<select name="sun_endMinute">');
+			for(i=0; i<60; i+=15)
+			{
+				document.write(' <option>'+i+'</option>');
+			}
+			document.write('</select>');
+			document.write('</td>');	
+			
+		}
+		document.write('</tr>');	
+	}
+	document.close();
+	 </script>
+            </table>
+              <div style="float:right;">
+              <a id="weekmodeCleanSpan" class="classname">Clean</a>
+              </div>
+          <div style="clear:both;"></div>
+        </div>
+        <div id="WorkmodeLayer">
+            <table>
+                <tr style="background:#D8DCE6">
+                    <td><label>&nbsp;</label></td>
+                    <td><label id="Workmodetimeperiod1span">time period 1</label></td>
+                    <td><label id="Workmodetimeperiod2span">time period 2</label></td>
+                    <td><label id="Workmodetimeperiod3span">time period 3</label></td>
+                </tr>
+                <script type="text/javascript">
+	document.open();
+	for(k=0; k<2; k++)
+	{
+		document.write('<tr style="height:25px;">');	//行
+		/*第一列*/
+		document.write('<td style="vertical-align:middle; text-align:left;">');	
+			
+		document.write('<input type="checkbox" value="checkbox" name="daycheck"></input>');	
+		switch(k)
+		{
+			case 0:
+				document.write('<label id="workdayspan" style="margin:0px;">workday</label>');		
+			break;
+			case 1:
+				document.write('<label id="weekendspan" style="margin:0px;">weekend</label>');		
+			break;
+		}
+		document.write('</td>');	
+		
+		/*第二，三，四列*/
+		for(j=0; j<3; j++)
+		{
+			document.write('<td style="vertical-align:middle; text-align:center;">');	
+			/********************************开始 小时***************************************/
+			document.write('<select name="sun_startHour">');
+			for(i=0; i<=23; i++)
+			{
+				document.write(' <option>'+i+'</option>');
+			}
+			document.write('</select>');
+			document.write(':');
+			/********************************开始 分钟***************************************/
+			document.write('<select name="sun_startMinute">');
+			for(i=0; i<60; i+=15)
+			{
+				document.write(' <option>'+i+'</option>');
+			}
+			document.write('</select>');
+			document.write('~');
+			/********************************结束 小时***************************************/
+			document.write('<select name="sun_endHour">');
+			for(i=0; i<=24; i++)
+			{
+				document.write(' <option>'+i+'</option>');
+			}
+			document.write('</select>');
+			document.write(':');
+			/********************************结束 分钟***************************************/
+			document.write('<select name="sun_endMinute">');
+			for(i=0; i<60; i+=15)
+			{
+				document.write(' <option>'+i+'</option>');
+			}
+			document.write('</select>');
+
+			document.write('</td>');	
+		}
+		document.write('</tr>');	
+	}
+	document.close();
+	 </script>
+            </table>
+              <div style="float:right;">
+              <a id="workmodeCleanSpan" class="classname">Clean</a>
+              </div>
+              <div style="clear:both;"></div>
+
+        </div>
+      
+    </form>
+</div>
+
+<!--------------------------END MdEnableLayer--------------------------------->
+</div>
+<div style="display:none"> </div>
+</body>
+</html>

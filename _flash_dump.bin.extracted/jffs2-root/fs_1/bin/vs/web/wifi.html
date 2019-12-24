@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/wifi.js"></script>
+<script language="JavaScript1.2" src="/cgi-bin/getwifiattr.cgi" type="text/javascript"></script>
+<script language="javascript">
+
+
+</script>
+</head>
+<body  class="content">
+<div style="display:block"> 
+    <!------------------------------------------>
+    <div>
+        <h4 id="WifiStatusSpan">Wifi Status:</h4>
+        <div> <span id="WifiEnableSpan">Enable:</span>
+            <input id="WifiEnable" type="checkbox" />
+        </div>
+    </div>
+    <div class="cutoffrule"></div>
+    <!---------------------cur point--------------------->
+    <div>
+        <h4 id="CurHotPointSpan">CurHotPoint</h4>
+        <div>
+            <div><span id="CurHotPointSSIDSpan">SSID:</span>
+                <label id="CurHotPointSSIDInput" type="text" ></label>
+            </div>
+            <div><span id="CurHotPointStatusSpan">Connect Status:</span>
+                <label id="CurHotPointStatus" type="text" ></label>
+            </div>
+        </div>
+    </div>
+    <div class="cutoffrule"></div>
+    <div id="SearchListLayer">
+        <table id="SearchResultHead">
+            <tr>
+                <td width="30%"><label id="SearchResultHeadSSIDSpan">SSID</label></td>
+                <td  width="10%"><label id="SearchResultHeadSignalSpan">Signal</label></td>
+                <td  width="60%"><label id="SearchResultHeadAuthModeSpan">AuthMode</label></td>
+            </tr>
+        </table>
+        <div style="overflow-y:scroll; overflow-x: hidden; height:200px; width:100%; ">
+            <table id="SearchResultTable" style="width:100%;border-collapse: collapse;">
+            </table>
+        </div>
+        <div class="cutoffrule"></div>
+        <a id="Search" href="javascript:;" class="classname" style="float:right; margin:5px 5px 0 0;"><label id="SearchResultHeadSearchSpan">Search</label></a>
+        <div style="margin-top:5px;"> 
+            <!---------------------wifi config--------------------->
+            <div><span id="ConfSSIDSpan">SSID:</span>
+                <input id="ConfSSIDInput" type="text" />
+            </div>
+            <div> <span id="AuthModeSpan">Auth Mode:</span>
+                <select id="AuthModeSelect">
+                    <option value="1">Off</option>
+                    <option value="2">WEP</option>
+                    <option value="3">WPA/WPA2</option>
+                </select>
+            </div>
+            <div> <span id="WPAPSKKeySpan">PassWord:</span>
+                <input id="WPAPasswd" type="password" style="height:16px;vertical-align:top;"/>
+                <input id="WPAPasswdText" type="text" style="height:16px; display:none; vertical-align:top;"/>
+                <input id="ShowPasswordInput" type="checkbox"/><label for="ShowPasswordInput" id="ShowPasswordSpan">Show Password</label>
+               </div>
+               <div> <span></span>
+                  <a id="TestConnect" href="javascript:;" class="classname"><label id="TestSpan">Test</label></a> 
+                  <label id="TestMsgSpan"></label>
+               </div>
+        </div>
+    </div>
+</div>
+
+<div style="display:none"> 
+<form name="form2">
+<input name="cmd" type="hidden" value="setwifiattr">
+<input name="cururl" type="hidden">
+<input type="hidden" id="Form2WifiKeytype"/>
+<input type="hidden" id="Form2WifiWhichkey"/>
+<input type="hidden" id="Form2WifiEnable"/>
+<input type="hidden" id="Form2WifiSSID"/>
+<input type="hidden" id="Form2WifiKey"/>
+</form>
+
+</div>
+<div class="ApplyLayerStyle"><a id="apply" href="#">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#">Cancel</a></div>
+</body>
+</html>

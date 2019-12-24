@@ -1,0 +1,63 @@
+#!/bin/sh
+
+sysctl -p
+
+ipaddr=192.168.0.135
+netmask=255.255.255.0
+gateway=192.168.0.1
+#nfspath="10.85.184.62:/home"
+MOD_PATH=/ko
+
+#note by fan 限制线程栈大小
+#ulimit -s 256
+
+#mount tmpfs /tmpfs -t tmpfs -o size=10m
+if [ ! -d  "/mnt/config" ]
+then
+mkdir -p /mnt/config
+fi
+mount -t jffs2 /dev/mtdblock4 /mnt/config
+if [ ! -f  "/mnt/config/build.ver" ]
+then
+	echo "----------Extract config_default-------------"
+	tar -xzf /bin/vs/config_default.bin -C /
+fi
+
+chmod g+s,g-x /dev/mtdblock3
+
+if [ ! -f  "/etc/devinfo" ] 
+then
+    p2p_did=`/bin/paraconf r 1 P2P_DID`
+    p2p_pwd=`/bin/paraconf r 1 P2P_PWD`
+    p2p_lisence=`/bin/paraconf r 1 P2P_LISENCE`
+#	echo "$p2p_did $p2p_pwd $p2p_lisence"
+dev_write $p2p_did $p2p_lisence $p2p_pwd
+fi
+
+simple_encrypt=`/bin/paraconf r 1 SIMPLE_ENCRYPE`
+#echo "simple_encrypt = $simple_encrypt"
+if [ "$simple_encrypt" != "null" ];then
+echo $simple_encrypt >/tmpfs/usrkey
+fi
+PATH="/usr/bin:/usr/sbin:/bin:/sbin:/bin/vs/cgi-bin:/bin/vs:/usr/local/sbin:/usr/local/bin"
+#set_path_before /usr/local/sbin
+#set_path_before /usr/local/bin
+
+LD_LIBRARY_PATH="/usr/local/lib:/usr/lib"
+
+export PATH
+export LD_LIBRARY_PATH
+
+echo eth0 > /tmpfs/netdev
+
+#network
+
+#/*PTZ Serial*/
+#himm 0x20090030 0x4F01;
+#himm 0x2005003c 0x1e2;
+
+#telnet
+telnetd& 
+cd /etc
+/etc/boottab &
+

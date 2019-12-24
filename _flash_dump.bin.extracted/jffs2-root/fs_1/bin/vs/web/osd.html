@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="js/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/vbscript" src="js/gbk2utf8.vbs"></script>
+<script type="text/javascript" src="js/gbk2utf8.js"></script>
+<script type="text/javascript" src="js/osd.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=snap&" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/getvdisplayattr.cgi?&-flip=&-mirror=" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/getosdattr.cgi?&-encode" type="text/javascript"></script>
+<script language="javascript"></script>
+
+</head>
+<body class="content" style="display:none;">
+<div style="display:block">
+    <div style=" padding-top:10px; ">
+        <h4 id="ParenthesisOptionsSpan">Parenthesis Options </h4>
+        <!-------------------------------------------------------------------------->
+        <div ><span id="TimeStampSpan">Time Stamp: </span>
+            <input type="radio" name="timeradio" value="radiobutton" id="timeon" checked>
+            <label for="timeon" id="TimeStampOnSpan">on</label>
+            <input type="radio" name="timeradio" value="radiobutton" id="timeoff">
+            <label for="timeoff" id="TimeStampOffSpan">off</label>
+        </div>
+        <!-------------------------------------------------------------------------->
+        <div > <span id="CameranameSpan">Camera name: </span>
+            <input type="radio" name="nameradio" value="radiobutton" id="camnameon" checked >
+            <label  for="camnameon" id="CameranameOnSpan">on</label>
+            <input type="radio" name="nameradio" value="radiobutton" id="camnameoff">
+            <label  for="camnameoff" id="CameranameOffSpan">off</label>
+        </div>
+        <!-------------------------------------------------------------------------->
+        <div><span id="NameSpan">Name: </span>
+          <input name="cameraname" type="text" class="STYLE_font" size="15" maxlength="12">
+        </div>
+    </div>
+       
+    <div style="position:relative">
+        <div style="display:block">
+            <div id="CdDisplayLayer"> 
+                <script type="text/javascript">			
+                    connent = '<img  id="mdsnap" style="position:absolute;left:0px;top:0px;width:100%;height:100%"'
+                    connent += 'src="' + path + '"';
+                    connent += '/>'
+                    document.open();
+                    document.write(connent);
+                    document.close();					
+                </script> 
+            </div>
+        </div>
+        <div id="RegionLayer">
+			<script type="text/javascript">
+            	document.open();
+				for(i=0; i<parseInt(rgncnt); i++)
+				{
+					connent =  '<div id="region' + i +'" ><label id="region' + i + 'Label" style="font-size:10px;margin-left:0px;"></label></div>';
+					document.write(connent);
+				}
+            	document.close();
+            </script>
+        </div>
+	</div>
+</div>
+
+<div style="display:none">
+    <form name="form2">
+        <input name="cmd" type="hidden" value="showosdtime">
+        <input name="cururl" type="hidden" >
+        <script type="text/javascript">
+		document.open();
+			for(i=0; i<parseInt(rgncnt); i++)
+			{
+				connent =  '<input id="Form2CmdRgn' + i + '"type="hidden">';
+				connent += '<input id="Form2RgnShow' + i + '"  type="hidden">';
+				
+				
+				connent += '<input id="Form2CmdRgnPos' + i + '" type="hidden">';
+				connent += '<input id="Form2CmdRgnNum' + i + '" type="hidden">';
+				connent += '<input id="Form2RegionX' + i + '"  type="hidden">';
+				connent += '<input id="Form2RegionY' + i + '"  type="hidden">';
+				if(i == 1){//osd name
+					connent += '<input id="Form2RegionCont' + i + '"  type="hidden">';
+					connent += '<input id="Form2RegionEncode' + i + '"  type="hidden">';
+				}
+				
+				document.write(connent);
+			}
+			document.close();
+		</script>
+        <input id="Form2SetServernameCmd" name="cmd"  type="hidden" value="setservername">
+        <input id="Form2SetServername"  type="hidden" value="">
+        <input id="Form2SetServernameEncode" name="encode"  type="hidden">
+    </form>
+</div>
+<div class="ApplyLayerStyle"> <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

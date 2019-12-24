@@ -1,0 +1,55 @@
+                   = "84             ";
+aecswitch                      = "off            ";
+ec                             = "1              ";
+agcswitch                      = "on             ";
+gc                             = "12             ";
+ablcswitch                     = "off            ";
+color                          = "color          ";
+scene                          = "outdoor        ";
+powerfreq                      = "50             ";
+flip                           = "0              ";config_enc_workmode.ini
+mirror                         = "0              ";[vi_chn_mode.0] ³åÍ»
+
+[sensor_b]
+brightness                     = "0              ";
+saturation                     = "101            ";
+sharpness                      = "4              ";
+contrast                       = "37             ";
+hue                            = "1              ";
+adnswitch                      = "off            ";
+dnt                            = "4              ";
+awbswitch                      = "off            ";
+wbr                            = "74             ";
+wbb                            = "84             ";
+aecswitch                      = "off            ";
+ec                             = "1              ";
+agcswitch                      = "on             ";
+gc                             = "12             ";
+ablcswitch                     = "off            ";
+color                          = "color          ";
+scene                          = "outdoor        ";
+powerfreq                      = "50             ";
+flip                           = "0              ";
+mirror                         = "0              ";
+
+[indoor]
+bdrcenable                     = "0              ";
+aeattrcompensation             = "32             ";
+setawbzonesel                  = "16             ";
+
+[outdoor]
+bdrcenable                     = "1              ";
+aeattrcompensation             = "32             ";
+setawbzonesel                  = "16             ";
+
+[ae_normal]
+aeattrcompensation             = "128            ";
+
+[ae_dark]
+aeattrcompensation             = "96             ";
+
+[ae_bright]
+aeattrcompensation             = "160            ";
+
+[videomode]
+para                           = "0              ";

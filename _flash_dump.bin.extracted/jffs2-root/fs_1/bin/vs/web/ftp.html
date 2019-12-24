@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script  type="text/javascript" src="js/ftp.js"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getftp" type="text/javascript"></script>
+
+<script language="javascript"></script>
+
+
+
+</head>
+<body class="content">
+
+<div style="display:block">
+  <div> <span id="ServerSpan">Server:</span>
+    <input  type="text" id="FtpServer"/>
+  </div>
+  <div> <span id="PortSpan">Port:</span>
+    <input  type="text" id="FtpPort" maxlength="5"/>
+  </div>
+  <div> <span id="UserSpan">User:</span>
+    <input  type="text" id="FtpUser"/>
+  </div>
+  <div> <span id="PasswdSpan">Password:</span>
+    <input  type="password" id="FtpPasswd"/>
+    <a id="TestConnect" href="javascript:;" class="classname"><label id="TestSpan">Test</label></a> 
+    <label id="TestMsgSpan"></label>
+  </div>
+</div>
+<div style="display:none">
+
+<form name="form2">
+<input name="cmd" type="hidden" value="setftp">
+<input name="cururl" type="hidden">
+<input id="Form2Ftpserver" name="-ftpserver" type="hidden">
+<input id="Form2Ftpport" name="-ftpport" type="hidden">
+<input id="Form2Ftpusername" name="-ftpusername" type="hidden">
+<input id="Form2Ftppassword" name="-ftppassword" type="hidden">
+</div>
+<div class="ApplyLayerStyle"><a id="apply" href="#">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a></div>
+</body>
+</html>

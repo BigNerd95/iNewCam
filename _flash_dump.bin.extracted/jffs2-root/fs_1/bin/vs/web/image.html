@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/userdefine-jquery-ui.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script  type="text/javascript" src="js/jquery.ui.progressbar.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script  type="text/javascript" src="js/image.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="cgi-bin/hi3510/param.cgi?cmd=getvdisplayattr&-wdr" TYPE="text/javascript"></SCRIPT>
+
+<script language="javascript"></script>
+
+</head>
+<body class="content" style="display:none;">
+<div style="display:block">
+   <div>
+         <span id="wdrSpan">wdr:</span>
+         <select id="wdrSelect">
+            <option id="wdrLevel0" value="0">High</option>
+            <option id="wdrLevel1" value="1">Normal</option>
+            <option id="wdrLevel2" value="2">Low</option>
+        </select>
+         <label id="WdrChangeRebootMsgLabel"></label>
+         </div>
+</div>
+<div id="MsgLayer" style="display:none; margin:10px auto; width:600px">
+  <P></p>
+  <P></P>
+  <P  style="margin-left:120px;font-size:14px;" id="Msg"></p>
+  <div id="progressbar" style="font-size:16px;height:16px;"> </div>
+</div>
+<div style="display:none">
+    <form name="form2" method="post">
+        <input id="Form2SetvdisplayattrCmd" type="hidden"  disabled="disabled">
+        <input name="cururl" type="hidden">
+        <input id="Form2Wdr" type="hidden" disabled="disabled">
+        
+		<!-------------------------必须放在最后---->        
+   		<input id="Form2SetvdisplayattrRebootCmd" type="hidden"  disabled="disabled">
+        <input id="Form2Reboot" type="hidden" disabled="disabled">
+    </form>
+</div>
+
+<div class="ApplyLayerStyle"><a id="apply" href="#">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a></div>
+</body>
+</html>

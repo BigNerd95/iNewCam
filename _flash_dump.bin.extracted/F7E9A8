@@ -1,0 +1,93 @@
+[common]
+panspd                         = "2              "
+tiltspd                        = "2              "
+panstep                        = "0              "
+tiltstep                       = "0              "
+mirror                         = "0              "
+flip                           = "0              "
+homeX                          = "4520           "
+homeY                          = "860            "
+reset_enable                   = "0              ";ptz rst enable
+interval                       = "3600           ";ptz rst period,secend
+md_enable                      = "1              ";ptz MDrst enable
+md_interval                    = "30             ";ptz MDrst period,secend
+[preset|0]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "0              "
+[preset|1]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "0              "
+[preset|2]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "0              "
+[preset|3]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "0              "
+[preset|4]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "0              "
+[preset|5]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "0              "
+[preset|6]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "0              "
+[preset|7]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "0              "
+[preset|8]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "               "
+[preset|9]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "               "
+[preset|10]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "               "
+[preset|11]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "               "
+[preset|12]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "               "
+[preset|13]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "               "
+[preset|14]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+valid                          = "               "
+[preset|15]
+name                           = "               "
+panpos                         = "               "
+tiltpos                        = "               "
+va

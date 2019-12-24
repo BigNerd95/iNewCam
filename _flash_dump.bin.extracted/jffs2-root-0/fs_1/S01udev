@@ -1,0 +1,10 @@
+#!/bin/sh
+
+mkdir /dev/pts
+mount -t devpts devpts /dev/pts
+
+udevd --daemon
+udevstart
+
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s

@@ -1,0 +1,35 @@
+               = "0~95           "
+interval                       = "60             "
+event                          = "               "
+[playaudio]
+timetable0                     = "0~95           "
+timetable1                     = "0~95           "
+timetable2                     = "0~95           "
+timetable3                     = "0~95           "
+timetable4                     = "0~95           "
+timetable5                     = "0~95           "
+timetable6                     = "0~95           "
+interval                       = "30             "
+event                          = "               "
+[snapcfg]                                        
+qval                           = "100            "
+prenum                         = "0              "
+prefix                         = "               "
+mail                           = "               "
+ftp                            = "               "
+save                           = "               "
+[alarmoutcfg]                                    
+isenable                       = "0              "
+lasttime                       = "10             "
+[recordcfg]                                      
+time                           = "10             "
+mail                           = "               "
+ftp                            = "               "
+save                           = "               "
+[mobilecfg]                                      
+msize                          = "1              "
+mqval                          = "100            "
+[ptzcfg]
+mode                           = "0              ";0，表示移动到预置点
+                                                  ;1，表示巡航
+presetid                       = "0              "

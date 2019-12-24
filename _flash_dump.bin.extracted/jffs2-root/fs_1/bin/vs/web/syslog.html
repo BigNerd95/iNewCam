@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getservertime" type="text/javascript"></script>
+
+<script language="javascript">
+
+ScreenMax = 18;
+var CurPage=0;
+var TotalPage=0;
+var StartData ;
+var EndData ;
+var SearchLogType = 0;
+
+$(document).ready(function(e) {	
+   LoadLanguage();
+  /* 
+   $( "#startTime" ).datepicker(
+							{dateFormat: "yy-mm-dd" },
+		{
+			
+		});
+	$( "#endTime" ).datepicker(
+							{dateFormat: "yy-mm-dd" },
+		{
+			
+		});	
+	
+		$( "#endTime, #startTime").datepicker( "option", "monthNames", [ Januar,  Februar, Marts, April, Maj, Juni,  Juli, August, September, Oktober, November, December] );
+		$( "#endTime, #startTime").datepicker( "option", "dayNamesMin", [ Sunday,  Monday,  Tuesday,  Wednesday,  Thursday,  Friday,  Saturday ] );
+
+*/
+
+setTimeout(function(){$("body").css("display", "block");}, 100);
+});
+
+function on_load()
+{
+	year=time.substring(0,4);
+	month=time.substring(4,6);
+	day=time.substring(6,8);
+
+	/*初始化日期控件 year month day*/
+	var tmpdata = new Date(year, month-1, day);
+
+//	$( "#startTime" ).datepicker( "setDate", tmpdata );
+//	$( "#endTime" ).datepicker( "setDate", tmpdata );
+
+	$("#StartTimeYear").val(year);
+	$("#StartTimeMonth").val(month);
+	$("#StartTimeDay").val(day);
+	
+	$("#EndTimeYear").val(year);
+	$("#EndTimeMonth").val(month);
+	$("#EndTimeDay").val(day);
+
+	$("#curpagenum").val(0);	
+	$("#totalpagenum").val(0);	
+}
+
+function checktime()
+{
+	/*
+	var startdata = $("#startTime").datepicker( "getDate" );
+	var enddata = $("#endTime").datepicker( "getDate" );
+	
+	if( enddata.getYear() >=  startdata.getYear() )
+	{
+		if( enddata.getMonth() >=  startdata.getMonth() )
+		{
+			if( enddata.getDate() <  startdata.getDate() )
+			{
+				return false;
+			}
+		}
+		else
+			{	
+				return false;
+			}
+	}
+	else
+	{
+		return false;
+	}*/
+	
+	startYear = Number($("#StartTimeYear").val());
+	startMonth = Number($("#StartTimeMonth").val());
+	startDay = Number($("#StartTimeDay").val());
+	
+	endYear = Number($("#EndTimeYear").val());
+	endMonth = Number($("#EndTimeMonth").val());
+	endDay = Number($("#EndTimeDay").val());
+	
+	
+	if( endYear >=  startYear )
+	{
+		if( endMonth >=  startMonth )
+		{
+			if( endDay < startDay )
+			{
+				return false;
+			}
+		}
+		else
+			{	
+				return false;
+			}
+	}
+	else
+	{
+		return false;
+	}
+	
+	return true;
+}
+
+function geturl(pagenum)
+{
+	var url =  '/cgi-bin/hi3510/querylog.cgi?';
+	
+	startYear = Number($("#StartTimeYear").val())-1900;
+	startMonth = Number($("#StartTimeMonth").val());
+	startDay = Number($("#StartTimeDay").val());
+	
+	endYear = Number($("#EndTimeYear").val())-1900;
+	endMonth = Number($("#EndTimeMonth").val());
+	endDay = Number($("#EndTimeDay").val());
+	/*
+	url += '&-s_year=' +  StartData.getYear();
+	url += '&-s_month=' +  StartData.getMonth()+1;
+	url += '&-s_day=' +  StartData.getDate();
+
+	url += '&-e_year=' +  EndData.getYear();
+	url += '&-e_month=' +  EndData.getMonth()+1;
+	url += '&-e_day=' +  EndData.getDate();
+*/
+	url += '&-s_year=' + startYear;
+	url += '&-s_month=' +  startMonth;
+	url += '&-s_day=' +  startDay;
+
+	url += '&-e_year=' +  endYear;
+	url += '&-e_month=' +  endMonth;
+	url += '&-e_day=' +  endDay;
+
+
+	url += '&-type=' +  SearchLogType;
+
+	url += '&-pagenum=' +  pagenum;
+		
+	url += '&-searchmax=' +  ScreenMax;
+	url += '&-time='+ new Date().getTime();
+
+	return url;
+}
+
+function searchlog(pagenum)
+{		
+	if(checktime() == false)
+	{
+		alert(ErrorTime);	
+		return;
+	}
+	else
+	{
+		var url = 	geturl(pagenum);
+	}
+	
+  	$.get(url,
+  					function(data) { 
+						/*清空列表*/
+						$("#logLayer td").html(" ");					
+						$("#ActionLayer").css("display", "block");
+					
+						eval(data);
+						
+				$("#GotoPage option").remove();
+						for(i=0; i<maxpagenum; i++)
+						{
+							$("#GotoPage").append("<option value='" + eval(i) + "'>" + (i+1) + "</option>");	
+						}
+						$("#GotoPage").val(pagenum);
+					
+						
+						if(Number(maxpagenum) == 0)
+						{
+							$("#curpagenum").val(0);	
+							$("#totalpagenum").val(0);	
+							TotalPage = 0;
+						}
+						else
+						{
+							$("#curpagenum").val(Number(pagenum)+1);	
+							$("#totalpagenum").val(Number(maxpagenum));	
+							TotalPage = maxpagenum;
+						}
+	
+
+						var majortype=0, minortype=0;
+						var id="";
+						for(i=0; i<Number(lognum); i++)//lognum 由IPC返回
+						{
+							majortype = Number(eval("majortype_"+i));
+							minortype = Number(eval("minortype_"+i));		
+							
+							$("#searchSN_"+i).html(i+(pagenum*ScreenMax)+1);
+							$("#searchTime_"+i).html(eval("time_"+i));
+								
+							switch(majortype)
+							{
+								case 0x1:/* 报警 */
+									$("#searchType_"+i).html(SearchTypeAlarmSpan);
+									switch(minortype)
+									{
+										case 0x1:
+											$("#searchOperation_"+i).html(MsgIOAlarmIn);
+										break;
+										case 0x2:
+											$("#searchOperation_"+i).html(MsgIOAlarmOut);
+										break;	
+										case 0x3:
+											$("#searchOperation_"+i).html(MsgMDAlarmStart);
+										break;	
+										case 0x4:
+											$("#searchOperation_"+i).html(MsgMDAlarmEnd);
+										break;
+										case 0x5:
+											$("#searchOperation_"+i).html(MsgODAlarmStart);
+										break;
+										case 0x6:
+											$("#searchOperation_"+i).html(MsgODAlarmEnd);
+										break;
+										case 0x9:
+											$("#searchOperation_"+i).html(MINORVCAALARMSTARTDEFENCE);
+										break;
+										case 0xa:
+											$("#searchOperation_"+i).html(MINORVCAALARMSTOPDEFENCE);
+										break;
+										case 0xb:
+											$("#searchOperation_"+i).html(MINORVCAALARMREGISTERCMD);
+										break;
+									}
+								break;	
+								case 0x2:/* 异常 */
+									
+								break;
+								case 0x3:/* 操作 */
+									$("#searchType_"+i).html(SearchTypeOperationSpan);
+									switch(minortype)
+									{
+										case 0x41:/* 开机 */										
+											$("#searchOperation_"+i).html(MsgStartup);
+										break;	
+										case 0x45:/* 登录 */										
+											$("#searchOperation_"+i).html(MsgRomoteLogin+eval("info_"+i));
+										break;
+										case 0x46:/* 发送email */						
+											$("#searchOperation_"+i).html(MsgSendEmail+eval("info_"+i));
+										break;	
+										case 0x47:	/* 时间修改 */				
+											$("#searchOperation_"+i).html(MsgModifyTime);
+										break;	
+										case 0x48:	/* 定时录像开始 */
+											$("#searchOperation_"+i).html(MsgTimeRecord);
+										break;	
+										case 0x49:	/* 手动录像开始 */
+											$("#searchOperation_"+i).html(MsgManualRecord);
+										break;	
+										case 0x50:	/* 告警录像开始 */
+											$("#searchOperation_"+i).html(MsgAlarmRecord);
+										break;	
+										case 0x51:	/* 网络参数修改 */
+											$("#searchOperation_"+i).html(MsgModifyNetwork);
+										break;
+									}
+								break;
+							}
+							
+						}
+				}); 	
+}
+
+function cleanlog()
+{
+	var url =  '/cgi-bin/hi3510/dellog.cgi?';
+		url += '&-time='+ new Date().getTime();
+	$.get(url,
+		function() {
+				window.location.reload();
+			}
+	) ;
+}
+
+function searchFirstLog()
+{
+	CurPage = 0;
+	searchlog(CurPage);
+	return true;	
+}
+
+function searchUpLog()
+{
+	if(CurPage > 0)
+		CurPage -= 1;
+	else
+		return true;
+		
+	searchlog(CurPage);
+	
+	return true;	
+}
+
+function searchDownLog()
+{
+	if(CurPage < TotalPage-1)
+		CurPage += 1;
+	else
+		return true;
+		
+	searchlog(CurPage);
+	
+	return true;	
+}
+
+function searchEndLog()
+{
+	CurPage = TotalPage-1;
+	searchlog(CurPage);
+	
+	return true;	
+}
+
+function updateLog()
+{
+	/*更新搜索条件，只有重新搜索时，才会按新的条件搜索*/
+//	StartData = $("#startTime").datepicker( "getDate" );
+//	EndData = $("#endTime").datepicker( "getDate" );
+ 	SearchLogType = $("#LogType").val();
+	CurPage = 0;
+	
+	searchlog(0);
+
+	return true;	
+}
+
+function gotoSearchLog()
+{
+	CurPage = Number($("#GotoPage").val());
+	searchlog(CurPage);
+	
+	return true;	
+}
+
+function SearchTimeOnblur(obj)
+{
+	if( $(obj).attr("id") == "StartTimeYear"
+	||   $(obj).attr("id") == "StartTimeMonth"
+	||   $(obj).attr("id") == "StartTimeDay" )	
+	{
+		yearobj = "#StartTimeYear";
+		monthobj = "#StartTimeMonth";
+		dayobj = "#StartTimeDay";
+	}
+	else
+	{
+		yearobj = "#EndTimeYear";
+		monthobj = "#EndTimeMonth";
+		dayobj = "#EndTimeDay";
+	}
+	
+	year = parseInt($(yearobj).val());	
+	if(isNaN(year))
+	 year = 0;
+	if(year < 1970)
+		$(yearobj).val(1970);
+
+	month = parseInt($(monthobj).val());
+		if(isNaN(month))
+	 month = 0;
+	if(month < 1)
+		$(monthobj).val("01");
+	else if(month > 12)
+		$(monthobj).val("12");
+					
+	switch(month)
+	{
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			maxday=31;
+		break;	
+		case 2:
+			if((year%4 == 0)&&( year%100 != 0) || (year%400 == 0))
+				maxday = 29;
+			else
+				maxday = 28;	
+		break;
+		default:
+			maxday=30;
+	}
+	
+	day = parseInt($(dayobj).val());
+	if(isNaN(day))
+	 day = 0;
+	if(day < 1)
+		$(dayobj).val("01");
+	else 	if(day > maxday)
+		$(dayobj).val(maxday);
+	
+	return true;	
+}
+
+$(function(){
+	    /****************限定数字输入*********************/
+    $("#StartTimeYear, #StartTimeMonth, #StartTimeDay, #EndTimeYear, #EndTimeMonth, #EndTimeDay").keypress(function(event) {
+        if (((event.which >= 48) && (event.which <= 57)) || event.which == 8 || event.which == 0) return event.which;
+        else return false;
+    })
+	
+})
+
+</script>
+</head>
+<body onLoad="on_load()" class="content" style="display:none;">
+<div style="display:block; margin:10px; padding:10px;"> 
+  <div>
+    <div  style="display:inline-block; vertical-align:top;*display:inline; *zoom:1;">
+      <label id="SearchTimeSpan">Time:</label>
+      <div style="background:#FFF; border:#CCC 1px solid; display:inline; padding:2px;">
+          <input id="StartTimeYear" style="border:0px; text-align:center;  background:#FFF;width:40px;" maxlength="4" size="5" onblur='SearchTimeOnblur(this)'/>
+          -
+          <input id="StartTimeMonth" style="border:0px; text-align:center; background:#FFF;width:20px;" maxlength="2"  size="5"  onblur='SearchTimeOnblur(this)'/>
+          -
+          <input id="StartTimeDay" style="border:0px; text-align:center; background:#FFF;width:20px;" maxlength="2"  size="5"  onblur='SearchTimeOnblur(this)'/>
+        </div>
+      ~
+      <div style="background:#FFF; border:#CCC 1px solid; display:inline; padding:2px;">
+          <input id="EndTimeYear" style="border:0px; text-align:center; background:#FFF;width:40px;" maxlength="4" size="5" onblur='SearchTimeOnblur(this)'/>
+          -
+          <input id="EndTimeMonth" style="border:0px; text-align:center; background:#FFF;width:20px;" maxlength="2"  size="5" onblur='SearchTimeOnblur(this)'/>
+          -
+          <input id="EndTimeDay" style="border:0px; text-align:center; background:#FFF; width:20px;" maxlength="2"  size="5" onblur='SearchTimeOnblur(this)'/>
+        </div>
+    </div>
+    <div  style="display:inline-block; vertical-align:top;*display:inline; *zoom:1;">
+      <label id="SearchTypeSpan">Type:</labeL>
+      <select id="LogType">
+        <option value="6" id="SearchTypeAllSpan">All</option>
+        <option value="5" id="SearchTypeAlarmSpan">Alarm</option>
+        <option value="4" id="SearchTypeOperationSpan">Operation</option>
+      </select>
+    </div>
+    <div style="display:inline-block; vertical-align:top;*display:inline; *zoom:1;"> <a  id="SearchSpan" href="javascript:;" class="classname" onClick="updateLog()">Search</a> </div>
+  </div>
+  <div style="width:100%; margin-top:10px">
+    <table width="100%" border="1px" bordercolor="#9097A9" style="border-collapse:collapse">
+      <thead>
+        <tr>
+          <td width="60px" ><label id="TabelNumSpan">Num</label></td>
+          <td  width="160px" ><label id="TabelTimeSpan">Time</label></td>
+          <td width="100px"  ><label id="TabelTypeSpan">Type</label></td>
+          <td ><label id="TabelDetailedSpan">Detailed</label></td>
+        </tr>
+      </thead>
+      <tbody id="logLayer">
+        <script type="text/javascript">
+			document.open();
+			for(i=0; i<ScreenMax; i++)
+			{
+				document.write('<tr>');
+				document.write('<td id="searchSN_' + i + '">&nbsp;</td>');
+				document.write('<td id="searchTime_' + i + '">&nbsp;</td>');
+				document.write('<td id="searchType_' + i + '">&nbsp;</td>');
+				document.write('<td id="searchOperation_' + i + '" style="text-align:left;padding-left:10px;">&nbsp;</td>');
+				document.write('</tr>');
+			}
+			document.close();	
+			</script>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top:10px; display:none; width:100%" id="ActionLayer">
+  	<div style="float:left;">
+          <input id="curpagenum"  type="text" maxlength="3" onfocus="this.blur()"  size="5"/>/
+        <input id="totalpagenum" type="text" maxlength="3"  onfocus="this.blur()" size="5"/>
+   	</div>
+  	<div style="float:right;">
+              <label id="gotospan">Goto</label>
+            <select id="GotoPage" onchange='gotoSearchLog()' style="width:auto;"></select>      
+            <a id="syslogFirstspan" href="javascript:;" class="classname" onClick='searchFirstLog()'>First</a> 
+            <a id="syslogUpspan" href="javascript:;" class="classname" onClick='searchUpLog()'>Up</a> 
+            <a id="syslogDownspan" href="javascript:;" class="classname" onClick='searchDownLog()'>Down</a> 
+            <a id="syslogEndspan" href="javascript:;" class="classname" onClick="searchEndLog()">End</a>      
+    </div>
+    <div style="clear:both;"></div>
+    <div style=" margin-top:5px; float:right;"> 
+        <!--a  id="syslogBackupspan" href="javascript:;" class="classname" onClick="BackupSearchLog(0)">Backup</a--> 
+        <a id="syslogcleanspan" href="javascript:;" class="classname" onClick="cleanlog()">Clean</a> </div>
+    </div>
+	<div style="clear:both;"></div>
+</div>
+<div style="display:none">
+  <form name="form2" method="get" action="cgi-bin/hi3510/cleanlog.cgi">
+    <input name="cururl" type="hidden"  >
+    <input id="Form2Name" name="name" type="hidden" value="sys">
+  </form>
+</div>
+</body>
+</html>

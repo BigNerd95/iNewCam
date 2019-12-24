@@ -1,0 +1,35 @@
+#!/bin/sh
+
+. /bin/vs/cgi-bin/netenv.conf
+. /bin/vs/cgi-bin/net_func.sh
+
+DEFAULT_IP=192.168.1.88
+DEFAULT_MASK=255.255.255.0
+DEFAULT_GW=192.168.1.1
+BROADCAST="broadcast 192.255.255.255"
+RESOLV_CONF="/etc/resolv.conf"
+
+echo "dhcp failed. set $interface to default ip: $DEFAULT_IP"
+logger "dhcp failed. set $interface to default ip: $DEFAULT_IP"
+
+/sbin/ifconfig $interface $DEFAULT_IP $BROADCAST netmask $DEFAULT_MASK
+
+a_3g_enable="0"
+
+if [ -f /etc/ppp/pppd_env.sh ];then
+	. /etc/ppp/pppd_env.sh
+	. $PPPD_CONFIG
+fi
+
+if [ $a_3g_enable == "0" ];then
+	/sbin/route add default gw $DEFAULT_GW
+fi
+
+. $mac_lined_file
+net_cache "$interface" "$DEFAULT_IP" "$DEFAULT_MASK" "$DEFAULT_GW" "$macaddress" "1" "1"
+
+#echo -e "var ip = \"$DEFAULT_IP\" ;\r\n"\
+#     "var netmask = \"$DEFAULT_MASK\" ;\r\n"\
+#     "var gateway = \"$DEFAULT_GW\" ;\r\n"\
+#     "var macaddress = \"$macaddress\" ;\r\n" > $ip_cache1
+     

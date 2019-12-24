@@ -1,0 +1,61 @@
+#!/bin/sh
+# Sample udhcpc bound script
+
+. /bin/vs/cgi-bin/netenv.conf
+. /bin/vs/cgi-bin/net_func.sh
+
+RESOLV_CONF="/etc/resolv.conf"
+
+[ -n "$broadcast" ] && BROADCAST="broadcast $broadcast"
+[ -n "$subnet" ] && NETMASK="netmask $subnet"
+
+/sbin/ifconfig $interface $ip $BROADCAST $NETMASK
+
+. $mac_lined_file
+
+#$1 NETTYPE    #$2 IP     #$3 MASK     #$4 GW    #$5 MAC    #$6 DHCPFlag    #$7 DNSFlag
+net_cache "$interface" "$ip" "$subnet" "$router" "$macaddress" "1" "1"
+
+#echo -e "var ip = \"$ip\" ;\r\n"\
+#     "var netmask = \"$subnet\" ;\r\n"\
+#     "var gateway = \"$router\" ;\r\n"\
+#     "var macaddress = \"$macaddress\" ;\r\n" > $ip_cache1
+
+
+if [ -n "$router" ]
+then
+	echo "deleting routers"
+	while /sbin/route del default gw 0.0.0.0 dev $interface
+	do :
+	done
+
+	for i in $router
+	do
+		/sbin/route add default gw $i dev $interface
+	done
+fi
+
+route add -net 239.0.0.0 netmask 255.0.0.0 $interface
+
+. $ip_config
+if [ $dnstype = "server" ]
+then
+    echo -n > $RESOLV_CONF
+    [ -n "$domain" ] && echo domain $domain >> $RESOLV_CONF
+    for i in $dns
+    do
+        echo adding dns $i
+        echo nameserver $i >> $RESOLV_CONF
+    done
+    widedns=`grep "8.8.8.8" $RESOLV_CONF`
+    if [ -z $widedns ]
+    then
+        echo nameserver 8.8.8.8 >> $RESOLV_CONF
+    fi
+
+fi  
+
+
+echo "DHCP renew" > /tmpfs/renew
+echo "devsrejoin" > /tmpfs/sysmon
+

@@ -1,0 +1,77 @@
+﻿@charset "gb2312";
+/* CSS Document */
+div#ReplayPlayerLayer, .LeftToolLayerStyle {display:inline;}
+
+div#RePlayerVolCtrLayer a#VolDisplaySpan1,
+div#RePlayerVolCtrLayer a#VolDisplaySpan2,
+div#RePlayerVolCtrLayer a#VolDisplaySpan3,
+div#RePlayerVolCtrLayer a#VolDisplaySpan4{width:28px;height:28px;}
+
+div#ReplaySearchListLayer a#Refresh,
+div#ReplaySearchListLayer a#Search,
+div#ReplaySearchListLayer a#Download,
+div#ReplaySearchListLayer a#FirstPage,
+div#ReplaySearchListLayer a#EndPage,
+div#ReplaySearchListLayer a#PrevPage,
+div#ReplaySearchListLayer a#NextPage{width:32px;height:32px;}
+
+div#ReplaySearchListLayer label#FileListSpan,
+div#RePlayerCtrLayer label#RePlayerCtrInfo,
+div#ReplaySearchListLayer a#Refresh,
+div#ReplaySearchListLayer a#Search,
+div#ReplaySearchListLayer a#Download,
+div#ReplaySearchListLayer a#FirstPage,
+div#ReplaySearchListLayer a#EndPage,
+div#ReplaySearchListLayer a#PrevPage,
+div#ReplaySearchListLayer a#NextPage,
+div#ReplayPlayerLayer div#RePlayerCtr,
+div#ReplayPlayerLayer div#RePlayerCtr a,
+div#ReplayPlayerLayer div#RePlayerTSeekLayer,
+div#ReplayPlayerLayer div#RePlayerTSeekLayer div#RePlayerTimeSlider,
+div#ReplayPlayerLayer div#RePlayerTSeekLayer div#DownloadProgress,
+div#ReplayPlayerLayer div#RePlayerVolCtrLayer,
+div#ReplayPlayerLayer div#RePlayerVolCtrLayer a,
+div#ReplayPlayerLayer div#RePlayerVolCtrLayer div#RePlayerVolSlider{display:inline;zoom:1;}
+
+
+div#OCXCtlLayer a#RecordSwitch{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/record.png', sizingMethod='scale');background:none;}
+div#OCXCtlLayer a#RecordIngSwitch{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/recording.png', sizingMethod='scale');background:none;}
+div#OCXCtlLayer a#CaptureSwitch{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/capture.png', sizingMethod='scale');background:none;}
+div#OCXCtlLayer a#MicroOnSwitch{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/micro_on.png', sizingMethod='scale');background:none;}
+div#OCXCtlLayer a#MicroOffSwitch{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/micro_off.png', sizingMethod='scale');background:none;}
+div#OCXCtlLayer a#VolOnSwitch{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/vol_on.png', sizingMethod='scale');background:none;}
+div#OCXCtlLayer a#VolOffSwitch{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/vol_off.png', sizingMethod='scale');background:none;}
+
+a#GotoPoint{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/goto.png', sizingMethod='scale');background:none;} 
+a#SetPoint{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/setup.png', sizingMethod='scale');background:none;} 
+a#ClearPoint{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/clear.png', sizingMethod='scale');background:none;} 
+
+a#BrightnessImg{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/bright.png', sizingMethod='scale');background:none;} 
+a#HueImg{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/hue.png', sizingMethod='scale');background:none;} 
+a#ContrastImg{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/contra.png', sizingMethod='scale');background:none;} 
+a#SaturationImg{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/saturation.png', sizingMethod='scale');background:none;} 
+
+
+div#RePlayerCtr a#Stop{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/Stop.png', sizingMethod='scale');background:none;}
+div#RePlayerCtr a#Pause{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/Pause.png', sizingMethod='scale');background:none;}
+div#RePlayerCtr a#Play{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/Play.png', sizingMethod='scale');background:none;}
+div#RePlayerCtr a#FastPlay{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/FastPlay.png', sizingMethod='scale');background:none;}
+div#RePlayerCtr a#FramePlay{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/FramePlay.png', sizingMethod='scale');background:none;}
+
+
+
+div#ReplaySearchListLayer a#Refresh{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/refresh.png', sizingMethod='scale');background:none;}
+div#ReplaySearchListLayer a#Search{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/search.png', sizingMethod='scale');background:none;}
+div#ReplaySearchListLayer a#Download{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/download.png', sizingMethod='scale');background:none;}
+div#ReplaySearchListLayer a#FirstPage{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/firstpage.png', sizingMethod='scale');background:none;}
+div#ReplaySearchListLayer a#EndPage{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/lastpage.png', sizingMethod='scale');background:none;}
+div#ReplaySearchListLayer a#PrevPage{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/prevpage.png', sizingMethod='scale');background:none;}
+div#ReplaySearchListLayer a#NextPage{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/nextpage.png', sizingMethod='scale');background:none;}
+
+div#RePlayerVolCtrLayer a#VolDisplaySpan1{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/vol_on.png', sizingMethod='scale');background:none;}
+div#RePlayerVolCtrLayer a#VolDisplaySpan2{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/vol_on.png', sizingMethod='scale');background:none;}
+div#RePlayerVolCtrLayer a#VolDisplaySpan3{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/vol_on.png', sizingMethod='scale');background:none;}
+div#RePlayerVolCtrLayer a#VolDisplaySpan4{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/vol_off.png', sizingMethod='scale');background:none;}
+
+div#SearchCalender a.ui-datepicker-prev{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/left_ico.png', sizingMethod='scale');background:none;}
+div#SearchCalender a.ui-datepicker-next{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/right_ico.png', sizingMethod='scale');background:none;}

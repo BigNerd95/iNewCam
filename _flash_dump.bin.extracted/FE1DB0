@@ -1,0 +1,14 @@
+[schedulemng]
+number                         = "1              "
+1                              = "timesheet1     "
+[timesheet1]
+type                           = "0              ";0-REC 1-ALARM 2-MD
+enable                         = "1              "
+mode                           = "0              ";0-星期模式 1-工作日模式 2-所有时间模式                                                            
+timetable0                     = "0~95           "
+timetable1                     = "0~95           "
+timetable2                     = "0~95           "
+timetable3                     = "0~95           "
+timetable4                     = "0~95           "
+timetable5                     = "0~95           "
+timetable6                     = "0~95           "

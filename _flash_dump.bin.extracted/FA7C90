@@ -1,0 +1,23 @@
+    = "5000";
+
+AWBCalibration_CurvePara_4        = "-553|997|189|286428|128|-242429|";
+AWBCalibration_au16StaticWB_4     =  "470|256|256|447|";
+AWBCalibration_u16RefTemp_4       = "5000";
+
+AWBCalibration_CurvePara_5        = "-553|997|189|286428|128|-242429|";
+AWBCalibration_au16StaticWB_5     =  "470|256|256|447|";
+AWBCalibration_u16RefTemp_5       = "5000";
+
+
+[CCM]
+HighColorTemp          = "5000";
+HighCCM                = "455|32961|32773|32844|443|32879|32803|33000|524|";
+
+[Saturation]
+sat                    = "128|128|128|112|96|80|64|48|";
+
+[DPC]
+;HI_U16 u32DpcDynSlope[12]={200|200|200|200|200| 200| 200|     300| 400|  800| 1600|1600}
+;	HI_U16 u32DpcDynThresh[12]={20|200|200|200|30|  30 | 20|  
+DynamicBadPixelSlope             = "512|512|512|512|512|512|512|768|832|848|864|880|";
+DynamicBadPixelThresh            = "64|64|64|64|48|48|32|25|16|5|0|0|";

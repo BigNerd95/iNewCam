@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/base-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css" />
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/ptz.js"></script>
+
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getptzcfg&" type="text/javascript"></script>
+<script language="javascript">
+
+
+
+</script>
+</head>
+<body class="content" style="display:none;">
+<div style="display:block">
+ <h4 id="PropertySpan">Property:</h4>
+  <!-----------------------type---------------------->
+  <div> <span id="TypeSpan">PTZ Type:</span>
+    <select id="TypeSelect">
+      <option class="optionspan" value="0">485</option>
+      <option class="optionspan" id="MotorSpan" value="1">motor</option>
+    </select>
+  </div>
+<div id="Rs485Layer">
+  <!-----------------------protocol---------------------->
+  <div> <span id="ProtocolSpan">Protocol:</span>
+    <select id="protocol">
+      <option value="pelco-d">pelco-d</option>
+      <option value="pelco-p">pelco-p</option>
+    </select>
+  </div>
+  <!-----------------------Baud---------------------->
+  <div> <span id="BaudRateSpan">Baud Rate:</span>
+    <select id="baudrate">
+      <option value="1200">1200</option>
+      <option value="2400">2400</option>
+      <option value="4800">4800</option>
+      <option value="9600">9600</option>
+      <option value="19200">19200</option>
+      <option value="38400">38400</option>
+      <option value="57600">57600</option>
+      <option value="115200">115200</option>
+    </select>
+  </div>
+  <!-----------------------Data---------------------->
+  <div> <span id="DataBitSpan">Data Bit:</span>
+    <select id="databit">
+      <option value="8">8</option>
+      <option value="7">7</option>
+      <option value="6">6</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  <!-----------------------Stop---------------------->
+  <div> <span id="StopBitSpan">Stop Bit:</span>
+    <select id="stopbit">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+  </div>
+  <!-----------------------parity---------------------->
+  <div> <span id="ParitySpan">Parity:</span>
+    <select id="parity">
+      <option value="0">None</option>
+      <option value="1">Odd</option>
+      <option value="2">Even</option>
+      <option value="3">Mark</option>
+      <option value="4">Space</option>
+    </select>
+  </div>
+  <!-----------------------address---------------------->
+  <div> <span id="AddressSpan">Address:</span>
+    <select id="address_h">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <select id="address_m">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+    <select id="address_l">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+    (0~255)
+  </div>
+  </div>
+  <div id="MontorLayer">
+  <div> <span id="FilpSpan">Flip:</span>
+ <input type="radio" name="FlipGrp" id="FlipGrpOn" value="1"/><label for="FlipGrpOn" id="FlipOnSpan">On</label>
+ <input type="radio" name="FlipGrp" id="FlipGrpOff" value="0" checked="checked"/><label for="FlipGrpOff" id="FlipOffSpan">Off</label>
+  </div>
+  <div> <span id="MirrorSpan">Mirror:</span>
+ <input type="radio" name="MirrorGrp" id="MirrorGrpOn" value="1"/><label for="MirrorGrpOn" id="MirrorOnSpan">On</label>
+ <input type="radio" name="MirrorGrp" id="MirrorGrpOff" value="0" checked="checked"/><label for="MirrorGrpOff" id="MirrorOffSpan">Off</label>
+  </div>
+   
+  <div style="display:none;"> <span id="TiltspdSpan">Vertical Speed:</span>
+  <select id="TiltspdSelect">
+      <option value="0" id="VerticalHighSpan" class="optionspan">High</option>
+      <option value="1" id="VerticalMidSpan"class="optionspan">Mid</option>
+      <option value="2" id="VerticalLowSpan" class="optionspan">Low</option>
+    </select>
+  </div>
+  <div> <span id="PanspdSpan">Plane Speed:</span>
+  <select id="PanspdSelect">
+      <option value="0" id="PanspdHighSpan" class="optionspan">High</option>
+      <option value="1" id="PanspdMidSpan"class="optionspan">Mid</option>
+      <option value="2" id="PanspdLowSpan"class="optionspan">Low</option>
+    </select>
+  </div>
+  <div> <span id="StayTimeSpan">Stay Time:</span>
+  <select id="StayTimeSelect">
+    <option value="2">2</option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="30">30</option>
+    <option value="45">45</option>
+    <option value="60">60</option>
+    </select><label id="SecondSpan">Second</label>
+  </div>
+  <div> <span id="PatrolsSpan">Patrols:</span>
+  <select id="PatrolsSelect">
+    <option value="2">2</option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    </select>
+  </div>
+  <div id="Track0Layer"> <span id="Track0Span">Track 1:</span></div>
+  <div id="Track1Layer"> <span id="Track1Span">Track 2:</span></div>
+  <div id="Track2Layer"> <span id="Track2Span">Track 3:</span></div>
+  <div id="Track3Layer"> <span id="Track3Span">Track 4:</span></div>
+ 
+  
+  
+  </div>
+</div>
+<div style="display:none">
+  <form id="Form2" name="form2" method="post">
+    <input name="cmd" type="hidden" value="setptzcfg">
+    <input id="Form2Cururl" name="cururl" type="hidden">
+    <input id="Form2Type" type="hidden">
+    <input id="Form2Baud" type="hidden">
+    <input id="Form2StopBit" type="hidden">
+    <input id="Form2DataBit" type="hidden">
+    <input id="Form2Parity" type="hidden">
+    <input id="Form2Address" type="hidden">
+    <input id="Form2Protocol" type="hidden">
+    
+    <input id="Form2Flip" type="hidden" >
+    <input id="Form2Mirror" type="hidden">
+    <input id="Form2StayTime" type="hidden">
+    <input id="Form2Patrols" type="hidden">
+    
+    <input id="Form2Panspd" type="hidden" >
+    <input id="Form2Tiltspd" type="hidden">
+    <input id="Form2Track1" type="hidden">
+    <input id="Form2Track2" type="hidden">
+    <input id="Form2Track3" type="hidden">
+    <input id="Form2Track4" type="hidden">
+  </form>
+</div>
+<div class="ApplyLayerStyle"> <a id="apply"  href="#" onClick="do_submit()">Apply</a> </div>
+<div class="CancelLayerStyle"><a id="cancel" href="#" onClick="JavaScript:location.reload(true)">Cancel</a> </div>
+</body>
+</html>

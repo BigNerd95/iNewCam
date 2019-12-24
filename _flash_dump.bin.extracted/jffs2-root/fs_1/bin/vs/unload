@@ -1,0 +1,91 @@
+#! /bin/sh
+
+DRI_PATH=/ko
+
+#Unload ETH0
+UnloadEth()
+{
+    ifconfig eth0 down
+    rmmod hiether
+    rmmod libphy
+}
+
+#Unload USB wifi
+UnloadWifi()
+{
+    rmmod rt73
+}
+
+#Unload USB
+UnloadUSB()
+{
+#   rmmod hiusb
+    rmmod hi3511_usb_1-1
+    rmmod usbcore
+}
+
+#Unload SD
+UnloadSD()
+{
+#	rmmod as-iosched
+	rmmod himci
+	rmmod mmc_block
+	rmmod mmc_core
+	rmmod sd_mmc_sdio
+	rmmod vfat
+	rmmod fat
+	rmmod nls_iso8859-1
+	rmmod nls_cp437
+	rmmod nls_base
+}
+
+#Unload hi3512
+UnloadHi3512()
+{
+	rmmod hi3511_jpegd
+	rmmod hi3511_jpege
+	rmmod hi3511_h264d
+	rmmod hi3511_h264e
+	rmmod hi3511_chnl
+	rmmod hi3511_ao
+	rmmod hi3511_ai
+	rmmod hi3511_sio
+	rmmod hi3511_md
+	rmmod hi3511_vdec
+	rmmod hi3511_group
+	rmmod hi3511_venc
+	rmmod hi3511_vpp
+	rmmod hi3511_dsu
+	rmmod hi3511_viu
+	rmmod hi3511_vou
+	rmmod tde
+	rmmod hi3511_sys
+	rmmod hi3511_base
+}
+
+#Unload base
+UnloadBase()
+{
+	rmmod encript
+	rmmod infra
+	rmmod reset
+	rmmod ip_motor
+	rmmod tlv_320aic31
+	rmmod rtc_pcf8563
+	#rmmod ov_7725
+	rmmod sensor_isp
+	rmmod hiwdt
+	rmmod hidmac
+	rmmod gpioi2c
+}
+
+#Unload mmz
+Unloadmmz()
+{
+    rmmod mmz
+}
+
+# main function start
+UnloadSD
+UnloadHi3512
+UnloadBase

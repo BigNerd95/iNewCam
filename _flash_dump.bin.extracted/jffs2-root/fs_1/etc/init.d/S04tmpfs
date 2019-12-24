@@ -1,0 +1,11 @@
+if [ ! -d  "/tmpfs/" ] 
+then
+echo "----------mkdir /tmpfs-------------"
+mkdir -p /tmpfs
+fi
+
+mount tmpfs /tmpfs -t tmpfs -o size=3m
+mkdir /tmpfs/log
+mkdir /tmpfs/snap
+touch /tmpfs/index.html
+

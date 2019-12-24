@@ -1,0 +1,10 @@
+[common]
+cnt                            = "1              "
+[recchn.0]
+vschn                          = "11             ";录哪个码流号
+rec_on_boot                    = "0              ";rec enable机器启动后是否手动录像
+prerecenable                   = "1              ";pre rec enable预录像开关
+fileformat                     = "2              ";文件格式 avi
+filecontent                    = "3              ";AVboth 录的内容，声音视频都要录
+filenamepre                    = "rec011         ";文件名开头
+singlefileperiod

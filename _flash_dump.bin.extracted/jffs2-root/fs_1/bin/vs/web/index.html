@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset =UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT" />
+<title>ipCAM</title>
+<!--------------------网页需要的CSS ------------------->
+<link rel="stylesheet" type="text/css" href="css/base-ui.css"/>
+<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.custom.css">
+
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/IE6.css" />
+<![endif]-->
+<!--------------------网页自身的CSS------------------->
+<style type="text/css"></style>
+
+<!--------------------网页需要的脚本 ------------------->
+<script type="text/javascript" src="js/jquery.js"> </script>
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="js/jquery.ui.slider.js"></script>
+<script type="text/javascript" src="js/base64.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/display.js"></script>
+<script type="text/javascript" src="js/ptz.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!--------------------CGI 命令------------------->
+<script language="JavaScript1.2" src="/cgi-bin/getwifiattr.cgi" type="text/javascript"></script>
+<!-------------------
+<script language="JavaScript1.2" src="/cgi-bin/p2p.cgi?cmd=p2p.cgi&-action=get" type="text/javascript"></script>
+<script language="JavaScript1.2" src="cgi-bin/hi3510/param.cgi?cmd=getptzcfg&" type="text/javascript"></script>
+-------->
+<!--------------------网页的消息函数------------------->
+<script language="javascript"></script>
+</head>
+
+<body>
+
+<div id="LogoLayer">
+<img id="LogoImg" src="images/logo.png" />
+</div>
+
+<div id="headerLayer" class="header" style="display:none;">
+    <div class="mainHeader" >
+        <ul class="navmenu">
+            <li><a id="home">
+                <label id="HeaderHomeSpan">Home</label>
+                </a></li>
+            <li><a id="Replay">
+                <label id="HeaderReplaySpan">Replay</label>
+                </a></li>
+            <li><a id="ParametersSet">
+                <label  id="HeaderParametersSpan">Parameters</label>
+                </a></li>
+            <li><a id="SystemSet">
+                <label id="HeaderSystemSpan">System</label>
+                </a></li>
+        </ul>
+    </div>
+</div>
+<!----------end header-------------->
+<div id="LogoutLayer" style="position: absolute; right: 36px; top: 5px; font-size:medium; display:none"> 
+<a style="text-decoration:underline;color:#900" onclick='JavaScript:window.open("/IPCameraSetup.zip");'>
+    <label id="DownloadPlayerSpan">Download Player</label></a>
+     <a style="color:#900">|</a>
+	 <a id="Logout" style="color:#900;">
+    <label id="LogoutSpan">Logout</label>
+    </a> </div>
+
+<!------------------登录界面----------------->
+<div>
+    <div id="LoginLayer" class="LoginLayerStyle" style="display:none">
+        <table style="margin-top:10px;">
+            <tr>
+                <td width="45%" align="right" valign="middle" height="auto"><span  id="UsernameSpan"> Username: </span></td>
+                <td width="55%" align="left" valign="middle" height="auto"><input id="LonginUsername" type="text" style="width:150px;  height:18px;" maxlength="8" /></td>
+            </tr>
+            <tr>
+                <td width="45%" align="right" valign="middle" height="auto"><span id="PasswordSpan" style="text-align:right"> Password: </span></td>
+                <td width="55%" align="left" valign="middle" height="auto"><input id="LonginPassword" type="password"  style="width:150px; height:18px;" maxlength="8"/></td>
+            </tr>
+            <tr>
+                <td width="45%" align="right" valign="middle" ><span id="LoginLanguageSpan" style="text-align:right"> Language: </span></td>
+                <td width="55%" align="left" valign="middle"><select id="LanSelect" style="width:118px;"></select></td>
+            </tr>
+            <tr>
+                <td width="45%" align="right" valign="middle"><span id="LoginStreamSpan"></span></td>
+                <td width="55%" align="left" valign="middle"><select id="StreamSelect" style="width:118px;">
+                        <option value="11" class="optionspan" id="LoginMainFlowSpan"> MainFlow</option>
+                        <option value="12" class="optionspan" id="LoginMinorFlowSpan"> MinorFlow</option>
+                    </select>
+                    <select id="PlayerSelect" style="display:none;">
+                        <option value="0" class="optionspan">OCX-H264</option>
+                        <option value="1" class="optionspan">VLC-H264</option>
+                    </select></td>
+            </tr>
+             <tr>
+                <td width="45%" align="right" valign="middle"><span id="LoginDownloadPlayerSpanaaaa"></span></td>
+                <td width="55%" align="left" valign="middle">
+                  <a style="text-decoration:underline;color:#900; text-align:center; vertical-align:middle;" onclick='JavaScript:window.open("/IPCameraSetup.zip");'>
+        		<label id="LoginDownloadPlayerSpan">Download Player</label>
+       			 </a>
+                
+                    </td>
+            </tr>
+        </table>
+        <div style="position:absolute; bottom:5px;left:132px;">
+		<a id="Login" class="classname">
+		<label id="LoginEnterSpan">Login </label>
+		</a>
+            <input type="checkbox" id="AutoLogin" />
+            <label id="AutologinSpan"> Autologin</label>
+        </div>
+    </div>
+</div>
+<div   id="ContainerLayer" class="container"> 
+    <!-------------------预览-------------------->
+    <div id="mainpageLayer" style="display:none; top:5px;">
+        <div  id="OCXCtlLayer" style="position:absolute; top:5px; left:655px;"> 
+		<a id="RecordSwitch" href="javascript:;" ></a> 
+         <a id="RecordIngSwitch" href="javascript:;" style="display:none;"></a> 
+		<a id="CaptureSwitch" href="javascript:;" ></a> 
+        <a id="MicroOnSwitch" href="javascript:;" style="display:none;"></a> 
+        <a id="MicroOffSwitch" href="javascript:;"></a> 
+        <a id="VolOnSwitch" href="javascript:;"  style="display:none;"></a> 
+        <a id="VolOffSwitch" href="javascript:;"></a> 
+		</div>
+        
+        <!-----------------控件在登录时动态加载---------------->
+        <!--div id="DisplayareaLayer"  class="DisplayareaLayerStyle">
+            <iframe id="VideoFrameLayer" scrolling="no" frameborder="0" width="100%" height="100%" ></iframe>
+        </div-->
+        <div id="LeftToolLayerLayer" class="LeftToolLayerStyle">
+            <div id="PtzCtrLayer"  style="border-bottom: 5px solid #212129;"> 
+            <div id="PtzDirLayer"> 
+                <a id="PtzLeftTop" href="javascript:;"></a> <a id="PtzTop" href="javascript:;"></a> <a id="PtzRightTop" href="javascript:;"></a> 
+                <a id="PtzLeft" href="javascript:;"></a> <a id="PtzStop" href="javascript:;"></a> <a id="PtzRight" href="javascript:;"></a> 
+                <a id="PtzLeftDown" href="javascript:;"></a> <a id="PtzDown" href="javascript:;"></a> <a id="PtzRightDown" href="javascript:;"></a> 
+               </div>
+               <!-------------
+                <div id="PTZScanLayer">
+                     <a id="PtzLRScan" href="javascript:;"></a>
+                     <a id="PtzHVScan" href="javascript:;"></a>
+                      <a id="PtzUPScan" href="javascript:;"></a>
+                      <a id="PtzHVStopScan" href="javascript:;"></a> 
+                    <a id="PtzScanLabelLayer"><label id="ScanSpan" style="display:none;" >Scan</label> </a>
+                </div>
+                <div id="PTZFocusLayer">
+                     <a id="PtzFocusAdd" href="javascript:;"></a>
+                      <a id="PtzFocusSub" href="javascript:;"></a> 
+                    <a id="PtzFocusLabelLayer"><label id="FocusSpan">Focus</label> </a>
+                </div>
+                <div id="PTZZoomLayer">
+                    <a id="PtzZoomAdd" href="javascript:;"></a>
+                    <a id="PtzZoomSub" href="javascript:;"></a> 
+                    <a id="PtzZoomLabelLayer"><label id="ZoomSpan">Zoom</label> </a>
+                </div>
+                <div id="AVSPTZSpeedLayer">
+                    <a id="AVSPtzSpeedAdd" href="javascript:;"></a>
+                    <a id="AVSPtzSpeedSub" href="javascript:;"></a> 
+                	<a id="AVSPtzSpeedLabelLayer"><label id="AVSSpeedSpan">Speed</label> </a>
+                </div>
+                <div id="PTZPointLayer" style="padding:2px;">
+                        <label id="PtzPointSpan">Pos:</label>
+                        <input id="PTZPosInput" type="text" maxlength="3" size="3" value="1" style="text-align:center;" />
+                        <a id="GotoPoint" href="javascript:;"></a> 
+                        <a id="SetPoint" href="javascript:;"></a> 
+                        <a id="ClearPoint" href="javascript:;"></a>
+                </div>
+            	----------->
+            </div>
+            <div id="ImageAdjustLayer"> 
+                <!----------------------------Hue------------------------------>
+                <div>
+                    <table>
+                        <tr>
+                            <td><a id="HueImg"></a></td>
+                            <td><div id="HueSlider" class="slieder" style="font-size:10px;"></div></td>
+                            <td><label id="HueText">0</label></td>
+                        </tr>
+                    </table>
+                </div>
+                <!----------------------------brightness------------------------------>
+                <div>
+                    <table>
+                        <tr>
+                            <td><a  id="BrightnessImg"></a></td>
+                            <td><div id="BriSlider" class="slieder" style="font-size:10px;"></div></td>
+                            <td><label id="BriSliderText">0</label></td>
+                        </tr>
+                    </table>
+                </div>
+                <!----------------------------contrast	------------------------------>
+                <div>
+                    <table>
+                        <tr>
+                            <td><a id="ContrastImg"></a></td>
+                            <td><div id="ConSlider" class="slieder" style="font-size:10px;"></div></td>
+                            <td><label id="ConSliderText">0</label></td>
+                        </tr>
+                    </table>
+                </div>
+                <!----------------------------saturation	------------------------------>
+                <div style="border-bottom: 1px solid #212129;">
+                    <table>
+                        <tr>
+                            <td><a id="SaturationImg"></a></td>
+                            <td><div id="SatSlider" class="slieder" style="font-size:10px;"></div></td>
+                            <td><label id="SatSliderText">0</label></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="AdvanceImageAdjustLayer">
+                <!----------------------------flip	------------------------------>
+                <div style="margin-top:10px;margin-left:0px;" id="FlipLayer">
+                    <label id="FlipSpan"  style="display:inline-block;width:80px;margin-left:10px;">Flip: </label>
+                    <input id="flipOn"type="radio" name="flipgrp" value="on"/>
+                    <label  for="flipOn" id="FillOnSpan">On </label>
+                    <input id="flipOff"type="radio" name="flipgrp"  value="off"/>
+                    <label for="flipOff" id="FillOffSpan">Off</label>
+                </div>
+                <!----------------------------mirror	------------------------------>
+                <div style="margin-top:10px;margin-left:0px;" id="MirrorLayer">
+                    <label id="MirrorSpan"  style="display:inline-block;width:80px;margin-left:10px;">Mirror: </label>
+                    <input id="mirrorOn"type="radio" name="mirrorgrp" value="on"/>
+                    <label  for="mirrorOn" id="MirrorOnSpan">On </label>
+                    <input id="mirrorOff"type="radio" name="mirrorgrp" value="off"/>
+                    <label for="mirrorOff" id="MirrorOffSpan">Off</label>
+                </div>
+                <!----------------------------power fq------------------------------>
+                <div style="margin-top:10px;margin-left:0px;">
+                    <label id="PowerfreqSpan"  style="display:inline-block;width:80px;margin-left:10px">Powerfreq: </label>
+                    <input id="powerfreq50"type="radio" name="Powerfreqgrp" value="50" />
+                    <label  for="powerfreq50">50HZ </label>
+                    <input id="powerfreq60"type="radio" name="Powerfreqgrp" value="60" />
+                    <label for="powerfreq60">60HZ</label>
+                </div>
+                <!-----------------------indoor outdoor auto------------------>
+              <div style="margin:10px 0px;">
+                  <label id="MainPageSceneSpan"  style="display:inline-block;width:80px;margin-left:10px">Scene: </label>
+                <select id="SceneSelect" style="width:80px; margin-left:5px;">
+                        <option class="optionspan" id="AutoSpan" value="0"> Auto</option>
+                        <option class="optionspan" id="IndoorSpan" value="1"> Indoor</option>
+                        <option class="optionspan" id="OutdoorSpan" value="2"> Outdoor</option>
+                </select>
+            </div>
+            <!---------------------------set ircut mode ------------------------->
+            <div style="margin:10px 0px;">
+                  <label id="MainPageIRSpan"  style="display:inline-block; width:80px; margin-left:10px">IRCut: </label>
+                <select id="IRSelect" style="width:80px; margin-left:5px;">
+                        <!------------option class="optionspan" id="IRLowSpan" value="0"> Low</option----------->
+                        <option class="optionspan" id="IRHighSpan" value="1"> High</option>
+                        <option class="optionspan" id="IRColorSpan" value="2"> Color</option>
+                        <option class="optionspan" id="IRBWSpan" value="3"> BlackWhite</option>
+                </select>
+            </div>
+                </div>
+                <div style="border-bottom: 5px solid #212129;"> 
+                	<a id="UpdateBtn" class="classname" style="margin-left:20px;" href="javascript:;">
+                    <label id="UpdateSpan" style="color:#FFF">Update</label>
+                    </a> <a id="DefaultBtn" class="classname" style="margin-left:10px;" href="javascript:;">
+                    <label  id="DefaultSpan" style="color:#FFF">Default</label>
+                    </a> </div>
+			</div>
+            <div id="PlayerCtrLayer">
+            <div style="margin-top:8px; margin-left:10px;">
+                <label id="StreamSpan" style="display:inline-block; width:52px; margin:0px;">Stream:</label>
+                <select id="StreamSelect1" style="width:100px; margin-left:30px;">
+                    <option value="11" class="optionspan" id="MainFlowSpan"> MainFlow</option>
+                    <option value="12" class="optionspan" id="MinorFlowSpan"> MinorFlow</option>
+                </select>
+            </div>
+            <div  id="ImageSizeLayer" style="margin-top:8px; margin-left:10px;">
+                <label id="MainPageImageSpan" style="display:inline-block; width:52px; margin:0px;">Image:</label>
+                <select id="ImageSize" style="width:100px; margin-left:30px;">
+                    <option value="0" class="optionspan" id="FitSizeSpan"> Fit Size</option>
+                    <option value="1" class="optionspan" id="SrcSizeSpan"> Src Size</option>
+                </select>
+            </div>
+            </div>            
+ </div>
+        
+          <div id="DisplayareaLayer"  class="DisplayareaLayerStyle">
+        <script type="text/javascript">LoadPlayer();</script>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div id="AdvanceLayer" class="AdvanceLayerStyle"> 
+        <!--左侧导航栏-->
+        <div class="side"> 
+            <!------------Media set------------------>
+            <h1  id="MediaSpan"><span id="MediaTitleSpan">Media</span></h1>
+            <div id="MediaLayer" style="display:block; " > 
+                <!--a id="ImageSpan">Image</a--> 
+                <a href="javascript:;"><span id="VideoSpan">Video</span><span class="arrow"></span> </a>
+				<a href="javascript:;"><span id="AudioSpan">Audio</span><span class="arrow"></span> </a>
+            <!---- 不显示图像 wdr
+                <a href="javascript:;"><span id="ImageSpan">Image</span><span class="arrow"></span></a> 
+ 			---------->						
+               <a href="javascript:;"><span  id="MobileSpan">Mobile</span><span class="arrow"></span> </a> 
+			<!----不显示PTZ页面 
+                <a href="javascript:;"> <span id="PTZSpan">PTZ</span><span class="arrow"></span> </a> 
+			---------->
+                </div>
+            <!------------Network set------------------>
+            <h1 id="NetWorkSpan"><span id="NetWorkTitleSpan">Network</span></h1>
+            <div id="NetworkLayer" style="display:none" >             
+            <a href="javascript:;"><span id="BasicSettingsSpan">Basic settings</span><span class="arrow"></span> </a> 
+			<!----不显示DDNS页面 			
+            <a href="javascript:;"><span id="DDNSSpan">DDNS&amp;UPNP</span><span class="arrow"></span> </a> 
+			---------->
+			<a href="javascript:;"><span id="EmailSpan">e-Mail</span><span class="arrow"></span> </a> 
+	        <a href="javascript:;"><span id="WifiSpan">Wifi</span><span class="arrow"></span> </a> 
+			<!----不显示DDNS页面 
+            <a href="javascript:;"><span id="P2PSpan">P2P</span><span class="arrow"></span> </a> 
+ 			---------->
+           <!---- 不支持FTP
+			<a href="javascript:;"><span id="FTPSpan">FTP</span><span class="arrow"></span> </a> 
+            ---------->
+            </div>
+            <!------------Event set------------------>
+            <h1 id="EventSpan"><span id="EventTitleSpan">Event</span></h1>
+            <div id="EventLayer" style="display:none" > 
+            <a href="javascript:;"><span id="MDSpan">Motion&nbsp;detection</span><span class="arrow"></span></a> 
+            <a href="javascript:;"><span  id="ODSpan">Occlusion&nbsp;detection </span><span class="arrow"></span></a> 
+            <!----不显示AlarmIn 
+			<a href="javascript:;"><span id="AlarmInSpan">Alarm&nbsp;in&out </span><span class="arrow"></span></a> 
+           ---------->
+		   <!--a id="AlarmOutSpan" href="#">Alarm&nbsp;out</a--> 
+              <a href="javascript:;"><span id="AutoSnapSpan">Auto&nbsp;capture</span><span class="arrow"></span></a>
+              <a href="javascript:;"><span id="RecordSpan">Record</span><span class="arrow"></span></a> 
+              <a href="javascript:;"><span id="CoverAreaSpan">Cover Area</span><span class="arrow"></span></a> 
+                </div>
+            <!------------system set------------------>
+            <h1 id="SystemSpan"><span id="SystemTitleSpan">System</span></h1>
+            <div id="SystemLayer" style="display:none" > 
+                <a href="javascript:;"><span id="UserSpan">User</span><span class="arrow"></span></a> 
+                <!--a id="LanguageSpan" href="#">Language</a--> 
+                <a href="javascript:;"><span id="TimeSpan">Time&nbsp;setting</span><span class="arrow"></span></a> 
+                <a href="javascript:;"><span id="InitSpan">Initialize</span><span class="arrow"></span></a> 
+                <a href="javascript:;"><span id="DeviceinfoSpan">Device&nbsp;information</span><span class="arrow"></span></a> 
+                <a href="javascript:;"><span  id="StorageSpan">Storage&nbsp;Device</span><span class="arrow"></span></a> 
+                <a href="javascript:;"><span id="LogSpan">System&nbsp;log</span><span class="arrow"></span></a> 
+            </div>
+        </div>
+        <!----------end side-------------->
+        
+        <iframe id="pageframe"  class="contentframe" src=""  scrolling="auto" frameborder="0" marginwidth="0px"></iframe>
+    </div>
+    <div id="ReplayLayer" style="display:none;"> 
+    	<iframe id="ReplayFrame" scrolling="yes" frameborder="0" marginwidth="0px"></iframe>
+    </div>
+</div>
+</body>
+</html>

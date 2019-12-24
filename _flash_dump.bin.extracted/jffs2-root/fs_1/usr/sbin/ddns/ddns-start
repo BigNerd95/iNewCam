@@ -1,0 +1,42 @@
+#!/bin/sh
+##################################################
+# ddns client
+# Author: leitz@sin360.net 2007.04.25
+##################################################
+
+DIRINCLUDE="/usr/sbin/ddns"
+
+. ${DIRINCLUDE}/ddnsrc
+
+echo "DDNS started"
+
+while [ 1 ]
+do
+	if ! [ -r ${CONFIGFILE} ] 
+	then
+		echo "Not Config DDNS ${CONFIGFILE}"
+	elif ! [ -r ${RUNDDNSCMD} ]
+	then
+		echo "Not Config DDNS ${RUNDDNSCMD}"
+	else
+		echo "Doing DDNS..."
+		[ -f ${LOGFILE} ] && ${RMCMD} ${LOGFILE}
+		if ! [ -r ${CONFIGFILE} ] || ! [ -r ${RUNDDNSCMD} ]; then
+			echo "Not Config DDNS Protocol type"
+		fi
+		
+		WANIP=$(GetWANIPAddress)
+
+		if [ \"${WANIP}\" = \"${OldWANIP}\" ]; then
+			echo "WAN IP No Change!" > ${LOGFILE} 2>&1	
+		else
+			${RUNDDNSCMD} > ${LOGFILE} 2>&1		
+		fi
+	
+		OldWANIP=${WANIP}
+		
+	fi
+	${SLEEPCMD} ${INTERVALTIME}
+done
+
+exit 0

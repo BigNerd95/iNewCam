@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+  <specVersion>
+    <major>1</major>
+    <minor>0</minor>
+  </specVersion>
+  <device>
+    <deviceType>urn:schemas-upnp-org:device:IPCamera:1</deviceType>
+    <friendlyName>$$DESCNAME$$</friendlyName>
+    <manufacturer>Hisilicon</manufacturer>
+    <manufacturerURL>http://www.hisilicon.com</manufacturerURL>
+    <modelDescription>Hisilicon Wireless-G Internet Video Camera</modelDescription>
+    <modelName>HSC54G</modelName>
+    <modelNumber>1.0</modelNumber>
+    <modelURL>http://www.hisilicon.com/</modelURL>
+    <serialNumber>123456789001</serialNumber>
+    <UDN>uuid:hisilicon-ipcamera-V100R002-$$IP$$</UDN>
+    <UPC>123456789</UPC>
+    <serviceList>
+      <service>
+        <serviceType></serviceType>
+        <serviceId></serviceId>
+        <controlURL></controlURL>
+        <eventSubURL></eventSubURL>
+        <SCPDURL></SCPDURL>
+      </service>
+    </serviceList>
+   <presentationURL>http://$$IP$$:$$ADMINPORT$$/</presentationURL>
+  </device>
+</root>

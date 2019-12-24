@@ -1,0 +1,30 @@
+#!/bin/sh
+
+IFCONF=/etc/network/ifattr
+IFRESOLV=/etc/network/resolv.conf
+RESOLV=/etc/resolv.conf
+
+logger "udhcpc default.leasefail"
+
+. $IFCONF
+
+if [ -n $address -a -n $netmask ];then
+    /sbin/ifconfig $iface $address netmask $netmask
+fi
+
+if [ $priflag = 1 ];then
+    if [ -n $gateway ];then
+            echo "deleting routers"                        
+            while /sbin/route del default gw 0.0.0.0       
+            do :                                           
+            done
+            
+            /sbin/route add default gw $gateway dev $iface
+    fi
+        
+    if [ -e $RESOLV ];then
+        rm -f $RESOLV
+    fi
+    cp $IFRESOLV $RESOLV    
+fi
+
