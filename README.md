@@ -4,6 +4,9 @@ Gaozhi iNewCam G6Plus firmware dump
 # Dump
 The flash is a Winbond W25Q128B with 16MB  
 It has been dumped using a CH341A MiniProgrammer  
+```bash
+$ sudo flashrom -p ch341a_spi -r flash_dump.bin
+```
 
 You can find all the flash content in flash_dump.bin.  
 The flash map is:  
